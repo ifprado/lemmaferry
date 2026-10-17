@@ -9,6 +9,8 @@
     ],
     "status": "reproduced"
   },
+  "baseline_commit": "98cb9eca826de6d955f1a0250140f5505e5ffe35",
+  "baseline_zip_sha256": "3e0f5b0641e74870eda28e093fa6ece9f6f4c71029695db1a61435a062a51db4",
   "created_at_utc": "2026-10-17T06:13:48.040211+00:00",
   "files_sha256": {
     ".github/ISSUE_TEMPLATE/experiment.md": "4ace1001bbe8f55ae9117b49f2e928655a46c5bebfa2059f35a011f4d2b789d0",
@@ -110,6 +112,7 @@
     "Complete human audits of generated examples.",
     "Run a small paired-activation experiment with actual mathematical and general language models."
   ],
+  "hash_scope": "The listed hashes identify the original v0.1.0 ZIP and baseline commit, not later research commits. Check them against that immutable snapshot.",
   "historical_samples": {
     "directory": "examples/logic/",
     "examples_per_split": 3,

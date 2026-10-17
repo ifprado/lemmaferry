@@ -1,0 +1,868 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>LemmaFerry: 15-example correspondence audit</title><style>body{max-width:980px;margin:40px auto;padding:0 20px;font:16px/1.6 system-ui;color:#222}details{border:1px solid #ccc;padding:12px;margin:16px 0}summary{cursor:pointer;font-weight:bold}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f3fa;padding:16px;font-size:13px}</style><h1>15-example correspondence audit</h1><p>Five fixed examples per split: indices 0, 4, 8, 12, and 16. The primary coding agent read all 15 and found matching formal statements, proofs, controlled-language rules, and shortest-chain answers. Human review remains pending.</p><p>Read each arrow as a one-way conditional. The theorem takes the initial fact and rules as explicit premises. Disconnected distractors have no starting fact. The short answer minimizes edge applications in this graph.</p><details><summary>train_000000: e2, e5</summary><p>p4 → p5 → p0 uses e2,e5; the alternate p4 → p6 → p7 → p3 → p0 uses e0,e4,e6,e3. The e1 component has no premise.</p><p>p0 = Vela_0_0; p1 = Vela_0_1; p2 = Vela_0_2; p3 = Vela_0_3; p4 = Vela_0_4; p5 = Vela_0_5; p6 = Vela_0_6; p7 = Vela_0_7</p><h3>Formal statement and two proofs</h3><pre>theorem lf_train_000000
+    (p0 p1 p2 p3 p4 p5 p6 p7 : Prop)
+    (h_start : p4)
+    (h_e0 : p4 → p6)
+    (h_e1 : p2 → p1)
+    (h_e2 : p4 → p5)
+    (h_e3 : p3 → p0)
+    (h_e4 : p6 → p7)
+    (h_e5 : p5 → p0)
+    (h_e6 : p7 → p3)
+    : p0 :=
+  h_e5 (h_e2 (h_start))
+theorem lf_train_000000_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 : Prop)
+    (h_start : p4)
+    (h_e0 : p4 → p6)
+    (h_e1 : p2 → p1)
+    (h_e2 : p4 → p5)
+    (h_e3 : p3 → p0)
+    (h_e4 : p6 → p7)
+    (h_e5 : p5 → p0)
+    (h_e6 : p7 → p3)
+    : p0 :=
+  h_e3 (h_e6 (h_e4 (h_e0 (h_start))))
+</pre><h3>Controlled language and expected answer</h3><pre>Station Vela_0_4 is active.
+Rule e0: If station Vela_0_4 is active, then station Vela_0_6 is active.
+Rule e1: If station Vela_0_2 is active, then station Vela_0_1 is active.
+Rule e2: If station Vela_0_4 is active, then station Vela_0_5 is active.
+Rule e3: If station Vela_0_3 is active, then station Vela_0_0 is active.
+Rule e4: If station Vela_0_6 is active, then station Vela_0_7 is active.
+Rule e5: If station Vela_0_5 is active, then station Vela_0_0 is active.
+Rule e6: If station Vela_0_7 is active, then station Vela_0_3 is active.
+Give a shortest rule chain establishing that station Vela_0_0 is active.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e2&quot;,
+    &quot;e5&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Vela_0_4&quot;,
+    &quot;Vela_0_5&quot;,
+    &quot;Vela_0_0&quot;
+  ]
+}</pre></details><details><summary>train_000004: e5, e4</summary><p>p5 → p4 → p7 uses e5,e4; the alternate p5 → p2 → p3 → p1 → p7 uses e0,e2,e3,e6. The p6 → p0 distractor is unreachable.</p><p>p0 = Vela_4_0; p1 = Vela_4_1; p2 = Vela_4_2; p3 = Vela_4_3; p4 = Vela_4_4; p5 = Vela_4_5; p6 = Vela_4_6; p7 = Vela_4_7</p><h3>Formal statement and two proofs</h3><pre>theorem lf_train_000004
+    (p0 p1 p2 p3 p4 p5 p6 p7 : Prop)
+    (h_start : p5)
+    (h_e0 : p5 → p2)
+    (h_e1 : p6 → p0)
+    (h_e2 : p2 → p3)
+    (h_e3 : p3 → p1)
+    (h_e4 : p4 → p7)
+    (h_e5 : p5 → p4)
+    (h_e6 : p1 → p7)
+    : p7 :=
+  h_e4 (h_e5 (h_start))
+theorem lf_train_000004_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 : Prop)
+    (h_start : p5)
+    (h_e0 : p5 → p2)
+    (h_e1 : p6 → p0)
+    (h_e2 : p2 → p3)
+    (h_e3 : p3 → p1)
+    (h_e4 : p4 → p7)
+    (h_e5 : p5 → p4)
+    (h_e6 : p1 → p7)
+    : p7 :=
+  h_e6 (h_e3 (h_e2 (h_e0 (h_start))))
+</pre><h3>Controlled language and expected answer</h3><pre>Station Vela_4_5 is active.
+Rule e0: If station Vela_4_5 is active, then station Vela_4_2 is active.
+Rule e1: If station Vela_4_6 is active, then station Vela_4_0 is active.
+Rule e2: If station Vela_4_2 is active, then station Vela_4_3 is active.
+Rule e3: If station Vela_4_3 is active, then station Vela_4_1 is active.
+Rule e4: If station Vela_4_4 is active, then station Vela_4_7 is active.
+Rule e5: If station Vela_4_5 is active, then station Vela_4_4 is active.
+Rule e6: If station Vela_4_1 is active, then station Vela_4_7 is active.
+Give a shortest rule chain establishing that station Vela_4_7 is active.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e5&quot;,
+    &quot;e4&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Vela_4_5&quot;,
+    &quot;Vela_4_4&quot;,
+    &quot;Vela_4_7&quot;
+  ]
+}</pre></details><details><summary>train_000008: e7, e4</summary><p>p0 → p4 → p6 uses e7,e4; the alternate p0 → p1 → p7 → p3 → p6 uses e1,e0,e3,e6. Neither distractor has an enabled antecedent.</p><p>p0 = Vela_8_0; p1 = Vela_8_1; p2 = Vela_8_2; p3 = Vela_8_3; p4 = Vela_8_4; p5 = Vela_8_5; p6 = Vela_8_6; p7 = Vela_8_7; p8 = Vela_8_8; p9 = Vela_8_9</p><h3>Formal statement and two proofs</h3><pre>theorem lf_train_000008
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 : Prop)
+    (h_start : p0)
+    (h_e0 : p1 → p7)
+    (h_e1 : p0 → p1)
+    (h_e2 : p9 → p2)
+    (h_e3 : p7 → p3)
+    (h_e4 : p4 → p6)
+    (h_e5 : p5 → p8)
+    (h_e6 : p3 → p6)
+    (h_e7 : p0 → p4)
+    : p6 :=
+  h_e4 (h_e7 (h_start))
+theorem lf_train_000008_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 : Prop)
+    (h_start : p0)
+    (h_e0 : p1 → p7)
+    (h_e1 : p0 → p1)
+    (h_e2 : p9 → p2)
+    (h_e3 : p7 → p3)
+    (h_e4 : p4 → p6)
+    (h_e5 : p5 → p8)
+    (h_e6 : p3 → p6)
+    (h_e7 : p0 → p4)
+    : p6 :=
+  h_e6 (h_e3 (h_e0 (h_e1 (h_start))))
+</pre><h3>Controlled language and expected answer</h3><pre>Station Vela_8_0 is active.
+Rule e0: If station Vela_8_1 is active, then station Vela_8_7 is active.
+Rule e1: If station Vela_8_0 is active, then station Vela_8_1 is active.
+Rule e2: If station Vela_8_9 is active, then station Vela_8_2 is active.
+Rule e3: If station Vela_8_7 is active, then station Vela_8_3 is active.
+Rule e4: If station Vela_8_4 is active, then station Vela_8_6 is active.
+Rule e5: If station Vela_8_5 is active, then station Vela_8_8 is active.
+Rule e6: If station Vela_8_3 is active, then station Vela_8_6 is active.
+Rule e7: If station Vela_8_0 is active, then station Vela_8_4 is active.
+Give a shortest rule chain establishing that station Vela_8_6 is active.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e7&quot;,
+    &quot;e4&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Vela_8_0&quot;,
+    &quot;Vela_8_4&quot;,
+    &quot;Vela_8_6&quot;
+  ]
+}</pre></details><details><summary>train_000012: e6, e8</summary><p>p10 → p6 → p7 uses e6,e8; the alternate p10 → p5 → p3 → p11 → p7 uses e1,e5,e3,e2. Other components are disconnected.</p><p>p0 = Vela_12_0; p1 = Vela_12_1; p2 = Vela_12_2; p3 = Vela_12_3; p4 = Vela_12_4; p5 = Vela_12_5; p6 = Vela_12_6; p7 = Vela_12_7; p8 = Vela_12_8; p9 = Vela_12_9; p10 = Vela_12_10; p11 = Vela_12_11</p><h3>Formal statement and two proofs</h3><pre>theorem lf_train_000012
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 : Prop)
+    (h_start : p10)
+    (h_e0 : p9 → p4)
+    (h_e1 : p10 → p5)
+    (h_e2 : p11 → p7)
+    (h_e3 : p3 → p11)
+    (h_e4 : p1 → p8)
+    (h_e5 : p5 → p3)
+    (h_e6 : p10 → p6)
+    (h_e7 : p2 → p0)
+    (h_e8 : p6 → p7)
+    : p7 :=
+  h_e8 (h_e6 (h_start))
+theorem lf_train_000012_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 : Prop)
+    (h_start : p10)
+    (h_e0 : p9 → p4)
+    (h_e1 : p10 → p5)
+    (h_e2 : p11 → p7)
+    (h_e3 : p3 → p11)
+    (h_e4 : p1 → p8)
+    (h_e5 : p5 → p3)
+    (h_e6 : p10 → p6)
+    (h_e7 : p2 → p0)
+    (h_e8 : p6 → p7)
+    : p7 :=
+  h_e2 (h_e3 (h_e5 (h_e1 (h_start))))
+</pre><h3>Controlled language and expected answer</h3><pre>Station Vela_12_10 is active.
+Rule e0: If station Vela_12_9 is active, then station Vela_12_4 is active.
+Rule e1: If station Vela_12_10 is active, then station Vela_12_5 is active.
+Rule e2: If station Vela_12_11 is active, then station Vela_12_7 is active.
+Rule e3: If station Vela_12_3 is active, then station Vela_12_11 is active.
+Rule e4: If station Vela_12_1 is active, then station Vela_12_8 is active.
+Rule e5: If station Vela_12_5 is active, then station Vela_12_3 is active.
+Rule e6: If station Vela_12_10 is active, then station Vela_12_6 is active.
+Rule e7: If station Vela_12_2 is active, then station Vela_12_0 is active.
+Rule e8: If station Vela_12_6 is active, then station Vela_12_7 is active.
+Give a shortest rule chain establishing that station Vela_12_7 is active.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e6&quot;,
+    &quot;e8&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Vela_12_10&quot;,
+    &quot;Vela_12_6&quot;,
+    &quot;Vela_12_7&quot;
+  ]
+}</pre></details><details><summary>train_000016: e6, e2</summary><p>p7 → p6 → p8 uses e6,e2; the alternate p7 → p3 → p2 → p5 → p8 uses e7,e0,e4,e3. The two distractor components cannot start.</p><p>p0 = Vela_16_0; p1 = Vela_16_1; p2 = Vela_16_2; p3 = Vela_16_3; p4 = Vela_16_4; p5 = Vela_16_5; p6 = Vela_16_6; p7 = Vela_16_7; p8 = Vela_16_8; p9 = Vela_16_9</p><h3>Formal statement and two proofs</h3><pre>theorem lf_train_000016
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 : Prop)
+    (h_start : p7)
+    (h_e0 : p3 → p2)
+    (h_e1 : p1 → p4)
+    (h_e2 : p6 → p8)
+    (h_e3 : p5 → p8)
+    (h_e4 : p2 → p5)
+    (h_e5 : p0 → p9)
+    (h_e6 : p7 → p6)
+    (h_e7 : p7 → p3)
+    : p8 :=
+  h_e2 (h_e6 (h_start))
+theorem lf_train_000016_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 : Prop)
+    (h_start : p7)
+    (h_e0 : p3 → p2)
+    (h_e1 : p1 → p4)
+    (h_e2 : p6 → p8)
+    (h_e3 : p5 → p8)
+    (h_e4 : p2 → p5)
+    (h_e5 : p0 → p9)
+    (h_e6 : p7 → p6)
+    (h_e7 : p7 → p3)
+    : p8 :=
+  h_e3 (h_e4 (h_e0 (h_e7 (h_start))))
+</pre><h3>Controlled language and expected answer</h3><pre>Station Vela_16_7 is active.
+Rule e0: If station Vela_16_3 is active, then station Vela_16_2 is active.
+Rule e1: If station Vela_16_1 is active, then station Vela_16_4 is active.
+Rule e2: If station Vela_16_6 is active, then station Vela_16_8 is active.
+Rule e3: If station Vela_16_5 is active, then station Vela_16_8 is active.
+Rule e4: If station Vela_16_2 is active, then station Vela_16_5 is active.
+Rule e5: If station Vela_16_0 is active, then station Vela_16_9 is active.
+Rule e6: If station Vela_16_7 is active, then station Vela_16_6 is active.
+Rule e7: If station Vela_16_7 is active, then station Vela_16_3 is active.
+Give a shortest rule chain establishing that station Vela_16_8 is active.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e6&quot;,
+    &quot;e2&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Vela_16_7&quot;,
+    &quot;Vela_16_6&quot;,
+    &quot;Vela_16_8&quot;
+  ]
+}</pre></details><details><summary>validation_000000: e11, e0, e2</summary><p>p6 → p5 → p2 → p1 uses e11,e0,e2. The other complete routes have four and five applications; the supplied long proof follows the five-edge route.</p><p>p0 = Nori_0_0; p1 = Nori_0_1; p2 = Nori_0_2; p3 = Nori_0_3; p4 = Nori_0_4; p5 = Nori_0_5; p6 = Nori_0_6; p7 = Nori_0_7; p8 = Nori_0_8; p9 = Nori_0_9; p10 = Nori_0_10; p11 = Nori_0_11; p12 = Nori_0_12; p13 = Nori_0_13; p14 = Nori_0_14; p15 = Nori_0_15; p16 = Nori_0_16</p><h3>Formal statement and two proofs</h3><pre>theorem lf_validation_000000
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 : Prop)
+    (h_start : p6)
+    (h_e0 : p5 → p2)
+    (h_e1 : p6 → p9)
+    (h_e2 : p2 → p1)
+    (h_e3 : p9 → p13)
+    (h_e4 : p4 → p16)
+    (h_e5 : p13 → p4)
+    (h_e6 : p8 → p15)
+    (h_e7 : p16 → p1)
+    (h_e8 : p0 → p10)
+    (h_e9 : p7 → p1)
+    (h_e10 : p3 → p12)
+    (h_e11 : p6 → p5)
+    (h_e12 : p11 → p14)
+    (h_e13 : p12 → p7)
+    (h_e14 : p6 → p3)
+    : p1 :=
+  h_e2 (h_e0 (h_e11 (h_start)))
+theorem lf_validation_000000_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 : Prop)
+    (h_start : p6)
+    (h_e0 : p5 → p2)
+    (h_e1 : p6 → p9)
+    (h_e2 : p2 → p1)
+    (h_e3 : p9 → p13)
+    (h_e4 : p4 → p16)
+    (h_e5 : p13 → p4)
+    (h_e6 : p8 → p15)
+    (h_e7 : p16 → p1)
+    (h_e8 : p0 → p10)
+    (h_e9 : p7 → p1)
+    (h_e10 : p3 → p12)
+    (h_e11 : p6 → p5)
+    (h_e12 : p11 → p14)
+    (h_e13 : p12 → p7)
+    (h_e14 : p6 → p3)
+    : p1 :=
+  h_e7 (h_e4 (h_e5 (h_e3 (h_e1 (h_start)))))
+</pre><h3>Controlled language and expected answer</h3><pre>Task Nori_0_6 is enabled.
+Dependency e0: Enabling Nori_0_5 enables Nori_0_2.
+Dependency e1: Enabling Nori_0_6 enables Nori_0_9.
+Dependency e2: Enabling Nori_0_2 enables Nori_0_1.
+Dependency e3: Enabling Nori_0_9 enables Nori_0_13.
+Dependency e4: Enabling Nori_0_4 enables Nori_0_16.
+Dependency e5: Enabling Nori_0_13 enables Nori_0_4.
+Dependency e6: Enabling Nori_0_8 enables Nori_0_15.
+Dependency e7: Enabling Nori_0_16 enables Nori_0_1.
+Dependency e8: Enabling Nori_0_0 enables Nori_0_10.
+Dependency e9: Enabling Nori_0_7 enables Nori_0_1.
+Dependency e10: Enabling Nori_0_3 enables Nori_0_12.
+Dependency e11: Enabling Nori_0_6 enables Nori_0_5.
+Dependency e12: Enabling Nori_0_11 enables Nori_0_14.
+Dependency e13: Enabling Nori_0_12 enables Nori_0_7.
+Dependency e14: Enabling Nori_0_6 enables Nori_0_3.
+Give a shortest dependency chain enabling Nori_0_1.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e11&quot;,
+    &quot;e0&quot;,
+    &quot;e2&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Nori_0_6&quot;,
+    &quot;Nori_0_5&quot;,
+    &quot;Nori_0_2&quot;,
+    &quot;Nori_0_1&quot;
+  ]
+}</pre></details><details><summary>validation_000004: e11, e0, e10</summary><p>p4 → p10 → p1 → p12 uses e11,e0,e10. The four-edge route passes p5,p6,p9; the five-edge proof passes p0,p8,p2,p7.</p><p>p0 = Nori_4_0; p1 = Nori_4_1; p2 = Nori_4_2; p3 = Nori_4_3; p4 = Nori_4_4; p5 = Nori_4_5; p6 = Nori_4_6; p7 = Nori_4_7; p8 = Nori_4_8; p9 = Nori_4_9; p10 = Nori_4_10; p11 = Nori_4_11; p12 = Nori_4_12</p><h3>Formal statement and two proofs</h3><pre>theorem lf_validation_000004
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 : Prop)
+    (h_start : p4)
+    (h_e0 : p10 → p1)
+    (h_e1 : p3 → p11)
+    (h_e2 : p7 → p12)
+    (h_e3 : p8 → p2)
+    (h_e4 : p2 → p7)
+    (h_e5 : p0 → p8)
+    (h_e6 : p9 → p12)
+    (h_e7 : p6 → p9)
+    (h_e8 : p4 → p0)
+    (h_e9 : p4 → p5)
+    (h_e10 : p1 → p12)
+    (h_e11 : p4 → p10)
+    (h_e12 : p5 → p6)
+    : p12 :=
+  h_e10 (h_e0 (h_e11 (h_start)))
+theorem lf_validation_000004_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 : Prop)
+    (h_start : p4)
+    (h_e0 : p10 → p1)
+    (h_e1 : p3 → p11)
+    (h_e2 : p7 → p12)
+    (h_e3 : p8 → p2)
+    (h_e4 : p2 → p7)
+    (h_e5 : p0 → p8)
+    (h_e6 : p9 → p12)
+    (h_e7 : p6 → p9)
+    (h_e8 : p4 → p0)
+    (h_e9 : p4 → p5)
+    (h_e10 : p1 → p12)
+    (h_e11 : p4 → p10)
+    (h_e12 : p5 → p6)
+    : p12 :=
+  h_e2 (h_e4 (h_e3 (h_e5 (h_e8 (h_start)))))
+</pre><h3>Controlled language and expected answer</h3><pre>Task Nori_4_4 is enabled.
+Dependency e0: Enabling Nori_4_10 enables Nori_4_1.
+Dependency e1: Enabling Nori_4_3 enables Nori_4_11.
+Dependency e2: Enabling Nori_4_7 enables Nori_4_12.
+Dependency e3: Enabling Nori_4_8 enables Nori_4_2.
+Dependency e4: Enabling Nori_4_2 enables Nori_4_7.
+Dependency e5: Enabling Nori_4_0 enables Nori_4_8.
+Dependency e6: Enabling Nori_4_9 enables Nori_4_12.
+Dependency e7: Enabling Nori_4_6 enables Nori_4_9.
+Dependency e8: Enabling Nori_4_4 enables Nori_4_0.
+Dependency e9: Enabling Nori_4_4 enables Nori_4_5.
+Dependency e10: Enabling Nori_4_1 enables Nori_4_12.
+Dependency e11: Enabling Nori_4_4 enables Nori_4_10.
+Dependency e12: Enabling Nori_4_5 enables Nori_4_6.
+Give a shortest dependency chain enabling Nori_4_12.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e11&quot;,
+    &quot;e0&quot;,
+    &quot;e10&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Nori_4_4&quot;,
+    &quot;Nori_4_10&quot;,
+    &quot;Nori_4_1&quot;,
+    &quot;Nori_4_12&quot;
+  ]
+}</pre></details><details><summary>validation_000008: e8, e4, e2</summary><p>p3 → p6 → p2 → p12 uses e8,e4,e2. The alternatives through p0 and p8 need four and five applications respectively.</p><p>p0 = Nori_8_0; p1 = Nori_8_1; p2 = Nori_8_2; p3 = Nori_8_3; p4 = Nori_8_4; p5 = Nori_8_5; p6 = Nori_8_6; p7 = Nori_8_7; p8 = Nori_8_8; p9 = Nori_8_9; p10 = Nori_8_10; p11 = Nori_8_11; p12 = Nori_8_12</p><h3>Formal statement and two proofs</h3><pre>theorem lf_validation_000008
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 : Prop)
+    (h_start : p3)
+    (h_e0 : p5 → p12)
+    (h_e1 : p3 → p0)
+    (h_e2 : p2 → p12)
+    (h_e3 : p0 → p1)
+    (h_e4 : p6 → p2)
+    (h_e5 : p11 → p4)
+    (h_e6 : p1 → p5)
+    (h_e7 : p8 → p10)
+    (h_e8 : p3 → p6)
+    (h_e9 : p9 → p7)
+    (h_e10 : p3 → p8)
+    (h_e11 : p10 → p11)
+    (h_e12 : p4 → p12)
+    : p12 :=
+  h_e2 (h_e4 (h_e8 (h_start)))
+theorem lf_validation_000008_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 : Prop)
+    (h_start : p3)
+    (h_e0 : p5 → p12)
+    (h_e1 : p3 → p0)
+    (h_e2 : p2 → p12)
+    (h_e3 : p0 → p1)
+    (h_e4 : p6 → p2)
+    (h_e5 : p11 → p4)
+    (h_e6 : p1 → p5)
+    (h_e7 : p8 → p10)
+    (h_e8 : p3 → p6)
+    (h_e9 : p9 → p7)
+    (h_e10 : p3 → p8)
+    (h_e11 : p10 → p11)
+    (h_e12 : p4 → p12)
+    : p12 :=
+  h_e12 (h_e5 (h_e11 (h_e7 (h_e10 (h_start)))))
+</pre><h3>Controlled language and expected answer</h3><pre>Task Nori_8_3 is enabled.
+Dependency e0: Enabling Nori_8_5 enables Nori_8_12.
+Dependency e1: Enabling Nori_8_3 enables Nori_8_0.
+Dependency e2: Enabling Nori_8_2 enables Nori_8_12.
+Dependency e3: Enabling Nori_8_0 enables Nori_8_1.
+Dependency e4: Enabling Nori_8_6 enables Nori_8_2.
+Dependency e5: Enabling Nori_8_11 enables Nori_8_4.
+Dependency e6: Enabling Nori_8_1 enables Nori_8_5.
+Dependency e7: Enabling Nori_8_8 enables Nori_8_10.
+Dependency e8: Enabling Nori_8_3 enables Nori_8_6.
+Dependency e9: Enabling Nori_8_9 enables Nori_8_7.
+Dependency e10: Enabling Nori_8_3 enables Nori_8_8.
+Dependency e11: Enabling Nori_8_10 enables Nori_8_11.
+Dependency e12: Enabling Nori_8_4 enables Nori_8_12.
+Give a shortest dependency chain enabling Nori_8_12.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e8&quot;,
+    &quot;e4&quot;,
+    &quot;e2&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Nori_8_3&quot;,
+    &quot;Nori_8_6&quot;,
+    &quot;Nori_8_2&quot;,
+    &quot;Nori_8_12&quot;
+  ]
+}</pre></details><details><summary>validation_000012: e11, e7, e4</summary><p>p3 → p6 → p10 → p5 uses e11,e7,e4. The alternatives through p2 and p1 need four and five applications respectively.</p><p>p0 = Nori_12_0; p1 = Nori_12_1; p2 = Nori_12_2; p3 = Nori_12_3; p4 = Nori_12_4; p5 = Nori_12_5; p6 = Nori_12_6; p7 = Nori_12_7; p8 = Nori_12_8; p9 = Nori_12_9; p10 = Nori_12_10; p11 = Nori_12_11; p12 = Nori_12_12</p><h3>Formal statement and two proofs</h3><pre>theorem lf_validation_000012
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 : Prop)
+    (h_start : p3)
+    (h_e0 : p3 → p1)
+    (h_e1 : p4 → p5)
+    (h_e2 : p8 → p11)
+    (h_e3 : p12 → p4)
+    (h_e4 : p10 → p5)
+    (h_e5 : p7 → p9)
+    (h_e6 : p2 → p12)
+    (h_e7 : p6 → p10)
+    (h_e8 : p1 → p0)
+    (h_e9 : p0 → p7)
+    (h_e10 : p3 → p2)
+    (h_e11 : p3 → p6)
+    (h_e12 : p9 → p5)
+    : p5 :=
+  h_e4 (h_e7 (h_e11 (h_start)))
+theorem lf_validation_000012_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 : Prop)
+    (h_start : p3)
+    (h_e0 : p3 → p1)
+    (h_e1 : p4 → p5)
+    (h_e2 : p8 → p11)
+    (h_e3 : p12 → p4)
+    (h_e4 : p10 → p5)
+    (h_e5 : p7 → p9)
+    (h_e6 : p2 → p12)
+    (h_e7 : p6 → p10)
+    (h_e8 : p1 → p0)
+    (h_e9 : p0 → p7)
+    (h_e10 : p3 → p2)
+    (h_e11 : p3 → p6)
+    (h_e12 : p9 → p5)
+    : p5 :=
+  h_e12 (h_e5 (h_e9 (h_e8 (h_e0 (h_start)))))
+</pre><h3>Controlled language and expected answer</h3><pre>Task Nori_12_3 is enabled.
+Dependency e0: Enabling Nori_12_3 enables Nori_12_1.
+Dependency e1: Enabling Nori_12_4 enables Nori_12_5.
+Dependency e2: Enabling Nori_12_8 enables Nori_12_11.
+Dependency e3: Enabling Nori_12_12 enables Nori_12_4.
+Dependency e4: Enabling Nori_12_10 enables Nori_12_5.
+Dependency e5: Enabling Nori_12_7 enables Nori_12_9.
+Dependency e6: Enabling Nori_12_2 enables Nori_12_12.
+Dependency e7: Enabling Nori_12_6 enables Nori_12_10.
+Dependency e8: Enabling Nori_12_1 enables Nori_12_0.
+Dependency e9: Enabling Nori_12_0 enables Nori_12_7.
+Dependency e10: Enabling Nori_12_3 enables Nori_12_2.
+Dependency e11: Enabling Nori_12_3 enables Nori_12_6.
+Dependency e12: Enabling Nori_12_9 enables Nori_12_5.
+Give a shortest dependency chain enabling Nori_12_5.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e11&quot;,
+    &quot;e7&quot;,
+    &quot;e4&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Nori_12_3&quot;,
+    &quot;Nori_12_6&quot;,
+    &quot;Nori_12_10&quot;,
+    &quot;Nori_12_5&quot;
+  ]
+}</pre></details><details><summary>validation_000016: e3, e10, e9</summary><p>p7 → p2 → p3 → p14 uses e3,e10,e9. The alternatives through p1 and p11 need four and five applications respectively.</p><p>p0 = Nori_16_0; p1 = Nori_16_1; p2 = Nori_16_2; p3 = Nori_16_3; p4 = Nori_16_4; p5 = Nori_16_5; p6 = Nori_16_6; p7 = Nori_16_7; p8 = Nori_16_8; p9 = Nori_16_9; p10 = Nori_16_10; p11 = Nori_16_11; p12 = Nori_16_12; p13 = Nori_16_13; p14 = Nori_16_14</p><h3>Formal statement and two proofs</h3><pre>theorem lf_validation_000016
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 : Prop)
+    (h_start : p7)
+    (h_e0 : p7 → p11)
+    (h_e1 : p11 → p0)
+    (h_e2 : p13 → p14)
+    (h_e3 : p7 → p2)
+    (h_e4 : p1 → p4)
+    (h_e5 : p0 → p9)
+    (h_e6 : p7 → p1)
+    (h_e7 : p9 → p5)
+    (h_e8 : p4 → p13)
+    (h_e9 : p3 → p14)
+    (h_e10 : p2 → p3)
+    (h_e11 : p8 → p6)
+    (h_e12 : p10 → p12)
+    (h_e13 : p5 → p14)
+    : p14 :=
+  h_e9 (h_e10 (h_e3 (h_start)))
+theorem lf_validation_000016_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 : Prop)
+    (h_start : p7)
+    (h_e0 : p7 → p11)
+    (h_e1 : p11 → p0)
+    (h_e2 : p13 → p14)
+    (h_e3 : p7 → p2)
+    (h_e4 : p1 → p4)
+    (h_e5 : p0 → p9)
+    (h_e6 : p7 → p1)
+    (h_e7 : p9 → p5)
+    (h_e8 : p4 → p13)
+    (h_e9 : p3 → p14)
+    (h_e10 : p2 → p3)
+    (h_e11 : p8 → p6)
+    (h_e12 : p10 → p12)
+    (h_e13 : p5 → p14)
+    : p14 :=
+  h_e13 (h_e7 (h_e5 (h_e1 (h_e0 (h_start)))))
+</pre><h3>Controlled language and expected answer</h3><pre>Task Nori_16_7 is enabled.
+Dependency e0: Enabling Nori_16_7 enables Nori_16_11.
+Dependency e1: Enabling Nori_16_11 enables Nori_16_0.
+Dependency e2: Enabling Nori_16_13 enables Nori_16_14.
+Dependency e3: Enabling Nori_16_7 enables Nori_16_2.
+Dependency e4: Enabling Nori_16_1 enables Nori_16_4.
+Dependency e5: Enabling Nori_16_0 enables Nori_16_9.
+Dependency e6: Enabling Nori_16_7 enables Nori_16_1.
+Dependency e7: Enabling Nori_16_9 enables Nori_16_5.
+Dependency e8: Enabling Nori_16_4 enables Nori_16_13.
+Dependency e9: Enabling Nori_16_3 enables Nori_16_14.
+Dependency e10: Enabling Nori_16_2 enables Nori_16_3.
+Dependency e11: Enabling Nori_16_8 enables Nori_16_6.
+Dependency e12: Enabling Nori_16_10 enables Nori_16_12.
+Dependency e13: Enabling Nori_16_5 enables Nori_16_14.
+Give a shortest dependency chain enabling Nori_16_14.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e3&quot;,
+    &quot;e10&quot;,
+    &quot;e9&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Nori_16_7&quot;,
+    &quot;Nori_16_2&quot;,
+    &quot;Nori_16_3&quot;,
+    &quot;Nori_16_14&quot;
+  ]
+}</pre></details><details><summary>test_000000: e4, e2, e8, e6</summary><p>p1 → p11 → p10 → p8 → p0 uses e4,e2,e8,e6. Each diamond has a two-edge minimum; the supplied longer proof takes three then four edges.</p><p>p0 = Zuri_0_0; p1 = Zuri_0_1; p2 = Zuri_0_2; p3 = Zuri_0_3; p4 = Zuri_0_4; p5 = Zuri_0_5; p6 = Zuri_0_6; p7 = Zuri_0_7; p8 = Zuri_0_8; p9 = Zuri_0_9; p10 = Zuri_0_10; p11 = Zuri_0_11</p><h3>Formal statement and two proofs</h3><pre>theorem lf_test_000000
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 : Prop)
+    (h_start : p1)
+    (h_e0 : p1 → p9)
+    (h_e1 : p5 → p6)
+    (h_e2 : p11 → p10)
+    (h_e3 : p3 → p10)
+    (h_e4 : p1 → p11)
+    (h_e5 : p10 → p4)
+    (h_e6 : p8 → p0)
+    (h_e7 : p2 → p7)
+    (h_e8 : p10 → p8)
+    (h_e9 : p6 → p0)
+    (h_e10 : p9 → p3)
+    (h_e11 : p4 → p5)
+    : p0 :=
+  h_e6 (h_e8 (h_e2 (h_e4 (h_start))))
+theorem lf_test_000000_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 : Prop)
+    (h_start : p1)
+    (h_e0 : p1 → p9)
+    (h_e1 : p5 → p6)
+    (h_e2 : p11 → p10)
+    (h_e3 : p3 → p10)
+    (h_e4 : p1 → p11)
+    (h_e5 : p10 → p4)
+    (h_e6 : p8 → p0)
+    (h_e7 : p2 → p7)
+    (h_e8 : p10 → p8)
+    (h_e9 : p6 → p0)
+    (h_e10 : p9 → p3)
+    (h_e11 : p4 → p5)
+    : p0 :=
+  h_e9 (h_e1 (h_e11 (h_e5 (h_e3 (h_e10 (h_e0 (h_start)))))))
+</pre><h3>Controlled language and expected answer</h3><pre>Beacon Zuri_0_1 is lit.
+Link e0: A lit Zuri_0_1 lights Zuri_0_9.
+Link e1: A lit Zuri_0_5 lights Zuri_0_6.
+Link e2: A lit Zuri_0_11 lights Zuri_0_10.
+Link e3: A lit Zuri_0_3 lights Zuri_0_10.
+Link e4: A lit Zuri_0_1 lights Zuri_0_11.
+Link e5: A lit Zuri_0_10 lights Zuri_0_4.
+Link e6: A lit Zuri_0_8 lights Zuri_0_0.
+Link e7: A lit Zuri_0_2 lights Zuri_0_7.
+Link e8: A lit Zuri_0_10 lights Zuri_0_8.
+Link e9: A lit Zuri_0_6 lights Zuri_0_0.
+Link e10: A lit Zuri_0_9 lights Zuri_0_3.
+Link e11: A lit Zuri_0_4 lights Zuri_0_5.
+Give a shortest link chain lighting Zuri_0_0.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e4&quot;,
+    &quot;e2&quot;,
+    &quot;e8&quot;,
+    &quot;e6&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Zuri_0_1&quot;,
+    &quot;Zuri_0_11&quot;,
+    &quot;Zuri_0_10&quot;,
+    &quot;Zuri_0_8&quot;,
+    &quot;Zuri_0_0&quot;
+  ]
+}</pre></details><details><summary>test_000004: e5, e2, e10, e9</summary><p>p9 → p3 → p0 → p8 → p2 uses e5,e2,e10,e9. Both two-edge branches are necessary for the four-edge minimum; the supplied long route takes seven.</p><p>p0 = Zuri_4_0; p1 = Zuri_4_1; p2 = Zuri_4_2; p3 = Zuri_4_3; p4 = Zuri_4_4; p5 = Zuri_4_5; p6 = Zuri_4_6; p7 = Zuri_4_7; p8 = Zuri_4_8; p9 = Zuri_4_9; p10 = Zuri_4_10; p11 = Zuri_4_11; p12 = Zuri_4_12; p13 = Zuri_4_13</p><h3>Formal statement and two proofs</h3><pre>theorem lf_test_000004
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 : Prop)
+    (h_start : p9)
+    (h_e0 : p11 → p5)
+    (h_e1 : p13 → p4)
+    (h_e2 : p3 → p0)
+    (h_e3 : p7 → p6)
+    (h_e4 : p1 → p0)
+    (h_e5 : p9 → p3)
+    (h_e6 : p10 → p2)
+    (h_e7 : p9 → p12)
+    (h_e8 : p0 → p13)
+    (h_e9 : p8 → p2)
+    (h_e10 : p0 → p8)
+    (h_e11 : p12 → p1)
+    (h_e12 : p4 → p10)
+    : p2 :=
+  h_e9 (h_e10 (h_e2 (h_e5 (h_start))))
+theorem lf_test_000004_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 : Prop)
+    (h_start : p9)
+    (h_e0 : p11 → p5)
+    (h_e1 : p13 → p4)
+    (h_e2 : p3 → p0)
+    (h_e3 : p7 → p6)
+    (h_e4 : p1 → p0)
+    (h_e5 : p9 → p3)
+    (h_e6 : p10 → p2)
+    (h_e7 : p9 → p12)
+    (h_e8 : p0 → p13)
+    (h_e9 : p8 → p2)
+    (h_e10 : p0 → p8)
+    (h_e11 : p12 → p1)
+    (h_e12 : p4 → p10)
+    : p2 :=
+  h_e6 (h_e12 (h_e1 (h_e8 (h_e4 (h_e11 (h_e7 (h_start)))))))
+</pre><h3>Controlled language and expected answer</h3><pre>Beacon Zuri_4_9 is lit.
+Link e0: A lit Zuri_4_11 lights Zuri_4_5.
+Link e1: A lit Zuri_4_13 lights Zuri_4_4.
+Link e2: A lit Zuri_4_3 lights Zuri_4_0.
+Link e3: A lit Zuri_4_7 lights Zuri_4_6.
+Link e4: A lit Zuri_4_1 lights Zuri_4_0.
+Link e5: A lit Zuri_4_9 lights Zuri_4_3.
+Link e6: A lit Zuri_4_10 lights Zuri_4_2.
+Link e7: A lit Zuri_4_9 lights Zuri_4_12.
+Link e8: A lit Zuri_4_0 lights Zuri_4_13.
+Link e9: A lit Zuri_4_8 lights Zuri_4_2.
+Link e10: A lit Zuri_4_0 lights Zuri_4_8.
+Link e11: A lit Zuri_4_12 lights Zuri_4_1.
+Link e12: A lit Zuri_4_4 lights Zuri_4_10.
+Give a shortest link chain lighting Zuri_4_2.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e5&quot;,
+    &quot;e2&quot;,
+    &quot;e10&quot;,
+    &quot;e9&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Zuri_4_9&quot;,
+    &quot;Zuri_4_3&quot;,
+    &quot;Zuri_4_0&quot;,
+    &quot;Zuri_4_8&quot;,
+    &quot;Zuri_4_2&quot;
+  ]
+}</pre></details><details><summary>test_000008: e11, e1, e8, e9</summary><p>p2 → p3 → p11 → p10 → p7 uses e11,e1,e8,e9. The alternate proof reaches the same merge via p0,p6, then takes p4,p8,p1.</p><p>p0 = Zuri_8_0; p1 = Zuri_8_1; p2 = Zuri_8_2; p3 = Zuri_8_3; p4 = Zuri_8_4; p5 = Zuri_8_5; p6 = Zuri_8_6; p7 = Zuri_8_7; p8 = Zuri_8_8; p9 = Zuri_8_9; p10 = Zuri_8_10; p11 = Zuri_8_11</p><h3>Formal statement and two proofs</h3><pre>theorem lf_test_000008
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 : Prop)
+    (h_start : p2)
+    (h_e0 : p2 → p0)
+    (h_e1 : p3 → p11)
+    (h_e2 : p8 → p1)
+    (h_e3 : p4 → p8)
+    (h_e4 : p11 → p4)
+    (h_e5 : p6 → p11)
+    (h_e6 : p1 → p7)
+    (h_e7 : p5 → p9)
+    (h_e8 : p11 → p10)
+    (h_e9 : p10 → p7)
+    (h_e10 : p0 → p6)
+    (h_e11 : p2 → p3)
+    : p7 :=
+  h_e9 (h_e8 (h_e1 (h_e11 (h_start))))
+theorem lf_test_000008_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 : Prop)
+    (h_start : p2)
+    (h_e0 : p2 → p0)
+    (h_e1 : p3 → p11)
+    (h_e2 : p8 → p1)
+    (h_e3 : p4 → p8)
+    (h_e4 : p11 → p4)
+    (h_e5 : p6 → p11)
+    (h_e6 : p1 → p7)
+    (h_e7 : p5 → p9)
+    (h_e8 : p11 → p10)
+    (h_e9 : p10 → p7)
+    (h_e10 : p0 → p6)
+    (h_e11 : p2 → p3)
+    : p7 :=
+  h_e6 (h_e2 (h_e3 (h_e4 (h_e5 (h_e10 (h_e0 (h_start)))))))
+</pre><h3>Controlled language and expected answer</h3><pre>Beacon Zuri_8_2 is lit.
+Link e0: A lit Zuri_8_2 lights Zuri_8_0.
+Link e1: A lit Zuri_8_3 lights Zuri_8_11.
+Link e2: A lit Zuri_8_8 lights Zuri_8_1.
+Link e3: A lit Zuri_8_4 lights Zuri_8_8.
+Link e4: A lit Zuri_8_11 lights Zuri_8_4.
+Link e5: A lit Zuri_8_6 lights Zuri_8_11.
+Link e6: A lit Zuri_8_1 lights Zuri_8_7.
+Link e7: A lit Zuri_8_5 lights Zuri_8_9.
+Link e8: A lit Zuri_8_11 lights Zuri_8_10.
+Link e9: A lit Zuri_8_10 lights Zuri_8_7.
+Link e10: A lit Zuri_8_0 lights Zuri_8_6.
+Link e11: A lit Zuri_8_2 lights Zuri_8_3.
+Give a shortest link chain lighting Zuri_8_7.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e11&quot;,
+    &quot;e1&quot;,
+    &quot;e8&quot;,
+    &quot;e9&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Zuri_8_2&quot;,
+    &quot;Zuri_8_3&quot;,
+    &quot;Zuri_8_11&quot;,
+    &quot;Zuri_8_10&quot;,
+    &quot;Zuri_8_7&quot;
+  ]
+}</pre></details><details><summary>test_000012: e3, e4, e1, e8</summary><p>p3 → p2 → p11 → p4 → p6 uses e3,e4,e1,e8. The alternate proof reaches p11 via p7,p5, then takes p10,p0,p9.</p><p>p0 = Zuri_12_0; p1 = Zuri_12_1; p2 = Zuri_12_2; p3 = Zuri_12_3; p4 = Zuri_12_4; p5 = Zuri_12_5; p6 = Zuri_12_6; p7 = Zuri_12_7; p8 = Zuri_12_8; p9 = Zuri_12_9; p10 = Zuri_12_10; p11 = Zuri_12_11</p><h3>Formal statement and two proofs</h3><pre>theorem lf_test_000012
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 : Prop)
+    (h_start : p3)
+    (h_e0 : p1 → p8)
+    (h_e1 : p11 → p4)
+    (h_e2 : p7 → p5)
+    (h_e3 : p3 → p2)
+    (h_e4 : p2 → p11)
+    (h_e5 : p9 → p6)
+    (h_e6 : p11 → p10)
+    (h_e7 : p0 → p9)
+    (h_e8 : p4 → p6)
+    (h_e9 : p10 → p0)
+    (h_e10 : p5 → p11)
+    (h_e11 : p3 → p7)
+    : p6 :=
+  h_e8 (h_e1 (h_e4 (h_e3 (h_start))))
+theorem lf_test_000012_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 : Prop)
+    (h_start : p3)
+    (h_e0 : p1 → p8)
+    (h_e1 : p11 → p4)
+    (h_e2 : p7 → p5)
+    (h_e3 : p3 → p2)
+    (h_e4 : p2 → p11)
+    (h_e5 : p9 → p6)
+    (h_e6 : p11 → p10)
+    (h_e7 : p0 → p9)
+    (h_e8 : p4 → p6)
+    (h_e9 : p10 → p0)
+    (h_e10 : p5 → p11)
+    (h_e11 : p3 → p7)
+    : p6 :=
+  h_e5 (h_e7 (h_e9 (h_e6 (h_e10 (h_e2 (h_e11 (h_start)))))))
+</pre><h3>Controlled language and expected answer</h3><pre>Beacon Zuri_12_3 is lit.
+Link e0: A lit Zuri_12_1 lights Zuri_12_8.
+Link e1: A lit Zuri_12_11 lights Zuri_12_4.
+Link e2: A lit Zuri_12_7 lights Zuri_12_5.
+Link e3: A lit Zuri_12_3 lights Zuri_12_2.
+Link e4: A lit Zuri_12_2 lights Zuri_12_11.
+Link e5: A lit Zuri_12_9 lights Zuri_12_6.
+Link e6: A lit Zuri_12_11 lights Zuri_12_10.
+Link e7: A lit Zuri_12_0 lights Zuri_12_9.
+Link e8: A lit Zuri_12_4 lights Zuri_12_6.
+Link e9: A lit Zuri_12_10 lights Zuri_12_0.
+Link e10: A lit Zuri_12_5 lights Zuri_12_11.
+Link e11: A lit Zuri_12_3 lights Zuri_12_7.
+Give a shortest link chain lighting Zuri_12_6.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e3&quot;,
+    &quot;e4&quot;,
+    &quot;e1&quot;,
+    &quot;e8&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Zuri_12_3&quot;,
+    &quot;Zuri_12_2&quot;,
+    &quot;Zuri_12_11&quot;,
+    &quot;Zuri_12_4&quot;,
+    &quot;Zuri_12_6&quot;
+  ]
+}</pre></details><details><summary>test_000016: e2, e6, e11, e5</summary><p>p0 → p13 → p11 → p5 → p10 uses e2,e6,e11,e5. The alternate proof reaches p11 via p12,p8, then takes p3,p6,p7.</p><p>p0 = Zuri_16_0; p1 = Zuri_16_1; p2 = Zuri_16_2; p3 = Zuri_16_3; p4 = Zuri_16_4; p5 = Zuri_16_5; p6 = Zuri_16_6; p7 = Zuri_16_7; p8 = Zuri_16_8; p9 = Zuri_16_9; p10 = Zuri_16_10; p11 = Zuri_16_11; p12 = Zuri_16_12; p13 = Zuri_16_13</p><h3>Formal statement and two proofs</h3><pre>theorem lf_test_000016
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 : Prop)
+    (h_start : p0)
+    (h_e0 : p7 → p10)
+    (h_e1 : p6 → p7)
+    (h_e2 : p0 → p13)
+    (h_e3 : p9 → p1)
+    (h_e4 : p11 → p3)
+    (h_e5 : p5 → p10)
+    (h_e6 : p13 → p11)
+    (h_e7 : p2 → p4)
+    (h_e8 : p3 → p6)
+    (h_e9 : p0 → p12)
+    (h_e10 : p12 → p8)
+    (h_e11 : p11 → p5)
+    (h_e12 : p8 → p11)
+    : p10 :=
+  h_e5 (h_e11 (h_e6 (h_e2 (h_start))))
+theorem lf_test_000016_long
+    (p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 : Prop)
+    (h_start : p0)
+    (h_e0 : p7 → p10)
+    (h_e1 : p6 → p7)
+    (h_e2 : p0 → p13)
+    (h_e3 : p9 → p1)
+    (h_e4 : p11 → p3)
+    (h_e5 : p5 → p10)
+    (h_e6 : p13 → p11)
+    (h_e7 : p2 → p4)
+    (h_e8 : p3 → p6)
+    (h_e9 : p0 → p12)
+    (h_e10 : p12 → p8)
+    (h_e11 : p11 → p5)
+    (h_e12 : p8 → p11)
+    : p10 :=
+  h_e0 (h_e1 (h_e8 (h_e4 (h_e12 (h_e10 (h_e9 (h_start)))))))
+</pre><h3>Controlled language and expected answer</h3><pre>Beacon Zuri_16_0 is lit.
+Link e0: A lit Zuri_16_7 lights Zuri_16_10.
+Link e1: A lit Zuri_16_6 lights Zuri_16_7.
+Link e2: A lit Zuri_16_0 lights Zuri_16_13.
+Link e3: A lit Zuri_16_9 lights Zuri_16_1.
+Link e4: A lit Zuri_16_11 lights Zuri_16_3.
+Link e5: A lit Zuri_16_5 lights Zuri_16_10.
+Link e6: A lit Zuri_16_13 lights Zuri_16_11.
+Link e7: A lit Zuri_16_2 lights Zuri_16_4.
+Link e8: A lit Zuri_16_3 lights Zuri_16_6.
+Link e9: A lit Zuri_16_0 lights Zuri_16_12.
+Link e10: A lit Zuri_16_12 lights Zuri_16_8.
+Link e11: A lit Zuri_16_11 lights Zuri_16_5.
+Link e12: A lit Zuri_16_8 lights Zuri_16_11.
+Give a shortest link chain lighting Zuri_16_10.</pre><pre>{
+  &quot;reachable&quot;: true,
+  &quot;rule_chain&quot;: [
+    &quot;e2&quot;,
+    &quot;e6&quot;,
+    &quot;e11&quot;,
+    &quot;e5&quot;
+  ],
+  &quot;atom_chain&quot;: [
+    &quot;Zuri_16_0&quot;,
+    &quot;Zuri_16_13&quot;,
+    &quot;Zuri_16_11&quot;,
+    &quot;Zuri_16_5&quot;,
+    &quot;Zuri_16_10&quot;
+  ]
+}</pre></details></html>

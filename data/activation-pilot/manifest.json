@@ -1,0 +1,43 @@
+{
+  "status": "prepared",
+  "seed": 1729,
+  "inputs": {
+    "train": {
+      "source": "results/lf-002/checked/train.checked.jsonl",
+      "source_sha256": "1e09e7589018babfb34434946c173a59a8776d566d9eed31fdacc68c7cd51a79",
+      "count": 10,
+      "path": "data/activation-pilot/train.jsonl",
+      "sha256": "0a1bd3f26c8098ba1fedba54a7de395d8fa3de20557ab917ff0659b0f5d28f40",
+      "answers": {
+        "A": 8,
+        "B": 2
+      }
+    },
+    "val": {
+      "source": "results/lf-002/checked/validation.checked.jsonl",
+      "source_sha256": "d22096404d774c9d9b389a46532fccf7d65a51906bf5ba9b73c92f45e7ba6b94",
+      "count": 10,
+      "path": "data/activation-pilot/val.jsonl",
+      "sha256": "d7828e22646a8978151495d2b620e6d2322b3d6533c98bdee1457fc050b8d2c9",
+      "answers": {
+        "A": 5,
+        "B": 5
+      }
+    },
+    "test": {
+      "source": "results/lf-002/checked/test.checked.jsonl",
+      "source_sha256": "a9163a3652ce31c310ddbc482cabc8b4e2b543a167838e29471dd940f22de55d",
+      "count": 10,
+      "path": "data/activation-pilot/test.jsonl",
+      "sha256": "ca11d84ee9600c8cb7694030e05b7a51a23f0cec5a58669596b2d0c1f05153a8",
+      "answers": {
+        "A": 6,
+        "B": 4
+      }
+    }
+  },
+  "scope": "Pipeline pilot only; source graph grammars are few and topology/template shifts are confounded.",
+  "information_policy": "Collector source and target see identical proof-assisted prompts. Functional text baseline receives that exact donor prompt; ordinary recipient receives the question and rules without the certificate.",
+  "answer_policy": "Two equal-length candidate chains, one valid and one invalid. No trivial reachable/not-reachable label.",
+  "split_policy": "Entire graph families stay in their original split; no claim that renamed members within one family are independent structures."
+}

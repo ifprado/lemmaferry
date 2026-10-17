@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "splits": {
+    "train": {
+      "examples": 256,
+      "proofs": 512,
+      "lineages": 48,
+      "families": [
+        "transfer_parallel_routes"
+      ]
+    },
+    "validation": {
+      "examples": 64,
+      "proofs": 128,
+      "lineages": 31,
+      "families": [
+        "transfer_triple_routes"
+      ]
+    },
+    "test": {
+      "examples": 128,
+      "proofs": 256,
+      "lineages": 69,
+      "families": [
+        "transfer_chained_diamonds",
+        "transfer_cyclic_diamonds"
+      ]
+    }
+  },
+  "total_examples": 448,
+  "total_zero_axiom_audits": 896,
+  "lean_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "artifact_sha256": {
+    "data/transfer-v1/checked/train.checked.jsonl": "1090bef7b89a5482e08edadeb408781d6d5b77a3b2a158ec01cb9573f2aee718",
+    "data/transfer-v1/logs/train/batch_00000.log": "04ddcf7e669ceea75fc925ca85c1f4637861ea92a8d6b0d5186a67fd651336a7",
+    "data/transfer-v1/logs/train/batch_00001.log": "bdeda00786c0418edd46def25b529864a51c351f58752b0de07eba5c3049e471",
+    "data/transfer-v1/logs/train/batch_00002.log": "f6e9d307a7b00ba5845fb4cec86d44deacc8e2bd3d150080061d097b6a2c23f9",
+    "data/transfer-v1/logs/train/batch_00003.log": "6e05103c04d3da11285685f6676b14d7fa6cbf8c625d0d93d2f753f2554a43a7",
+    "data/transfer-v1/checked/validation.checked.jsonl": "1b167d6b804a8396828cc308998c734ccddc9a0dfaf8b3a0041aa81a44257cfc",
+    "data/transfer-v1/logs/validation/batch_00000.log": "9a9998562b9bf21d4fd0ddd881fca86a523012ae34fffcd3caa6a92ecb733b49",
+    "data/transfer-v1/checked/test.checked.jsonl": "f476379b48ae6bd1465f17be31452602478a78991908b60aae6bb0512cf77ed5",
+    "data/transfer-v1/logs/test/batch_00000.log": "b11aeec3753311b88e232b4de6c7502e5b145af6e1193b1b94a087a5bda2d7e1",
+    "data/transfer-v1/logs/test/batch_00001.log": "cd916f77a9103b62f107cab29295d92a13f9a1d8599a7b9e3dbaab889b6f9abb"
+  }
+}

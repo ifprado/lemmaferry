@@ -1,0 +1,2380 @@
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:7:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:9:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:10:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:11:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:12:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:13:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:14:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:15:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:16:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:18:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:19:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:20:5: warning: Variable name `h_e14` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e14
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000000' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:29:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:31:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:35:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:37:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:38:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:39:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:40:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:41:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:42:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:43:5: warning: Variable name `h_e14` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e14
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000000_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:52:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:53:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:55:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:57:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:59:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:60:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:61:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:62:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:63:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:64:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000001' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:75:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:77:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:78:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:79:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:80:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:82:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:83:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:84:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000001_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:94:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:95:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:96:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:98:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:99:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:100:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:101:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:103:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:104:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:105:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000002' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:115:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:116:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:117:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:118:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:122:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:123:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:125:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:127:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000002_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:136:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:137:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:138:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:140:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:141:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:142:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:144:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:145:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:147:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:148:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:149:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:150:5: warning: Variable name `h_e14` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e14
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000003' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:159:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:161:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:162:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:164:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:165:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:166:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:167:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:169:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:172:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:173:5: warning: Variable name `h_e14` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e14
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000003_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:183:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:184:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:185:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:186:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:187:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:188:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:189:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:190:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:191:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:194:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000004' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:203:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:204:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:209:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:210:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:212:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:213:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:214:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:215:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000004_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:224:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:225:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:226:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:228:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:229:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:230:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:231:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:232:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:233:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:234:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:235:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:237:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000005' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:250:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:251:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:252:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:253:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:254:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:256:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:257:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:258:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:259:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:261:5: warning: Variable name `h_e14` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e14
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000005_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:271:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:272:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:273:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:274:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:275:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:277:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:278:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:279:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:280:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:281:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000006' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:291:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:293:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:294:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:296:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:297:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:298:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:300:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:303:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000006_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:312:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:314:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:315:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:317:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:318:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:319:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:320:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:321:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:323:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:324:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:325:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000007' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:335:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:336:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:338:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:339:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:340:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:341:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:342:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:344:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:345:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000007_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:356:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:357:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:359:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:361:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:362:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:363:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:365:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:366:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:367:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:368:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000008' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:377:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:378:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:379:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:380:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:381:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:383:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:385:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:386:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000008_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:400:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:401:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:402:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:403:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:404:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:405:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:406:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:407:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:408:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:410:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000009' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:419:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:420:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:425:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:427:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:428:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:429:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:430:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:431:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000009_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:441:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:442:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:443:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:446:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:447:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:448:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:449:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:450:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:451:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:452:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000010' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:461:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:462:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:465:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:466:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:467:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:468:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:469:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:472:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000010_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:482:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:484:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:485:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:487:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:488:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:489:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:490:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:491:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:492:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:493:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000011' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:504:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:505:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:506:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:507:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:512:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:513:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:514:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:515:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000011_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:524:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:525:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:526:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:527:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:529:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:530:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:532:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:533:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:534:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:536:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000012' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:546:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:547:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:548:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:549:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:551:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:552:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:555:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:556:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000012_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:567:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:568:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:569:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:571:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:572:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:573:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:574:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:575:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:576:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:578:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000013' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:587:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:590:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:591:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:592:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:594:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:596:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:598:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:599:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000013_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:609:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:611:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:612:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:613:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:614:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:615:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:616:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:617:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:618:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:620:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:621:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:622:5: warning: Variable name `h_e14` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e14
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000014' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:631:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:633:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:634:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:635:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:636:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:637:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:638:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:639:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:640:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:642:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000014_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:654:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:655:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:658:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:660:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:661:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:662:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:663:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:664:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:665:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:666:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000015' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:675:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:677:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:678:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:680:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:681:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:684:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:686:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:687:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000015_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:696:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:697:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:698:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:700:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:701:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:702:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:703:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:704:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:707:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:708:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:709:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000016' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:720:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:721:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:722:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:724:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:726:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:727:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:728:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:729:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:730:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000016_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:742:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:743:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:744:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:745:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:746:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:747:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:748:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:749:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:750:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:752:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:753:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:754:5: warning: Variable name `h_e14` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e14
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000017' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:763:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:764:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:766:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:769:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:770:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:771:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:772:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:773:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:774:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:776:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000017_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:787:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:788:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:789:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:790:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:791:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:792:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:793:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:794:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:796:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:797:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:798:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000018' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:808:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:810:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:813:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:815:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:816:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:817:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:818:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:820:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:821:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000018_long' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:830:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:832:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:833:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:835:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:837:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:838:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:839:5: warning: Variable name `h_e9` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e9
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:840:5: warning: Variable name `h_e10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:841:5: warning: Variable name `h_e11` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e11
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:842:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:843:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:844:5: warning: Variable name `h_e14` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e14
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000019' does not depend on any axioms
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:854:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:856:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:857:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:858:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:859:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:860:5: warning: Variable name `h_e7` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e7
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:861:5: warning: Variable name `h_e8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:865:5: warning: Variable name `h_e12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:866:5: warning: Variable name `h_e13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry_lean_fqir3s9o/batch_00000.lean:867:5: warning: Variable name `h_e14` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e14
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_validation_000019_long' does not depend on any axioms

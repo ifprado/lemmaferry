@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-10-17T06:21:35.950692+00:00",
+  "status": "runtime_ready_no_weights_downloaded",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "memory_bytes": 25769803776,
+  "cpu": "Apple M5 Pro",
+  "torch": "2.14.1",
+  "transformers": "4.57.6",
+  "mps_available": true,
+  "cuda_available": false,
+  "dependency_lock_excludes_editable_project": true,
+  "models": {
+    "math": {
+      "model": "Qwen/Qwen2.5-Math-1.5B",
+      "revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "license": "Apache-2.0",
+      "license_url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B/blob/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2/LICENSE",
+      "config_url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B/blob/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2/config.json",
+      "hidden_size": 1536,
+      "num_hidden_layers": 28,
+      "max_position_embeddings": 4096
+    },
+    "general": {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "license": "Apache-2.0",
+      "license_url": "https://huggingface.co/Qwen/Qwen2.5-1.5B/blob/8faed761d45a263340a0528343f099c05c9a4323/LICENSE",
+      "config_url": "https://huggingface.co/Qwen/Qwen2.5-1.5B/blob/8faed761d45a263340a0528343f099c05c9a4323/config.json",
+      "hidden_size": 1536,
+      "num_hidden_layers": 28,
+      "max_position_embeddings": 131072
+    }
+  },
+  "sha256": {
+    "environment.lock.txt": "319dcc1f8e8dbecd675dfa70b356eed6f069704b59f1a6d18445cf07b36c61f5",
+    "general-LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "general-config.json": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77",
+    "math-LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "math-config.json": "81d1dc3c9d4797466a24bfc140776894d15ac4ccce58a0220462b2106f2f4831"
+  }
+}

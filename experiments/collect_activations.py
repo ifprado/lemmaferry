@@ -19,10 +19,21 @@ import platform
 import random
 import re
 import sys
+import time
 
 
 def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def peak_rss_bytes() -> int | None:
+    """Process peak resident memory; macOS reports bytes and Linux reports KiB."""
+    try:
+        import resource
+        value = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    except ImportError:
+        return None
+    return int(value if sys.platform == "darwin" else value * 1024)
 
 
 def load_splits(paths: dict[str, Path]) -> dict[str, list[dict[str, str]]]:
@@ -77,6 +88,7 @@ def parser() -> argparse.ArgumentParser:
 
 
 def main() -> None:
+    started = time.perf_counter()
     args = parser().parse_args()
     if not re.fullmatch(r"[0-9a-fA-F]{40}", args.revision):
         raise SystemExit("--revision must be an exact 40-character commit SHA, not 'main'.")
@@ -117,6 +129,7 @@ def main() -> None:
 
     common = dict(revision=args.revision, trust_remote_code=False,
                   local_files_only=args.local_files_only)
+    tokenizer_started = time.perf_counter()
     tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True, **common)
     if not tokenizer.is_fast:
         raise SystemExit("This collector requires a fast tokenizer to record its full fingerprint.")
@@ -152,6 +165,13 @@ def main() -> None:
         "use_safetensors": True, "device": device, "dtype": args.dtype,
         "max_length": args.max_length, "batch_size": args.batch_size,
         "deterministic_algorithms": "enabled_warn_only; not a cross-platform guarantee",
+        "collector_sha256": sha256(Path(__file__).read_bytes()),
+        "measurement": {
+            "tokenizer_and_tokenization_wall_seconds": time.perf_counter() - tokenizer_started,
+            "peak_process_rss_bytes": peak_rss_bytes(),
+            "peak_process_rss_method": "getrusage(RUSAGE_SELF).ru_maxrss; process lifetime",
+            "mps_peak_memory_api": "not_available; only sampled public allocator counters",
+        },
         "python": sys.version, "platform": platform.platform(),
         "packages": {name: importlib.metadata.version(name)
                      for name in ("numpy", "torch", "transformers", "huggingface-hub")},
@@ -161,23 +181,46 @@ def main() -> None:
     manifest_path = args.output / "manifest.json"
 
     def save_manifest() -> None:
+        manifest["measurement"].update(
+            total_wall_seconds=time.perf_counter() - started,
+            peak_process_rss_bytes=peak_rss_bytes(),
+        )
         manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
+
+    def sample_device_memory() -> None:
+        if device != "mps":
+            return
+        torch.mps.synchronize()
+        measurement = manifest["measurement"]
+        for label, value in (("allocated", torch.mps.current_allocated_memory()),
+                             ("driver_allocated", torch.mps.driver_allocated_memory())):
+            key = f"mps_sampled_max_{label}_bytes"
+            measurement[key] = max(measurement.get(key, 0), value)
+        measurement["mps_memory_sampling"] = "after model load and each completed batch; not a continuous peak"
 
     save_manifest()
     try:
+        model_started = time.perf_counter()
         model = AutoModel.from_pretrained(args.model, torch_dtype=getattr(torch, args.dtype),
                                           use_safetensors=True, **common)
         model.to(device)
         model.eval()
         model.requires_grad_(False)
+        sample_device_memory()
+        manifest["measurement"]["model_load_wall_seconds"] = time.perf_counter() - model_started
+        model_source = Path(sys.modules[type(model).__module__].__file__)
+        manifest["model_implementation"] = {"module": type(model).__module__,
+                                            "sha256": sha256(model_source.read_bytes())}
         if args.layer > model.config.num_hidden_layers:
             raise ValueError(f"Layer {args.layer} exceeds {model.config.num_hidden_layers}")
         if args.max_length > model.config.max_position_embeddings:
             raise ValueError("max-length exceeds this model's configured positional limit")
         manifest["config"] = model.config.to_dict()
         outputs_meta = {}
+        collection_started = time.perf_counter()
         with torch.inference_mode():
             for split, rows in splits.items():
+                split_started = time.perf_counter()
                 vectors = []
                 token_hashes = []
                 for start in range(0, len(rows), args.batch_size):
@@ -193,6 +236,7 @@ def main() -> None:
                     last = positions.masked_fill(mask == 0, -1).max(dim=1).values
                     selected = states[torch.arange(states.shape[0], device=device), last]
                     vectors.append(selected.float().cpu().numpy())
+                    sample_device_memory()
                     token_hashes.extend(sha256(json.dumps(ids).encode()) for ids in sequences)
                     del out, states, selected
                 values = np.concatenate(vectors, axis=0)
@@ -205,9 +249,18 @@ def main() -> None:
                                     token_sha256=np.asarray(token_hashes),
                                     lengths=np.asarray([len(x) for x in tokenized[split]]))
                 outputs_meta[split] = {"path": output.name, "shape": list(values.shape),
-                                       "sha256": sha256(output.read_bytes())}
+                                       "sha256": sha256(output.read_bytes()),
+                                       "collection_wall_seconds": time.perf_counter() - split_started,
+                                       "input_tokens": sum(len(x) for x in tokenized[split])}
                 manifest["outputs"] = outputs_meta
                 save_manifest()
+        collection_seconds = time.perf_counter() - collection_started
+        example_count = sum(len(rows) for rows in splits.values())
+        manifest["measurement"].update(
+            collection_wall_seconds=collection_seconds, collected_examples=example_count,
+            examples_per_second=example_count / collection_seconds,
+            input_tokens=sum(len(ids) for values in tokenized.values() for ids in values),
+        )
         manifest["status"] = "completed"
         save_manifest()
         print(f"Collected activations in {args.output}; tokenizer SHA: {tokenizer_sha}")

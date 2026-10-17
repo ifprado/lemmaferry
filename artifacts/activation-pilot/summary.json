@@ -1,0 +1,162 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-17T06:26:29.627418+00:00",
+  "scope": "30-prompt engineering pilot; no capability or transfer claim",
+  "collector_sha256": "4ff6aec2ca5837ced9c075c484087ecd13c9d2e4c38c2ba7bcfa18c99a96e6d9",
+  "preregistered_plan_sha256": "a54c8abf4e83fbeb926b805c4a1fc716a88ada61608fc64b16b565799a5858e6",
+  "runs": {
+    "cpu-smoke-source": {
+      "status": "completed",
+      "device": "cpu",
+      "examples": 3,
+      "measurement": {
+        "tokenizer_and_tokenization_wall_seconds": 0.4421086669899523,
+        "peak_process_rss_bytes": 7058128896,
+        "peak_process_rss_method": "getrusage(RUSAGE_SELF).ru_maxrss; process lifetime",
+        "mps_peak_memory_api": "not_available; only sampled public allocator counters",
+        "total_wall_seconds": 41.63201541698072,
+        "model_load_wall_seconds": 35.91834029200254,
+        "collection_wall_seconds": 4.201553582970519,
+        "collected_examples": 3,
+        "examples_per_second": 0.7140215971919096,
+        "input_tokens": 2011
+      },
+      "manifest": "artifacts/activation-pilot/cpu-smoke-source-manifest.json"
+    },
+    "cpu-smoke-target": {
+      "status": "completed",
+      "device": "cpu",
+      "examples": 3,
+      "measurement": {
+        "tokenizer_and_tokenization_wall_seconds": 0.44353729201247916,
+        "peak_process_rss_bytes": 8064942080,
+        "peak_process_rss_method": "getrusage(RUSAGE_SELF).ru_maxrss; process lifetime",
+        "mps_peak_memory_api": "not_available; only sampled public allocator counters",
+        "total_wall_seconds": 39.2187831250485,
+        "model_load_wall_seconds": 32.76951520901639,
+        "collection_wall_seconds": 4.525960999948438,
+        "collected_examples": 3,
+        "examples_per_second": 0.6628426537555621,
+        "input_tokens": 2011
+      },
+      "manifest": "artifacts/activation-pilot/cpu-smoke-target-manifest.json"
+    },
+    "source": {
+      "status": "completed",
+      "device": "mps",
+      "examples": 30,
+      "measurement": {
+        "tokenizer_and_tokenization_wall_seconds": 0.45782883296487853,
+        "peak_process_rss_bytes": 9694298112,
+        "peak_process_rss_method": "getrusage(RUSAGE_SELF).ru_maxrss; process lifetime",
+        "mps_peak_memory_api": "not_available; only sampled public allocator counters",
+        "total_wall_seconds": 17.583800667023752,
+        "mps_sampled_max_allocated_bytes": 6387222016,
+        "mps_sampled_max_driver_allocated_bytes": 6560612352,
+        "mps_memory_sampling": "after model load and each completed batch; not a continuous peak",
+        "model_load_wall_seconds": 5.303692000044975,
+        "collection_wall_seconds": 10.593551458034199,
+        "collected_examples": 30,
+        "examples_per_second": 2.8319114811348616,
+        "input_tokens": 20089
+      },
+      "manifest": "artifacts/activation-pilot/source-manifest.json"
+    },
+    "target": {
+      "status": "completed",
+      "device": "mps",
+      "examples": 30,
+      "measurement": {
+        "tokenizer_and_tokenization_wall_seconds": 0.4380524160224013,
+        "peak_process_rss_bytes": 9694445568,
+        "peak_process_rss_method": "getrusage(RUSAGE_SELF).ru_maxrss; process lifetime",
+        "mps_peak_memory_api": "not_available; only sampled public allocator counters",
+        "total_wall_seconds": 16.52431537496159,
+        "mps_sampled_max_allocated_bytes": 6387222016,
+        "mps_sampled_max_driver_allocated_bytes": 6560612352,
+        "mps_memory_sampling": "after model load and each completed batch; not a continuous peak",
+        "model_load_wall_seconds": 5.194417082995642,
+        "collection_wall_seconds": 9.665266041993164,
+        "collected_examples": 30,
+        "examples_per_second": 3.103898006496407,
+        "input_tokens": 20089
+      },
+      "manifest": "artifacts/activation-pilot/target-manifest.json"
+    }
+  },
+  "pair_checks": {
+    "train": {
+      "count": 10,
+      "matching_ids_families_tokens_lengths": true,
+      "shape_per_model": [
+        10,
+        1536
+      ]
+    },
+    "val": {
+      "count": 10,
+      "matching_ids_families_tokens_lengths": true,
+      "shape_per_model": [
+        10,
+        1536
+      ]
+    },
+    "test": {
+      "count": 10,
+      "matching_ids_families_tokens_lengths": true,
+      "shape_per_model": [
+        10,
+        1536
+      ]
+    }
+  },
+  "cpu_mps_numerical_comparison": {
+    "source/train": {
+      "max_absolute_difference": 7.2479248046875e-05,
+      "rmse": 1.4652405812745417e-05,
+      "relative_l2_error": 5.834257727899085e-06,
+      "note": "Descriptive cross-device comparison; no predeclared equality claim."
+    },
+    "target/train": {
+      "max_absolute_difference": 6.008148193359375e-05,
+      "rmse": 9.57438218429304e-06,
+      "relative_l2_error": 7.99990967864525e-06,
+      "note": "Descriptive cross-device comparison; no predeclared equality claim."
+    },
+    "source/val": {
+      "max_absolute_difference": 6.340444087982178e-05,
+      "rmse": 1.674033671746546e-05,
+      "relative_l2_error": 6.692286180319628e-06,
+      "note": "Descriptive cross-device comparison; no predeclared equality claim."
+    },
+    "target/val": {
+      "max_absolute_difference": 5.2928924560546875e-05,
+      "rmse": 9.900217389509797e-06,
+      "relative_l2_error": 8.173358348614313e-06,
+      "note": "Descriptive cross-device comparison; no predeclared equality claim."
+    },
+    "source/test": {
+      "max_absolute_difference": 9.918212890625e-05,
+      "rmse": 1.5740551080979496e-05,
+      "relative_l2_error": 6.260623288756815e-06,
+      "note": "Descriptive cross-device comparison; no predeclared equality claim."
+    },
+    "target/test": {
+      "max_absolute_difference": 4.208087921142578e-05,
+      "rmse": 9.920062630902741e-06,
+      "relative_l2_error": 8.194610925183614e-06,
+      "note": "Descriptive cross-device comparison; no predeclared equality claim."
+    }
+  },
+  "failed_attempts": [],
+  "expanded_runtime_estimate_seconds_per_model_at_pilot_rate": {
+    "source": 158.19703510664405,
+    "target": 144.33463956043124
+  },
+  "measurement_notes": [
+    "CPU smoke model-load time includes initial weight downloads. MPS load times use the completed local cache.",
+    "Collection times cover forward passes, synchronization, output transfer and archive/manifest writing.",
+    "Peak RSS is a process-lifetime resident-memory high-water mark. MPS counters are sampled after loading and each completed batch; they are not a continuous GPU-memory peak.",
+    "CPU/MPS differences are descriptive and were not used for model, layer or data selection."
+  ]
+}

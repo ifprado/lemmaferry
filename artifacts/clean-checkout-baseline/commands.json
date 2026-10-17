@@ -1,0 +1,128 @@
+[
+  {
+    "name": "tests",
+    "args": [
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/.venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y",
+    "exit_code": 0,
+    "wall_seconds": 1.326241916976869,
+    "log": "tests.log"
+  },
+  {
+    "name": "alignment-seed7",
+    "args": [
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/.venv/bin/python",
+      "experiments/toy_alignment.py",
+      "--seed",
+      "7",
+      "--output",
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/runs/clean-reproduction/alignment-seed7.json"
+    ],
+    "cwd": "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y",
+    "exit_code": 0,
+    "wall_seconds": 0.07300004200078547,
+    "log": "alignment-seed7.log"
+  },
+  {
+    "name": "alignment-seed19",
+    "args": [
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/.venv/bin/python",
+      "experiments/toy_alignment.py",
+      "--seed",
+      "19",
+      "--output",
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/runs/clean-reproduction/alignment-seed19.json"
+    ],
+    "cwd": "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y",
+    "exit_code": 0,
+    "wall_seconds": 0.07720775000052527,
+    "log": "alignment-seed19.log"
+  },
+  {
+    "name": "generate",
+    "args": [
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/.venv/bin/python",
+      "experiments/generate_logic.py",
+      "--count",
+      "20",
+      "--seed",
+      "7"
+    ],
+    "cwd": "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y",
+    "exit_code": 0,
+    "wall_seconds": 0.040264417009893805,
+    "log": "generate.log"
+  },
+  {
+    "name": "lean-version",
+    "args": [
+      "/Users/ianprado02/.elan/bin/lean",
+      "--version"
+    ],
+    "cwd": "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/lean",
+    "exit_code": 0,
+    "wall_seconds": 0.04016316699562594,
+    "log": "lean-version.log"
+  },
+  {
+    "name": "lean-train",
+    "args": [
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/.venv/bin/python",
+      "../experiments/check_lean.py",
+      "../data/generated/train.jsonl",
+      "--lean",
+      "/Users/ianprado02/.elan/bin/lean",
+      "--output",
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/runs/clean-reproduction/train.checked.jsonl",
+      "--log-dir",
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/runs/clean-reproduction/logs/train"
+    ],
+    "cwd": "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/lean",
+    "exit_code": 0,
+    "wall_seconds": 0.2423059589928016,
+    "log": "lean-train.log"
+  },
+  {
+    "name": "lean-validation",
+    "args": [
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/.venv/bin/python",
+      "../experiments/check_lean.py",
+      "../data/generated/validation.jsonl",
+      "--lean",
+      "/Users/ianprado02/.elan/bin/lean",
+      "--output",
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/runs/clean-reproduction/validation.checked.jsonl",
+      "--log-dir",
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/runs/clean-reproduction/logs/validation"
+    ],
+    "cwd": "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/lean",
+    "exit_code": 0,
+    "wall_seconds": 0.24200741696404293,
+    "log": "lean-validation.log"
+  },
+  {
+    "name": "lean-test",
+    "args": [
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/.venv/bin/python",
+      "../experiments/check_lean.py",
+      "../data/generated/test.jsonl",
+      "--lean",
+      "/Users/ianprado02/.elan/bin/lean",
+      "--output",
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/runs/clean-reproduction/test.checked.jsonl",
+      "--log-dir",
+      "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/runs/clean-reproduction/logs/test"
+    ],
+    "cwd": "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/lean",
+    "exit_code": 0,
+    "wall_seconds": 0.2421787910279818,
+    "log": "lean-test.log"
+  }
+]

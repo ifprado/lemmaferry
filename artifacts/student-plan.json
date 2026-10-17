@@ -1,0 +1,59 @@
+{
+  "registered_at_utc": "2026-10-17T06:29:28.325555+00:00",
+  "question": "Does correct verified synthetic answer supervision improve a small causal student on held-out graph structures versus a label-permuted equal-budget control?",
+  "inputs": "data/transfer-v1/anchors",
+  "input_policy": "ordinary_text only, without donor certificate; no source model or translator present during training or evaluation",
+  "architecture": {
+    "initialization": "random, same initial weights for matched arms",
+    "layers": 2,
+    "hidden": 128,
+    "heads": 4,
+    "feedforward": 512,
+    "context": 1024,
+    "dropout": 0,
+    "tokenizer": "word/digit/punctuation vocabulary fitted on train only"
+  },
+  "training": {
+    "seeds": [
+      1729,
+      1730,
+      1731
+    ],
+    "epochs": 3,
+    "batch_size": 8,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "gradient_clip": 1.0,
+    "loss": "full-vocabulary cross-entropy on one next answer token per example",
+    "selection": "fixed final epoch, no test/validation hyperparameter selection"
+  },
+  "arms": [
+    "verified correct answer labels",
+    "same prompts with permuted train labels"
+  ],
+  "budget_matching": [
+    "initial weights",
+    "batch order",
+    "optimizer updates",
+    "supervised token count",
+    "input and padding token count",
+    "architecture"
+  ],
+  "metrics": [
+    "two-choice accuracy",
+    "answer-token negative log likelihood",
+    "per-family accuracy",
+    "untrained starting model"
+  ],
+  "limitations": [
+    "This is a small from-scratch synthetic next-token student, not general-language-model distillation.",
+    "The label-shuffle control isolates correct supervision; it does not establish an advantage over equally useful ordinary text.",
+    "No adaptive generation will run from this experiment alone."
+  ],
+  "runner_sha256": "b2a128fad2d2a1b30d5170014e4cc68bcbec8aa69f2f31d4718718c3e62aee6d"
+}

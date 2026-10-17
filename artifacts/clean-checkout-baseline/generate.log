@@ -1,0 +1,34 @@
+{
+  "seed": 7,
+  "lean_status": "not_run",
+  "splits": {
+    "train": {
+      "examples": 20,
+      "family": "parallel_routes",
+      "template": "stations",
+      "jsonl": "data/generated/train.jsonl",
+      "lean_source": "data/generated/train.lean",
+      "python_certificates": "verified",
+      "render_roundtrip": "verified"
+    },
+    "validation": {
+      "examples": 20,
+      "family": "triple_routes",
+      "template": "tasks",
+      "jsonl": "data/generated/validation.jsonl",
+      "lean_source": "data/generated/validation.lean",
+      "python_certificates": "verified",
+      "render_roundtrip": "verified"
+    },
+    "test": {
+      "examples": 20,
+      "family": "chained_diamonds",
+      "template": "beacons",
+      "jsonl": "data/generated/test.jsonl",
+      "lean_source": "data/generated/test.lean",
+      "python_certificates": "verified",
+      "render_roundtrip": "verified"
+    }
+  }
+}
+Lean proof terms were exported but were NOT compiled by this command.

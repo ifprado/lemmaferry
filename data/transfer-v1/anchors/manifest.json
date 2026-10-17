@@ -1,0 +1,43 @@
+{
+  "status": "prepared",
+  "seed": 1729,
+  "inputs": {
+    "train": {
+      "source": "data/transfer-v1/checked/train.checked.jsonl",
+      "source_sha256": "1090bef7b89a5482e08edadeb408781d6d5b77a3b2a158ec01cb9573f2aee718",
+      "count": 256,
+      "path": "data/transfer-v1/anchors/train.jsonl",
+      "sha256": "d1fcc429e691f7ce235c7e1169020a9fbaa78092d0175b113735be2dfb819a6e",
+      "answers": {
+        "A": 121,
+        "B": 135
+      }
+    },
+    "val": {
+      "source": "data/transfer-v1/checked/validation.checked.jsonl",
+      "source_sha256": "1b167d6b804a8396828cc308998c734ccddc9a0dfaf8b3a0041aa81a44257cfc",
+      "count": 64,
+      "path": "data/transfer-v1/anchors/val.jsonl",
+      "sha256": "db1643545f3421b7248c19c6fc7049d244c865563dc7278c21d918eae69eb7c6",
+      "answers": {
+        "A": 32,
+        "B": 32
+      }
+    },
+    "test": {
+      "source": "data/transfer-v1/checked/test.checked.jsonl",
+      "source_sha256": "f476379b48ae6bd1465f17be31452602478a78991908b60aae6bb0512cf77ed5",
+      "count": 128,
+      "path": "data/transfer-v1/anchors/test.jsonl",
+      "sha256": "af14ac8cd8eecbcf550c5b00c14222fa8a8e71242f03deb38041052eb4fec5e8",
+      "answers": {
+        "A": 63,
+        "B": 65
+      }
+    }
+  },
+  "scope": "Constructive graph proof assistance. Pilot data have topology/template confounds; expanded data share one renderer and hold out two test grammars. Neither supports broad model claims.",
+  "information_policy": "Collector source and target see identical proof-assisted prompts. Functional text baseline receives that exact donor prompt; ordinary recipient receives the question and rules without the certificate.",
+  "answer_policy": "Two equal-length candidate chains, one valid and one invalid. No trivial reachable/not-reachable label.",
+  "split_policy": "Entire graph families stay in their original split; no claim that renamed members within one family are independent structures."
+}

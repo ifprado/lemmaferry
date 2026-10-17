@@ -1,0 +1,33 @@
+{
+  "seed": 1729,
+  "generator": "transfer_implication_graph_v1",
+  "splits": {
+    "train": {
+      "count": 256,
+      "lineages": 48,
+      "families": [
+        "transfer_parallel_routes"
+      ],
+      "sha256": "56c75328bcd72da47db6381e9df69df87b81e34c9d3d3aeab19bb5494a843ed7"
+    },
+    "validation": {
+      "count": 64,
+      "lineages": 31,
+      "families": [
+        "transfer_triple_routes"
+      ],
+      "sha256": "9208976a2d0b802527e484ea18e613c52873aba3cd83a79899c62779139263bb"
+    },
+    "test": {
+      "count": 128,
+      "lineages": 69,
+      "families": [
+        "transfer_chained_diamonds",
+        "transfer_cyclic_diamonds"
+      ],
+      "sha256": "3e2ba749c2edd315ded211bca947476904b9ecdb9e7d32c0299eabf02d95cd87"
+    }
+  },
+  "lean_status": "not_run",
+  "note": "Compiler evidence belongs in separately checked records."
+}

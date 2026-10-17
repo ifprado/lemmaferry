@@ -1,0 +1,2 @@
+-e git+https://github.com/ifprado/lemmaferry.git@98cb9eca826de6d955f1a0250140f5505e5ffe35#egg=lemmaferry
+numpy==2.5.4

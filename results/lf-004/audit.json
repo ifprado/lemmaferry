@@ -1,0 +1,427 @@
+{
+  "issue": "LF-004",
+  "created_at_utc": "2026-10-17T06:21:02.415945+00:00",
+  "reviewer": "Codex primary agent; manual reading of all 15 statement/proof/rendering/answer tuples",
+  "selection": "Fixed indices 0,4,8,12,16 from each checked split; selected before inspection.",
+  "source_sha256": {
+    "results/lf-002/checked/train.checked.jsonl": "1e09e7589018babfb34434946c173a59a8776d566d9eed31fdacc68c7cd51a79",
+    "results/lf-002/checked/validation.checked.jsonl": "d22096404d774c9d9b389a46532fccf7d65a51906bf5ba9b73c92f45e7ba6b94",
+    "results/lf-002/checked/test.checked.jsonl": "a9163a3652ce31c310ddbc482cabc8b4e2b543a167838e29471dd940f22de55d"
+  },
+  "agent_review": "passed",
+  "human_review": "pending",
+  "total_examples": 15,
+  "records": [
+    {
+      "id": "train_000000",
+      "split": "train",
+      "source_index": 0,
+      "manual_observation": "p4 \u2192 p5 \u2192 p0 uses e2,e5; the alternate p4 \u2192 p6 \u2192 p7 \u2192 p3 \u2192 p0 uses e0,e4,e6,e3. The e1 component has no premise.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e2",
+          "e5"
+        ],
+        "atom_chain": [
+          "Vela_0_4",
+          "Vela_0_5",
+          "Vela_0_0"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "train_000004",
+      "split": "train",
+      "source_index": 4,
+      "manual_observation": "p5 \u2192 p4 \u2192 p7 uses e5,e4; the alternate p5 \u2192 p2 \u2192 p3 \u2192 p1 \u2192 p7 uses e0,e2,e3,e6. The p6 \u2192 p0 distractor is unreachable.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e5",
+          "e4"
+        ],
+        "atom_chain": [
+          "Vela_4_5",
+          "Vela_4_4",
+          "Vela_4_7"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "train_000008",
+      "split": "train",
+      "source_index": 8,
+      "manual_observation": "p0 \u2192 p4 \u2192 p6 uses e7,e4; the alternate p0 \u2192 p1 \u2192 p7 \u2192 p3 \u2192 p6 uses e1,e0,e3,e6. Neither distractor has an enabled antecedent.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e7",
+          "e4"
+        ],
+        "atom_chain": [
+          "Vela_8_0",
+          "Vela_8_4",
+          "Vela_8_6"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "train_000012",
+      "split": "train",
+      "source_index": 12,
+      "manual_observation": "p10 \u2192 p6 \u2192 p7 uses e6,e8; the alternate p10 \u2192 p5 \u2192 p3 \u2192 p11 \u2192 p7 uses e1,e5,e3,e2. Other components are disconnected.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e6",
+          "e8"
+        ],
+        "atom_chain": [
+          "Vela_12_10",
+          "Vela_12_6",
+          "Vela_12_7"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "train_000016",
+      "split": "train",
+      "source_index": 16,
+      "manual_observation": "p7 \u2192 p6 \u2192 p8 uses e6,e2; the alternate p7 \u2192 p3 \u2192 p2 \u2192 p5 \u2192 p8 uses e7,e0,e4,e3. The two distractor components cannot start.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e6",
+          "e2"
+        ],
+        "atom_chain": [
+          "Vela_16_7",
+          "Vela_16_6",
+          "Vela_16_8"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "validation_000000",
+      "split": "validation",
+      "source_index": 0,
+      "manual_observation": "p6 \u2192 p5 \u2192 p2 \u2192 p1 uses e11,e0,e2. The other complete routes have four and five applications; the supplied long proof follows the five-edge route.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e11",
+          "e0",
+          "e2"
+        ],
+        "atom_chain": [
+          "Nori_0_6",
+          "Nori_0_5",
+          "Nori_0_2",
+          "Nori_0_1"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "validation_000004",
+      "split": "validation",
+      "source_index": 4,
+      "manual_observation": "p4 \u2192 p10 \u2192 p1 \u2192 p12 uses e11,e0,e10. The four-edge route passes p5,p6,p9; the five-edge proof passes p0,p8,p2,p7.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e11",
+          "e0",
+          "e10"
+        ],
+        "atom_chain": [
+          "Nori_4_4",
+          "Nori_4_10",
+          "Nori_4_1",
+          "Nori_4_12"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "validation_000008",
+      "split": "validation",
+      "source_index": 8,
+      "manual_observation": "p3 \u2192 p6 \u2192 p2 \u2192 p12 uses e8,e4,e2. The alternatives through p0 and p8 need four and five applications respectively.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e8",
+          "e4",
+          "e2"
+        ],
+        "atom_chain": [
+          "Nori_8_3",
+          "Nori_8_6",
+          "Nori_8_2",
+          "Nori_8_12"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "validation_000012",
+      "split": "validation",
+      "source_index": 12,
+      "manual_observation": "p3 \u2192 p6 \u2192 p10 \u2192 p5 uses e11,e7,e4. The alternatives through p2 and p1 need four and five applications respectively.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e11",
+          "e7",
+          "e4"
+        ],
+        "atom_chain": [
+          "Nori_12_3",
+          "Nori_12_6",
+          "Nori_12_10",
+          "Nori_12_5"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "validation_000016",
+      "split": "validation",
+      "source_index": 16,
+      "manual_observation": "p7 \u2192 p2 \u2192 p3 \u2192 p14 uses e3,e10,e9. The alternatives through p1 and p11 need four and five applications respectively.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e3",
+          "e10",
+          "e9"
+        ],
+        "atom_chain": [
+          "Nori_16_7",
+          "Nori_16_2",
+          "Nori_16_3",
+          "Nori_16_14"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "test_000000",
+      "split": "test",
+      "source_index": 0,
+      "manual_observation": "p1 \u2192 p11 \u2192 p10 \u2192 p8 \u2192 p0 uses e4,e2,e8,e6. Each diamond has a two-edge minimum; the supplied longer proof takes three then four edges.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e4",
+          "e2",
+          "e8",
+          "e6"
+        ],
+        "atom_chain": [
+          "Zuri_0_1",
+          "Zuri_0_11",
+          "Zuri_0_10",
+          "Zuri_0_8",
+          "Zuri_0_0"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "test_000004",
+      "split": "test",
+      "source_index": 4,
+      "manual_observation": "p9 \u2192 p3 \u2192 p0 \u2192 p8 \u2192 p2 uses e5,e2,e10,e9. Both two-edge branches are necessary for the four-edge minimum; the supplied long route takes seven.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e5",
+          "e2",
+          "e10",
+          "e9"
+        ],
+        "atom_chain": [
+          "Zuri_4_9",
+          "Zuri_4_3",
+          "Zuri_4_0",
+          "Zuri_4_8",
+          "Zuri_4_2"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "test_000008",
+      "split": "test",
+      "source_index": 8,
+      "manual_observation": "p2 \u2192 p3 \u2192 p11 \u2192 p10 \u2192 p7 uses e11,e1,e8,e9. The alternate proof reaches the same merge via p0,p6, then takes p4,p8,p1.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e11",
+          "e1",
+          "e8",
+          "e9"
+        ],
+        "atom_chain": [
+          "Zuri_8_2",
+          "Zuri_8_3",
+          "Zuri_8_11",
+          "Zuri_8_10",
+          "Zuri_8_7"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "test_000012",
+      "split": "test",
+      "source_index": 12,
+      "manual_observation": "p3 \u2192 p2 \u2192 p11 \u2192 p4 \u2192 p6 uses e3,e4,e1,e8. The alternate proof reaches p11 via p7,p5, then takes p10,p0,p9.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e3",
+          "e4",
+          "e1",
+          "e8"
+        ],
+        "atom_chain": [
+          "Zuri_12_3",
+          "Zuri_12_2",
+          "Zuri_12_11",
+          "Zuri_12_4",
+          "Zuri_12_6"
+        ]
+      },
+      "human_review_status": "pending"
+    },
+    {
+      "id": "test_000016",
+      "split": "test",
+      "source_index": 16,
+      "manual_observation": "p0 \u2192 p13 \u2192 p11 \u2192 p5 \u2192 p10 uses e2,e6,e11,e5. The alternate proof reaches p11 via p12,p8, then takes p3,p6,p7.",
+      "statement_and_rendering_agree": true,
+      "short_and_long_proofs_agree": true,
+      "expected_shortest_answer_agrees": true,
+      "directionality": "Each rule is a one-way implication; no converse or external causal claim is assumed.",
+      "python_certificate_recheck": "passed",
+      "lean_status": "verified",
+      "answer": {
+        "reachable": true,
+        "rule_chain": [
+          "e2",
+          "e6",
+          "e11",
+          "e5"
+        ],
+        "atom_chain": [
+          "Zuri_16_0",
+          "Zuri_16_13",
+          "Zuri_16_11",
+          "Zuri_16_5",
+          "Zuri_16_10"
+        ]
+      },
+      "human_review_status": "pending"
+    }
+  ],
+  "limitations": [
+    "Agent review is recorded separately from human review.",
+    "Only three graph grammars and three rendering templates are covered.",
+    "All goals are reachable; binary reachability would be trivial.",
+    "The shortest-path claim concerns graph edge applications rather than global Lean proof optimality."
+  ]
+}

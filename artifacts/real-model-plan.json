@@ -1,0 +1,99 @@
+{
+  "registered_at_utc": "2026-10-17T06:22:08.854251+00:00",
+  "question": "Can a learned affine bridge convey a supplied verified mathematical proof to a general model more usefully than the exact same proof supplied as text?",
+  "scope": "Proof-assisted one-token choice in constructive implication graphs. An engineering and exploratory reasoning experiment, not equal-information pretraining skill transfer.",
+  "models": {
+    "source": {
+      "id": "Qwen/Qwen2.5-Math-1.5B",
+      "revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2"
+    },
+    "recipient": {
+      "id": "Qwen/Qwen2.5-1.5B",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+    }
+  },
+  "pilot": {
+    "directory": "data/activation-pilot",
+    "counts": {
+      "train": 10,
+      "val": 10,
+      "test": 10
+    },
+    "purpose": "Pipeline checks only; no capability conclusion from these30prompts."
+  },
+  "expanded": {
+    "counts": {
+      "train": 256,
+      "val": 64,
+      "test": 128
+    },
+    "seed": 1729,
+    "train_grammar": "parallel disjoint routes, varying path lengths",
+    "val_grammar": "three disjoint routes, varying path lengths",
+    "test_grammars": [
+      "two chained diamonds",
+      "two chained diamonds with a directed cycle"
+    ],
+    "structural_grouping": "All renamings of the same rooted route-length/cycle/distractor signature stay within one split. Full topology grammars held out; only2testgrammars, so family-level uncertainty is weak."
+  },
+  "interface": {
+    "layer_index": 14,
+    "boundary": "hidden_states[14], after decoder layer13 for a28-layer Qwen2 model; verify installed implementation before hooking",
+    "position": "last_nonpadding_token",
+    "dtype": "float32",
+    "device": "MPS after a3-example CPU float32 smoke run",
+    "batch_size": 1,
+    "max_length": 2048,
+    "input_format": "literal text, no chat template, no special tokens"
+  },
+  "fit": {
+    "formula": "target_row=source_row@coef.T+intercept",
+    "alphas": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "selection": "Lowest validation normalized RMSE, ties smalleralpha. Fixedlayer14, no test-based choice. Train-only scaling and no valrefit.",
+    "seed": 1729
+  },
+  "functional": {
+    "labels": [
+      "A",
+      "B"
+    ],
+    "label_check": "Require exactly one continuation token per label and stable promptprefix tokenization.",
+    "primary_metrics": [
+      "two-choice accuracy",
+      "answer-token full-vocabulary negative log likelihood"
+    ],
+    "controls": [
+      "ordinary recipient",
+      "source with same supplied proof",
+      "recipient with identical donor proof text",
+      "self-patch recipient",
+      "oracle recipient state from text-assisted prompt",
+      "translated donor",
+      "shuffled training-pair map",
+      "shuffled donor rows",
+      "zero donor",
+      "recipient training mean"
+    ],
+    "self_patch_tolerance": {
+      "absolute": 0.0001,
+      "relative": 0.0001
+    },
+    "selection": "Fixed test set, no intervention mixing/layer tuning on test."
+  },
+  "budget": {
+    "paid_compute": 0,
+    "model_loading": "Sequential, one checkpoint per process; local24GiBAppleM5Pro.",
+    "student": "Fixed small student versus equal token/step budget control, after functional experiment. No iterative generation before measurable fixed-data value."
+  },
+  "limitations": [
+    "The source receives a verified certificate; this is explicit assistance, not knowledge acquired by the recipient.",
+    "Choice candidates have equal length, one invalid; all original goals are reachable.",
+    "Expanded data still synthetic and restricted; report failures and weak family-level power."
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "status": "passed",
+  "reviewer": "delegated cousin agent",
+  "count": 30,
+  "checks": [
+    {
+      "id": "train_000000",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "train_000001",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "train_000002",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "train_000003",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "train_000004",
+      "answer": "B",
+      "choices_validity": {
+        "A": false,
+        "B": true
+      }
+    },
+    {
+      "id": "train_000005",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "train_000006",
+      "answer": "B",
+      "choices_validity": {
+        "A": false,
+        "B": true
+      }
+    },
+    {
+      "id": "train_000007",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "train_000008",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "train_000009",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "validation_000000",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "validation_000001",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "validation_000002",
+      "answer": "B",
+      "choices_validity": {
+        "A": false,
+        "B": true
+      }
+    },
+    {
+      "id": "validation_000003",
+      "answer": "B",
+      "choices_validity": {
+        "A": false,
+        "B": true
+      }
+    },
+    {
+      "id": "validation_000004",
+      "answer": "B",
+      "choices_validity": {
+        "A": false,
+        "B": true
+      }
+    },
+    {
+      "id": "validation_000005",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "validation_000006",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "validation_000007",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "validation_000008",
+      "answer": "B",
+      "choices_validity": {
+        "A": false,
+        "B": true
+      }
+    },
+    {
+      "id": "validation_000009",
+      "answer": "B",
+      "choices_validity": {
+        "A": false,
+        "B": true
+      }
+    },
+    {
+      "id": "test_000000",
+      "answer": "B",
+      "choices_validity": {
+        "A": false,
+        "B": true
+      }
+    },
+    {
+      "id": "test_000001",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "test_000002",
+      "answer": "B",
+      "choices_validity": {
+        "A": false,
+        "B": true
+      }
+    },
+    {
+      "id": "test_000003",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "test_000004",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "test_000005",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "test_000006",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    },
+    {
+      "id": "test_000007",
+      "answer": "B",
+      "choices_validity": {
+        "A": false,
+        "B": true
+      }
+    },
+    {
+      "id": "test_000008",
+      "answer": "B",
+      "choices_validity": {
+        "A": false,
+        "B": true
+      }
+    },
+    {
+      "id": "test_000009",
+      "answer": "A",
+      "choices_validity": {
+        "A": true,
+        "B": false
+      }
+    }
+  ],
+  "manually_inspected": "train_000000: p4\u2192p5\u2192p0 via e2,e5 supports A; reverse chain starts with unavailable p5. Full Lean declaration and symbol-to-label mapping agree with rendered rules.",
+  "scope": "The donor sees a supplied certificate. The text baseline matches it exactly; the ordinary recipient prompt omits it."
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-17T06:21:17.089638+00:00",
+  "repository": "https://github.com/ifprado/lemmaferry.git",
+  "revision": "98cb9eca826de6d955f1a0250140f5505e5ffe35",
+  "checkout": "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y",
+  "fresh_virtual_environment": true,
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "unit_tests": 23,
+  "alignment_comparisons": {
+    "7": "All JSON fields agree; numeric tolerance rel=1e-10, abs=1e-12.",
+    "19": "All JSON fields agree; numeric tolerance rel=1e-10, abs=1e-12."
+  },
+  "lean": {
+    "examples": 60,
+    "proofs": 120,
+    "zero_axiom_audits": 120,
+    "generated_inputs_byte_identical_to_frozen_LF002": true,
+    "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)"
+  },
+  "tracked_worktree_unchanged": true,
+  "artifact_note": "Raw checked-record log paths refer to the clean-clone directory; the same retained logs are copied under this artifact directory."
+}

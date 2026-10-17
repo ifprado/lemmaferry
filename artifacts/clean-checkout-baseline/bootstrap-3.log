@@ -1,0 +1,21 @@
+Obtaining file:///private/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Collecting numpy<3,>=1.26 (from lemmaferry==0.1.0)
+  Using cached numpy-2.5.4-cp314-cp314-macosx_14_0_arm64.whl.metadata (6.6 kB)
+Using cached numpy-2.5.4-cp314-cp314-macosx_14_0_arm64.whl (5.5 MB)
+Building wheels for collected packages: lemmaferry
+  Building editable for lemmaferry (pyproject.toml): started
+  Building editable for lemmaferry (pyproject.toml): finished with status 'done'
+  Created wheel for lemmaferry: filename=lemmaferry-0.1.0-0.editable-py3-none-any.whl size=9443 sha256=fb2b205f5fd857f046d563e2dec0a285411e023a0295ffbf43c0cac43d26786a
+  Stored in directory: /private/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/pip-ephem-wheel-cache-owwazeey/wheels/f5/3b/56/70fb2d110b4de588d1f661104722e561a20b54f994ed6591b4
+Successfully built lemmaferry
+Installing collected packages: numpy, lemmaferry
+
+Successfully installed lemmaferry-0.1.0 numpy-2.5.4

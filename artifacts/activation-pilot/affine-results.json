@@ -1,0 +1,571 @@
+{
+  "counts": {
+    "test": 10,
+    "train": 10,
+    "val": 10
+  },
+  "experiment": "same_input_frozen_activation_affine_alignment",
+  "map": {
+    "formula": "target_row = source_row @ coef.T + intercept",
+    "path": "translator.npz",
+    "sha256": "53bd0e5b04028db318b5c836ba38f0b001ac337e3e7712025f90978bcca2122e"
+  },
+  "normalization": "Per-coordinate target standard deviation fitted on training rows only; constant columns use 1.",
+  "retrieval": "Raw cosine retrieval within each reported test candidate pool; ties select first row.",
+  "scope": "Geometric alignment only. No activation intervention, capability transfer, or LLM training performed.",
+  "seed": 1729,
+  "selected_alpha": 1.0,
+  "selection": "Lowest validation normalized RMSE; ties favor smaller alpha. No train-plus-validation refit.",
+  "source": {
+    "directory": "runs/activation-pilot/source",
+    "manifest": {
+      "batch_size": 1,
+      "collector_sha256": "4ff6aec2ca5837ced9c075c484087ecd13c9d2e4c38c2ba7bcfa18c99a96e6d9",
+      "config": {
+        "_name_or_path": "Qwen/Qwen2.5-Math-1.5B",
+        "add_cross_attention": false,
+        "architectures": [
+          "Qwen2ForCausalLM"
+        ],
+        "attention_dropout": 0.0,
+        "bad_words_ids": null,
+        "begin_suppress_tokens": null,
+        "bos_token_id": 151643,
+        "chunk_size_feed_forward": 0,
+        "cross_attention_hidden_size": null,
+        "decoder_start_token_id": null,
+        "diversity_penalty": 0.0,
+        "do_sample": false,
+        "dtype": "float32",
+        "early_stopping": false,
+        "encoder_no_repeat_ngram_size": 0,
+        "eos_token_id": 151643,
+        "exponential_decay_length_penalty": null,
+        "finetuning_task": null,
+        "forced_bos_token_id": null,
+        "forced_eos_token_id": null,
+        "hidden_act": "silu",
+        "hidden_size": 1536,
+        "id2label": {
+          "0": "LABEL_0",
+          "1": "LABEL_1"
+        },
+        "initializer_range": 0.02,
+        "intermediate_size": 8960,
+        "is_decoder": false,
+        "is_encoder_decoder": false,
+        "label2id": {
+          "LABEL_0": 0,
+          "LABEL_1": 1
+        },
+        "layer_types": [
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention"
+        ],
+        "length_penalty": 1.0,
+        "max_length": 20,
+        "max_position_embeddings": 4096,
+        "max_window_layers": 21,
+        "min_length": 0,
+        "model_type": "qwen2",
+        "no_repeat_ngram_size": 0,
+        "num_attention_heads": 12,
+        "num_beam_groups": 1,
+        "num_beams": 1,
+        "num_hidden_layers": 28,
+        "num_key_value_heads": 2,
+        "num_return_sequences": 1,
+        "output_attentions": false,
+        "output_hidden_states": false,
+        "output_scores": false,
+        "pad_token_id": null,
+        "prefix": null,
+        "problem_type": null,
+        "pruned_heads": {},
+        "remove_invalid_values": false,
+        "repetition_penalty": 1.0,
+        "return_dict": true,
+        "return_dict_in_generate": false,
+        "rms_norm_eps": 1e-06,
+        "rope_scaling": null,
+        "rope_theta": 10000,
+        "sep_token_id": null,
+        "sliding_window": null,
+        "suppress_tokens": null,
+        "task_specific_params": null,
+        "temperature": 1.0,
+        "tf_legacy_loss": false,
+        "tie_encoder_decoder": false,
+        "tie_word_embeddings": true,
+        "tokenizer_class": null,
+        "top_k": 50,
+        "top_p": 1.0,
+        "torchscript": false,
+        "transformers_version": "4.57.6",
+        "typical_p": 1.0,
+        "use_bfloat16": false,
+        "use_cache": true,
+        "use_mrope": false,
+        "use_sliding_window": false,
+        "vocab_size": 151936
+      },
+      "created_utc": "2026-10-17T06:25:26.032808+00:00",
+      "deterministic_algorithms": "enabled_warn_only; not a cross-platform guarantee",
+      "device": "mps",
+      "dtype": "float32",
+      "eval_mode": true,
+      "inference_mode": true,
+      "input_format": "literal_text_no_chat_template_no_special_tokens",
+      "inputs": {
+        "test": {
+          "count": 10,
+          "path": "data/activation-pilot/test.jsonl",
+          "sha256": "ca11d84ee9600c8cb7694030e05b7a51a23f0cec5a58669596b2d0c1f05153a8"
+        },
+        "train": {
+          "count": 10,
+          "path": "data/activation-pilot/train.jsonl",
+          "sha256": "0a1bd3f26c8098ba1fedba54a7de395d8fa3de20557ab917ff0659b0f5d28f40"
+        },
+        "val": {
+          "count": 10,
+          "path": "data/activation-pilot/val.jsonl",
+          "sha256": "d7828e22646a8978151495d2b620e6d2322b3d6533c98bdee1457fc050b8d2c9"
+        }
+      },
+      "layer_index": 14,
+      "max_length": 2048,
+      "measurement": {
+        "collected_examples": 30,
+        "collection_wall_seconds": 10.593551458034199,
+        "examples_per_second": 2.8319114811348616,
+        "input_tokens": 20089,
+        "model_load_wall_seconds": 5.303692000044975,
+        "mps_memory_sampling": "after model load and each completed batch; not a continuous peak",
+        "mps_peak_memory_api": "not_available; only sampled public allocator counters",
+        "mps_sampled_max_allocated_bytes": 6387222016,
+        "mps_sampled_max_driver_allocated_bytes": 6560612352,
+        "peak_process_rss_bytes": 9694298112,
+        "peak_process_rss_method": "getrusage(RUSAGE_SELF).ru_maxrss; process lifetime",
+        "tokenizer_and_tokenization_wall_seconds": 0.45782883296487853,
+        "total_wall_seconds": 17.583800667023752
+      },
+      "model": "Qwen/Qwen2.5-Math-1.5B",
+      "model_implementation": {
+        "module": "transformers.models.qwen2.modeling_qwen2",
+        "sha256": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb"
+      },
+      "outputs": {
+        "test": {
+          "collection_wall_seconds": 3.645027874968946,
+          "input_tokens": 7447,
+          "path": "test.npz",
+          "sha256": "e184ed97d5787ad149ded090f17580dab97dccfcaf2dba0a030c44d2c4b610fc",
+          "shape": [
+            10,
+            1536
+          ]
+        },
+        "train": {
+          "collection_wall_seconds": 3.053981625009328,
+          "input_tokens": 4906,
+          "path": "train.npz",
+          "sha256": "0e5f0b487595b2f0aa40b251e235742e684c1169dfb2db51bd9f891d5f2a3581",
+          "shape": [
+            10,
+            1536
+          ]
+        },
+        "val": {
+          "collection_wall_seconds": 3.8935680410359055,
+          "input_tokens": 7736,
+          "path": "val.npz",
+          "sha256": "e54bcebff5a94d5ac5e5b7923bd0f15906a5905eb2f58aaebbbcb4df85b605fb",
+          "shape": [
+            10,
+            1536
+          ]
+        }
+      },
+      "packages": {
+        "huggingface-hub": "0.36.2",
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "transformers": "4.57.6"
+      },
+      "padding_side": "right",
+      "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+      "pooling": "none",
+      "position": "last_nonpadding_token",
+      "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+      "revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "seed": 1729,
+      "status": "completed",
+      "tokenizer_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "tokenizer_sha256": "f884026e05f6dfffe68b72d580b588006d98b3bc0a128bb1ac425c76f7fc438c",
+      "trust_remote_code": false,
+      "use_safetensors": true
+    },
+    "manifest_sha256": "c9f46b03c544b100f18e3137ca0bfdaf19f6ea61eb322de2e136f6cfbff00d33"
+  },
+  "source_dim": 1536,
+  "status": "completed",
+  "target": {
+    "directory": "runs/activation-pilot/target",
+    "manifest": {
+      "batch_size": 1,
+      "collector_sha256": "4ff6aec2ca5837ced9c075c484087ecd13c9d2e4c38c2ba7bcfa18c99a96e6d9",
+      "config": {
+        "_name_or_path": "Qwen/Qwen2.5-1.5B",
+        "add_cross_attention": false,
+        "architectures": [
+          "Qwen2ForCausalLM"
+        ],
+        "attention_dropout": 0.0,
+        "bad_words_ids": null,
+        "begin_suppress_tokens": null,
+        "bos_token_id": 151643,
+        "chunk_size_feed_forward": 0,
+        "cross_attention_hidden_size": null,
+        "decoder_start_token_id": null,
+        "diversity_penalty": 0.0,
+        "do_sample": false,
+        "dtype": "float32",
+        "early_stopping": false,
+        "encoder_no_repeat_ngram_size": 0,
+        "eos_token_id": 151643,
+        "exponential_decay_length_penalty": null,
+        "finetuning_task": null,
+        "forced_bos_token_id": null,
+        "forced_eos_token_id": null,
+        "hidden_act": "silu",
+        "hidden_size": 1536,
+        "id2label": {
+          "0": "LABEL_0",
+          "1": "LABEL_1"
+        },
+        "initializer_range": 0.02,
+        "intermediate_size": 8960,
+        "is_decoder": false,
+        "is_encoder_decoder": false,
+        "label2id": {
+          "LABEL_0": 0,
+          "LABEL_1": 1
+        },
+        "layer_types": [
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention"
+        ],
+        "length_penalty": 1.0,
+        "max_length": 20,
+        "max_position_embeddings": 131072,
+        "max_window_layers": 28,
+        "min_length": 0,
+        "model_type": "qwen2",
+        "no_repeat_ngram_size": 0,
+        "num_attention_heads": 12,
+        "num_beam_groups": 1,
+        "num_beams": 1,
+        "num_hidden_layers": 28,
+        "num_key_value_heads": 2,
+        "num_return_sequences": 1,
+        "output_attentions": false,
+        "output_hidden_states": false,
+        "output_scores": false,
+        "pad_token_id": null,
+        "prefix": null,
+        "problem_type": null,
+        "pruned_heads": {},
+        "remove_invalid_values": false,
+        "repetition_penalty": 1.0,
+        "return_dict": true,
+        "return_dict_in_generate": false,
+        "rms_norm_eps": 1e-06,
+        "rope_scaling": null,
+        "rope_theta": 1000000.0,
+        "sep_token_id": null,
+        "sliding_window": null,
+        "suppress_tokens": null,
+        "task_specific_params": null,
+        "temperature": 1.0,
+        "tf_legacy_loss": false,
+        "tie_encoder_decoder": false,
+        "tie_word_embeddings": true,
+        "tokenizer_class": null,
+        "top_k": 50,
+        "top_p": 1.0,
+        "torchscript": false,
+        "transformers_version": "4.57.6",
+        "typical_p": 1.0,
+        "use_bfloat16": false,
+        "use_cache": true,
+        "use_mrope": false,
+        "use_sliding_window": false,
+        "vocab_size": 151936
+      },
+      "created_utc": "2026-10-17T06:25:49.420344+00:00",
+      "deterministic_algorithms": "enabled_warn_only; not a cross-platform guarantee",
+      "device": "mps",
+      "dtype": "float32",
+      "eval_mode": true,
+      "inference_mode": true,
+      "input_format": "literal_text_no_chat_template_no_special_tokens",
+      "inputs": {
+        "test": {
+          "count": 10,
+          "path": "data/activation-pilot/test.jsonl",
+          "sha256": "ca11d84ee9600c8cb7694030e05b7a51a23f0cec5a58669596b2d0c1f05153a8"
+        },
+        "train": {
+          "count": 10,
+          "path": "data/activation-pilot/train.jsonl",
+          "sha256": "0a1bd3f26c8098ba1fedba54a7de395d8fa3de20557ab917ff0659b0f5d28f40"
+        },
+        "val": {
+          "count": 10,
+          "path": "data/activation-pilot/val.jsonl",
+          "sha256": "d7828e22646a8978151495d2b620e6d2322b3d6533c98bdee1457fc050b8d2c9"
+        }
+      },
+      "layer_index": 14,
+      "max_length": 2048,
+      "measurement": {
+        "collected_examples": 30,
+        "collection_wall_seconds": 9.665266041993164,
+        "examples_per_second": 3.103898006496407,
+        "input_tokens": 20089,
+        "model_load_wall_seconds": 5.194417082995642,
+        "mps_memory_sampling": "after model load and each completed batch; not a continuous peak",
+        "mps_peak_memory_api": "not_available; only sampled public allocator counters",
+        "mps_sampled_max_allocated_bytes": 6387222016,
+        "mps_sampled_max_driver_allocated_bytes": 6560612352,
+        "peak_process_rss_bytes": 9694445568,
+        "peak_process_rss_method": "getrusage(RUSAGE_SELF).ru_maxrss; process lifetime",
+        "tokenizer_and_tokenization_wall_seconds": 0.4380524160224013,
+        "total_wall_seconds": 16.52431537496159
+      },
+      "model": "Qwen/Qwen2.5-1.5B",
+      "model_implementation": {
+        "module": "transformers.models.qwen2.modeling_qwen2",
+        "sha256": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb"
+      },
+      "outputs": {
+        "test": {
+          "collection_wall_seconds": 3.4626900420407765,
+          "input_tokens": 7447,
+          "path": "test.npz",
+          "sha256": "670fd904cf6a956753a38668bd8b76e3e1afcfacfd3edc0669ee6e5dfc7c7f14",
+          "shape": [
+            10,
+            1536
+          ]
+        },
+        "train": {
+          "collection_wall_seconds": 2.549508667027112,
+          "input_tokens": 4906,
+          "path": "train.npz",
+          "sha256": "abe64f369ef4581ed6d21729f0d17cada87b275fc350f81ac64b35ed613b9400",
+          "shape": [
+            10,
+            1536
+          ]
+        },
+        "val": {
+          "collection_wall_seconds": 3.6522284590173513,
+          "input_tokens": 7736,
+          "path": "val.npz",
+          "sha256": "dddb6bb82cb4d688342d5579da86ccbed30a56b7288604ad0d14f28bf1357718",
+          "shape": [
+            10,
+            1536
+          ]
+        }
+      },
+      "packages": {
+        "huggingface-hub": "0.36.2",
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "transformers": "4.57.6"
+      },
+      "padding_side": "right",
+      "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+      "pooling": "none",
+      "position": "last_nonpadding_token",
+      "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "seed": 1729,
+      "status": "completed",
+      "tokenizer_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "tokenizer_sha256": "f884026e05f6dfffe68b72d580b588006d98b3bc0a128bb1ac425c76f7fc438c",
+      "trust_remote_code": false,
+      "use_safetensors": true
+    },
+    "manifest_sha256": "c45630f85fa6e74c44b1c1c2c2a3161e9b36b4b1ecfea29ef7775c64ee8b9d5e"
+  },
+  "target_dim": 1536,
+  "test_metrics": {
+    "paired_affine": {
+      "cosine_retrieval_top1_accuracy": 0.1,
+      "mean_matched_cosine_similarity": 0.9942440544919915,
+      "mse": 0.01663078354888243,
+      "mse_divided_by_training_mean_baseline_mse": 1.1196909227087082,
+      "normalized_rmse": 6.036652614665679,
+      "retrieval_candidate_count": 10,
+      "retrieval_chance_accuracy": 0.1,
+      "rmse": 0.12896039527266667
+    },
+    "raw_identity": {
+      "cosine_retrieval_top1_accuracy": 0.1,
+      "mean_matched_cosine_similarity": 0.6778144836425781,
+      "mse": 3.6520283222198486,
+      "mse_divided_by_training_mean_baseline_mse": 245.87794975778297,
+      "normalized_rmse": 86.30291290112613,
+      "retrieval_candidate_count": 10,
+      "retrieval_chance_accuracy": 0.1,
+      "rmse": 1.9110281185031017
+    },
+    "shuffled_training_pairs": {
+      "cosine_retrieval_top1_accuracy": 0.1,
+      "mean_matched_cosine_similarity": 0.993749880505631,
+      "mse": 0.018043031763202575,
+      "mse_divided_by_training_mean_baseline_mse": 1.214772522534599,
+      "normalized_rmse": 6.286286570553315,
+      "retrieval_candidate_count": 10,
+      "retrieval_chance_accuracy": 0.1,
+      "rmse": 0.13432435283001581
+    },
+    "training_mean": {
+      "cosine_retrieval_top1_accuracy": 0.1,
+      "mean_matched_cosine_similarity": 0.9948580861091614,
+      "mse": 0.01485301274806261,
+      "mse_divided_by_training_mean_baseline_mse": 1.0,
+      "normalized_rmse": 5.883176047416537,
+      "retrieval_candidate_count": 10,
+      "retrieval_chance_accuracy": 0.1,
+      "rmse": 0.12187293620616386
+    }
+  },
+  "test_metrics_by_family": {
+    "chained_diamonds": {
+      "paired_affine": {
+        "cosine_retrieval_top1_accuracy": 0.1,
+        "mean_matched_cosine_similarity": 0.9942440544919915,
+        "mse": 0.01663078354888243,
+        "mse_divided_by_training_mean_baseline_mse": 1.1196909227087082,
+        "normalized_rmse": 6.036652614665679,
+        "retrieval_candidate_count": 10,
+        "retrieval_chance_accuracy": 0.1,
+        "rmse": 0.12896039527266667
+      },
+      "raw_identity": {
+        "cosine_retrieval_top1_accuracy": 0.1,
+        "mean_matched_cosine_similarity": 0.6778144836425781,
+        "mse": 3.6520283222198486,
+        "mse_divided_by_training_mean_baseline_mse": 245.87794975778297,
+        "normalized_rmse": 86.30291290112613,
+        "retrieval_candidate_count": 10,
+        "retrieval_chance_accuracy": 0.1,
+        "rmse": 1.9110281185031017
+      },
+      "shuffled_training_pairs": {
+        "cosine_retrieval_top1_accuracy": 0.1,
+        "mean_matched_cosine_similarity": 0.993749880505631,
+        "mse": 0.018043031763202575,
+        "mse_divided_by_training_mean_baseline_mse": 1.214772522534599,
+        "normalized_rmse": 6.286286570553315,
+        "retrieval_candidate_count": 10,
+        "retrieval_chance_accuracy": 0.1,
+        "rmse": 0.13432435283001581
+      },
+      "training_mean": {
+        "cosine_retrieval_top1_accuracy": 0.1,
+        "mean_matched_cosine_similarity": 0.9948580861091614,
+        "mse": 0.01485301274806261,
+        "mse_divided_by_training_mean_baseline_mse": 1.0,
+        "normalized_rmse": 5.883176047416537,
+        "retrieval_candidate_count": 10,
+        "retrieval_chance_accuracy": 0.1,
+        "rmse": 0.12187293620616386
+      }
+    }
+  },
+  "validation_scores": [
+    {
+      "alpha": 0.0001,
+      "normalized_rmse": 5.45072447813918,
+      "rmse": 0.11441588790222189
+    },
+    {
+      "alpha": 0.001,
+      "normalized_rmse": 5.450722674716513,
+      "rmse": 0.11441584954792555
+    },
+    {
+      "alpha": 0.01,
+      "normalized_rmse": 5.450704643314772,
+      "rmse": 0.11441546605688685
+    },
+    {
+      "alpha": 0.1,
+      "normalized_rmse": 5.450524615645857,
+      "rmse": 0.11441163639785114
+    },
+    {
+      "alpha": 1.0,
+      "normalized_rmse": 5.448752208672943,
+      "rmse": 0.11437385213860418
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "counts": {
+    "verified": 20,
+    "not_run": 0,
+    "error": 0
+  },
+  "output": "/var/folders/qf/_f8ggs0j79x76h_y8n1wt8780000gn/T/lemmaferry-clean-checkout-lazxag5y/runs/clean-reproduction/test.checked.jsonl"
+}

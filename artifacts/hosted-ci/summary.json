@@ -1,0 +1,114 @@
+{
+  "status": "passed",
+  "inspected_utc": "2026-10-17T06:24:54.876173+00:00",
+  "run_id": 39009649778,
+  "url": "https://github.com/ifprado/lemmaferry/actions/runs/39009649778",
+  "revision": "3e6d3704d98473b4d28d76e628aaa3df905772b8",
+  "python": {
+    "3.10": {
+      "tests_passed": 28,
+      "python": "Python 3.10.22",
+      "tests_log": "runs/hosted-ci/python-check-results-3.10/tests.log",
+      "environment": "runs/hosted-ci/python-check-results-3.10/environment.txt"
+    },
+    "3.12": {
+      "tests_passed": 28,
+      "python": "Python 3.12.15",
+      "tests_log": "runs/hosted-ci/python-check-results-3.12/tests.log",
+      "environment": "runs/hosted-ci/python-check-results-3.12/environment.txt"
+    }
+  },
+  "lean": {
+    "actual_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+    "examples_per_split": 20,
+    "examples_total": 60,
+    "proofs_total": 120,
+    "recognized_zero_axiom_audits": 120,
+    "evidence_path": "runs/hosted-ci/lean-check-results/results/ci-lean/evidence.json"
+  },
+  "evidence_hashes_verified": [
+    {
+      "path": "experiments/check_lean.py",
+      "origin": "exact committed source",
+      "sha256": "fb83b270fa537135c826aad56238f2d575342acf882654e7938a9237b8bcfd5d"
+    },
+    {
+      "path": "experiments/generate_logic.py",
+      "origin": "exact committed source",
+      "sha256": "f81d9cdec129dc986efaa71ec6be5d5d0756b77809c45da20c4ee6d19c40f3db"
+    },
+    {
+      "path": "experiments/verify_lean_evidence.py",
+      "origin": "exact committed source",
+      "sha256": "a2dbfcfed0cb350e51399d6f36f030205c76e0d3a61c04a01fcd5c562cfa832b"
+    },
+    {
+      "path": "lean/lake-manifest.json",
+      "origin": "downloaded artifact",
+      "sha256": "4a6c1a2f625989a361c4fdb224896600fca6a5a4435e77cd30e348e769cc43e8"
+    },
+    {
+      "path": "results/ci-lean/logs/test/batch_00000.log",
+      "origin": "downloaded artifact",
+      "sha256": "5d047d6fb6d585312b3f2e39da52812f0f24a1acbef4ae341af19b8fc1bda039"
+    },
+    {
+      "path": "results/ci-lean/logs/train/batch_00000.log",
+      "origin": "downloaded artifact",
+      "sha256": "2c4351d019da9978e58d5c18aac19cdf467c72d53fb7ef7ffcf0397813df231f"
+    },
+    {
+      "path": "results/ci-lean/logs/validation/batch_00000.log",
+      "origin": "downloaded artifact",
+      "sha256": "f84bfb72ab9a745e3fb2652a3b97f55ce14f68e2c46ace8f42d7b5ce7bbc0dd4"
+    },
+    {
+      "path": "src/lemmaferry/logic.py",
+      "origin": "exact committed source",
+      "sha256": "1309175d2186679e11916c1d7000af8be2b3c7fa31c29dedb55c1dd49eda7eb7"
+    },
+    {
+      "path": "data/generated/test.jsonl",
+      "origin": "downloaded artifact",
+      "sha256": "6f6def79d28ce455aceb93d476f5d64a182524e89c8b6761c670191a29d9655f"
+    },
+    {
+      "path": "data/generated/train.jsonl",
+      "origin": "downloaded artifact",
+      "sha256": "2299ed957f147a0a31a6ebdfe6d5adc344c9a95f716bf5d41d071a15ab9f3924"
+    },
+    {
+      "path": "data/generated/validation.jsonl",
+      "origin": "downloaded artifact",
+      "sha256": "173ab8a6f1ca059cd0dfd7e351b0dfd195d6acf36729f748af41c4e934e5de22"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "origin": "downloaded artifact",
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "results/ci-lean/lean-version.txt",
+      "origin": "downloaded artifact",
+      "sha256": "eb22144228dd41cd51a0c84af4f976cd0cef473102dcf99b60be756b11f2b95a"
+    },
+    {
+      "path": "results/ci-lean/test.checked.jsonl",
+      "origin": "downloaded artifact",
+      "sha256": "574e1d2e03f69a4beb87ba5a1527742786685e5acecaf62f12c1db718667f455"
+    },
+    {
+      "path": "results/ci-lean/train.checked.jsonl",
+      "origin": "downloaded artifact",
+      "sha256": "c15dbd4c9eeb77d167c2055cc8e0d8d781560985bf18f1dcfce1a9a6818873c9"
+    },
+    {
+      "path": "results/ci-lean/validation.checked.jsonl",
+      "origin": "downloaded artifact",
+      "sha256": "30b33eeec6f895d593c67abf2829334d5e572b33bd9e254ed87636e7c11cef50"
+    }
+  ],
+  "download_directory": "runs/hosted-ci",
+  "workflow_log": "runs/hosted-ci/workflow.log",
+  "artifact_download_note": "Full outputs are local ignored run artifacts; this summary retains their source, hashes, and inspected outcomes."
+}

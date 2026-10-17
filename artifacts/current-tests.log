@@ -1,0 +1,39 @@
+test_candidate_labels_and_text_control_preserve_information (test_activation_tasks.ChoiceTaskTests.test_candidate_labels_and_text_control_preserve_information) ... ok
+test_unchecked_record_is_rejected (test_activation_tasks.ChoiceTaskTests.test_unchecked_record_is_rejected) ... ok
+test_correct_anchors_beat_wrong_anchors_and_mean (test_alignment.AlignmentTests.test_correct_anchors_beat_wrong_anchors_and_mean) ... ok
+test_invalid_arrays_and_unfitted_prediction_fail_clearly (test_alignment.AlignmentTests.test_invalid_arrays_and_unfitted_prediction_fail_clearly) ... ok
+test_known_affine_map_recovers_heldout_different_dimensions (test_alignment.AlignmentTests.test_known_affine_map_recovers_heldout_different_dimensions) ... ok
+test_orthogonal_procrustes_recovers_rigid_map (test_alignment.AlignmentTests.test_orthogonal_procrustes_recovers_rigid_map) ... ok
+test_test_distribution_never_changes_training_preprocessing (test_alignment.AlignmentTests.test_test_distribution_never_changes_training_preprocessing) ... ok
+test_unpaired_geometry_and_cycles_can_hide_wrong_semantics (test_alignment.AlignmentTests.test_unpaired_geometry_and_cycles_can_hide_wrong_semantics) ... ok
+test_end_to_end_selects_on_validation_and_saves_raw_affine_map (test_fit_activations.FitActivationTests.test_end_to_end_selects_on_validation_and_saves_raw_affine_map) ... ok
+test_rejects_family_leakage (test_fit_activations.FitActivationTests.test_rejects_family_leakage) ... ok
+test_rejects_partial_or_malformed_manifest (test_fit_activations.FitActivationTests.test_rejects_partial_or_malformed_manifest) ... ok
+test_rejects_row_reordering_input_mismatch_and_archive_corruption (test_fit_activations.FitActivationTests.test_rejects_row_reordering_input_mismatch_and_archive_corruption) ... ok
+test_rejects_token_mismatch_even_when_ids_match (test_fit_activations.FitActivationTests.test_rejects_token_mismatch_even_when_ids_match) ... ok
+test_patch_changes_prediction_and_does_not_mutate_shared_cache (test_intervention.InterventionTests.test_patch_changes_prediction_and_does_not_mutate_shared_cache) ... ok
+test_self_patch_full_and_cached_reproduce_logits_at_exact_boundary (test_intervention.InterventionTests.test_self_patch_full_and_cached_reproduce_logits_at_exact_boundary) ... ok
+test_checked_payload_must_equal_input (test_lean_evidence.LeanEvidenceTests.test_checked_payload_must_equal_input) ... ok
+test_complete_fixture_has_hashes_for_records_and_audits (test_lean_evidence.LeanEvidenceTests.test_complete_fixture_has_hashes_for_records_and_audits) ... ok
+test_insufficient_count_is_rejected (test_lean_evidence.LeanEvidenceTests.test_insufficient_count_is_rejected) ... ok
+test_missing_long_audit_is_rejected_despite_verified_status (test_lean_evidence.LeanEvidenceTests.test_missing_long_audit_is_rejected_despite_verified_status) ... ok
+test_wrong_compiler_version_is_rejected (test_lean_evidence.LeanEvidenceTests.test_wrong_compiler_version_is_rejected) ... ok
+test_bfs_handles_cycles_and_unreachable_targets (test_logic.GraphCertificateTests.test_bfs_handles_cycles_and_unreachable_targets) ... ok
+test_certificate_rejects_disconnected_or_unknown_steps (test_logic.GraphCertificateTests.test_certificate_rejects_disconnected_or_unknown_steps) ... ok
+test_generated_corpus_certificates_across_all_splits (test_logic.GraphCertificateTests.test_generated_corpus_certificates_across_all_splits) ... ok
+test_mismatched_text_and_forged_lean_are_rejected (test_logic.GraphCertificateTests.test_mismatched_text_and_forged_lean_are_rejected) ... ok
+test_nonshortest_answer_is_rejected (test_logic.GraphCertificateTests.test_nonshortest_answer_is_rejected) ... ok
+test_parser_rejects_unrecognized_sentences (test_logic.GraphCertificateTests.test_parser_rejects_unrecognized_sentences) ... ok
+test_reproducibility (test_logic.GraphCertificateTests.test_reproducibility) ... ok
+test_structure_template_and_lexicon_holdouts (test_logic.GraphCertificateTests.test_structure_template_and_lexicon_holdouts) ... ok
+test_absent_lean_never_becomes_verified (test_logic.LeanStatusTests.test_absent_lean_never_becomes_verified) ... ok
+test_axiom_audit_is_fail_closed (test_logic.LeanStatusTests.test_axiom_audit_is_fail_closed) ... ok
+test_exit_zero_without_axiom_output_is_not_verification (test_logic.LeanStatusTests.test_exit_zero_without_axiom_output_is_not_verification) ... ok
+test_forged_source_fails_before_lean_invocation (test_logic.LeanStatusTests.test_forged_source_fails_before_lean_invocation) ... ok
+test_reproducible_and_both_test_grammars_present (test_transfer_logic.TransferLogicTests.test_reproducible_and_both_test_grammars_present) ... ok
+test_topology_holdouts_and_cycle_do_not_break_certificates (test_transfer_logic.TransferLogicTests.test_topology_holdouts_and_cycle_do_not_break_certificates) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 1.686s
+
+OK
