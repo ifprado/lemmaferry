@@ -9,7 +9,7 @@
     "results/lf-002/checked/test.checked.jsonl": "a9163a3652ce31c310ddbc482cabc8b4e2b543a167838e29471dd940f22de55d"
   },
   "agent_review": "passed",
-  "human_review": "pending",
+  "human_review": "passed",
   "total_examples": 15,
   "records": [
     {
@@ -35,7 +35,7 @@
           "Vela_0_0"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "train_000004",
@@ -60,7 +60,7 @@
           "Vela_4_7"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "train_000008",
@@ -85,7 +85,7 @@
           "Vela_8_6"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "train_000012",
@@ -110,7 +110,7 @@
           "Vela_12_7"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "train_000016",
@@ -135,7 +135,7 @@
           "Vela_16_8"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "validation_000000",
@@ -162,7 +162,7 @@
           "Nori_0_1"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "validation_000004",
@@ -189,7 +189,7 @@
           "Nori_4_12"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "validation_000008",
@@ -216,7 +216,7 @@
           "Nori_8_12"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "validation_000012",
@@ -243,7 +243,7 @@
           "Nori_12_5"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "validation_000016",
@@ -270,7 +270,7 @@
           "Nori_16_14"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "test_000000",
@@ -299,7 +299,7 @@
           "Zuri_0_0"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "test_000004",
@@ -328,7 +328,7 @@
           "Zuri_4_2"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "test_000008",
@@ -357,7 +357,7 @@
           "Zuri_8_7"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "test_000012",
@@ -386,7 +386,7 @@
           "Zuri_12_6"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     },
     {
       "id": "test_000016",
@@ -415,7 +415,7 @@
           "Zuri_16_10"
         ]
       },
-      "human_review_status": "pending"
+      "human_review_status": "passed"
     }
   ],
   "limitations": [
@@ -423,5 +423,7 @@
     "Only three graph grammars and three rendering templates are covered.",
     "All goals are reachable; binary reachability would be trivial.",
     "The shortest-path claim concerns graph edge applications rather than global Lean proof optimality."
-  ]
+  ],
+  "human_review_record": "results/lf-004/human-review.json",
+  "human_review_confirmed_at_utc": "2026-10-17T06:54:21.920260+00:00"
 }

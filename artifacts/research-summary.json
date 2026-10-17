@@ -6,14 +6,17 @@
     "repository": "https://github.com/ifprado/lemmaferry",
     "initial_baseline_commit": "98cb9eca826de6d955f1a0250140f5505e5ffe35",
     "baseline_release": "https://github.com/ifprado/lemmaferry/releases/tag/v0.1.0",
-    "passed_research_code_ci": "https://github.com/ifprado/lemmaferry/actions/runs/39010288317"
+    "passed_research_code_ci": "https://github.com/ifprado/lemmaferry/actions/runs/39011305670",
+    "research_release": "https://github.com/ifprado/lemmaferry/releases/tag/research-2026-10-17",
+    "research_source_commit": "6e07e00483aa9c966c6da84b78bd682149696449"
   },
   "audit": {
     "examples": 15,
     "per_split": 5,
     "coding_agent_review": "passed",
-    "human_review": "pending",
-    "record": "results/lf-004/audit.json"
+    "human_review": "passed",
+    "record": "results/lf-004/audit.json",
+    "human_review_record": "results/lf-004/human-review.json"
   },
   "collection": {
     "pilot_pairs": 30,
@@ -155,13 +158,15 @@
     "Proof-assisted evidence compression, not transfer of equal-information pretrained mathematical skill.",
     "Single next-token binary choice and two held-out graph grammars only.",
     "No multi-token generation or matched end-to-end inference-cost advantage claimed.",
-    "Human correspondence review remains pending.",
+    "Human correspondence review covers the selected 15 original examples, not the entire expanded corpus.",
     "Small student is initialized from scratch and restricted to this synthetic next-token task."
   ],
   "independent_coding_agent_review": {
     "status": "passed",
     "record": "artifacts/transfer-v1/independent-review.json",
     "sha256": "4e73e67afe95e2f1b7ad4f9e7a8455c16a8bdc526f769408229b317a7a817330",
-    "human_review_remains_pending": true
-  }
+    "human_review_remains_pending": false,
+    "historical_note": "The unchanged independent agent record predates the separate human signoff in results/lf-004/human-review.json."
+  },
+  "updated_at_utc": "2026-10-17T06:54:21.920260+00:00"
 }

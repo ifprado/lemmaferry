@@ -1,0 +1,37 @@
+{
+  "issue": "LF-004",
+  "status": "passed",
+  "recorded_at_utc": "2026-10-17T06:54:21.920260+00:00",
+  "reviewer": "Ian Prado",
+  "evidence": "Explicit user reply in this session",
+  "verbatim_reply": "I reviewed all 15 and agree",
+  "scope": "Five selected examples from each original checked split: indices 0, 4, 8, 12, 16. The formal statements, proofs, fictional-language renderings, and expected answers agree.",
+  "examples": 15,
+  "per_split": 5,
+  "example_ids": [
+    "train_000000",
+    "train_000004",
+    "train_000008",
+    "train_000012",
+    "train_000016",
+    "validation_000000",
+    "validation_000004",
+    "validation_000008",
+    "validation_000012",
+    "validation_000016",
+    "test_000000",
+    "test_000004",
+    "test_000008",
+    "test_000012",
+    "test_000016"
+  ],
+  "reviewed_audit_sha256_before_confirmation": "ba3f1f04048bf440ef6752c41d225469c37b40d9fc8c5ae90d73ef1c24c0c120",
+  "checked_dataset_sha256": {
+    "results/lf-002/checked/train.checked.jsonl": "1e09e7589018babfb34434946c173a59a8776d566d9eed31fdacc68c7cd51a79",
+    "results/lf-002/checked/validation.checked.jsonl": "d22096404d774c9d9b389a46532fccf7d65a51906bf5ba9b73c92f45e7ba6b94",
+    "results/lf-002/checked/test.checked.jsonl": "a9163a3652ce31c310ddbc482cabc8b4e2b543a167838e29471dd940f22de55d"
+  },
+  "scope_limit": "This confirms the selected 15 examples; it does not claim human inspection of all 448 expanded examples.",
+  "published_experiment_source_commit": "6e07e00483aa9c966c6da84b78bd682149696449",
+  "snapshot_note": "The immutable research source ZIP and independent agent review were captured before this reply and therefore retain the then-pending human-review status."
+}

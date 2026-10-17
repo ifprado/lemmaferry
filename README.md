@@ -8,6 +8,7 @@ The first question is deliberately small: **can a learned affine map carry usefu
 
 ## Start here
 
+- Download the [published source and numerical evidence](https://github.com/ifprado/lemmaferry/releases/tag/research-2026-10-17), with SHA256 checksums. The immutable source snapshot predates the separate human audit confirmation linked below.
 - Read the [first actual-model results](docs/validation.md#first-actual-model-experiment): vector alignment improved, but the translated state did not beat ordinary answers or supplying the same proof as text.
 - Inspect the [latest alignment reproduction](artifacts/lf-001/reproduction.json) and [real Lean-verification report](docs/lf-002-lean-verification.md). The accepted dataset is in [`results/lf-002/checked/`](results/lf-002/checked/), with 20 verified examples per split; `examples/logic/` retains the original three-example preparation samples.
 - Read the [actionable roadmap](docs/roadmap.md), or open [the interactive roadmap](docs/index.html) in your browser.
@@ -83,7 +84,7 @@ The bundled [run record](docs/validation.md) contains measured CPU results and v
 
 A [follow-up reproduction](artifacts/lf-001/reproduction.json) retained both predefined seeds, 7 and 19, and matched the bundled alignment results within floating-point tolerance; all 23 Python tests passed. The separate [first real Lean verification](docs/lf-002-lean-verification.md) checked 20 examples per split, retained compiler logs, and confirmed corrupted-input and missing-executable controls.
 
-The [hosted CI reproduction](docs/ci-reproduction.md) passed on clean Linux checkouts after fixing the missing Lake manifest. A [15-example correspondence audit](docs/example-audit.html) records five examples per split; coding-agent review passed and human review remains pending.
+The [hosted CI reproduction](docs/ci-reproduction.md) passed on clean Linux checkouts after fixing the missing Lake manifest. A [15-example correspondence audit](docs/example-audit.html) records five examples per split; coding-agent review passed, and Ian confirmed agreement on all 15 in the [human review record](results/lf-004/human-review.json).
 
 In the [actual-model experiment](docs/validation.md#first-actual-model-experiment), the affine map aligned representations but did not improve answer accuracy. The recipient benefited more from the supplied proof as ordinary text. The same fixed dataset also failed to improve a small student's held-out accuracy over a label-permutation control. These are bounded negative results, with commands, controls, hashes, and per-example outputs retained.
 

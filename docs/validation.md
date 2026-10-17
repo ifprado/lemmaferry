@@ -214,9 +214,11 @@ general-model distillation was run.
 
 ### Reproduction and review
 
-The original [15-example correspondence sheet](example-audit.html) has coding-agent
-manual review and retains human review as pending. Agent review and Lean
-verification do not substitute for a human English-correspondence audit.
+The original [15-example correspondence sheet](example-audit.html) passed coding-agent
+manual review. Ian subsequently confirmed, "I reviewed all 15 and agree"; the
+[human signoff](../results/lf-004/human-review.json) completes our joint audit of
+five examples per original split. This does not claim human inspection of the
+entire expanded corpus.
 
 Collection commands are in [`artifacts/transfer-v1/commands.json`](../artifacts/transfer-v1/commands.json).
 Fitting, answer evaluation, student training, and checkpoint reload commands are
@@ -235,5 +237,5 @@ A [second coding-agent review](../artifacts/transfer-v1/independent-review.json)
 independently reproduced the dual ridge fit, row-level scores, conditional
 intervals, student budgets and hashes, and a real-Qwen self-patch control. The
 independent cached self-patch error was `1.86e-5`, and the full-prompt self-patch
-error was zero. This remains agent review; it does not fill the pending human
-correspondence signoff.
+error was zero. That immutable agent record predates the separate human
+correspondence signoff above; its historical pending status is preserved.
