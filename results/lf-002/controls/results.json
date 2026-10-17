@@ -1,0 +1,60 @@
+[
+  {
+    "control": "inspected-pair",
+    "args": [
+      "/Users/ianprado02/.elan/bin/lean",
+      "../results/lf-002/controls/inspected-pair.lean"
+    ],
+    "cwd": "lean",
+    "expected_exit_code": 0,
+    "exit_code": 0,
+    "log": "../results/lf-002/controls/inspected-pair.log"
+  },
+  {
+    "control": "corrupted-source",
+    "args": [
+      "/Users/ianprado02/.elan/bin/lean",
+      "../results/lf-002/controls/corrupted.lean"
+    ],
+    "cwd": "lean",
+    "expected_exit_code": 1,
+    "exit_code": 1,
+    "log": "../results/lf-002/controls/corrupted-source.log"
+  },
+  {
+    "control": "corrupted-record",
+    "args": [
+      "../.venv/bin/python",
+      "../experiments/check_lean.py",
+      "../results/lf-002/controls/corrupted.jsonl",
+      "--lean",
+      "/Users/ianprado02/.elan/bin/lean",
+      "--output",
+      "../results/lf-002/controls/corrupted.checked.jsonl",
+      "--log-dir",
+      "../results/lf-002/logs/corrupted"
+    ],
+    "cwd": "lean",
+    "expected_exit_code": 1,
+    "exit_code": 1,
+    "log": "../results/lf-002/controls/corrupted-record.log"
+  },
+  {
+    "control": "missing-lean",
+    "args": [
+      "../.venv/bin/python",
+      "../experiments/check_lean.py",
+      "../results/lf-002/checked/train.checked.jsonl",
+      "--lean",
+      "../results/lf-002/controls/intentionally-missing-lean",
+      "--output",
+      "../results/lf-002/controls/missing-lean.checked.jsonl",
+      "--log-dir",
+      "../results/lf-002/logs/missing-lean"
+    ],
+    "cwd": "lean",
+    "expected_exit_code": 2,
+    "exit_code": 2,
+    "log": "../results/lf-002/controls/missing-lean.log"
+  }
+]

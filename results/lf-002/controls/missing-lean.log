@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "verified": 0,
+    "not_run": 20,
+    "error": 0
+  },
+  "output": "../results/lf-002/controls/missing-lean.checked.jsonl"
+}
+Lean was not run. No records are Lean verified.

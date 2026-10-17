@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If this toolkit helps your work, cite the release or commit you used."
+title: "LemmaFerry: Verified mathematics, measurable transfer"
+type: software
+version: 0.1.0
+date-released: 2026-10-16
+authors:
+  - family-names: Prado
+    given-names: Ian
+license: Apache-2.0
+abstract: "A small open research starter for Lean proof generation, affine representation alignment, and controlled tests of mathematical transfer."

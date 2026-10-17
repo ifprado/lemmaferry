@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lemmaferry"
+version = "0.1.0"
+description = "Verified mathematical tasks and measurable representation transfer experiments"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = ["numpy>=1.26,<3"]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.8,<4"]
+llm = ["torch>=2.4", "transformers>=4.45,<5", "safetensors>=0.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

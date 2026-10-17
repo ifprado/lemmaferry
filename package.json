@@ -1,0 +1,9 @@
+{
+  "name": "lemmaferry-docs",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Optional static roadmap builder; Python experiments do not require Node",
+  "scripts": {"docs": "node tools/build_report.mjs"},
+  "devDependencies": {"marked": "17.0.5"},
+  "engines": {"node": ">=20"}
+}

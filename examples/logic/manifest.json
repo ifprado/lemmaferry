@@ -1,0 +1,33 @@
+{
+  "seed": 7,
+  "lean_status": "not_run",
+  "splits": {
+    "train": {
+      "examples": 3,
+      "family": "parallel_routes",
+      "template": "stations",
+      "jsonl": "examples/logic/train.jsonl",
+      "lean_source": "examples/logic/train.lean",
+      "python_certificates": "verified",
+      "render_roundtrip": "verified"
+    },
+    "validation": {
+      "examples": 3,
+      "family": "triple_routes",
+      "template": "tasks",
+      "jsonl": "examples/logic/validation.jsonl",
+      "lean_source": "examples/logic/validation.lean",
+      "python_certificates": "verified",
+      "render_roundtrip": "verified"
+    },
+    "test": {
+      "examples": 3,
+      "family": "chained_diamonds",
+      "template": "beacons",
+      "jsonl": "examples/logic/test.jsonl",
+      "lean_source": "examples/logic/test.lean",
+      "python_certificates": "verified",
+      "render_roundtrip": "verified"
+    }
+  }
+}

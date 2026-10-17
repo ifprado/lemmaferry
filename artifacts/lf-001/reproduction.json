@@ -1,0 +1,133 @@
+{
+  "artifact_sha256": {
+    "artifacts/lf-001/tests.log": "4e91b01fe8f024d16c7de270f920afee3769c49e2397f8d33e535cee0108a7da",
+    "artifacts/lf-001/toy_alignment_seed19.json": "fd6d229be3b9c06ac30a21e61c3c9d02e52cc722ed24da63de95f24cc78733bc",
+    "artifacts/lf-001/toy_alignment_seed19.svg": "bb95faddc2b046b6720458ce2ac22379fe05a0d1418d027dbdd97ba082f5854a",
+    "artifacts/lf-001/toy_alignment_seed7.json": "92ae8b70cfd29bb5c74181ca92d862a16d1fd78676d933e0099641e4fed8a166",
+    "artifacts/lf-001/toy_alignment_seed7.svg": "c790706dbeea679b04dcf55b87a14dd3ef9d091a18f0806be0139eecf328e62b"
+  },
+  "commands": [
+    ".venv/bin/python -m unittest discover -s tests -v",
+    ".venv/bin/python experiments/toy_alignment.py --seed 7 --output artifacts/lf-001/toy_alignment_seed7.json --plot artifacts/lf-001/toy_alignment_seed7.svg",
+    ".venv/bin/python experiments/toy_alignment.py --seed 19 --output artifacts/lf-001/toy_alignment_seed19.json --plot artifacts/lf-001/toy_alignment_seed19.svg"
+  ],
+  "comparison_tolerance": {
+    "absolute": 1e-10,
+    "relative": 1e-08
+  },
+  "comparisons": [
+    {
+      "all_fields_agree": true,
+      "max_absolute_numeric_difference": 1.7408297026122455e-13,
+      "metrics": {
+        "paired_affine": {
+          "normalized_rmse": 0.009701578189475814,
+          "receiver_task_accuracy": 1.0,
+          "rmse": 0.01273228263258608
+        },
+        "training_mean": {
+          "normalized_rmse": 1.0605764047207538,
+          "receiver_task_accuracy": 0.5234375,
+          "rmse": 1.835949645477615
+        },
+        "wrong_pairs": {
+          "normalized_rmse": 1.0683650187278975,
+          "receiver_task_accuracy": 0.68359375,
+          "rmse": 1.8401153978215736
+        }
+      },
+      "plot": "artifacts/lf-001/toy_alignment_seed7.svg",
+      "reference": "artifacts/toy_alignment_seed7.json",
+      "result": "artifacts/lf-001/toy_alignment_seed7.json",
+      "seed": 7
+    },
+    {
+      "all_fields_agree": true,
+      "max_absolute_numeric_difference": 2.1316282072803006e-13,
+      "metrics": {
+        "paired_affine": {
+          "normalized_rmse": 0.006754129141630743,
+          "receiver_task_accuracy": 1.0,
+          "rmse": 0.013319264140013307
+        },
+        "training_mean": {
+          "normalized_rmse": 1.0022560011064436,
+          "receiver_task_accuracy": 0.46484375,
+          "rmse": 2.047221456118133
+        },
+        "wrong_pairs": {
+          "normalized_rmse": 1.068164971084225,
+          "receiver_task_accuracy": 0.3125,
+          "rmse": 2.196743494935468
+        }
+      },
+      "plot": "artifacts/lf-001/toy_alignment_seed19.svg",
+      "reference": "artifacts/toy_alignment_seed19.json",
+      "result": "artifacts/lf-001/toy_alignment_seed19.json",
+      "seed": 19
+    }
+  ],
+  "environment": {
+    "dependencies": {
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "fonttools": "4.67.0",
+      "kiwisolver": "1.5.1",
+      "lemmaferry": "0.1.0",
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.4",
+      "packaging": "26.3",
+      "pillow": "13.0.0",
+      "pip": "26.2.1",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0",
+      "six": "1.17.0"
+    },
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "interpretation": [
+    "These runs use artificial vectors with four planted shared factors, with no LLM inference or Lean verification involved in the alignment experiment.",
+    "The affine map recovers that deliberately shared linear structure, so its low held-out error is a numerical sanity check.",
+    "Both predefined seeds are retained, and preprocessing and recipient decoding use training rows only.",
+    "Shuffled anchors and training-mean predictions have much higher reconstruction error, showing that correct pairing matters in this construction.",
+    "In the symmetric-cloud control, identity and half-turn have effectively identical unpaired geometry and exact round trips but 100% versus 0% semantic accuracy, so geometric matching alone cannot establish semantic translation."
+  ],
+  "issue": "LF-001",
+  "protocol": {
+    "all_seeds_retained": true,
+    "noise_std": 0.01,
+    "predefined_seeds": [
+      7,
+      19
+    ],
+    "preprocessing": "Source and target standardizers, target-coordinate normalization scales, and recipient decoder fitted on training rows only.",
+    "ridge_alpha": 1e-06,
+    "shared_factors": 4,
+    "source_dimensions": 12,
+    "target_dimensions": 8,
+    "test_rows": 256,
+    "training_rows": 256
+  },
+  "recorded_at_utc": "2026-10-17T05:55:56.831492+00:00",
+  "scope": "Artificial numeric vectors only; no LLM inference or Lean verification involved in these alignment experiments.",
+  "setup_commands": [
+    "python3 -m venv .venv",
+    ".venv/bin/python -m pip install -e '.[plots]'"
+  ],
+  "source_sha256": {
+    "experiments/toy_alignment.py": "82219074f054b40beb846670ffffbc12a1271562e7efccef2f775d7d88b3f2fc",
+    "pyproject.toml": "4f5cd7bffb9a74be004753a05e5df38a14cc0318d1bf409da6a066f56f975519",
+    "src/lemmaferry/alignment.py": "6c6064733bf35390cb3a62d973dd96a42097de7061a3f2369d9a6a209444abc9",
+    "tests/test_alignment.py": "229202b0473e65b1b495a8c5a86db305573f50177b69f3bf33eac2eb3f0dee1a",
+    "tests/test_fit_activations.py": "66bfab9ed371db3b1942b69fc962fa3036d8040a371a6abdc206e688902f5a5a",
+    "tests/test_logic.py": "93cc8203463923854d7658b7f388f3dd93b46eeec212c1f2b6fb9e0066e54fb4"
+  },
+  "status": "reproduced",
+  "tests": {
+    "exit_code": 0,
+    "failed": 0,
+    "log": "artifacts/lf-001/tests.log",
+    "passed": 23
+  }
+}

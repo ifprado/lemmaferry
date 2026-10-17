@@ -1,0 +1,55 @@
+name: Reproduce starter checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install -e .
+      - run: python -m unittest discover -s tests -v
+      - run: python experiments/toy_alignment.py --seed 7 --output artifacts/ci_alignment.json
+      - run: python experiments/generate_logic.py --count 5 --seed 7
+
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python experiments/generate_logic.py --count 5 --seed 7
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: lean
+          auto-config: false
+          build: false
+          test: false
+          lint: false
+          use-github-cache: false
+      - name: Check all generated splits and axiom audits
+        working-directory: lean
+        run: |
+          lean --version
+          python ../experiments/check_lean.py ../data/generated/train.jsonl --output ../results/train.checked.jsonl --log-dir ../results/lean_logs/train
+          python ../experiments/check_lean.py ../data/generated/validation.jsonl --output ../results/validation.checked.jsonl --log-dir ../results/lean_logs/validation
+          python ../experiments/check_lean.py ../data/generated/test.jsonl --output ../results/test.checked.jsonl --log-dir ../results/lean_logs/test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lean-check-results
+          path: results/

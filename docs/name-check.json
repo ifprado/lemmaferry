@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-10-17T03:28:47.448662+00:00",
+  "observations": [
+    {
+      "domain": "lemmaferry.com",
+      "url": "https://rdap.verisign.com/com/v1/domain/lemmaferry.com",
+      "http_status": 404
+    },
+    {
+      "domain": "example.com",
+      "url": "https://rdap.verisign.com/com/v1/domain/example.com",
+      "http_status": 200,
+      "ldhName": "EXAMPLE.COM"
+    }
+  ],
+  "meaning": "Registry lookup only. No purchase, reservation, registrar checkout or price verification."
+}

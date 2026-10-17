@@ -1,0 +1,13 @@
+LemmaFerry
+Copyright 2026 Ian Prado
+
+Original starter code and documentation are provided under Apache License 2.0.
+Research papers are linked and credited in docs/sources.md. Third-party models,
+datasets, libraries, and dependencies retain their own licenses and are not
+relicensed by this notice.
+
+The unmodified installer retained at results/lf-002/install/elan-init.sh was
+downloaded from https://elan.lean-lang.org/elan-init.sh as installation evidence.
+Copyright 2016 The Rust Project Developers. Its original copyright and license
+header is retained. This copy is distributed under the Apache License 2.0 option
+offered in that header; see LICENSE for the license text.

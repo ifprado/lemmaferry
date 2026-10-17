@@ -1,0 +1,26 @@
+../results/lf-002/controls/corrupted.lean:14:2: error: Type mismatch
+  h_start
+has type
+  p4
+but is expected to have type
+  p0
+'lf_train_000000' depends on axioms: [sorryAx]
+../results/lf-002/controls/corrupted.lean:20:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../results/lf-002/controls/corrupted.lean:21:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../results/lf-002/controls/corrupted.lean:24:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_train_000000_long' does not depend on any axioms

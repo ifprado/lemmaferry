@@ -1,0 +1,54 @@
+{
+  "ambiguity_control": {
+    "experiment": "unpaired_symmetric_cloud_ambiguity",
+    "half_turn": {
+      "paired_rmse": 1.4142135623730951,
+      "round_trip_rmse": 0.0,
+      "semantic_label_accuracy": 0.0,
+      "unpaired_nearest_neighbor_rmse": 3.2954267514107376e-16
+    },
+    "identity": {
+      "paired_rmse": 0.0,
+      "round_trip_rmse": 0.0,
+      "semantic_label_accuracy": 1.0,
+      "unpaired_nearest_neighbor_rmse": 0.0
+    },
+    "interpretation": "Matching clouds and perfect cycles do not identify semantic correspondence.",
+    "points": 32,
+    "scope": "Exact counterexample with two hand-specified maps; no training performed."
+  },
+  "paired_alignment": {
+    "config": {
+      "latent_dim": 4,
+      "noise_std": 0.01,
+      "ridge_alpha": 1e-06,
+      "seed": 7,
+      "source_dim": 12,
+      "target_dim": 8,
+      "test_size": 256,
+      "train_size": 256
+    },
+    "experiment": "artificial_shared_latent_alignment",
+    "metrics": {
+      "paired_affine": {
+        "normalized_rmse": 0.009701578189480222,
+        "receiver_task_accuracy": 1.0,
+        "rmse": 0.012732282632597031
+      },
+      "training_mean": {
+        "normalized_rmse": 1.0605764047207538,
+        "receiver_task_accuracy": 0.5234375,
+        "rmse": 1.835949645477615
+      },
+      "wrong_pairs": {
+        "normalized_rmse": 1.0683650187279878,
+        "receiver_task_accuracy": 0.68359375,
+        "rmse": 1.8401153978217477
+      }
+    },
+    "normalization": "Per-coordinate target standard deviation from training rows only.",
+    "receiver_task": "Sign of a planted linear combination of latent factors.",
+    "receiver_task_accuracy_on_true_target": 1.0,
+    "scope": "Synthetic vectors with planted shared factors; not LLM skill transfer."
+  }
+}

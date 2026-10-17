@@ -1,0 +1,1472 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LemmaFerry | Research Roadmap</title>
+<style>
+:root{--ink:#222034;--muted:#66617b;--purple:#6546b5;--purple-soft:#eee9fa;--line:#e2ddec;--paper:#fff;--bg:#f5f3fa;--green:#20705b;--amber:#8c5e16}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--purple);text-underline-offset:3px}a:hover{color:#3f287b}button{font:inherit;cursor:pointer;border:1px solid #d3c8e9;border-radius:8px;background:#fff;color:#513490;padding:8px 13px}button:hover{background:#f3eefc}aside{position:fixed;inset:0 auto 0 0;width:250px;padding:36px 25px;background:#20192f;color:#d6cce6;overflow-y:auto}.brand{display:flex;gap:12px;align-items:center;color:white;font-weight:750;letter-spacing:-.04em;font-size:23px}.mark{border:1px solid #8c72bd;border-radius:12px;width:43px;height:43px;display:grid;place-items:center;font-size:15px;letter-spacing:0;background:#332444}.tagline{font-size:13px;line-height:1.5;color:#bcb0ce;margin:20px 0 30px}nav{display:grid;gap:5px}nav a{display:block;color:#d8cfe5;text-decoration:none;font-size:14px;padding:9px 10px;border-radius:7px}nav a:hover{background:#352743;color:white}.side-note{font-size:12px;line-height:1.6;color:#a99abf;margin-top:32px}.progress-box{padding:18px 0;margin-top:25px;border-top:1px solid #493859}.progress-track{height:5px;background:#4b3b5d;border-radius:4px;margin:10px 0}.progress-fill{height:100%;width:0;background:#b99be8;border-radius:4px}.progress-label{font-size:12px;color:#d6c8e9}main{max-width:1260px;margin-left:250px;padding:48px 54px 90px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:750;color:var(--purple)}h1{font-size:clamp(34px,4vw,52px);line-height:1.1;letter-spacing:-.045em;max-width:820px;margin:16px 0 20px}.intro{font-size:19px;line-height:1.6;color:#5b526e;max-width:850px}.hero-meta{font-size:12px;color:var(--muted);margin-top:22px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:25px 0}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0}.stat{background:white;border:1px solid var(--line);border-radius:12px;padding:18px}.stat b{display:block;font-size:27px;line-height:1.2;color:#4c3482}.stat span{font-size:12px;color:var(--muted)}.status{background:#ece7f6;border:1px solid #d9ccec;border-left:4px solid var(--purple);border-radius:8px;padding:16px 19px;margin:24px 0 34px;font-size:14px}.status strong{color:#49316f}.stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0 34px}.stage{display:block;text-decoration:none;padding:15px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}.stage:hover{border-color:#b29bd5}.stage b{font-size:13px;display:block;color:var(--purple);margin-bottom:4px}.stage small{font-size:12px;line-height:1.4;display:block;color:var(--muted)}.chapter{background:#fff;border:1px solid var(--line);border-radius:12px;margin:16px 0;overflow:hidden;scroll-margin-top:24px}.chapter>summary{list-style:none;display:flex;align-items:center;gap:17px;padding:23px 25px;cursor:pointer}.chapter>summary::-webkit-details-marker{display:none}.chapter-index{color:#a08aba;font-size:12px;font-weight:700;min-width:20px}.chapter>summary strong{display:block;font-size:19px;letter-spacing:-.02em}.chapter>summary small{display:block;font-size:12px;color:var(--muted);margin-top:2px}.chevron{margin-left:auto;font-size:24px;color:#9177b2}.chapter[open] .chevron{transform:rotate(45deg)}.chapter[open]>summary{border-bottom:1px solid var(--line);background:#fcfbfe}.chapter-body{padding:10px 30px 30px}.chapter-body h2{font-size:25px;line-height:1.3;letter-spacing:-.025em;margin:35px 0 15px;color:#382847;scroll-margin-top:24px}.chapter-body h3{font-size:19px;line-height:1.4;margin:28px 0 12px;color:#4e3b64;scroll-margin-top:24px}.chapter-body p{margin:12px 0}.chapter-body li{margin:9px 0}.chapter-body ul,.chapter-body ol{padding-left:24px}.chapter-body input[type=checkbox]{accent-color:var(--purple);width:17px;height:17px;vertical-align:-3px;margin-right:8px;cursor:pointer}.task-done{color:#777180}.task-done strong{color:#777180}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.6;margin:20px 0;display:block;overflow-x:auto}th,td{text-align:left;vertical-align:top;padding:11px 12px;border:1px solid var(--line);min-width:90px}th{background:#f1edf8;font-weight:700;color:#49325f}tr:nth-child(even) td{background:#fcfbfe}pre{background:#24202d;color:#eee8f7;padding:18px;border-radius:9px;overflow-x:auto;font-size:12px;line-height:1.7}code{font: .87em/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;background:#f0edf5;border-radius:4px;padding:2px 4px;overflow-wrap:anywhere}pre code{padding:0;background:none;font-size:inherit;color:inherit}blockquote{border-left:3px solid #b4a0d0;padding:4px 18px;margin:20px 0;color:#625074;background:#f8f5fc}.equation{font-family:ui-monospace,monospace;background:#f2eef9;padding:18px;border-radius:8px;overflow:auto}footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:24px;margin-top:36px}.top-note{font-size:13px;color:var(--muted)}.skip-link{position:absolute;left:-999px;top:0;background:#fff;padding:10px}.skip-link:focus{left:260px;z-index:100}
+@media(max-width:1050px){aside{width:210px;padding:28px 18px}main{margin-left:210px;padding:36px 28px}.brand{font-size:20px}.stats{gap:8px}.stat{padding:14px}.stage-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){aside{position:relative;width:auto;padding:22px}aside nav{display:flex;flex-wrap:wrap;gap:3px}nav a{font-size:12px;padding:5px 8px}.tagline{margin:8px 0 15px}.side-note{display:none}.progress-box{padding:10px 0 0;margin-top:12px}main{margin:0;padding:30px 16px 60px}.intro{font-size:17px}.stats{grid-template-columns:repeat(2,1fr)}.chapter>summary{padding:18px 16px;gap:12px}.chapter-body{padding:5px 17px 25px}.chapter-body h2{font-size:22px}.chapter>summary small{max-width:240px}.stage-grid{gap:8px}.skip-link:focus{left:10px}}
+@media print{aside,.actions,.top-note,.stage-grid,.skip-link{display:none!important}body{background:white;font-size:10.5pt;color:#111}main{margin:0;padding:0;max-width:none}h1{font-size:31pt}.intro{font-size:13pt}.stats{margin:15px 0}.chapter{border:0;border-radius:0;overflow:visible;break-before:page}.chapter>summary{padding:10px 0;border-bottom:1px solid #aaa!important;background:white!important}.chapter-body{padding:0}.chapter-index,.chevron{display:none}.chapter-body h2{font-size:18pt;break-after:avoid}.chapter-body h3{font-size:13pt;break-after:avoid}table{display:table;font-size:8pt}tr,pre,.stage,.stat{break-inside:avoid}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f1f1;color:#111;font-size:8pt}a{color:#32214d}details>summary{list-style:none}footer{font-size:8pt}}
+</style></head><body><a class="skip-link" href="#main">Skip to roadmap</a>
+<aside><div class="brand"><span class="mark">LF</span>LemmaFerry</div><p class="tagline">Verified mathematics.<br>Measurable transfer.</p><nav><a href="#roadmap">Roadmap</a><a href="#issues">26 actionable issues</a><a href="#models">Actual-model experiment</a><a href="#sources">25 primary sources</a><a href="#launch">GitHub and name</a><a href="#validation">What was tested</a><a href="#card">Experiment card</a><a href="#provenance">Provenance</a></nav><div class="progress-box"><div class="progress-label" id="progressLabel">0 checklist items completed</div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div><p class="side-note">Working research plan<br>October 16, 2026<br><br>Checkmarks stay in this browser. Use the export button to keep a separate checklist.</p></aside>
+<main id="main"><div class="eyebrow">Open research starter / Version 0.1</div><h1>Build the smallest useful bridge.</h1><p class="intro">A practical route from verified mathematical tasks to representation alignment, useful model communication, and eventually student learning. One reproducible result at a time.</p><div class="hero-meta">Prepared for Ian Prado and a prospective collaborator. A working plan with explicit assumptions, experiments, and finish lines.</div><div class="actions"><button id="printButton">Print / Save PDF</button><button id="exportButton">Export checklist</button><button id="expandButton">Expand all chapters</button></div><p class="top-note">Use your browser's Find command to search. All content is included in this file; only source links need an internet connection.</p><div class="stats"><div class="stat"><b>26</b><span>actionable issue cards</span></div><div class="stat"><b>10</b><span>concrete toy problems</span></div><div class="stat"><b>25</b><span>annotated primary sources</span></div><div class="stat"><b>6</b><span>research milestones</span></div></div><div class="status"><strong>Verified snapshot:</strong> All 23 Python tests passed, and both artificial-vector alignment runs were reproduced. Lean 4.35.0 verified 60 examples and 120 proofs with zero-axiom audits. See the validation chapter for the retained evidence. Real-model inference remains pending.</div><div class="stage-grid"><a class="stage" href="#roadmap-milestone-a-establish-the-mechanics"><b>A / Mechanics</b><small>Recover a known vector relationship.</small></a><a class="stage" href="#roadmap-milestone-b-generate-genuinely-checked-formal-data"><b>B / Formal data</b><small>Execute the checker and audit the language view.</small></a><a class="stage" href="#roadmap-milestone-c-align-actual-model-representations"><b>C / Alignment</b><small>Test a map on actual model activations.</small></a><a class="stage" href="#roadmap-milestone-d-establish-functional-transfer"><b>D / Useful communication</b><small>Measure answers, text baselines, and controls.</small></a><a class="stage" href="#roadmap-milestone-e-teach-a-standalone-student"><b>E / Permanent learning</b><small>Evaluate without the teacher present.</small></a><a class="stage" href="#roadmap-milestone-f-test-adaptive-improvement"><b>F / Adaptive curriculum</b><small>Compare against a fixed generator at equal budget.</small></a></div><details class="chapter" id="roadmap" open><summary><span class="chapter-index">01</span><span><strong>Roadmap</strong><small>The first evening, six milestones, ten toys, eight-week plan</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p><strong>Working name:</strong> LemmaFerry. <strong>Working question:</strong> Can verified mathematical experience be translated into useful training signals for a general language model?</p>
+<p>Prepared for Ian Prado and a prospective collaborator on October 16, 2026. The schedule assumes each person can contribute roughly four to six hours per week, an existing laptop, and no paid compute for the first milestone. These are planning assumptions, not requirements. The project can proceed more slowly without changing its scientific question.</p>
+<h2 id="roadmap-1-what-you-are-actually-starting">1. What you are actually starting</h2>
+<p>You have a plausible research direction and several separable hypotheses. The credible first open-source contribution is a small benchmark, generator, translator baseline, and evaluation protocol that other people can reproduce. You do not need to claim that you can build AGI to publish that. Nor do you need to master statistical mechanics or topology before running an affine regression experiment.</p>
+<p>The broad idea has close predecessors. The <a href="#sources">source map</a> explains where this project overlaps existing work. The contribution to investigate is the combination: correct-by-construction tasks, explicit representation translation, and tests that distinguish geometric alignment from useful reasoning transfer. Whether this combination adds value is an empirical question.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>What it does</th>
+<th>First implementation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Formal world</td>
+<td>Defines objects, premises, inference rules, and target claims</td>
+<td>Tiny propositional implication graphs</td>
+</tr>
+<tr>
+<td>Generator</td>
+<td>Constructs tasks and proof certificates</td>
+<td>Deterministic Python generator, later a learned proposer</td>
+</tr>
+<tr>
+<td>Checker</td>
+<td>Checks that a formal proof proves the stated claim under stated assumptions</td>
+<td>Lean, separate from the neural model</td>
+</tr>
+<tr>
+<td>Semantic view</td>
+<td>Expresses the same tiny world as a language task</td>
+<td>Controlled renderer from the same graph</td>
+</tr>
+<tr>
+<td>Representation translator</td>
+<td>Maps source activations to a recipient model&#39;s chosen interface</td>
+<td>Affine ridge regression, then a small nonlinear adapter if justified</td>
+</tr>
+<tr>
+<td>Learner</td>
+<td>Uses translated states or trains on generated examples</td>
+<td>Small related open-weight models</td>
+</tr>
+<tr>
+<td>Evaluator</td>
+<td>Tests unfamiliar problems, costs, and general-capability retention</td>
+<td>Fixed family splits and explicit controls</td>
+</tr>
+</tbody></table>
+<h3 id="roadmap-keep-these-meanings-separate">Keep these meanings separate</h3>
+<ul>
+<li>A Lean proof is a formal object. An embedding of a proof is a learned representation of that object. Lean does not certify what an arbitrary embedding means.</li>
+<li>A neural prover proposes proof text or actions. Lean checks the formal result. They have different jobs.</li>
+<li>New proofs create new activation vectors when a model processes them. Those activations do not automatically become persistent knowledge.</li>
+<li>Moving vectors with a matrix is a representation change. Updating a model&#39;s parameters is learning. Supplying a teacher at inference is assistance.</li>
+<li>A generated theorem can be a new training example without being a mathematical discovery new to humanity.</li>
+<li>A Lean-accepted proof can use classical axioms. This starter&#39;s tiny implication fragment aims for no axiom dependencies; broader constructive restrictions require an explicit policy.</li>
+<li>Formal correctness establishes a consequence of premises. A natural-language description still needs a separate correspondence check, and an empirical premise still needs evidence from the world.</li>
+</ul>
+<h2 id="roadmap-2-your-first-90-minutes">2. Your first 90 minutes</h2>
+<p>Do these in order. A domain purchase and an LLM download are not prerequisites.</p>
+<ul>
+<li><input type="checkbox" data-task="task-0"> <strong>Open the starter&#39;s README.</strong> Read the status table before running anything. Know which parts were tested and which remain unrun.</li>
+<li><input type="checkbox" data-task="task-1"> <strong>Create a Python environment and run the tests.</strong> Use Python 3.10 or newer. Follow the exact quick-start commands in the README.</li>
+<li><input type="checkbox" data-task="task-2"> <strong>Run the artificial alignment experiment with seed 7.</strong> Open the output JSON. Find the paired, wrong-pair, and mean-output errors.</li>
+<li><input type="checkbox" data-task="task-3"> <strong>Change the seed to 19.</strong> Explain why the wrong-pair task accuracy changes while its regression error remains poor. Do not select the nicer seed for a public claim.</li>
+<li><input type="checkbox" data-task="task-4"> <strong>Read the ambiguity counterexample.</strong> A half-turn of a symmetric point cloud has excellent geometric matching and the wrong semantic labels. This is why pairing and task evaluation matter.</li>
+<li><input type="checkbox" data-task="task-5"> <strong>Generate 20 implication problems per split.</strong> Open one JSONL record and its Lean declaration. Trace its short proof by hand.</li>
+<li><input type="checkbox" data-task="task-6"> <strong>Create an empty public GitHub repository called <code>lemmaferry</code>.</strong> Follow <a href="#launch">launch.md</a>, review the staged files, and push the starter. The supplied package has not been pushed to your account.</li>
+<li><input type="checkbox" data-task="task-7"> <strong>Create three initial issues:</strong> run Lean verification, reproduce both alignment seeds, and choose the first actual-model experiment. Invite your cousin after you confirm their GitHub username yourself.</li>
+</ul>
+<p>Finish line: a repository another person can clone, a reproducible CPU result, one understood formal example, and an honest list of untested claims.</p>
+<h2 id="roadmap-3-what-this-starter-already-gives-you">3. What this starter already gives you</h2>
+<table>
+<thead>
+<tr>
+<th>Included item</th>
+<th>What you can do now</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>alignment.py</code></td>
+<td>Fit a train-standardized affine ridge map with different source/target dimensions</td>
+<td>Artificial tests do not establish neural-model transfer</td>
+</tr>
+<tr>
+<td><code>toy_alignment.py</code></td>
+<td>Reproduce paired versus shuffled anchors and the symmetric-cloud counterexample</td>
+<td>Shared factors are deliberately planted</td>
+</tr>
+<tr>
+<td><code>logic.py</code> and <code>generate_logic.py</code></td>
+<td>Generate graphs, rule-chain answers, Lean proof terms, and controlled language views</td>
+<td>Small fixed grammar; every selected target is reachable</td>
+</tr>
+<tr>
+<td><code>check_lean.py</code></td>
+<td>Run Lean with timeouts and axiom audits; keep per-example results</td>
+<td>Lean was absent during preparation, so generated proofs are initially <code>not_run</code></td>
+</tr>
+<tr>
+<td><code>collect_activations.py</code></td>
+<td>Collect actual-model activations when you install optional dependencies and download chosen checkpoints</td>
+<td>Model inference has not been executed in the supplied environment</td>
+</tr>
+<tr>
+<td><code>fit_activations.py</code></td>
+<td>Fit a validation-selected affine map to collected arrays and compare controls</td>
+<td>It evaluates representation error, not downstream model capability</td>
+</tr>
+<tr>
+<td>Documentation and templates</td>
+<td>Publish the project, divide work, register experiments, and record provenance</td>
+<td>The future experiments still need to be implemented and evaluated</td>
+</tr>
+</tbody></table>
+<p>See <a href="#validation">validation.md</a> for the exact completed checks. No model weights or large source corpora are bundled. The private July conversation and scanned sketch are not in the public-ready repository.</p>
+<h2 id="roadmap-4-the-milestones-and-the-evidence-each-requires">4. The milestones and the evidence each requires</h2>
+<h3 id="roadmap-milestone-a-establish-the-mechanics">Milestone A: establish the mechanics</h3>
+<p><strong>Question:</strong> Does the affine translator implementation recover a known relationship on held-out numeric vectors?</p>
+<ul>
+<li><input type="checkbox" data-task="task-8"> Run seeds 7 and 19 with the default settings.</li>
+<li><input type="checkbox" data-task="task-9"> Run with noise zero, then increase noise to 0.1.</li>
+<li><input type="checkbox" data-task="task-10"> Compare paired anchors, shuffled anchors, and training-mean prediction.</li>
+<li><input type="checkbox" data-task="task-11"> Confirm that normalization uses training rows only.</li>
+<li><input type="checkbox" data-task="task-12"> Draw the optional plot and commit the small result JSON plus the command.</li>
+</ul>
+<p><strong>Done when:</strong> another person reproduces the numbers within documented numerical tolerance. A default paired normalized RMSE below 0.05 is an engineering sanity check for this planted toy, not a research success threshold for real models. If the toy fails, fix the implementation before introducing model complexity.</p>
+<h3 id="roadmap-milestone-b-generate-genuinely-checked-formal-data">Milestone B: generate genuinely checked formal data</h3>
+<p><strong>Question:</strong> Can the pipeline create tasks, formal proofs, and matching language views while keeping their verification status accurate?</p>
+<ul>
+<li><input type="checkbox" data-task="task-13"> Install the pinned Lean toolchain through the official instructions.</li>
+<li><input type="checkbox" data-task="task-14"> Check the generated train, validation, and test files with the provided runner.</li>
+<li><input type="checkbox" data-task="task-15"> Keep compiler version, diagnostics, and zero-axiom output with each accepted record.</li>
+<li><input type="checkbox" data-task="task-16"> Deliberately corrupt one proof. Confirm it fails and cannot retain an old success status.</li>
+<li><input type="checkbox" data-task="task-17"> Deliberately insert an incomplete proof. Confirm it is rejected even if a compiler process exits successfully.</li>
+<li><input type="checkbox" data-task="task-18"> Have both collaborators inspect at least five examples from each split.</li>
+</ul>
+<p><strong>Done when:</strong> the intended accepted sample passes Lean and its axiom audit, altered examples fail, and the renderer preserves the same graph. If Lean has not run, keep the <code>not_run</code> status. A Python certificate check is useful and does not replace this gate.</p>
+<h3 id="roadmap-milestone-c-align-actual-model-representations">Milestone C: align actual-model representations</h3>
+<p><strong>Question:</strong> Can an affine map predict a recipient model&#39;s activations on unseen task families better than simple controls?</p>
+<ul>
+<li><input type="checkbox" data-task="task-19"> Follow <a href="#models">llm-experiment.md</a>.</li>
+<li><input type="checkbox" data-task="task-20"> Begin with identical short input prompts for both models. This isolates coordinate alignment from language translation.</li>
+<li><input type="checkbox" data-task="task-21"> Record the exact model commits, tokenizer hashes, layers, positions, input hashes, and packages.</li>
+<li><input type="checkbox" data-task="task-22"> Debug on about 30 examples before collecting thousands.</li>
+<li><input type="checkbox" data-task="task-23"> Fit regularization on validation data only. Keep the test set untouched until the choice is fixed.</li>
+<li><input type="checkbox" data-task="task-24"> Compare shuffled anchors and training-mean outputs; add an identity map when dimensions match.</li>
+</ul>
+<p><strong>Done when:</strong> a fresh collection and fitting run produces a complete manifest and a clear held-out result, positive or negative. Do not require a positive result to publish. This milestone establishes representation alignment only.</p>
+<h3 id="roadmap-milestone-d-establish-functional-transfer">Milestone D: establish functional transfer</h3>
+<p><strong>Question:</strong> Does the translated representation help the recipient answer questions, beyond what text or simple controls provide?</p>
+<ul>
+<li><input type="checkbox" data-task="task-25"> Choose a single insertion point and document whether the state is before or after normalization.</li>
+<li><input type="checkbox" data-task="task-26"> Implement an identity/oracle intervention using the recipient&#39;s own states. It should preserve the recipient&#39;s predictions within numerical tolerance.</li>
+<li><input type="checkbox" data-task="task-27"> Implement the translated-source intervention at that exact interface.</li>
+<li><input type="checkbox" data-task="task-28"> Test the recipient alone, the source alone, plain-text communication, translated states, shuffled states, and zero/mean states.</li>
+<li><input type="checkbox" data-task="task-29"> Keep input information and decoding budgets matched. If the source sees a solution, compare with an equally solution-informed text teacher and label that condition.</li>
+<li><input type="checkbox" data-task="task-30"> Evaluate exact rule-chain correctness or next-token loss on held-out problem families, not only embedding distance.</li>
+</ul>
+<p><strong>Done when:</strong> the intervention is reproducible and its result is interpreted narrowly. A clean functional failure despite good alignment is an informative result. Increase adapter complexity only if the failure points to a specific missing capability.</p>
+<h3 id="roadmap-milestone-e-teach-a-standalone-student">Milestone E: teach a standalone student</h3>
+<p><strong>Question:</strong> Does training on checked synthetic examples improve the student when the mathematical teacher and translator are absent at evaluation?</p>
+<ul>
+<li><input type="checkbox" data-task="task-31"> Create a small fixed text dataset from the formally checked tasks and audited renderings.</li>
+<li><input type="checkbox" data-task="task-32"> Fine-tune a small student with a modest parameter-efficient method or an explicitly bounded full-tuning run.</li>
+<li><input type="checkbox" data-task="task-33"> Compare equal training-token/step budgets: controlled renderer data, learned-translator data if available, and a simpler nonformal synthetic baseline.</li>
+<li><input type="checkbox" data-task="task-34"> Evaluate unseen structures and a small frozen general-language retention set.</li>
+<li><input type="checkbox" data-task="task-35"> Repeat training with three seeds before advertising a capability gain.</li>
+</ul>
+<p><strong>Done when:</strong> the student is evaluated alone, with all controls and compute reported. A suggested later confirmatory criterion is at least five percentage points of held-out task improvement with a paired uncertainty interval excluding zero, chosen before the run. That is a proposed local criterion, not a field standard or a guaranteed achievable result.</p>
+<h3 id="roadmap-milestone-f-test-adaptive-improvement">Milestone F: test adaptive improvement</h3>
+<p><strong>Question:</strong> Does a curriculum adapting to the current learner outperform a fixed generator at the same total budget?</p>
+<ul>
+<li><input type="checkbox" data-task="task-36"> Implement only after a useful standalone or connected-system baseline exists.</li>
+<li><input type="checkbox" data-task="task-37"> Keep a fixed-generator control. Give both conditions the same total generated candidates, proof attempts, training tokens, and compute accounting.</li>
+<li><input type="checkbox" data-task="task-38"> Score candidate usefulness using the current learner on training/validation tasks, never the held-out test set.</li>
+<li><input type="checkbox" data-task="task-39"> Prefer tasks near the learner&#39;s current frontier while enforcing diversity and nontriviality.</li>
+<li><input type="checkbox" data-task="task-40"> Retain some older data to measure and reduce forgetting; compare a replay condition explicitly.</li>
+<li><input type="checkbox" data-task="task-41"> Evaluate after a fixed number of rounds and report unsuccessful candidates as part of the cost.</li>
+</ul>
+<p><strong>Done when:</strong> adaptation beats the fixed curriculum under the registered budget, or a reproducible failure reveals why it does not. More generated proofs alone do not demonstrate recursive capability improvement.</p>
+<h2 id="roadmap-5-concrete-toy-problems-to-work-through">5. Concrete toy problems to work through</h2>
+<h3 id="roadmap-toy-1-change-coordinates-with-known-ground-truth">Toy 1: change coordinates with known ground truth</h3>
+<p>Take the 2D point <code>(3, 1)</code>, rotate it 90 degrees to <code>(-1, 3)</code>, then add <code>(2, -1)</code> to obtain <code>(1, 2)</code>. Generate many points transformed by the same rule. Fit a matrix plus offset and predict held-out transformed points. Then use different input/output dimensions with a shared lower-dimensional factor, as the included code does.</p>
+<p><strong>Exercise:</strong> recover the transformation, add noise, shuffle the anchors, and compare errors. For an equal-dimension rigid case, compare the included orthogonal Procrustes baseline with the full affine map. Distances should be preserved only in the rigid case.</p>
+<h3 id="roadmap-toy-2-perfect-geometry-with-the-wrong-meaning">Toy 2: perfect geometry with the wrong meaning</h3>
+<p>Place points equally around a circle. Label points by whether their horizontal coordinate is positive. Both identity and a half-turn map the unpaired cloud onto itself and undo themselves on a second application. The half-turn reverses the labels.</p>
+<p><strong>Exercise:</strong> reproduce the included counterexample, then add three known anchors and see which ambiguities remain. The lesson concerns correspondence, not whether unsupervised alignment can ever work.</p>
+<h3 id="roadmap-toy-3-a-theorem-with-two-valid-proofs">Toy 3: a theorem with two valid proofs</h3>
+<p>Use a starting proposition <code>P0</code> and rules <code>P0 -&gt; P1</code>, <code>P1 -&gt; P4</code>, <code>P0 -&gt; P2</code>, <code>P2 -&gt; P3</code>, <code>P3 -&gt; P4</code>. The short route uses two rules; another valid route uses three. Formal proof terms apply the implication hypotheses to the starting fact.</p>
+<p><strong>Exercise:</strong> inspect the generated equivalent in <code>data/generated/train.jsonl</code>. Reconstruct the short chain, then the long chain. Lean should validate both under the same assumptions. Shortening here is shortest-path search over a fixed supplied rule graph. It is not a general algorithm for finding globally shortest mathematical proofs.</p>
+<h3 id="roadmap-toy-4-render-the-exact-same-graph-as-a-fictional-task">Toy 4: render the exact same graph as a fictional task</h3>
+<p>Render the previous example as processes becoming ready: process Atlas is ready; if Atlas is ready then Birch is ready; if Birch is ready then Cedar is ready. Ask for a valid shortest rule chain establishing the target. Store both rule IDs and the atom chain as ground truth.</p>
+<p><strong>Exercise:</strong> rename every process, reorder rules, and add irrelevant rules. The answer&#39;s semantic structure should remain valid. The included templates have an exact round trip to the underlying graph; they do not establish that an arbitrary free-form explanation is faithful.</p>
+<p>Every target in the initial generator is reachable. Asking only whether it is reachable would yield a trivial all-yes dataset. For a balanced future task, ask finite Horn entailment and generate non-entailment certificates under an explicit finite-world semantics. An unreachable graph node does not, by itself, prove the negation of a free proposition in Lean.</p>
+<h3 id="roadmap-toy-5-separate-the-different-generalization-challenges">Toy 5: separate the different generalization challenges</h3>
+<p>The initial splits change graph topology, naming vocabulary, and rendering template together. This is a useful stress test but does not isolate the cause of failure.</p>
+<p><strong>Exercise:</strong> make a factorial evaluation: familiar/unfamiliar structure crossed with familiar/unfamiliar naming and familiar/unfamiliar template. Keep each graph lineage within one split. This yields eight conditions. Report each condition instead of one blended accuracy.</p>
+<h3 id="roadmap-toy-6-learn-where-affine-translation-fails">Toy 6: learn where affine translation fails</h3>
+<p>Generate source vectors and targets that include nonlinear functions such as a squared coordinate. Fit the affine map and observe the residual. Compare a two-layer MLP on exactly the same train/validation/test split. Change only the translator.</p>
+<p><strong>Exercise:</strong> distinguish insufficient model capacity from insufficient anchors. A nonlinear adapter winning this artificial task does not justify using a huge translator for real LLMs. It only demonstrates the intended capacity difference.</p>
+<h3 id="roadmap-toy-7-write-ten-lean-exercises-yourself">Toy 7: write ten Lean exercises yourself</h3>
+<p>Prove implication application, implication composition, conjunction introduction, conjunction commutativity, projection from a conjunction, disjunction introduction, disjunction case analysis, an explicit existential witness, a simple natural-number identity, and an induction statement. Record the axiom dependencies.</p>
+<p><strong>Exercise:</strong> for each one, write a plain-English statement that preserves quantifiers and assumptions. Change one quantifier or reverse an implication and explain why the statement is different. These examples can become a manually inspected seed set for future translation.</p>
+<h3 id="roadmap-toy-8-inspect-actual-activations-without-training-a-model">Toy 8: inspect actual activations without training a model</h3>
+<p>Give related general and mathematical models the same short prompts ending before the answer. Extract a fixed hidden-state layer and the last nonpadding position. Fit an affine map. The optional collector and fitter support this stage once the model dependencies and checkpoints are available.</p>
+<p><strong>Exercise:</strong> compare a fixed middle layer with the final representation using validation data, then freeze the choice. Changing layers based on test performance would contaminate the evaluation. Do not insert an intermediate residual vector into an input-embedding interface as if they were interchangeable.</p>
+<h3 id="roadmap-toy-9-test-whether-the-recipient-can-use-a-translated-state">Toy 9: test whether the recipient can use a translated state</h3>
+<p>Begin with the recipient&#39;s own state as an oracle. For a simple next-token decoding test, a final normalized state may be supplied to the matching output head after inspecting the model implementation. For an intermediate-layer test, implement a proper forward intervention at that layer so remaining layers run normally.</p>
+<p><strong>Exercise:</strong> first show that the oracle path reproduces the original output. Then replace it with the mapped source state. A low MSE and a bad task result are compatible. Record both.</p>
+<h3 id="roadmap-toy-10-a-tiny-learning-progress-curriculum">Toy 10: a tiny learning-progress curriculum</h3>
+<p>After establishing a working learner, create tasks at several rule-chain depths. Compare uniform sampling against sampling from depth ranges where the learner is improving. Reject duplicate normalized tasks. Use an independent validation pool for selection and a frozen test pool for reporting.</p>
+<p><strong>Exercise:</strong> use the same number of learner updates and examples in both conditions. Add generation, checking, and teacher inference costs to the comparison. This is the first bounded test of the adaptive part of your original proposal.</p>
+<h2 id="roadmap-6-an-eight-week-plan-with-dependencies">6. An eight-week plan with dependencies</h2>
+<p>These are effort-sized phases, not deadlines. If a phase takes three weeks, move the later phases rather than skipping its checks.</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Ian&#39;s concrete work</th>
+<th>Cousin&#39;s concrete work</th>
+<th>Reviewable deliverable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>First evening</td>
+<td>Run CPU toys; create repository; choose first issues</td>
+<td>Clone and reproduce one result</td>
+<td>Public starter plus reproduction comment</td>
+</tr>
+<tr>
+<td>Week 1</td>
+<td>Trace ten graph/proof pairs; learn basic Lean terms</td>
+<td>Verify test harness and continuous integration</td>
+<td>Lean audit results and deliberately failing example</td>
+</tr>
+<tr>
+<td>Week 2</td>
+<td>Specify task semantics and held-out graph families</td>
+<td>Add factorial split/renderer controls</td>
+<td>Dataset card, 100 audited examples, frozen evaluation</td>
+</tr>
+<tr>
+<td>Week 3</td>
+<td>Read model-stitching methods and write experiment card</td>
+<td>Collect a 30-example activation pilot, measure memory/time</td>
+<td>Exact model revisions and complete pilot manifest</td>
+</tr>
+<tr>
+<td>Week 4</td>
+<td>Inspect errors and competing explanations</td>
+<td>Fit affine map and controls on a larger anchor set</td>
+<td>Held-out alignment report, including failed cases</td>
+</tr>
+<tr>
+<td>Week 5</td>
+<td>Choose a functional task and plain-text baseline</td>
+<td>Implement oracle and translated-state intervention</td>
+<td>Connected-system comparison at matched information</td>
+</tr>
+<tr>
+<td>Week 6</td>
+<td>Curate a small verified text dataset</td>
+<td>Run one small student-training pilot if earlier gates justify it</td>
+<td>Student-alone evaluation and retention results</td>
+</tr>
+<tr>
+<td>Week 7</td>
+<td>Design fixed versus adaptive curriculum comparison</td>
+<td>Implement a bounded curriculum if a useful baseline exists</td>
+<td>Registered comparison and cost accounting</td>
+</tr>
+<tr>
+<td>Week 8</td>
+<td>Write a short methods/results/limitations note</td>
+<td>Reproduce from a fresh environment and package release</td>
+<td>Versioned v0.1 research result, positive or negative</td>
+</tr>
+</tbody></table>
+<p>Have a weekly 30- to 45-minute review. Each person brings one artifact, one uncertainty, and one proposed next experiment. Rotate who reproduces the other&#39;s result. Ian can lead the question, semantics, interpretation and documentation without pretending to be an expert in every implementation detail. His cousin can lead model internals and training while reviewing the mathematical claims together.</p>
+<h2 id="roadmap-7-learn-only-the-prerequisites-needed-for-the-next-gate">7. Learn only the prerequisites needed for the next gate</h2>
+<h3 id="roadmap-linear-algebra-and-regression">Linear algebra and regression</h3>
+<ul>
+<li><input type="checkbox" data-task="task-42"> Derive the shape of <code>W</code> when the source has 12 coordinates and the target has 8.</li>
+<li><input type="checkbox" data-task="task-43"> Explain why the intercept matters and why coordinate scales affect regularization.</li>
+<li><input type="checkbox" data-task="task-44"> Fit using least squares or a ridge solver rather than an explicit matrix inverse.</li>
+<li><input type="checkbox" data-task="task-45"> Compute the number of anchors relative to the input dimension and effective rank. A wide, underdetermined fit can interpolate training data without useful generalization.</li>
+<li><input type="checkbox" data-task="task-46"> Explain the circle ambiguity and why determinant matching would not resolve semantics.</li>
+</ul>
+<p>Finish when you can describe the planted toy and its controls from the output JSON without relying on a model&#39;s reassurance. Read the PyTorch/SciPy references in the source map as needed.</p>
+<h3 id="roadmap-lean-and-formal-semantics">Lean and formal semantics</h3>
+<ul>
+<li><input type="checkbox" data-task="task-47"> Work through the logic chapters of Theorem Proving in Lean 4 and the corresponding Mathematics in Lean exercises.</li>
+<li><input type="checkbox" data-task="task-48"> Understand propositions as types and proofs as terms at the level needed for implication chains.</li>
+<li><input type="checkbox" data-task="task-49"> Check actual dependencies with <code>#print axioms</code>.</li>
+<li><input type="checkbox" data-task="task-50"> Keep assumptions, theorem statements, proof certificates, and language views distinct in the data schema.</li>
+</ul>
+<p>Finish when you can intentionally break a statement, a proof, and a renderer separately and predict which check should catch each error.</p>
+<h3 id="roadmap-transformer-representations">Transformer representations</h3>
+<ul>
+<li><input type="checkbox" data-task="task-51"> Identify the difference between token embeddings, residual-stream states, normalized states, logits, and KV caches.</li>
+<li><input type="checkbox" data-task="task-52"> Print the shape of one actual model output and the token positions selected.</li>
+<li><input type="checkbox" data-task="task-53"> Verify padding masks and deterministic evaluation mode on a small pilot.</li>
+<li><input type="checkbox" data-task="task-54"> Document the recipient insertion point before training a translator for it.</li>
+</ul>
+<p>Finish when you can trace one prompt through collection, mapping, and recipient evaluation with every shape and interface written down.</p>
+<h3 id="roadmap-experimental-inference">Experimental inference</h3>
+<ul>
+<li><input type="checkbox" data-task="task-55"> Choose a primary outcome before running the test.</li>
+<li><input type="checkbox" data-task="task-56"> Use validation for choices and hold out independent graph/theorem families.</li>
+<li><input type="checkbox" data-task="task-57"> Keep paraphrases, variable renamings, alternative proofs, and numeric variants of one source within the same split.</li>
+<li><input type="checkbox" data-task="task-58"> Report per-family results and paired differences. Bootstrap independent problem families rather than treating all paraphrases as independent samples.</li>
+<li><input type="checkbox" data-task="task-59"> Repeat stochastic training seeds, retain failed runs, and avoid selecting the best seed.</li>
+</ul>
+<p>Finish when a skeptical reader can distinguish leakage, extra context, extra compute, and useful transfer from your report.</p>
+<h2 id="roadmap-8-evaluation-rules-that-prevent-convincing-yourself-too-early">8. Evaluation rules that prevent convincing yourself too early</h2>
+<h3 id="roadmap-before-collecting-data">Before collecting data</h3>
+<p>Write the task, allowed inference information, generator grammar, split unit, selection rule, and budget into an experiment card. Version the generator and record a normalized structure hash or lineage identifier. Do not make a test theorem available as an imported library lemma while claiming the system discovered its proof.</p>
+<h3 id="roadmap-before-claiming-translation">Before claiming translation</h3>
+<p>Use paired content anchors, selected layers, consistent token positions, and training-only preprocessing. Compare mean outputs, shuffled pairs, and a simple affine map before adding neural capacity. A small nonlinear MLP is the next capacity test. A cross-attention/Q-Former-style bridge is a later candidate for variable-length proof representations when simple mapping is demonstrably insufficient.</p>
+<h3 id="roadmap-before-claiming-useful-connected-model-reasoning">Before claiming useful connected-model reasoning</h3>
+<p>Use end-task correctness and the same-information controls. Compare the mathematical model&#39;s raw text against its mapped representations. If the teacher read the complete proof, describe the result as proof-informed assistance. Account for the teacher&#39;s compute and the recipient&#39;s context length. An oracle with more information can define a ceiling, but it is not a fair baseline for an unaided model.</p>
+<h3 id="roadmap-before-claiming-permanent-learning">Before claiming permanent learning</h3>
+<p>Evaluate the student without the source model or adapter. Compare matched training tokens, steps, and data counts. Keep a small frozen retention set so specialized improvement is not mistaken for broader improvement. Show example-level failures, not just an average score.</p>
+<h3 id="roadmap-before-claiming-recursive-improvement">Before claiming recursive improvement</h3>
+<p>Compare multiple adaptive rounds against a fixed generator with equal budget. Measure gain per checked example and per unit of total compute. Track unique normalized statements, proof families, attempted candidates, checking time, search time, training tokens, and replay. A larger data file or a shorter proof is not itself a capability improvement.</p>
+<h2 id="roadmap-9-compute-tools-and-spending">9. Compute, tools, and spending</h2>
+<p>The default is to keep the CPU/Lean phase free apart from existing hardware. A domain is optional. A standard text-only LLM API is useful for coding assistance or drafting explanations, but it generally does not expose the hidden states needed for your vector-regression experiment. Use locally inspectable open-weight models for that part.</p>
+<p>Start the real-model stage with a small pilot and measure memory. Raw weights for a 1.5-billion-parameter model occupy about 6 GB in float32 or 3 GB in two-byte precision, before framework overhead and activations. Sequential collection avoids keeping both models in memory simultaneously. These are arithmetic estimates, not fit guarantees. The detailed plan includes activation-storage calculations and short-context defaults.</p>
+<p>If the laptop is too slow, use a bounded one-off compute job after the pilot is specified. A suggested first discretionary cap is $25, chosen before launching anything; it is a budget decision, not a provider price estimate. Do not begin a large training run while debugging data semantics or padding. Record time and memory on the first batch and extrapolate cautiously.</p>
+<p>Use Git, Python, NumPy, Lean, and optional PyTorch/Transformers. Prefer simple local files and JSONL over infrastructure. A vector database, web backend, and distributed training system are not needed for the first result. Full STP reproduction is a reference target with much larger compute requirements, not a sensible first milestone.</p>
+<h2 id="roadmap-10-open-source-launch-and-collaboration">10. Open-source launch and collaboration</h2>
+<ul>
+<li><input type="checkbox" data-task="task-60"> Use the supplied Apache-2.0 license for original starter material and record external terms separately.</li>
+<li><input type="checkbox" data-task="task-61"> Follow the launch commands in <code>launch.md</code>; the account name and remote URL are intentionally yours to choose.</li>
+<li><input type="checkbox" data-task="task-62"> Keep the original private conversation and scanned notes outside the public repository.</li>
+<li><input type="checkbox" data-task="task-63"> Add topics: <code>lean4</code>, <code>synthetic-data</code>, <code>representation-learning</code>, <code>theorem-proving</code>, <code>reproducible-research</code>.</li>
+<li><input type="checkbox" data-task="task-64"> Add an honest short description: &quot;Verified synthetic reasoning tasks and experiments in representation transfer.&quot;</li>
+<li><input type="checkbox" data-task="task-65"> Enable continuous integration and inspect its first run. A workflow file being present does not mean it has passed on GitHub.</li>
+<li><input type="checkbox" data-task="task-66"> Invite your cousin yourself and assign one small issue to each person.</li>
+<li><input type="checkbox" data-task="task-67"> Enable GitHub Pages from <code>main</code> and <code>/docs</code> if you want the interactive roadmap as the project page.</li>
+<li><input type="checkbox" data-task="task-68"> Publish the first experiment note only after another person reproduces it.</li>
+<li><input type="checkbox" data-task="task-69"> Tag a release after commands, provenance, and results correspond to one commit. Use <code>CITATION.cff</code>; add a DOI only if you later actually obtain one.</li>
+</ul>
+<p>Working domain: <code>lemmaferry.com</code>. A read-only official registry check found no matching record at October 16, 2026, 8:22 p.m. Pacific. This is not a reservation or a registrar checkout result; availability and price can change. GitHub Pages can host the project without buying a domain. See the timestamped observations in <code>launch.md</code>.</p>
+<p>Useful first public contribution requests are concrete: reproduce an environment, inspect five proof/language pairs, improve a split, or implement one control. Avoid a broad request for someone to &quot;help build AGI&quot; before the toolkit has an independently checkable result.</p>
+<h2 id="roadmap-11-possible-later-connection-to-light-dose">11. Possible later connection to Light Dose</h2>
+<p>Keep the first benchmark domain-neutral so other people can understand and reproduce it. If the toolkit becomes useful, a later physics branch could generate and check small symbolic or finite-model exercises: dimensional consistency, matrix evolution in a specified kinetic model, probability identities, or energy accounting under explicit assumptions.</p>
+<p>Such exercises could help audit theoretical derivations or teach a model to respect stated constraints. A formal proof would certify the mathematics inside the chosen model. It would not establish that the model describes biological effects or validate a radiation-health claim. The bridge back to Light Dose should come from a specific computational question, not from renaming a general benchmark.</p>
+<h2 id="roadmap-12-choose-the-next-step-from-the-result">12. Choose the next step from the result</h2>
+<table>
+<thead>
+<tr>
+<th>Observation</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Artificial affine recovery fails</td>
+<td>Fix numeric implementation, scaling, pairing or test generation</td>
+</tr>
+<tr>
+<td>Python certificate passes but Lean fails</td>
+<td>Inspect formal export and actual checker diagnostics</td>
+</tr>
+<tr>
+<td>Controlled text view fails a round trip</td>
+<td>Fix rendering before adding a language model</td>
+</tr>
+<tr>
+<td>Real-model alignment is poor</td>
+<td>Inspect layers, tokenization, rank, anchors and family shift before increasing capacity</td>
+</tr>
+<tr>
+<td>MSE is low but answers do not improve</td>
+<td>Investigate the recipient interface and lost task-relevant information; report the failure</td>
+</tr>
+<tr>
+<td>Teacher-assisted answers improve</td>
+<td>Compare plain-text assistance and total compute</td>
+</tr>
+<tr>
+<td>Standalone student improves on familiar templates only</td>
+<td>Strengthen structural splits and simplify the claim</td>
+</tr>
+<tr>
+<td>Adaptive curriculum fails to beat a fixed one</td>
+<td>Publish the comparison and diagnose diversity, difficulty and forgetting</td>
+</tr>
+<tr>
+<td>Several results are reproducible</td>
+<td>Release the benchmark and invite focused contributions before expanding scope</td>
+</tr>
+</tbody></table>
+<p>Your next concrete deliverable is small: a public repository with a tested numeric translator, an accurately labeled formal-data pipeline, and one experiment another person can reproduce. Everything larger can be earned one result at a time.</p>
+</div></details>
+<details class="chapter" id="issues" ><summary><span class="chapter-index">02</span><span><strong>26 actionable issues</strong><small>Tasks, owners, dependencies, effort and acceptance criteria</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Copy the first three cards into GitHub issues after creating the repository. Estimates are focused work time for someone with the stated prerequisites, not deadlines. Use the experiment issue template for new research claims. The research lead and implementation lead are suggested roles, not fixed ownership.</p>
+<h2 id="issues-first-three-issue-bodies">First three issue bodies</h2>
+<h3 id="issues-lf-001-reproduce-both-artificial-alignment-runs">LF-001: Reproduce both artificial alignment runs</h3>
+<p><strong>Owner:</strong> Ian. <strong>Estimate:</strong> 45 to 90 minutes. <strong>Dependencies:</strong> none. <strong>Labels:</strong> good first issue, reproduction.</p>
+<p>Run the test suite and <code>toy_alignment.py</code> with seeds 7 and 19. Save the two JSON outputs and optional plots. Compare paired-anchor, wrong-pair, and mean-output errors. Read the symmetric-cloud control. Write five sentences describing why it is a numerical sanity check and why geometric matching alone cannot establish semantic translation.</p>
+<p><strong>Acceptance:</strong> another person reruns both commands; normalized RMSE agrees to a sensible floating-point tolerance; no test-data preprocessing or best-seed selection; results explicitly say artificial vectors, no LLM or Lean involved.</p>
+<h3 id="issues-lf-002-execute-the-first-real-lean-verification">LF-002: Execute the first real Lean verification</h3>
+<p><strong>Owner:</strong> cousin, with Ian reviewing examples. <strong>Estimate:</strong> 1 to 3 hours plus installation. <strong>Dependencies:</strong> none. <strong>Labels:</strong> good first issue, verification.</p>
+<p>Install the pinned Lean toolchain using official instructions. Generate 20 examples per split. From <code>lean/</code>, check all three JSONL files, retaining logs and actual version. Inspect a short and a longer proof for the same theorem. Deliberately corrupt one copy and confirm failure. Read the existing tests for missing executables and misleading compiler success.</p>
+<p><strong>Acceptance:</strong> every accepted example has a recognized zero-axiom audit; corrupted input fails; missing Lean remains <code>not_run</code>; checked files and log locations appear in the experiment record. If the compiler rejects exported syntax, fix and retest the generator rather than changing statuses manually.</p>
+<h3 id="issues-lf-003-publish-the-initial-repository-and-reproduction-instructions">LF-003: Publish the initial repository and reproduction instructions</h3>
+<p><strong>Owner:</strong> Ian. <strong>Estimate:</strong> 45 to 90 minutes. <strong>Dependencies:</strong> review LF-001 and provenance policy. <strong>Labels:</strong> documentation, launch.</p>
+<p>Create an empty public <code>lemmaferry</code> repository. Review the license, README, contents and staged diff, then push. Do not upload private notes, scans, credentials, activations, or weights. Invite the cousin after confirming their account. Open LF-001 and LF-002 and add one reproduction comment when they pass. Enable GitHub Pages from <code>/docs</code> if desired.</p>
+<p><strong>Acceptance:</strong> a fresh clone can run CPU tests; the README states actual verification limits; the first CI run is inspected; the project page has working links. No claim of Lean or model success is based only on a workflow file being present.</p>
+<h2 id="issues-next-issues">Next issues</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Concrete task</th>
+<th>Suggested owner / effort</th>
+<th>Depends on</th>
+<th>Done when</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LF-004</td>
+<td>Audit five graph/proof/language triples from each split</td>
+<td>Both, 1 hour</td>
+<td>LF-002</td>
+<td>Each formal assumption and answer chain matches the rendered world; audit recorded</td>
+</tr>
+<tr>
+<td>LF-005</td>
+<td>Add factorial structure, naming, and template splits</td>
+<td>Implementation lead, 3 to 6 hours</td>
+<td>LF-004</td>
+<td>Eight evaluation conditions isolate each shift; graph lineage stays within one split</td>
+</tr>
+<tr>
+<td>LF-006</td>
+<td>Add normalized graph/statement hashes and deduplication</td>
+<td>Implementation lead, 2 to 4 hours</td>
+<td>LF-005</td>
+<td>Renamings and reordered-edge variants are grouped or rejected across splits</td>
+</tr>
+<tr>
+<td>LF-007</td>
+<td>Write and check ten hand-authored Lean seed examples</td>
+<td>Ian, 3 to 6 hours</td>
+<td>LF-002</td>
+<td>Assumptions, proof terms, English views, and axiom audits reviewed</td>
+</tr>
+<tr>
+<td>LF-008</td>
+<td>Define finite Horn non-entailment semantics and balanced tasks</td>
+<td>Both, 3 to 6 hours</td>
+<td>LF-004</td>
+<td>Negative labels mean not derivable in the finite rule world; never confused with a proof of negated free propositions</td>
+</tr>
+<tr>
+<td>LF-009</td>
+<td>Add nonlinear planted-map capacity test</td>
+<td>Ian or cousin, 2 to 4 hours</td>
+<td>LF-001</td>
+<td>Affine and small MLP use identical splits; expected failure/success explained</td>
+</tr>
+<tr>
+<td>LF-010</td>
+<td>Record a first actual-model experiment card</td>
+<td>Both, 1 hour</td>
+<td>LF-005, LF-007</td>
+<td>Model IDs/revisions, layer, position, tokens, controls and budget chosen before test</td>
+</tr>
+<tr>
+<td>LF-011</td>
+<td>Prepare disjoint activation anchor views</td>
+<td>Ian, 2 to 4 hours</td>
+<td>LF-010</td>
+<td>IDs/families/text and stronger structural lineage checks pass; no answers in same-information prompts</td>
+</tr>
+<tr>
+<td>LF-012</td>
+<td>Run 30-example activation collector pilot</td>
+<td>Implementation lead, 2 to 4 hours plus download</td>
+<td>LF-011</td>
+<td>Complete manifests, exact revisions, tokenizer hashes, timing and memory recorded</td>
+</tr>
+<tr>
+<td>LF-013</td>
+<td>Collect larger anchors and fit affine baseline</td>
+<td>Implementation lead, 3 to 6 hours</td>
+<td>LF-012</td>
+<td>Validation selects alpha, test untouched, shuffled/mean controls and per-family metrics released</td>
+</tr>
+<tr>
+<td>LF-014</td>
+<td>Add identity/oracle recipient intervention</td>
+<td>Implementation lead, 3 to 8 hours</td>
+<td>LF-013</td>
+<td>Recipient&#39;s own activation reproduces original predictions at the specified interface</td>
+</tr>
+<tr>
+<td>LF-015</td>
+<td>Test translated-state intervention and text baseline</td>
+<td>Both, 3 to 8 hours</td>
+<td>LF-014</td>
+<td>Exact task results and equal-information/equal-budget controls, not MSE alone</td>
+</tr>
+<tr>
+<td>LF-016</td>
+<td>Compare a small MLP against affine mapping</td>
+<td>Implementation lead, 3 to 6 hours</td>
+<td>LF-015 diagnosis</td>
+<td>Capacity and training cost isolated; no test-set architecture selection</td>
+</tr>
+<tr>
+<td>LF-017</td>
+<td>Prototype cross-attention bridge only if variable-length mismatch warrants it</td>
+<td>Implementation lead, 1 to 2 weeks</td>
+<td>LF-015, LF-016</td>
+<td>Same task/budget comparison shows whether complexity helps; evidence is not only training loss</td>
+</tr>
+<tr>
+<td>LF-018</td>
+<td>Build fixed verified-text student dataset</td>
+<td>Ian, 3 to 6 hours</td>
+<td>LF-002, LF-006, LF-007</td>
+<td>Every accepted formal item checked; rendering audit and provenance intact</td>
+</tr>
+<tr>
+<td>LF-019</td>
+<td>Run a small standalone student-training pilot</td>
+<td>Implementation lead, 1 to 2 weeks</td>
+<td>LF-018</td>
+<td>Student evaluated without teacher/translator; equal-token baseline and retention set included</td>
+</tr>
+<tr>
+<td>LF-020</td>
+<td>Add paired uncertainty estimates over independent families</td>
+<td>Both, 2 to 4 hours</td>
+<td>Any task result</td>
+<td>Confidence procedure respects dependence; three training seeds retained when applicable</td>
+</tr>
+<tr>
+<td>LF-021</td>
+<td>Compare fixed and learning-progress curricula</td>
+<td>Both, 1 to 2 weeks</td>
+<td>LF-019 useful baseline</td>
+<td>Same total candidates/updates/compute and frozen test; unsuccessful rounds reported</td>
+</tr>
+<tr>
+<td>LF-022</td>
+<td>Compare proof costs with a fixed library</td>
+<td>Ian, 2 to 4 hours</td>
+<td>LF-002</td>
+<td>Edge applications, source tokens, checking time and search effort reported separately</td>
+</tr>
+<tr>
+<td>LF-023</td>
+<td>Add a carefully scoped Mathlib domain</td>
+<td>Both, 1 to 2 weeks</td>
+<td>LF-007 and useful baseline</td>
+<td>Toolchain/imports pinned; target theorem cannot be imported as its own solution</td>
+</tr>
+<tr>
+<td>LF-024</td>
+<td>Write the first public methods/results note</td>
+<td>Ian, 3 to 6 hours</td>
+<td>LF-013 or later clean result</td>
+<td>Claim limited to completed experiment; failures, controls, commands and revisions included</td>
+</tr>
+<tr>
+<td>LF-025</td>
+<td>Reproduce a release from a fresh environment</td>
+<td>Cousin, 2 to 4 hours</td>
+<td>LF-024</td>
+<td>Clean clone commands work; citation, status table and results match one release commit</td>
+</tr>
+<tr>
+<td>LF-026</td>
+<td>Explore one explicitly modeled physics task</td>
+<td>Ian, later</td>
+<td>A useful released baseline</td>
+<td>Mathematical assumptions explicit; no biological inference claimed from formal correctness</td>
+</tr>
+</tbody></table>
+<h2 id="issues-stop-and-simplify-rules">Stop and simplify rules</h2>
+<ul>
+<li>If LF-001 fails, do not troubleshoot large models yet.</li>
+<li>If LF-004 fails, repair the renderer or formal semantics before training.</li>
+<li>If LF-013 has low MSE but LF-015 gives no useful task improvement, publish that distinction and inspect the interface.</li>
+<li>If a plain-text baseline wins at lower cost, keep it as the recommended method and investigate why.</li>
+<li>If LF-019 learns familiar wording only, strengthen the evaluation instead of expanding training compute.</li>
+<li>If LF-021 does not beat the fixed curriculum, the generator may still be a useful benchmark; retain the negative result.</li>
+</ul>
+<p>For every issue, attach the smallest artifact that lets the other collaborator check it: a JSON result, five inspected examples, a failing input, a shape trace, a plot, or a reproduction command.</p>
+</div></details>
+<details class="chapter" id="models" ><summary><span class="chapter-index">03</span><span><strong>Actual-model experiment</strong><small>Checkpoint choices, activation collection, regression and interventions</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>The first real-model milestone asks a limited question: can an affine map align
+the activations of a small mathematical model and a small general model on
+unseen theorem families? A later intervention experiment asks whether the
+translated activations improve the recipient&#39;s predictions. These are distinct
+claims. A low alignment error does not establish reasoning transfer, permanent
+learning, recursive self-improvement, or AGI.</p>
+<h2 id="models-choose-this-pair-first">Choose this pair first</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Public checkpoint</th>
+<th>Why use it</th>
+<th>Published license</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Source</td>
+<td><a href="https://huggingface.co/Qwen/Qwen2.5-Math-1.5B" target="_blank" rel="noopener noreferrer">Qwen/Qwen2.5-Math-1.5B</a></td>
+<td>Small, math-specialized, directly inspectable weights</td>
+<td><a href="https://huggingface.co/Qwen/Qwen2.5-Math-1.5B/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0</a></td>
+</tr>
+<tr>
+<td>Recipient</td>
+<td><a href="https://huggingface.co/Qwen/Qwen2.5-1.5B" target="_blank" rel="noopener noreferrer">Qwen/Qwen2.5-1.5B</a></td>
+<td>Related general base model with compatible architecture</td>
+<td><a href="https://huggingface.co/Qwen/Qwen2.5-1.5B/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0</a></td>
+</tr>
+</tbody></table>
+<p>The official configurations currently specify 28 layers and a 1,536-dimensional
+hidden state for each checkpoint. They differ in positional encoding and
+context limits. Use short prompts and record both configurations. These are
+base completion models, so start with literal completion prompts rather than
+chat templates. References:
+<a href="https://huggingface.co/Qwen/Qwen2.5-Math-1.5B/blob/main/config.json" target="_blank" rel="noopener noreferrer">math configuration</a>,
+<a href="https://huggingface.co/Qwen/Qwen2.5-1.5B/blob/main/config.json" target="_blank" rel="noopener noreferrer">general configuration</a>.</p>
+<p>The math checkpoint is a mathematical language model, not a certified Lean
+proof checker. Lean remains a separate executable verifier. This model pair
+tests the representation interface; it does not yet instantiate a
+Lean-trained, self-improving theorem prover.</p>
+<p>Do not assume related names guarantee identical tokenization. The collector
+records a full tokenizer fingerprint and token IDs for every input as hashes.
+Require equal fingerprints and token hashes for the same-input baseline. If
+they differ, inspect the actual tokenization or choose a different checkpoint
+pair. Matching vocabularies alone would be insufficient.</p>
+<h2 id="models-checklist-a-prepare-a-small-auditable-dataset">Checklist A: prepare a small, auditable dataset</h2>
+<ul>
+<li><input type="checkbox" data-task="task-70"> Run the repository&#39;s deterministic toy experiments before downloading any models.</li>
+<li><input type="checkbox" data-task="task-71"> Create <code>data/anchors/train.jsonl</code>, <code>val.jsonl</code>, and <code>test.jsonl</code>.</li>
+<li><input type="checkbox" data-task="task-72"> Give each example a stable <code>id</code>, <code>family</code>, and <code>text</code>.</li>
+<li><input type="checkbox" data-task="task-73"> Start with 30 prompts to debug collection, then aim for about 3,000 anchors
+across several genuinely different families. A possible budget is 2,000 train,
+500 validation, and 500 test examples. These are proposed experiment sizes.</li>
+<li><input type="checkbox" data-task="task-74"> Assign complete generator families to splits before rendering text. Keep
+all variable renamings, numeric variants, alternate proofs, paraphrases, and
+applications of one underlying theorem in the same split.</li>
+<li><input type="checkbox" data-task="task-75"> Use at least two held-out families. Examples include implication chains,
+parity composition, finite-set membership, modular arithmetic, and finite
+graph reachability. Record the particular grammar used for each.</li>
+<li><input type="checkbox" data-task="task-76"> Deduplicate normalized theorem/proof structures, not just literal strings.</li>
+<li><input type="checkbox" data-task="task-77"> Store the original formal statement, proof, Lean toolchain version,
+verification result, source, and generator seed in the main dataset. The
+collector&#39;s compact JSONL is a view of that dataset.</li>
+<li><input type="checkbox" data-task="task-78"> Select validation/test families once. Write down the decision and avoid
+inspecting test results while choosing layers, regularization, or prompts.</li>
+</ul>
+<p>Each JSONL line is one JSON object:</p>
+<pre><code class="language-json">{&quot;id&quot;:&quot;train-implication-0001&quot;,&quot;family&quot;:&quot;implication_chains&quot;,&quot;text&quot;:&quot;Facts: every A is B; every B is C; x is A. Therefore x is&quot;}
+</code></pre>
+<p>An example from another split needs a different family, for example
+<code>parity_composition</code>. Numbers changed within one implication template do not
+constitute a new family. The collector checks disjoint IDs, exact-text
+duplicates across splits, and the declared family partition. It cannot
+automatically detect disguised structural duplicates; the generator must
+enforce that stronger rule.</p>
+<p>For this milestone, both models see <strong>identical prompt text</strong>. This removes
+formal-language translation and token-position alignment from the first test.
+The selected prompt must end before the answer. Do not give the source the
+correct solution while presenting the recipient only the question when
+claiming same-information reasoning transfer.</p>
+<h2 id="models-checklist-b-collect-frozen-model-activations">Checklist B: collect frozen-model activations</h2>
+<p>An optional collector is provided at <code>experiments/collect_activations.py</code>.
+Its model inference path has not been executed in the starter package.
+The initial workspace did not contain torch or transformers, and no weights
+were downloaded. Treat the first run as a documented engineering milestone.</p>
+<p>Create a separate environment so the toy package stays lightweight:</p>
+<pre><code class="language-bash">python3 -m venv .venv-llm
+source .venv-llm/bin/activate
+python -m pip install -e &#39;.[llm]&#39;
+python -m pip freeze &gt; llm-environment.lock.txt
+</code></pre>
+<p>For hardware-specific PyTorch installation, follow the
+<a href="https://pytorch.org/get-started/locally/" target="_blank" rel="noopener noreferrer">official installation selector</a>.
+The optional dependency group keeps this prototype on Transformers 4.x. The command above intentionally does not claim a tested dependency lock.
+Commit the exact lock from a successful run together with the run&#39;s manifest.</p>
+<p>Resolve and inspect immutable model revisions before collecting. This command
+queries metadata rather than downloading weights:</p>
+<pre><code class="language-bash">python - &lt;&lt;&#39;PY&#39;
+from huggingface_hub import HfApi
+api = HfApi()
+for model in [&quot;Qwen/Qwen2.5-Math-1.5B&quot;, &quot;Qwen/Qwen2.5-1.5B&quot;]:
+    print(model, api.model_info(model).sha)
+PY
+</code></pre>
+<p>Paste each 40-character commit SHA into its command. The collector rejects
+mutable references such as <code>main</code>:</p>
+<pre><code class="language-bash">python experiments/collect_activations.py \
+  --model Qwen/Qwen2.5-Math-1.5B \
+  --revision PASTE_THE_MATH_COMMIT_SHA \
+  --train data/anchors/train.jsonl \
+  --val data/anchors/val.jsonl \
+  --test data/anchors/test.jsonl \
+  --output runs/llm-source-layer14 \
+  --layer 14 --max-length 256 --batch-size 1 \
+  --device cpu --dtype float32
+
+python experiments/collect_activations.py \
+  --model Qwen/Qwen2.5-1.5B \
+  --revision PASTE_THE_GENERAL_COMMIT_SHA \
+  --train data/anchors/train.jsonl \
+  --val data/anchors/val.jsonl \
+  --test data/anchors/test.jsonl \
+  --output runs/llm-recipient-layer14 \
+  --expected-tokenizer-sha PASTE_SHA_FROM_SOURCE_MANIFEST \
+  --layer 14 --max-length 256 --batch-size 1 \
+  --device cpu --dtype float32
+</code></pre>
+<p>Run the commands sequentially. Each process loads one checkpoint, finishes,
+and exits before the other starts. CUDA and MPS can be requested explicitly;
+try the CPU float32 baseline for a few examples first. Float16 on CUDA may
+reduce memory use but changes the numerical experiment. MPS support and
+bfloat16 support depend on the installed runtime and hardware.</p>
+<p>The collector:</p>
+<ul>
+<li>Uses built-in Transformers model classes with <code>trust_remote_code=False</code> and
+safetensors weights.</li>
+<li>Loads tokenizer and model from the same immutable revision.</li>
+<li>Sets a fixed seed, <code>eval()</code> mode, and <code>torch.inference_mode()</code>.</li>
+<li>Records package versions, model configuration, input/output hashes, device,
+dtype, tokenizer fingerprint, layer, and selection rule.</li>
+<li>Supplies attention masks, pads on the right, and selects the last <strong>nonpadding</strong>
+token. It does not average padding tokens or assume the last array column is valid.</li>
+<li>Rejects overlong inputs rather than silently truncating them.</li>
+<li>Saves a status manifest; partially failed runs must not be treated as results.</li>
+</ul>
+<p>For each split, the NPZ contains <code>vectors</code> of shape <code>[examples, hidden_size]</code>,
+<code>ids</code>, <code>families</code>, <code>token_sha256</code>, and <code>lengths</code>. Arrays are non-pickle NumPy
+types. Pair rows by IDs and assert identical input hashes and token hashes
+before fitting. Do not pair rows merely by their current array order.</p>
+<p>The layer argument is the literal index in the Transformers <code>hidden_states</code>
+tuple. Index zero is the embedding output; subsequent indices identify model
+boundaries. The final entry may include final normalization. Confirm the
+precise boundary in the installed model implementation before writing hooks.
+<a href="https://huggingface.co/docs/transformers/en/main_classes/output" target="_blank" rel="noopener noreferrer">Transformers documents these output conventions</a>.</p>
+<h2 id="models-checklist-c-fit-and-evaluate-the-affine-translator">Checklist C: fit and evaluate the affine translator</h2>
+<p>Use the same regression idea as the toy alignment experiment:</p>
+<div class="equation">min over W, b: sum over training pairs ||x W + b - y||² + λ ||W||²</div>
+
+
+<p>This uses row-vector notation. Its matrix is transposed relative to the
+column-vector expression <code>Wx + b</code>; the operation is the same.</p>
+<p>After both collection manifests report <code>completed</code>, run the included fitter
+from the repository root:</p>
+<pre><code class="language-bash">python experiments/fit_activations.py \
+  --source runs/llm-source-layer14 \
+  --target runs/llm-recipient-layer14 \
+  --output runs/affine-layer14 \
+  --alphas 0.0001 0.001 0.01 0.1 1.0 \
+  --seed 1729
+</code></pre>
+<p>Choose a new output directory for each run. The fitter verifies archive hashes,
+completed statuses, matching input/token hashes, and identical paired IDs in
+the same order. It rejects reordered collections rather than silently pairing
+their rows. It fits standardizers on training data, selects the ridge strength
+using validation normalized RMSE, and then evaluates the selected map on test.
+Its objective averages squared error in standardized coordinates, so the
+numeric <code>alpha</code> values depend on that convention. It does not refit on the
+validation set.</p>
+<p>Read <code>runs/affine-layer14/results.json</code> for validation scores, test metrics,
+per-family metrics, and shuffled/mean/identity controls. The raw-coordinate
+map is saved in <code>translator.npz</code>; apply it as
+<code>source_vectors @ coef.T + intercept</code>. PCA, an unrelated-input control, layer
+selection, and activation interventions remain follow-up tasks. The fitter&#39;s
+numeric integration tests use artificial activations; an actual checkpoint
+collection is still required for model results.</p>
+<ul>
+<li><input type="checkbox" data-task="task-79"> Fit source centering, target centering, any standardization, and PCA
+<strong>only on the training split</strong>. Transform validation/test with those fitted values.</li>
+<li><input type="checkbox" data-task="task-80"> Begin with ridge regression. The 1,536 by 1,536 map has over two million
+parameters, so low training error with a few hundred anchors is uninformative.</li>
+<li><input type="checkbox" data-task="task-81"> Optionally use a training-fitted PCA or low-rank map with 32 or 64 components.
+Fit ridge in the smaller space and reconstruct full recipient activations.</li>
+<li><input type="checkbox" data-task="task-82"> Compare a small, predetermined validation grid for ridge strength and
+layers, such as indices 7, 14, and 21. Select one configuration before test.</li>
+<li><input type="checkbox" data-task="task-83"> Include recipient-training-mean prediction, identity when dimensions
+match, a shuffled-pair map, and an unrelated-input control.</li>
+<li><input type="checkbox" data-task="task-84"> Report test MSE, MSE divided by the recipient-mean baseline MSE, cosine
+similarity, and matched-example retrieval accuracy. State chance retrieval
+accuracy and candidate-pool size. For MSE, smaller is better; a ratio below one
+beats the mean baseline.</li>
+<li><input type="checkbox" data-task="task-85"> Report per-family metrics so a majority template cannot hide failure.</li>
+<li><input type="checkbox" data-task="task-86"> Publish unsuccessful runs and data sizes. A usable result includes the
+manifests and enough scripts to reproduce it, not just a scatter plot.</li>
+</ul>
+<p>This experiment is motivated by
+<a href="https://papers.neurips.cc/paper_files/paper/2025/hash/4569a868e7aa891248832ec08445d071-Abstract-Conference.html" target="_blank" rel="noopener noreferrer">Chen et al., Transferring Linear Features Across Language Models With Model Stitching</a>.
+That work supports affine feature transfer between language models. It does
+not establish that this proposed math-to-general interface will improve
+general reasoning. The related checkpoints make alignment easier, so success
+here should not be presented as evidence for arbitrary unrelated models.</p>
+<h2 id="models-checklist-d-test-an-actual-intervention">Checklist D: test an actual intervention</h2>
+<p>This part is a future implementation task. The collector does not replace
+activations, run the recipient&#39;s decoder, or evaluate answers.</p>
+<ol>
+<li>Load the recipient as <code>AutoModelForCausalLM</code>, keep its parameters frozen,
+and implement a hook at the exact boundary used during collection.</li>
+<li>Feed both models the same held-out prompt. Translate the source&#39;s final
+prompt-token activation with the fitted affine map.</li>
+<li>Replace only the recipient activation at that boundary and position.
+Continue through the remaining recipient layers and its output head.</li>
+<li>Start by scoring the <strong>next answer token</strong>. This avoids claiming that a
+single-position intervention has implemented coherent multi-token generation.
+Check tokenization of answer labels; do not assume <code>A</code>, <code>B</code>, <code>0</code>, or <code>1</code>
+is a single token in every context.</li>
+<li>Compare ordinary recipient, translated source, shuffled source, zero source,
+recipient mean, and identity-hook controls on identical examples. Include
+source-model performance as a reference, not as an automatically attainable
+upper bound. A self-patch must reproduce the ordinary recipient&#39;s logits
+within a declared numerical tolerance.</li>
+<li>Measure held-out answer accuracy and answer-token negative log likelihood.
+Later, score full answers with teacher forcing while masking prompt and
+padding positions out of the loss. Report the exact intervention policy
+for each continuation token.</li>
+<li>Bootstrap paired differences at the <strong>underlying theorem or family level</strong>,
+rather than treating paraphrases as independent observations. Use a fixed
+test set and confidence intervals. Report regressions as well as gains.</li>
+</ol>
+<p>Before spending on a large run, verify that the source is better on the target
+toy task or carries a complementary usable signal. Mapping its activations
+toward the weaker recipient&#39;s existing activations can erase exactly the
+information you hoped to transfer. If geometric alignment succeeds but
+functional improvement fails, preserve that result and try a task-loss-trained
+adapter as the next hypothesis.</p>
+<p>When testing a source that receives an entire proof and a recipient that sees
+only a question, also give a baseline recipient the proof as ordinary text.
+Improvement in this setting might be evidence compression or communication
+of extra context. It cannot by itself establish transfer from equal information.</p>
+<h2 id="models-later-formal-to-natural-correspondence-and-permanent-learning">Later: formal-to-natural correspondence and permanent learning</h2>
+<p>Formal statements, proof steps, and ordinary-language explanations have
+different token counts. A token-wise matrix does not solve this alignment
+problem automatically. Begin with one statement-level summary activation on
+each side or explicit AST/proof-step anchors. If that bottleneck loses needed
+information, test variable-length cross-attention or a query-based adapter.
+Keep every rendition of an underlying proof in the same split. Separate
+semantic preservation checks from whether Lean accepts the original proof.</p>
+<p>An inference-time interface leaves the recipient&#39;s weights unchanged. To
+study permanent learning, create a verified dataset with the connected system,
+train or distill a separate recipient on that data, remove the source and
+adapter, then evaluate again. Compare against the same number of ordinary
+proof-text examples and match training tokens, optimizer steps, and compute.</p>
+<p>The first recursive experiment needs at least two complete cycles and fresh
+evaluation families: mathematical-system improvement, new accepted examples,
+recipient retraining, and measured improvement that helps the next cycle.
+Additional stored vectors alone are not such a cycle.</p>
+<h2 id="models-resource-planning-and-stop-conditions">Resource planning and stop conditions</h2>
+<p>The following are calculations and planning assumptions, not measured runtimes:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Approximate scale or decision</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>One 1.5B checkpoint&#39;s weights</td>
+<td>About 3 GB at two bytes per parameter, or 6 GB at four bytes, before runtime overhead</td>
+</tr>
+<tr>
+<td>Loading strategy</td>
+<td>One model per process, sequential collection; never require both resident initially</td>
+</tr>
+<tr>
+<td>Machine target</td>
+<td>A 16 to 24 GB machine may support short float32 runs sequentially; runtime and loading peaks must be measured on the actual machine</td>
+</tr>
+<tr>
+<td>Stored last-token vectors</td>
+<td><code>N * 1536 * 4</code> bytes per model; 3,000 examples are about 18.4 MB before archive overhead</td>
+</tr>
+<tr>
+<td>Raw all-token activations</td>
+<td>Larger by roughly average token length; do not save them in the first experiment</td>
+</tr>
+<tr>
+<td>CPU timing</td>
+<td>Time 30 examples and extrapolate; publish the measured rate rather than guessing a GPU rental budget</td>
+</tr>
+<tr>
+<td>First spending gate</td>
+<td>Finish the CPU toy and 30-example collector checks before paid compute</td>
+</tr>
+<tr>
+<td>Second spending gate</td>
+<td>Beat the mean/shuffled alignment controls on held-out families before implementing a large adapter</td>
+</tr>
+</tbody></table>
+<p>Retain existing model-license and attribution requirements if redistributing
+weights; the repository code license does not relicense model checkpoints or
+third-party datasets. Downloading public weights locally is sufficient for
+this experiment; do not commit them to GitHub.</p>
+<p>Fixed seeds improve reproducibility but do not guarantee identical results
+across hardware or package releases. See
+<a href="https://github.com/pytorch/pytorch/blob/main/docs/source/notes/randomness.md" target="_blank" rel="noopener noreferrer">PyTorch&#39;s reproducibility guidance</a>.</p>
+<p>Sources checked on 2026-10-17 UTC. Pin the exact model commits and runtime
+versions used by the actual experiment.</p>
+</div></details>
+<details class="chapter" id="sources" ><summary><span class="chapter-index">04</span><span><strong>25 primary sources</strong><small>Nearest projects, annotated papers and learning materials</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Prepared for Ian Prado, October 16, 2026. Primary sources checked during this session. This is a research map, not a claim that the complete proposal is already implemented or that it yields general intelligence.</p>
+<h2 id="sources-where-this-project-sits">Where this project sits</h2>
+<p>The proposal combines four established research areas: verified synthetic theorem generation, adaptive theorem-proving curricula, representation alignment between neural models, and distillation into a general language model. The integration question remains open: does a verified mathematical curriculum improve a general model, and does a learned vector interface beat simply supplying well-designed text?</p>
+<p>Lean is a programming language and proof assistant. Its kernel checks proof terms against formal statements and assumptions. A neural encoder can turn those terms, statements, or proof states into vectors. Lean itself does not continuously generate neural embeddings or automatically add knowledge to another model&#39;s weights.</p>
+<p>The most useful first contribution is a small, reproducible experiment distinguishing alignment quality, connected-system performance, and permanent student improvement. These are three different outcomes.</p>
+<h2 id="sources-five-nearest-related-projects">Five nearest related projects</h2>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Closest part of Ian&#39;s proposal</th>
+<th>Gap this project can investigate</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>STP</td>
+<td>Conjecture, prove, select problems near current ability, retrain, repeat</td>
+<td>Transfer beyond formal theorem proving and the benefit of a vector interface</td>
+</tr>
+<tr>
+<td>Synthetic Theorem Generation in Lean</td>
+<td>Generate theorem and proof together by forward inference</td>
+<td>A small open reproduction with controlled task families and target-domain transfer</td>
+</tr>
+<tr>
+<td>MUSTARD</td>
+<td>Formal verification plus paired formal and informal training data</td>
+<td>Lean 4 pipeline, controlled rendering, stronger out-of-family tests</td>
+</tr>
+<tr>
+<td>Cache-to-Cache</td>
+<td>Learn a direct internal interface between specialist and general language models</td>
+<td>Verified theorem curriculum as the specialist&#39;s experience and separate distillation assessment</td>
+</tr>
+<tr>
+<td>ProofOptimizer</td>
+<td>Iteratively shorten verified proofs and reuse them for training</td>
+<td>Whether shorter, clearer, or more diverse proofs produce more transferable learning</td>
+</tr>
+</tbody></table>
+<p>These are related implementations to learn from and compare against. An exhaustive novelty determination would require a continuing literature review.</p>
+<h2 id="sources-read-these-first-alongside-the-experiment">Read these first, alongside the experiment</h2>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Read</th>
+<th>Produce while reading</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Lean textbook logic chapters, source 15</td>
+<td>Ten explicit proofs and an axiom audit</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Model stitching methods, source 9</td>
+<td>An affine-map experiment card and paired anchors</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Forward theorem generation, source 2</td>
+<td>One graph/theorem/proof example traced by hand</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ProofOptimizer, source 5</td>
+<td>A table separating proof length, checking time and search cost</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Transferability study, source 11</td>
+<td>A held-out functional task and a retention set</td>
+</tr>
+</tbody></table>
+<p>The remaining references are a map to consult when a milestone needs them. Completing all of them is not a prerequisite for publishing the first CPU experiment.</p>
+<h2 id="sources-annotated-primary-source-reading-list">Annotated primary-source reading list</h2>
+<p>License notes refer only to the component explicitly named. A repository&#39;s code license does not automatically license its models, datasets, or dependencies. A missing note means terms were not verified in this pass.</p>
+<h3 id="sources-verified-generation-and-self-improvement">Verified generation and self-improvement</h3>
+<p><strong>1. STP: Self-play LLM Theorem Provers with Iterative Conjecturing and Proving, Kefan Dong and Tengyu Ma, ICML 2025.</strong> <a href="https://proceedings.mlr.press/v267/dong25h.html" target="_blank" rel="noopener noreferrer">Paper</a>, <a href="https://github.com/kfdong/STP" target="_blank" rel="noopener noreferrer">official code, models and data links</a>. A conjecturer learns from problems barely solvable by its prover; verified proofs train subsequent rounds. Demonstrates stronger Lean and Isabelle theorem proving. It does not demonstrate general-world capability transfer. The Lean run generated 51.3 billion tokens. The repository&#39;s reproduction example requests 256 TPU-v4 cores and does not directly support GPUs. Borrow the curriculum design before reproducing its scale. Code MIT; bundled <code>levanter</code> Apache 2.0; model subject to the separate DeepSeek model agreement.</p>
+<p><strong>2. Synthetic Theorem Generation in Lean, Joseph Rotella, Zhizhen Qin and colleagues, 2025 preprint.</strong> <a href="https://josephrotella.com/" target="_blank" rel="noopener noreferrer">Author page and publication metadata</a>, <a href="https://josephrotella.com/files/synthm-lean.pdf" target="_blank" rel="noopener noreferrer">paper</a>. Uses forward reasoning from existing Lean proof states and assembles theorem and proof together, with optional proof minimization. Very close to correct-by-construction generation. Reported Falcon2-11B miniF2F improvement is 37.3% to 38.5% in one setting. It demonstrates theorem-proving utility, not broad transfer. No public implementation or reusable dataset license was verified from the consulted primary pages. Reimplement a tiny inference-rule subset rather than assuming code is available.</p>
+<p><strong>3. MUSTARD: Mastering Uniform Synthesis of Theorem and Proof Data, Yinya Huang and colleagues, ICLR 2024.</strong> <a href="https://arxiv.org/abs/2402.08957" target="_blank" rel="noopener noreferrer">Paper</a>, <a href="https://github.com/Eleanor-H/MUSTARD" target="_blank" rel="noopener noreferrer">official code and data</a>. Creates informal problems, informal proofs, formal statements and checked formal proofs. Its 5,866 validated examples improve theorem proving and math word problems in reported experiments. This is the closest clear text-data bridge. The current repository explicitly targets Lean 3.51.1, so treat it as a design reference for a new Lean 4 project. Do not assume its code or data has your chosen project&#39;s license; terms were not verified here.</p>
+<p><strong>4. ImProver: Agent-Based Automated Proof Optimization, Riyaz Ahuja, Jeremy Avigad, Prasad Tetali and Sean Welleck, ICLR 2025.</strong> <a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/4864005cfdea7ebd07086ed1b9846825-Abstract-Conference.html" target="_blank" rel="noopener noreferrer">Conference paper</a>, <a href="https://github.com/riyazahuja/ImProver" target="_blank" rel="noopener noreferrer">official code</a>. Rewrites Lean proofs while maintaining correctness and optimizing user-defined criteria such as length or declarative structure. Useful for choosing a measurable proof-improvement objective. It does not imply that shorter proofs teach general intelligence better. Implementation license was not verified in this pass.</p>
+<p><strong>5. ProofOptimizer: Training Language Models to Simplify Proofs without Human Demonstrations, Alex Gu and colleagues, October 17, 2025 preprint.</strong> <a href="https://arxiv.org/abs/2510.15700" target="_blank" rel="noopener noreferrer">Paper</a>, <a href="https://proof-optimizer.github.io/" target="_blank" rel="noopener noreferrer">author project page</a>. Learns Lean proof simplification using expert iteration and reinforcement learning. Reports faster checking and better downstream prover training from simplified proofs. Strong evidence for the proof-optimization feedback component. It remains formal-math evidence. The project page was verified; a dedicated released code repository and its license were not verified. Separate proof discovery cost, checking cost, token length and readability in your own metrics.</p>
+<p><strong>6. DeepSeek-Prover-V1.5, Huajian Xin and colleagues, 2024.</strong> <a href="https://github.com/deepseek-ai/DeepSeek-Prover-V1.5" target="_blank" rel="noopener noreferrer">Official implementation and paper</a>. Combines Lean feedback, supervised learning, reinforcement learning and search. Provides practical proof-attempt and checker integration patterns. It is a neural prover with an external formal checker, not a proof checker that learns truth by itself. Code MIT, model under separate model terms. It is a substantial specialist baseline; a small project need not train it from scratch.</p>
+<p><strong>7. DeepSeek-Prover-V2, DeepSeek, 2025.</strong> <a href="https://github.com/deepseek-ai/DeepSeek-Prover-V2" target="_blank" rel="noopener noreferrer">Official repository, paper and models</a>. Uses recursive subgoal decomposition, synthesized formal proofs and reinforcement learning. Demonstrates stronger formal mathematical reasoning. Recursive task decomposition here is different from demonstrated open-ended recursive improvement of the whole AI system. Read to understand how formal and informal reasoning can coexist. Models have a separate model license.</p>
+<p><strong>8. Absolute Zero: Reinforced Self-play Reasoning with Zero Data, 2025.</strong> <a href="https://arxiv.org/abs/2505.03335" target="_blank" rel="noopener noreferrer">Paper</a>, <a href="https://github.com/LeapLabTHU/Absolute-Zero-Reasoner" target="_blank" rel="noopener noreferrer">official implementation</a>. A pretrained model proposes and solves executable code reasoning tasks, using execution as verification. Relevant to task generation and learning-progress curricula without human examples during this post-training phase. It does not start from a randomly initialized general language model, does not use Lean as its main verifier, and does not establish AGI. Implementation/model license terms were not verified here.</p>
+<h3 id="sources-representation-translation-and-transfer">Representation translation and transfer</h3>
+<p><strong>9. Transferring Linear Features Across Language Models With Model Stitching, Alan Chen, Jack Merullo, Alessandro Stolfo and Ellie Pavlick, NeurIPS 2025.</strong> <a href="https://arxiv.org/html/2506.06609v3" target="_blank" rel="noopener noreferrer">Paper</a>, <a href="https://proceedings.nips.cc/paper_files/paper/2025/hash/4569a868e7aa891248832ec08445d071-Abstract-Conference.html" target="_blank" rel="noopener noreferrer">conference record</a>. Learns affine maps between model residual streams; transfers sparse autoencoders, probes and steering vectors. The central experiments use within-family pairs trained on the same data. This supports affine regression as a sensible baseline, not guaranteed transfer between arbitrary Lean and natural-language models. The paper reports that stitched downstream performance is bottlenecked by the weaker model. A dedicated official implementation license was not verified.</p>
+<p><strong>10. Cache-to-Cache: Direct Semantic Communication Between Large Language Models, 2025 preprint, official repository identifies ICLR 2026.</strong> <a href="https://arxiv.org/abs/2510.03215" target="_blank" rel="noopener noreferrer">Paper</a>, <a href="https://github.com/thu-nics/C2C" target="_blank" rel="noopener noreferrer">official code and checkpoints</a>. Projects and fuses attention caches, with gating to select useful layers. It demonstrates connected-model gains rather than permanent modification of a standalone receiver. Current repository supports differing dimensions, layers, heads and tokenizers and lists a Qwen3-0.6B receiver with a Qwen2.5-Math-1.5B specialist. This is a relevant later comparison to affine hidden-state translation. Repository Apache 2.0; constituent models have their own terms.</p>
+<p><strong>11. Does Math Reasoning Improve General LLM Capabilities? Understanding Transferability of LLM Reasoning, Maggie Ziyu Huan and colleagues, ICML 2026.</strong> <a href="https://proceedings.mlr.press/v306/huan26a.html" target="_blank" rel="noopener noreferrer">Final conference paper</a>, <a href="https://github.com/ReasoningTransfer/Transferability-of-LLM-Reasoning" target="_blank" rel="noopener noreferrer">official code</a>. Studies more than 20 models and controlled math-only post-training. Most observed math gains do not transfer broadly; controlled experiments identify on-policy training as important to transfer. Use it to design general-capability retention tests. The conclusion is empirical for studied setups, not a theorem that off-policy training always fails. License terms were not verified here.</p>
+<p><strong>12. Learning from Synthetic Data Improves Multi-hop Reasoning, Anmol Kabra and colleagues, March 2, 2026; accepted to ICLR 2026 per author record.</strong> <a href="https://arxiv.org/abs/2603.02091" target="_blank" rel="noopener noreferrer">Paper</a>. Rule-generated fictional knowledge improves multi-hop question answering after reinforcement learning. Relevant evidence that synthetic structure can teach transferable composition. The evaluation supplies relevant passages, so it does not show learning previously unknown real-world facts. It does not require Lean or vector translation. This is a useful simple alternative to compare with your formal-math pipeline. A dedicated official code/data link was not verified in this pass.</p>
+<p><strong>13. Theorem Prover as a Judge for Synthetic Data Generation, Joshua Ong Jun Leang, Giwon Hong, Wenda Li and Shay B. Cohen, ACL 2025.</strong> <a href="https://aclanthology.org/2025.acl-long.1448/" target="_blank" rel="noopener noreferrer">Paper and official metadata</a>. Uses iterative formalization and theorem-prover feedback to assess generated mathematical reasoning, improving several mathematical word-problem benchmarks. Relevant to filtering synthetic examples, but a formally valid translated statement need not faithfully express the original natural-language problem. Preserve that distinction in dataset status fields. A dedicated code/data license was not verified in this pass.</p>
+<p><strong>14. Self-Play Pretraining with Zero Data, Aditya Cowsik and colleagues, September 24, 2026 preprint.</strong> <a href="https://arxiv.org/html/2609.30063v1" target="_blank" rel="noopener noreferrer">Paper</a>. Randomly initialized program generator and learner adapt their synthetic curriculum; next-byte prediction improves on natural text and other modalities. The study is below 25 million parameters with 4K context. Natural validation data informs hyperparameter selection, although it is excluded from gradient updates. It uses executable programs, not Lean proof generation. Its most actionable lesson is that an adaptive curriculum beats merely having access to an unlimited program space. No official full reproduction repository was verified in this pass.</p>
+<h3 id="sources-tools-and-prerequisite-materials">Tools and prerequisite materials</h3>
+<p><strong>15. Theorem Proving in Lean 4, Jeremy Avigad, Leonardo de Moura, Soonho Kong and Sebastian Ullrich with the Lean community.</strong> <a href="https://leanprover.github.io/theorem_proving_in_lean4/" target="_blank" rel="noopener noreferrer">Living textbook</a>. Start with propositions/proofs, tactics, induction and axioms/computation. Current online pages and an older model&#39;s Lean environment can use different versions. Pin a project&#39;s toolchain and dependencies; do not upgrade a reproduction merely because the textbook is newer.</p>
+<p><strong>16. Mathematics in Lean, Lean community.</strong> <a href="https://leanprover-community.github.io/mathematics_in_lean/" target="_blank" rel="noopener noreferrer">Living textbook and exercises</a>. Best bridge from Ian&#39;s mathematics background to practical Lean proof writing. Do the logic, algebra and induction exercises before attempting a general theorem generator. Existing mathematical knowledge lowers the conceptual burden; formalization syntax remains a separate skill.</p>
+<p><strong>17. Lean REPL, Lean community.</strong> <a href="https://github.com/leanprover-community/repl" target="_blank" rel="noopener noreferrer">Code and JSON protocol</a>. Programmatic command execution, proof states, diagnostics and <code>sorry</code> information. The simplest likely starting interface for a Python orchestration layer. Apache 2.0. The README demonstrates commands containing <code>sorry</code> for exploration; your accepted training records must reject incomplete results and audit proof dependencies. A successful process exit alone is insufficient.</p>
+<p><strong>18. LeanDojo-v2, LeanDojo team.</strong> <a href="https://github.com/lean-dojo/LeanDojo-v2" target="_blank" rel="noopener noreferrer">Current implementation</a>, <a href="https://github.com/lean-dojo/LeanDojo-v2/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">license file</a>. End-to-end tracing, data management, retrieval agents, fine-tuning and evaluation. The original LeanDojo repository now points new projects to v2. More infrastructure than the minimal toy requires. The actual license file is Apache 2.0 despite an inconsistent README sentence saying MIT; use the license file and pinned commit. This is a reason to check actual files rather than inherit assumptions from a paper.</p>
+<p><strong>19. mathlib4, Lean community.</strong> <a href="https://github.com/leanprover-community/mathlib4" target="_blank" rel="noopener noreferrer">Repository</a>. Mathematical definitions, lemmas and tactics for Lean 4. Apache 2.0. Useful for later arithmetic, graph and algebra tasks; a core-Lean logic toy can avoid this dependency initially. Pin a revision and record imported theorem dependencies so the held-out theorem cannot be imported as an available lemma.</p>
+<p><strong>20. PyTorch least squares.</strong> <a href="https://docs.pytorch.org/docs/stable/generated/torch.linalg.lstsq.html" target="_blank" rel="noopener noreferrer">Official <code>torch.linalg.lstsq</code> documentation</a>. Implements the central affine-regression baseline. Add a constant column to inputs for an intercept, or center using training-only means. Use an SVD/QR-based least-squares solver or ridge solve instead of explicitly forming an inverse. This is a numerical tool, not evidence that an arbitrary pair of neural spaces is alignable.</p>
+<p><strong>21. SciPy orthogonal Procrustes.</strong> <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.orthogonal_procrustes.html" target="_blank" rel="noopener noreferrer">Official reference</a>. Finds the best orthogonal alignment for matched, same-shaped matrices. Useful to test whether rotation/reflection suffices before permitting scaling and shear. It does not itself include translation or scaling. Center using training data if appropriate and compare to full affine regression. Toy control: rotate random vectors with a known orthogonal matrix and recover it from anchors.</p>
+<p><strong>22. Hugging Face Transformers model outputs.</strong> <a href="https://huggingface.co/docs/transformers/main_classes/output" target="_blank" rel="noopener noreferrer">Official documentation</a>. Explains <code>output_hidden_states=True</code> and the batch-by-token-by-hidden-dimension shapes. Essential for defining exactly which vectors are translated. Distinguish token embeddings, layer activations, pooled representations, logits and KV caches. A pooled whole-proof vector is an experimental choice, not a standard universal representation of a theorem.</p>
+<p><strong>23. Hugging Face PEFT LoRA guide.</strong> <a href="https://huggingface.co/docs/peft/main/en/conceptual_guides/lora" target="_blank" rel="noopener noreferrer">Official documentation</a>. A practical way to update a small fraction of a student model&#39;s parameters after creating checked text examples. This belongs to the permanent-learning experiment and should be separate from an adapter-only inference experiment. Use a pinned stable package version and identical data/step budgets across compared training conditions.</p>
+<p><strong>24. Qwen2.5-0.5B model card, Qwen team, 2024 model family.</strong> <a href="https://huggingface.co/Qwen/Qwen2.5-0.5B" target="_blank" rel="noopener noreferrer">Official base-model card</a>. A manageable open-weight starting point for inspecting activations or training a tiny specialist/student pair from the same initialization. Card lists Apache 2.0. It is a general pretrained model, not an already competent Lean prover; begin with small logic tasks. Pin model revision and tokenizer. Report actual memory use instead of guessing that an entire experiment fits on a laptop.</p>
+<p><strong>25. Language Model Evaluation Harness, EleutherAI.</strong> <a href="https://github.com/EleutherAI/lm-evaluation-harness" target="_blank" rel="noopener noreferrer">Official code and usage</a>. Standard evaluation runner, MIT. Useful later for a small fixed set of general-language and reasoning regression tests. The tiny generated benchmark should have its own exact verifier first. Record task version, prompt template, decoding parameters and sample budget. Benchmark datasets can have separate licenses and pretraining contamination.</p>
+<h2 id="sources-five-prerequisite-blocks-with-concrete-finish-lines">Five prerequisite blocks with concrete finish lines</h2>
+<p>These can be learned while building. Ian can own task semantics, Lean examples, experiment interpretation and documentation while his cousin owns model internals and training. Both should review each other&#39;s work.</p>
+<ol>
+<li><strong>Lean proof terms and trust.</strong> Read sources 15 and 16 on logic. Write ten core-Lean proofs using implication, conjunction and existential witnesses. Example: from <code>P -&gt; Q</code>, <code>Q -&gt; R</code> and <code>P</code>, construct <code>R</code>. Then deliberately replace a proof with <code>sorry</code> and make the pipeline reject it. Inspect <code>#print axioms</code> for accepted declarations. Finish when a script distinguishes checked, incomplete and failed attempts.</li>
+<li><strong>Linear algebra and regression.</strong> Use sources 20 and 21. Generate 1,000 random 16D vectors, transform with known <code>W</code> and <code>b</code>, fit on 800 and evaluate on 200. Repeat with noise, shuffled anchors and an unseen nonlinear transformation. Report held-out MSE and compare affine, orthogonal and mean-prediction baselines. Finish when Ian can explain what each failure means without referring to an LLM.</li>
+<li><strong>Transformer activations.</strong> Use sources 22 and 24. Extract one layer from ten inputs, document its exact shape and token positions, and reproduce it twice in evaluation mode. Verify that changing a premise changes activations. Compare a last-token vector with masked mean pooling. Finish with a small activation cache plus model, tokenizer, layer and pooling metadata.</li>
+<li><strong>Training versus inference.</strong> Use source 23. Freeze a student, train only an adapter, then verify the student&#39;s parameters have not changed. Separately train a tiny LoRA on checked text and compare parameters and held-out performance. Finish with two clearly named experiments: connected-system performance and standalone student learning.</li>
+<li><strong>Experimental design.</strong> Read sources 9, 11 and 14 selectively. Create train, validation and test splits by underlying task family or graph structure before rendering text. Generate three paraphrases of one structure and show they remain in the same split. Implement bootstrap intervals over independent problems and three training seeds. Finish with a frozen evaluation specification and an explicit unsuccessful-result interpretation.</li>
+</ol>
+<h2 id="sources-evaluation-controls-that-make-the-result-informative">Evaluation controls that make the result informative</h2>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it rules out</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Student alone, same questions and decoding budget</td>
+<td>Extra context or changed evaluation explaining the gain</td>
+</tr>
+<tr>
+<td>Plain text theorem/premises and a deterministic verbal rendering</td>
+<td>Translator only recreating information text already supplies cheaply</td>
+</tr>
+<tr>
+<td>Same examples and training tokens, unverified generation condition</td>
+<td>Whether proof checking adds measurable value at this scale</td>
+</tr>
+<tr>
+<td>Random map, zero map, training-mean output, shuffled anchor pairs</td>
+<td>Gains from generic perturbation, bias or accidental leakage</td>
+</tr>
+<tr>
+<td>Source statement only versus source statement plus proof</td>
+<td>Whether proof structure matters or the statement already gives the answer</td>
+</tr>
+<tr>
+<td>Oracle target activation injection</td>
+<td>Whether the selected target layer/interface can support the task at all</td>
+</tr>
+<tr>
+<td>No-answer source features and explicitly labeled answer-visible oracle</td>
+<td>Teacher representations secretly containing the held-out answer</td>
+</tr>
+<tr>
+<td>Same-family aligned token experiment before cross-format proofs</td>
+<td>Separate basic mapping failure from tokenization/semantic mismatch</td>
+</tr>
+<tr>
+<td>Lexical baseline such as bag-of-tokens or fixed random projection</td>
+<td>Apparent semantic alignment caused by shared syntax or token identity</td>
+</tr>
+<tr>
+<td>Structure/family split, renaming and paraphrase kept together</td>
+<td>Near-duplicate and template leakage</td>
+</tr>
+<tr>
+<td>Fixed proof attempts, maximum tokens and wall-clock budgets</td>
+<td>Pass@many or search compute being confused with learned ability</td>
+</tr>
+<tr>
+<td>End-task exact correctness in addition to MSE/cosine/retrieval</td>
+<td>Attractive vector alignment without useful computation</td>
+</tr>
+<tr>
+<td>Frozen general-domain retention set after each training round</td>
+<td>Narrow math gain that damages other capabilities</td>
+</tr>
+<tr>
+<td>Three seeds, per-problem paired comparison and uncertainty</td>
+<td>A noisy small-sample difference being advertised as progress</td>
+</tr>
+<tr>
+<td>Keep old data replay versus new data only</td>
+<td>Forgetting being confused with recursive improvement</td>
+</tr>
+</tbody></table>
+<p>More proof bytes do not necessarily mean more learning. Track unique normalized statements, proof families, proof costs, student improvement per generated example and per unit of compute. An adaptive curriculum should beat a fixed generator at an equal budget before expanding it.</p>
+<h2 id="sources-trust-and-semantic-checks-for-the-first-dataset">Trust and semantic checks for the first dataset</h2>
+<ul>
+<li>Pin Lean and all imports. Store the exact formal statement, assumptions, proof, source rules and dependency list, toolchain, checker diagnostics and generation seed.</li>
+<li>Reject incomplete proofs and any occurrence of <code>sorryAx</code> in the accepted theorem&#39;s dependency closure. For a constructive-only subset, use an explicit allowed-axiom policy and inspect dependencies; a proof accepted by Lean can use classical principles.</li>
+<li>Prevent generated declarations from introducing arbitrary new axioms. Recheck in a clean environment with allowlisted imports.</li>
+<li>Keep finite toy-world premises satisfiable by construction. A valid implication from contradictory assumptions is not useful evidence about the intended problem.</li>
+<li>Generate formal and natural-language views from the same small abstract syntax tree. Lean verifies the formal side; separately unit-check the renderer against that tree. Free-form autoformalization does not inherit correctness merely because its output compiles.</li>
+<li>If a source model sees a full solution at inference, call that condition a solution-informed teacher. Compare it to an equally solution-informed text teacher. Do not market it as the student solving a problem unaided.</li>
+</ul>
+<h2 id="sources-an-appropriate-future-scientific-claim-after-the-evaluations">An appropriate future scientific claim after the evaluations</h2>
+<p>After actual Lean checking, recipient interventions, and student-alone evaluations have run, a bounded claim could be: &quot;We release a reproducible benchmark and baselines for translating representations of Lean-verified synthetic reasoning tasks into a small language model. We measure alignment, exact downstream answers, and standalone student learning separately.&quot; The starter does not yet establish that result.</p>
+<p>An improvement on this bounded experiment would justify the next experiment. A negative result with clean controls would still give other contributors a useful open-source artifact.</p>
+</div></details>
+<details class="chapter" id="launch" ><summary><span class="chapter-index">05</span><span><strong>GitHub and name</strong><small>Repository upload, GitHub Pages, domain observations and license</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Research checked on 2026-10-16, Pacific time. Domain endpoint checks began at 2026-10-17T03:22:04Z, equivalent to October 16 at 8:22 p.m. Pacific. These checks are observations, not reservations or purchases.</p>
+<h2 id="launch-recommended-name">Recommended name</h2>
+<p><strong>LemmaFerry</strong>, repository slug <code>lemmaferry</code>, subtitle: <strong>Verified mathematics, measurable transfer.</strong></p>
+<p>The ferry metaphor describes carrying verified mathematical structure into a general model. It suits an experimental toolkit without promising AGI. The initial README description can be:</p>
+<blockquote>
+<p>LemmaFerry is an open research toolkit for generating Lean-checked synthetic tasks and measuring whether mathematical training transfers to language-model reasoning and internal representations.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Collision search</th>
+<th>Domain observation</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LemmaFerry</td>
+<td>Exact-name web search found no relevant existing project. GitHub public repository API returned <code>total_count: 0</code>, <code>incomplete_results: false</code>.</td>
+<td>Official Verisign <code>.com</code> RDAP returned HTTP 404 for <code>lemmaferry.com</code>. This indicates no matching registry record at the check, subject to endpoint availability and registry restrictions. The <code>.org</code> registry endpoint returned 403, so <code>.org</code> status is unknown.</td>
+<td>Recommended working name. Check registrar checkout before deciding to buy.</td>
+</tr>
+<tr>
+<td>AxiomFerry</td>
+<td>Exact-name web search found no relevant existing project. GitHub public repository API returned <code>total_count: 0</code>, <code>incomplete_results: false</code>.</td>
+<td>Official Verisign <code>.com</code> RDAP returned HTTP 404 for <code>axiomferry.com</code>.</td>
+<td>Backup.</td>
+</tr>
+<tr>
+<td>LemmaVoyage</td>
+<td>Exact-name web search found no relevant existing project. GitHub public repository API returned <code>total_count: 0</code>, <code>incomplete_results: false</code>.</td>
+<td>Official Verisign <code>.com</code> RDAP returned HTTP 404 for <code>lemmavoyage.com</code>.</td>
+<td>Second backup.</td>
+</tr>
+<tr>
+<td>ProofHarbor</td>
+<td>An active company, ProofHarbor Federal Integrations, uses the name.</td>
+<td>Not investigated further.</td>
+<td>Avoid.</td>
+</tr>
+</tbody></table>
+<p>No exact-name search is a trademark clearance. A missing search result or missing DNS record does not establish domain availability. A positive control against the same Verisign endpoint for <code>example.com</code> returned HTTP 200 with <code>ldhName: EXAMPLE.COM</code> and <code>objectClassName: domain</code>, confirming the registry service was reachable. No domain was purchased, and registrar price or ability to complete registration was not verified. GitHub Pages works without purchasing a domain, so obtaining one does not block the experiment.</p>
+<p>Direct records and sources:</p>
+<ul>
+<li><a href="https://rdap.verisign.com/com/v1/domain/lemmaferry.com" target="_blank" rel="noopener noreferrer">LemmaFerry <code>.com</code> registry endpoint</a></li>
+<li><a href="https://rdap.publicinterestregistry.org/rdap/domain/lemmaferry.org" target="_blank" rel="noopener noreferrer">LemmaFerry <code>.org</code> registry endpoint</a></li>
+<li><a href="https://rdap.verisign.com/com/v1/domain/axiomferry.com" target="_blank" rel="noopener noreferrer">AxiomFerry <code>.com</code> registry endpoint</a></li>
+<li><a href="https://rdap.verisign.com/com/v1/domain/lemmavoyage.com" target="_blank" rel="noopener noreferrer">LemmaVoyage <code>.com</code> registry endpoint</a></li>
+<li><a href="https://api.github.com/search/repositories?q=lemmaferry" target="_blank" rel="noopener noreferrer">GitHub exact candidate repository query</a></li>
+<li><a href="https://www.verisign.com/news-insights/registration-data-access-protocol/help/" target="_blank" rel="noopener noreferrer">Verisign explanation of its registry RDAP service</a></li>
+<li><a href="https://www.icann.org/rdap/" target="_blank" rel="noopener noreferrer">ICANN explanation of RDAP registration information</a></li>
+<li><a href="https://proofharborfederal.com/" target="_blank" rel="noopener noreferrer">Existing ProofHarbor company</a></li>
+</ul>
+<h2 id="launch-first-github-upload">First GitHub upload</h2>
+<p>Assumption: the supplied starter is a local directory named <code>lemmaferry</code> and is not already inside a Git repository. The user creates the remote under their own GitHub account; there is no need to invent an account name or choose an organization yet.</p>
+<ol>
+<li>Review <code>README.md</code>, the roadmap, and the license. Edit in vim if desired: <code>vim README.md</code>.</li>
+<li>On GitHub, create an <strong>empty public repository</strong> named <code>lemmaferry</code>. Do not select the README, license, or gitignore initialization options because the starter supplies those files.</li>
+<li>In a terminal inside the extracted directory, run the commands below. If the starter is already a Git repository, skip <code>git init</code> and inspect its existing branch and remotes before proceeding.</li>
+</ol>
+<pre><code class="language-bash">cd lemmaferry
+git init -b main
+git status --short
+git add .
+git diff --cached --stat
+git commit -m &quot;Start LemmaFerry reproducible research toolkit&quot;
+</code></pre>
+<ol start="4">
+<li>Copy the remote URL from GitHub. The following commands deliberately use a placeholder; replace <code>YOUR-USER</code> with the account owning the new repository before running them.</li>
+</ol>
+<pre><code class="language-bash">git remote add origin https://github.com/YOUR-USER/lemmaferry.git
+git remote -v
+git push -u origin main
+</code></pre>
+<ol start="5">
+<li>Invite the cousin through the repository&#39;s collaborator settings after confirming their GitHub username. Keep this as a user action; no invitation has been sent.</li>
+<li>Add repository topics such as <code>lean4</code>, <code>synthetic-data</code>, <code>representation-learning</code>, <code>theorem-proving</code>, and <code>reproducible-research</code>.</li>
+<li>Open three initial issues: run the first Lean validation; reproduce a shuffled-anchor control; choose the first language-model pair and exact evaluation task.</li>
+</ol>
+<p>GitHub&#39;s official instructions cover <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository" target="_blank" rel="noopener noreferrer">creating a repository</a> and <a href="https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github" target="_blank" rel="noopener noreferrer">uploading locally hosted code</a>. GitHub CLI users can instead authenticate normally and run <code>gh repo create lemmaferry --public --source=. --remote=origin --push</code> after reviewing the local commit.</p>
+<h2 id="launch-static-project-report-on-github-pages">Static project report on GitHub Pages</h2>
+<p>Use this only for the static project explanation and experiment reports. The Python/Lean experiments run locally or in CI, not in GitHub Pages.</p>
+<ol>
+<li>Put a self-contained <code>index.html</code> report in <code>docs/</code> and commit it. Put <code>.nojekyll</code> in <code>docs/</code> if the report should be served directly without Jekyll processing.</li>
+<li>Open repository <strong>Settings &gt; Pages</strong>.</li>
+<li>Under <strong>Build and deployment</strong>, choose <strong>Deploy from a branch</strong>.</li>
+<li>Choose branch <strong>main</strong>, folder <strong>/docs</strong>, then <strong>Save</strong>.</li>
+<li>Once published, the default project address is <code>https://YOUR-USER.github.io/lemmaferry/</code>. A purchased domain can be connected later through Pages settings and DNS.</li>
+</ol>
+<p>Source: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site" target="_blank" rel="noopener noreferrer">GitHub Pages publishing-source documentation</a>. The current documentation permits Pages for public repositories on GitHub Free. It supports publishing the repository root or <code>/docs</code> from a branch.</p>
+<h2 id="launch-open-source-defaults">Open-source defaults</h2>
+<ul>
+<li>Use <strong>Apache-2.0</strong> for original project code, with the complete official license in <code>LICENSE</code>. SPDX confirms this exact identifier. This is a practical project default, not a conclusion that every imported asset can use the same license.</li>
+<li>Keep the permissions and attribution for models, source corpora, Lean libraries, and copied code separate. Record origins and original licenses in a small provenance table before redistributing any third-party artifact.</li>
+<li>Include a <code>CITATION.cff</code>, a concise <code>CONTRIBUTING.md</code>, an issue template for experiment reports, and a clear <code>reproduce</code> command. Publish failed experiments and the controls alongside positive results.</li>
+<li>Keep any personal source conversations and the original scanned sketch outside the public starter unless the user decides to publish them.</li>
+</ul>
+<p>Primary license sources: <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener noreferrer">Apache&#39;s official license and application instructions</a>, <a href="https://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank" rel="noopener noreferrer">plain text license</a>, and <a href="https://spdx.org/licenses/Apache-2.0.html" target="_blank" rel="noopener noreferrer">SPDX Apache-2.0</a>.</p>
+<p>The starter also contains <code>name-check.json</code> with a second independent registry check and its exact UTC timestamp. No registrar transaction was attempted.</p>
+</div></details>
+<details class="chapter" id="validation" ><summary><span class="chapter-index">06</span><span><strong>What was tested</strong><small>Measured CPU results and the work that remains unrun</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>These records describe what was actually executed while preparing the starter on October 16, 2026, Pacific time. They are not results from a language model.</p>
+<h2 id="validation-follow-up-runs">Follow-up runs</h2>
+<p>The <a href="../artifacts/lf-001/reproduction.json">LF-001 reproduction record</a> contains fresh seed-7 and seed-19 JSON results, plots, environment versions, commands, source hashes, and the 23-test passing log. Every result field agrees with the bundled reference at relative tolerance <code>1e-8</code> and absolute tolerance <code>1e-10</code>; the largest absolute numeric difference is below <code>2.2e-13</code>. Both predefined seeds were retained, and preprocessing and recipient decoding used training data only. This run used Python 3.14.7, NumPy 2.5.4, and Matplotlib 3.11.2 on macOS arm64.</p>
+<p>The separate <a href="lf-002-lean-verification.md">LF-002 Lean-verification record</a> supersedes the preparation-time missing-Lean limitation below: real Lean 4.35.0 verified all 60 generated examples and both proof variants, with 120 recognized zero-axiom audits. Corrupted inputs failed, missing Lean remained <code>not_run</code>, and all 12 logic/checker tests passed. Inputs, checked records, and unedited logs are retained under <a href="../results/lf-002/"><code>results/lf-002/</code></a>. No generator or checker fixes were needed.</p>
+<h2 id="validation-executed-successfully">Executed successfully</h2>
+<ul>
+<li>Editable package build and installation with existing dependencies.</li>
+<li><strong>23 Python unit and integration tests passed</strong> on Python 3.12.14, NumPy 2.3.5, and Matplotlib 3.10.8.</li>
+<li>Python compilation of source, experiments, and tests.</li>
+<li>Artificial alignment experiments with seeds 7 and 19.</li>
+<li>Deterministic generation of three examples per formal-data split, nine examples total, with Python graph certificates and controlled renderer round trips checked.</li>
+<li>Missing-Lean behavior: checker returned exit code 2, zero Lean-verified records, three <code>not_run</code> records, and no fabricated compiler success.</li>
+<li>Optional activation collector and fitter help commands and static Python checks; numeric fitter integration tests use fake collected arrays.</li>
+<li>Interactive report build, JavaScript syntax check, internal-anchor checks, and HTML structure checks. Browser rendering was unavailable, so no screenshot-based visual review is claimed.</li>
+</ul>
+<p>Tests cover held-out affine recovery, wrong anchors, training-only preprocessing, rigid alignment, semantic ambiguity, graph/proof certificates, renderer mismatches, split leakage, corrupted archives, missing Lean, stale compiler metadata, and exit-zero output without an axiom audit.</p>
+<h2 id="validation-artificial-alignment-results">Artificial alignment results</h2>
+<p>The toy uses 256 training and 256 test points, 12 source dimensions, 8 target dimensions, 4 planted shared factors, and Gaussian noise with standard deviation 0.01. Normalized RMSE uses per-coordinate target scales fitted on training data only.</p>
+<table>
+<thead>
+<tr>
+<th>Seed</th>
+<th>Paired affine nRMSE</th>
+<th>Shuffled-anchor nRMSE</th>
+<th>Training-mean nRMSE</th>
+<th>Paired task accuracy</th>
+<th>Shuffled-anchor task accuracy</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>7</td>
+<td>0.009702</td>
+<td>1.068365</td>
+<td>1.060576</td>
+<td>100%</td>
+<td>68.36%</td>
+</tr>
+<tr>
+<td>19</td>
+<td>0.006754</td>
+<td>1.068165</td>
+<td>1.002256</td>
+<td>100%</td>
+<td>31.25%</td>
+</tr>
+</tbody></table>
+<p>The task is the sign of a planted linear combination of latent factors. The target-space decoder is fitted on training data. The paired 100% result is unsurprising in this deliberately favorable construction. The changing shuffled accuracy illustrates why multiple seeds and the primary regression metric should be retained.</p>
+<p>The symmetric-cloud counterexample has effectively zero unpaired geometric error and exact round trips under both identity and half-turn maps. Planted semantic-label accuracy is 100% for identity and 0% for the half-turn. These maps are hand-specified; this is an exact ambiguity example, not a learned-model benchmark.</p>
+<p>Reproduce from the repository root:</p>
+<pre><code class="language-bash">python -m unittest discover -s tests -v
+python experiments/toy_alignment.py --seed 7 --output artifacts/toy_alignment_seed7.json
+python experiments/toy_alignment.py --seed 19 --output artifacts/toy_alignment_seed19.json
+python experiments/generate_logic.py --count 3 --seed 7 --output-dir examples/logic
+</code></pre>
+<h2 id="validation-not-executed-during-preparation">Not executed during preparation</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Actual status</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Real Lean compilation</td>
+<td>Lean not installed in preparation environment</td>
+<td>Run LF-002 and retain axiom audits</td>
+</tr>
+<tr>
+<td>Actual model downloads/inference</td>
+<td>No weights downloaded; torch/transformers unavailable</td>
+<td>Run the small collector pilot from the model plan</td>
+</tr>
+<tr>
+<td>Real-model alignment</td>
+<td>Numeric integration tests only</td>
+<td>Collect source/recipient activations, then fit</td>
+</tr>
+<tr>
+<td>Activation intervention</td>
+<td>Not implemented</td>
+<td>Implement identity/oracle intervention before translation</td>
+</tr>
+<tr>
+<td>Student training or distillation</td>
+<td>Not run</td>
+<td>Establish the dataset and matched baseline first</td>
+</tr>
+<tr>
+<td>Adaptive self-play</td>
+<td>Not implemented</td>
+<td>Compare only after a useful fixed baseline exists</td>
+</tr>
+<tr>
+<td>GitHub-hosted CI</td>
+<td>Workflow supplied, not run on a remote repository</td>
+<td>Inspect the first run after upload</td>
+</tr>
+<tr>
+<td>GitHub repository/domain purchase</td>
+<td>No remote created and no domain purchased</td>
+<td>User launch checklist</td>
+</tr>
+</tbody></table>
+<p>The source pair suggested for the next milestone is a small mathematical/general model pair, not a certified Lean prover. Actual proof checking always remains separate.</p>
+</div></details>
+<details class="chapter" id="card" ><summary><span class="chapter-index">07</span><span><strong>Experiment card</strong><small>Register a question, budget, controls and stop rule</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Copy this into an issue before running a new experiment.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Fill in before the run</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID and question</td>
+<td>One specific claim</td>
+</tr>
+<tr>
+<td>Hypothesis</td>
+<td>Expected direction and meaningful effect</td>
+</tr>
+<tr>
+<td>Inputs allowed at inference</td>
+<td>Theorem, proof, question, source model, or no assistance</td>
+</tr>
+<tr>
+<td>Ground truth</td>
+<td>How the answer and formal meaning are checked</td>
+</tr>
+<tr>
+<td>Training data</td>
+<td>Origin, license, example count, family or lineage IDs</td>
+</tr>
+<tr>
+<td>Validation/test split</td>
+<td>What remains unseen and why</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>Map, loss, layer, pooling, regularization, insertion point</td>
+</tr>
+<tr>
+<td>Controls</td>
+<td>Mean/random/shuffled/text/oracle, as applicable</td>
+</tr>
+<tr>
+<td>Budget</td>
+<td>Tokens, candidate attempts, wall time, hardware, memory</td>
+</tr>
+<tr>
+<td>Selection rule</td>
+<td>What can be tuned using validation only</td>
+</tr>
+<tr>
+<td>Primary metric</td>
+<td>Task correctness first for capability claims</td>
+</tr>
+<tr>
+<td>Uncertainty</td>
+<td>Seeds and paired bootstrap over independent problem families</td>
+</tr>
+<tr>
+<td>Stop rule</td>
+<td>Conditions to stop, simplify, or escalate</td>
+</tr>
+<tr>
+<td>Release</td>
+<td>Commands, exact revisions, outputs, unsuccessful runs</td>
+</tr>
+</tbody></table>
+<p>Afterward record the observed result, any deviations, and the narrowest claim justified by it. A low embedding error by itself is not a functional transfer result. A proof supplied at inference is assistance, not evidence of knowledge retained without it.</p>
+</div></details>
+<details class="chapter" id="provenance" ><summary><span class="chapter-index">08</span><span><strong>Provenance</strong><small>Licenses, dataset origins and reproducibility records</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Original code and documentation in this starter use Apache-2.0. This does not change the licenses of Python dependencies, Lean, models, source corpora, or borrowed code. No external model weights, private messages, scans, or paper PDFs are included.</p>
+<h2 id="provenance-required-record-for-every-new-dataset">Required record for every new dataset</h2>
+<p>Store the generator version/commit and seed, source family and lineage, formal statement, assumptions and dependency identifiers, proof, semantic view, answer certificate, Lean toolchain/import revisions, checker status and axiom audit, and any human review status. Preserve failed attempts separately from accepted data.</p>
+<p>Use distinct fields for <code>python_certificate</code>, <code>lean</code>, <code>lean_axioms</code>, and rendering/semantic checks. Do not rename <code>not_run</code> to <code>verified</code> to make a dataset convenient. A generated formal proof and a controlled Python certificate are valuable, but they are different from having executed Lean.</p>
+<h2 id="provenance-required-record-for-every-model-experiment">Required record for every model experiment</h2>
+<p>Record the public model ID, immutable revision, tokenizer hash, model/data license link, layer, token position or pooling, normalization fitted on training only, random seeds, compute budget, training steps/tokens, split hashes, prompt/decoding specification, and all baseline outputs. Record actual hardware and peak memory rather than relying on estimates.</p>
+<h2 id="provenance-import-checklist">Import checklist</h2>
+<ul>
+<li><input type="checkbox" data-task="task-87"> Find the actual upstream LICENSE file at the pinned revision.</li>
+<li><input type="checkbox" data-task="task-88"> Record a source URL and commit, plus any required attribution.</li>
+<li><input type="checkbox" data-task="task-89"> Check code, model weights, and dataset terms separately.</li>
+<li><input type="checkbox" data-task="task-90"> Keep upstream notices when required. Do not present third-party material as original.</li>
+<li><input type="checkbox" data-task="task-91"> Keep private conversations, API keys, employer information, and personal uploads out of the repository.</li>
+<li><input type="checkbox" data-task="task-92"> Store large files outside Git and link the exact version and checksum.</li>
+</ul>
+<h2 id="provenance-current-contents">Current contents</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Origin</th>
+<th>Treatment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Starter Python and docs</td>
+<td>Created for this project</td>
+<td>Apache-2.0</td>
+</tr>
+<tr>
+<td>Numeric toy outputs</td>
+<td>This starter&#39;s seeded generator</td>
+<td>Released with the starter; artificial data</td>
+</tr>
+<tr>
+<td>Propositional graph tasks</td>
+<td>This starter&#39;s seeded generator</td>
+<td>Released with explicit verification statuses</td>
+</tr>
+<tr>
+<td>NumPy and Matplotlib</td>
+<td>Installed dependencies</td>
+<td>Not vendored; retain their own terms</td>
+</tr>
+<tr>
+<td>Lean</td>
+<td>Separate installation</td>
+<td>Not bundled</td>
+</tr>
+<tr>
+<td>Retained elan installer</td>
+<td>Downloaded from <code>https://elan.lean-lang.org/elan-init.sh</code>; exact SHA-256 retained in <code>results/lf-002/SHA256SUMS</code></td>
+<td>Unmodified installation evidence at <code>results/lf-002/install/elan-init.sh</code>; original Rust Project copyright and dual-license notice retained; distributed under its Apache-2.0 option, with attribution in <code>NOTICE</code></td>
+</tr>
+<tr>
+<td>Qwen checkpoints</td>
+<td>Optional future downloads</td>
+<td>Not bundled; exact licenses linked in the experiment plan</td>
+</tr>
+<tr>
+<td>Research papers</td>
+<td>Primary-source links</td>
+<td>Not redistributed as full-text copies</td>
+</tr>
+</tbody></table>
+<p>Before a public release, update the citation metadata, make the results match a specific commit, and have another contributor reproduce the main commands.</p>
+</div></details><footer>This is a research roadmap and starter package, not a claim of AGI. Small, reproducible negative results are useful. Source papers and tools retain their own licenses. No domain was purchased or GitHub repository created during preparation.</footer></main>
+<script>
+const storageKey='lemmaferry-checklist-v1';
+let saved={};try{saved=JSON.parse(localStorage.getItem(storageKey)||'{}')}catch{}
+const tasks=[...document.querySelectorAll('input[data-task]')];
+for(const box of tasks){box.setAttribute('aria-label',box.closest('li')?.textContent.trim()||'Checklist item');box.checked=!!saved[box.dataset.task];box.closest('li')?.classList.toggle('task-done',box.checked);box.addEventListener('change',()=>{saved[box.dataset.task]=box.checked;box.closest('li')?.classList.toggle('task-done',box.checked);try{localStorage.setItem(storageKey,JSON.stringify(saved))}catch{};updateProgress()})}
+function updateProgress(){const done=tasks.filter(x=>x.checked).length;document.getElementById('progressLabel').textContent=done+' of '+tasks.length+' checklist items completed';document.getElementById('progressFill').style.width=(tasks.length?100*done/tasks.length:0)+'%'}updateProgress();
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{const el=document.getElementById(a.getAttribute('href').slice(1));if(el){const chapter=el.closest('details');if(chapter)chapter.open=true}}));
+document.getElementById('expandButton').onclick=()=>document.querySelectorAll('details').forEach(d=>d.open=true);
+document.getElementById('printButton').onclick=()=>window.print();
+let printState=[];window.addEventListener('beforeprint',()=>{printState=[...document.querySelectorAll('details')].map(d=>[d,d.open]);printState.forEach(([d])=>d.open=true)});window.addEventListener('afterprint',()=>printState.forEach(([d,open])=>d.open=open));
+document.getElementById('exportButton').onclick=()=>{const lines=['LemmaFerry checklist','Exported '+new Date().toISOString(),''];for(const box of tasks){lines.push((box.checked?'[x] ':'[ ] ')+box.getAttribute('aria-label'))}const url=URL.createObjectURL(new Blob([lines.join(String.fromCharCode(10))],{type:'text/plain'}));const a=document.createElement('a');a.href=url;a.download='LemmaFerry_Checklist.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+if(location.hash){const el=document.getElementById(location.hash.slice(1));if(el){const d=el.closest('details');if(d)d.open=true}}
+</script></body></html>

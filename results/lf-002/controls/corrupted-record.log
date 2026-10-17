@@ -1,0 +1,8 @@
+{
+  "counts": {
+    "verified": 0,
+    "not_run": 0,
+    "error": 1
+  },
+  "output": "../results/lf-002/controls/corrupted.checked.jsonl"
+}

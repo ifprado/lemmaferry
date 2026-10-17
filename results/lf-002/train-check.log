@@ -1,0 +1,8 @@
+{
+  "counts": {
+    "verified": 20,
+    "not_run": 0,
+    "error": 0
+  },
+  "output": "../results/lf-002/checked/train.checked.jsonl"
+}

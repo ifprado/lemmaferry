@@ -1,0 +1,50 @@
+../results/lf-002/controls/inspected-pair.lean:6:5: warning: Variable name `h_e0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../results/lf-002/controls/inspected-pair.lean:7:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../results/lf-002/controls/inspected-pair.lean:9:5: warning: Variable name `h_e3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../results/lf-002/controls/inspected-pair.lean:10:5: warning: Variable name `h_e4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../results/lf-002/controls/inspected-pair.lean:12:5: warning: Variable name `h_e6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_train_000000' does not depend on any axioms
+../results/lf-002/controls/inspected-pair.lean:20:5: warning: Variable name `h_e1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../results/lf-002/controls/inspected-pair.lean:21:5: warning: Variable name `h_e2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../results/lf-002/controls/inspected-pair.lean:24:5: warning: Variable name `h_e5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h_e5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'lf_train_000000_long' does not depend on any axioms
