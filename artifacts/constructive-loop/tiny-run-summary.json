@@ -1,0 +1,5111 @@
+{
+  "claim": "Mechanism execution only. Increasingly broad or sustained reasoning gains remain an experimental conjecture.",
+  "completed_iterations": 2,
+  "evaluation_used_for_generation": false,
+  "final_comparisons": {
+    "mean_control": {
+      "accuracy_difference_treatment_minus_control": 0.0,
+      "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+      "risk_difference_bootstrap_95": [
+        5.02626101175944e-05,
+        0.0005692362785339355
+      ],
+      "risk_difference_treatment_minus_control": 0.0003179311752319336
+    },
+    "ordinary_control": {
+      "accuracy_difference_treatment_minus_control": 0.0,
+      "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+      "risk_difference_bootstrap_95": [
+        -0.011596732338269551,
+        0.00291572411855061
+      ],
+      "risk_difference_treatment_minus_control": -0.00410008430480957
+    },
+    "shuffled_control": {
+      "accuracy_difference_treatment_minus_control": 0.0,
+      "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+      "risk_difference_bootstrap_95": [
+        -0.0012801925341288248,
+        -3.771285216013632e-05
+      ],
+      "risk_difference_treatment_minus_control": -0.000648657480875651
+    },
+    "text_control": {
+      "accuracy_difference_treatment_minus_control": 0.0,
+      "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+      "risk_difference_bootstrap_95": [
+        0.05584378937880198,
+        0.1001498719056447
+      ],
+      "risk_difference_treatment_minus_control": 0.07703479131062825
+    }
+  },
+  "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+  "guided_iterations": 1,
+  "initial_checkpoints": {
+    "mean_control": {
+      "cumulative_updates": 0,
+      "parameter_sha256": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+      "path": "runs/constructive-loop-v3/initial/mean_control.pt",
+      "sha256": "b8752b4a36b9f76697d05a9779c78f8c15df959242c71cf03c2154098fbf679a"
+    },
+    "ordinary_control": {
+      "cumulative_updates": 0,
+      "parameter_sha256": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+      "path": "runs/constructive-loop-v3/initial/ordinary_control.pt",
+      "sha256": "59beda55c354a5c916bce4bf9fc72937e4a5d9496325fdd6abb7349cefee57c7"
+    },
+    "shuffled_control": {
+      "cumulative_updates": 0,
+      "parameter_sha256": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+      "path": "runs/constructive-loop-v3/initial/shuffled_control.pt",
+      "sha256": "9b3b8277da03afa1ef2ad17dc731f49a5e82ef239fd17f97236bfd9fac303ec7"
+    },
+    "text_control": {
+      "cumulative_updates": 0,
+      "parameter_sha256": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+      "path": "runs/constructive-loop-v3/initial/text_control.pt",
+      "sha256": "eb2c10c3c8e0be025d2b9f6703693960b607d593b34bb37803e0b2f9aa3c456c"
+    },
+    "verified": {
+      "cumulative_updates": 0,
+      "parameter_sha256": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+      "path": "runs/constructive-loop-v3/initial/verified.pt",
+      "sha256": "b53332814cc439ef34bf4708c60f2e2f9b83307b1efc3ebb094ca7ded15a2945"
+    }
+  },
+  "initial_evaluation": {
+    "accuracy": 0.625,
+    "count": 24,
+    "cumulative_updates": 0,
+    "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+    "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+    "recipient_parameter_sha256": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+    "records": [
+      {
+        "answer": "A",
+        "answer_nll": 16.982803344726562,
+        "answer_token_nll": 5.6609344482421875,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 16.982803344726562,
+          "B": 16.910470962524414
+        },
+        "correct": false,
+        "family": "arithmetic",
+        "id": "independent_000",
+        "prediction": "B"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 18.019371032714844,
+        "answer_token_nll": 6.006457010904948,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 18.1346378326416,
+          "B": 18.019371032714844
+        },
+        "correct": true,
+        "family": "arithmetic",
+        "id": "independent_001",
+        "prediction": "B"
+      },
+      {
+        "answer": "A",
+        "answer_nll": 16.54446029663086,
+        "answer_token_nll": 5.514820098876953,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 16.54446029663086,
+          "B": 16.03132438659668
+        },
+        "correct": false,
+        "family": "arithmetic",
+        "id": "independent_002",
+        "prediction": "B"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 15.992822647094727,
+        "answer_token_nll": 5.330940882364909,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 16.30125617980957,
+          "B": 15.992822647094727
+        },
+        "correct": true,
+        "family": "arithmetic",
+        "id": "independent_003",
+        "prediction": "B"
+      },
+      {
+        "answer": "A",
+        "answer_nll": 17.47633171081543,
+        "answer_token_nll": 5.8254439036051435,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 17.47633171081543,
+          "B": 16.88768196105957
+        },
+        "correct": false,
+        "family": "arithmetic",
+        "id": "independent_004",
+        "prediction": "B"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 16.043109893798828,
+        "answer_token_nll": 5.347703297932942,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 16.570648193359375,
+          "B": 16.043109893798828
+        },
+        "correct": true,
+        "family": "arithmetic",
+        "id": "independent_005",
+        "prediction": "B"
+      },
+      {
+        "answer": "A",
+        "answer_nll": 18.027572631835938,
+        "answer_token_nll": 6.0091908772786455,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 18.027572631835938,
+          "B": 17.33749008178711
+        },
+        "correct": false,
+        "family": "ordering",
+        "id": "independent_006",
+        "prediction": "B"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 16.66403579711914,
+        "answer_token_nll": 5.554678599039714,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 15.702417373657227,
+          "B": 16.66403579711914
+        },
+        "correct": false,
+        "family": "ordering",
+        "id": "independent_007",
+        "prediction": "A"
+      },
+      {
+        "answer": "A",
+        "answer_nll": 16.797138214111328,
+        "answer_token_nll": 5.599046071370442,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 16.797138214111328,
+          "B": 16.809200286865234
+        },
+        "correct": true,
+        "family": "ordering",
+        "id": "independent_008",
+        "prediction": "A"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 16.395538330078125,
+        "answer_token_nll": 5.465179443359375,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 16.23807144165039,
+          "B": 16.395538330078125
+        },
+        "correct": false,
+        "family": "ordering",
+        "id": "independent_009",
+        "prediction": "A"
+      },
+      {
+        "answer": "A",
+        "answer_nll": 17.18265151977539,
+        "answer_token_nll": 5.727550506591797,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 17.18265151977539,
+          "B": 18.068891525268555
+        },
+        "correct": true,
+        "family": "ordering",
+        "id": "independent_010",
+        "prediction": "A"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 17.469741821289062,
+        "answer_token_nll": 5.8232472737630205,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 17.492759704589844,
+          "B": 17.469741821289062
+        },
+        "correct": true,
+        "family": "ordering",
+        "id": "independent_011",
+        "prediction": "B"
+      },
+      {
+        "answer": "A",
+        "answer_nll": 17.535476684570312,
+        "answer_token_nll": 5.8451588948567705,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 17.535476684570312,
+          "B": 17.083614349365234
+        },
+        "correct": false,
+        "family": "strings",
+        "id": "independent_012",
+        "prediction": "B"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 16.318405151367188,
+        "answer_token_nll": 5.4394683837890625,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 17.31301498413086,
+          "B": 16.318405151367188
+        },
+        "correct": true,
+        "family": "strings",
+        "id": "independent_013",
+        "prediction": "B"
+      },
+      {
+        "answer": "A",
+        "answer_nll": 17.480188369750977,
+        "answer_token_nll": 5.826729456583659,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 17.480188369750977,
+          "B": 17.779170989990234
+        },
+        "correct": true,
+        "family": "strings",
+        "id": "independent_014",
+        "prediction": "A"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 16.96790313720703,
+        "answer_token_nll": 5.655967712402344,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 17.36243438720703,
+          "B": 16.96790313720703
+        },
+        "correct": true,
+        "family": "strings",
+        "id": "independent_015",
+        "prediction": "B"
+      },
+      {
+        "answer": "A",
+        "answer_nll": 17.313426971435547,
+        "answer_token_nll": 5.771142323811849,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 17.313426971435547,
+          "B": 16.935630798339844
+        },
+        "correct": false,
+        "family": "strings",
+        "id": "independent_016",
+        "prediction": "B"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 15.905851364135742,
+        "answer_token_nll": 5.301950454711914,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 16.027297973632812,
+          "B": 15.905851364135742
+        },
+        "correct": true,
+        "family": "strings",
+        "id": "independent_017",
+        "prediction": "B"
+      },
+      {
+        "answer": "A",
+        "answer_nll": 16.00905990600586,
+        "answer_token_nll": 5.336353302001953,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 16.00905990600586,
+          "B": 16.4879150390625
+        },
+        "correct": true,
+        "family": "everyday_rules",
+        "id": "independent_018",
+        "prediction": "A"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 16.760845184326172,
+        "answer_token_nll": 5.586948394775391,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 17.096843719482422,
+          "B": 16.760845184326172
+        },
+        "correct": true,
+        "family": "everyday_rules",
+        "id": "independent_019",
+        "prediction": "B"
+      },
+      {
+        "answer": "A",
+        "answer_nll": 16.701831817626953,
+        "answer_token_nll": 5.567277272542317,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 16.701831817626953,
+          "B": 17.0332088470459
+        },
+        "correct": true,
+        "family": "everyday_rules",
+        "id": "independent_020",
+        "prediction": "A"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 16.415678024291992,
+        "answer_token_nll": 5.471892674763997,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 16.49884033203125,
+          "B": 16.415678024291992
+        },
+        "correct": true,
+        "family": "everyday_rules",
+        "id": "independent_021",
+        "prediction": "B"
+      },
+      {
+        "answer": "A",
+        "answer_nll": 18.04046630859375,
+        "answer_token_nll": 6.01348876953125,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 18.04046630859375,
+          "B": 18.386844635009766
+        },
+        "correct": true,
+        "family": "everyday_rules",
+        "id": "independent_022",
+        "prediction": "A"
+      },
+      {
+        "answer": "B",
+        "answer_nll": 16.544179916381836,
+        "answer_token_nll": 5.514726638793945,
+        "answer_tokens": 3,
+        "choice_nll": {
+          "A": 16.097461700439453,
+          "B": 16.544179916381836
+        },
+        "correct": false,
+        "family": "everyday_rules",
+        "id": "independent_023",
+        "prediction": "A"
+      }
+    ],
+    "risk_mean_answer_nll": 16.899537086486816
+  },
+  "initial_parameter_sha256": {
+    "mean_control": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+    "ordinary_control": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+    "shuffled_control": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+    "text_control": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+    "verified": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032"
+  },
+  "iterations": [
+    {
+      "admitted": 6,
+      "calibration": {
+        "artifacts": {
+          "activations": "activations.npz",
+          "activations_sha256": "504226aa8b658cf800aa4543ca88e34477103aef4bc6274edad6635676f2e7ae",
+          "correspondence_manifest": "views/manifest.json",
+          "map_manifest": "maps/manifest.json",
+          "map_manifest_content_sha256": "cd58418171ab5c53ee10b4bf1195552c72d204b178133623762a34052d5a649b"
+        },
+        "protocol": {
+          "extraction": {
+            "calibration_scope": "Library-only structural-family geometric holdout; these records may subsequently be used for training. No frozen capability evaluation task P is used.",
+            "correspondence_manifest_content_sha256": "23af6ea6a628cf0bbfa44ac0f7159bf07e91ce39d676e38e5c0fb24768992993",
+            "family_split": {
+              "and_elimination": "train",
+              "and_introduction": "val",
+              "implication_chain": "test"
+            },
+            "library_snapshot_sha256": "93669ce758827b68747c60f20e9245cdfe77b6e17ad69bad9079aa7f1cc9eea1",
+            "models": {
+              "language": {
+                "backend": "tiny_byte_causal",
+                "boundary": "final layer-normalized hidden state at last prompt token before output head",
+                "config": {
+                  "device": "cpu",
+                  "heads": 2,
+                  "hidden": 32,
+                  "layers": 1,
+                  "max_length": 2048,
+                  "seed": 1729
+                },
+                "config_sha256": "2de58d1e6d6a9f0f5562558e5c333da65e693e3e35fd0ea7f8e81d125e280026",
+                "hidden_size": 32,
+                "position": "last prompt token; no answer tokens",
+                "role": "untrained or deterministic pipeline fixture; not a mathematical specialist or general-purpose transfer result"
+              },
+              "math": {
+                "backend": "tiny_byte_causal",
+                "boundary": "final layer-normalized hidden state at last prompt token before output head",
+                "config": {
+                  "device": "cpu",
+                  "heads": 2,
+                  "hidden": 32,
+                  "layers": 1,
+                  "max_length": 2048,
+                  "seed": 1730
+                },
+                "config_sha256": "ad8e97b0d487123a7a1afc22992c519c55a13249021f9362835cd59f013aa0da",
+                "hidden_size": 32,
+                "position": "last prompt token; no answer tokens",
+                "role": "untrained or deterministic pipeline fixture; not a mathematical specialist or general-purpose transfer result"
+              }
+            },
+            "parameters_unchanged": true,
+            "timing": "before the current recipient training update",
+            "trainable_parameter_sha256_after": {
+              "language": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+              "math": "c67731601f6416fdd0dd08a8f4ab3e25f5004a8d6cda34a5b6e58ab90e0a8f26"
+            },
+            "trainable_parameter_sha256_before": {
+              "language": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+              "math": "c67731601f6416fdd0dd08a8f4ab3e25f5004a8d6cda34a5b6e58ab90e0a8f26"
+            }
+          },
+          "lambda_grid": [
+            0.0,
+            0.001,
+            0.1,
+            1.0
+          ],
+          "objective": "sum_i ||W x_i + b - y_i||^2 + lambda ||W||_F^2; b unpenalized",
+          "objective_mode": "raw_sum",
+          "reference_policy": "Frozen training mean unless an explicit fixed vector was supplied; a missing slot supplies no inferred semantic pairing.",
+          "refit_after_selection": false,
+          "schema": "lemmaferry.rosetta.v1",
+          "scope": "Supervised geometric correspondence; round-trip consistency does not establish semantics or reasoning transfer.",
+          "seed": 1729,
+          "selection": {
+            "S": {
+              "selected_lambda": 1.0,
+              "validation_scores": [
+                {
+                  "lambda": 0.0,
+                  "validation_mse": 1.179576912475314
+                },
+                {
+                  "lambda": 0.001,
+                  "validation_mse": 1.1795618636660266
+                },
+                {
+                  "lambda": 0.1,
+                  "validation_mse": 1.1780879870391494
+                },
+                {
+                  "lambda": 1.0,
+                  "validation_mse": 1.1660031794564591
+                }
+              ]
+            },
+            "S_shuffled": {
+              "selected_lambda": 1.0,
+              "validation_scores": [
+                {
+                  "lambda": 0.0,
+                  "validation_mse": 1.0370269681095048
+                },
+                {
+                  "lambda": 0.001,
+                  "validation_mse": 1.0370237504557234
+                },
+                {
+                  "lambda": 0.1,
+                  "validation_mse": 1.0367115161912692
+                },
+                {
+                  "lambda": 1.0,
+                  "validation_mse": 1.0343785350106174
+                }
+              ]
+            },
+            "T": {
+              "selected_lambda": 1.0,
+              "validation_scores": [
+                {
+                  "lambda": 0.0,
+                  "validation_mse": 0.7093807069200887
+                },
+                {
+                  "lambda": 0.001,
+                  "validation_mse": 0.7093732960028147
+                },
+                {
+                  "lambda": 0.1,
+                  "validation_mse": 0.7086458768205384
+                },
+                {
+                  "lambda": 1.0,
+                  "validation_mse": 0.702557703915144
+                }
+              ]
+            },
+            "T_shuffled": {
+              "selected_lambda": 0.0,
+              "validation_scores": [
+                {
+                  "lambda": 0.0,
+                  "validation_mse": 0.5866330793299785
+                },
+                {
+                  "lambda": 0.001,
+                  "validation_mse": 0.5866344409309396
+                },
+                {
+                  "lambda": 0.1,
+                  "validation_mse": 0.586769337819434
+                },
+                {
+                  "lambda": 1.0,
+                  "validation_mse": 0.5879980054315612
+                }
+              ]
+            }
+          },
+          "selection_metric": "raw coordinate mean squared error on validation only",
+          "shuffled_train_permutation": [
+            1,
+            0
+          ],
+          "train": {
+            "count": 2,
+            "families": [
+              "and_elimination",
+              "and_elimination"
+            ],
+            "ids": [
+              "7336460e22551e875fb6202e3cc7ca97c1985659e2896c9b7a30edee14d0e01c",
+              "ab39828d833e47ad8b7fa39247f7de4d9967c2453e35783a2d035de5efc3018e"
+            ],
+            "language_dimension": 32,
+            "language_vectors_sha256": "928d7165cb7d5b50b32f04ddd1126eab153b3872b4e885aa00d7f0e582a3e034",
+            "math_dimension": 32,
+            "math_vectors_sha256": "f4d533e3adff17aa7ba588a85b03bbc9a07d02fbfde1c67e4d920bc90a0858ae",
+            "split": "train"
+          },
+          "validation": {
+            "count": 2,
+            "families": [
+              "and_introduction",
+              "and_introduction"
+            ],
+            "ids": [
+              "94501138590923a501a6cc26ee2cb7df72183e51bb2ecf0ab0885f1a268d3fde",
+              "0f103a03f9f36ddb4beb8c364afc6c047e2fd66b72938d59bd20008607ed1b89"
+            ],
+            "language_dimension": 32,
+            "language_vectors_sha256": "35c3e83fa2e6be1a7aed8b0bf3af05007d45547031ec81b948804a6199b8f2b3",
+            "math_dimension": 32,
+            "math_vectors_sha256": "fdce34746fb0f41147a4f041929c62d01c216b75ddfdf3a810eeb8f446121f24",
+            "split": "val"
+          }
+        },
+        "round_trip": {
+          "S_of_T_math": {
+            "cosine_retrieval_top1": 1.0,
+            "mean_matched_cosine": 0.5821001771022599,
+            "mse": 0.7561075337678022,
+            "mse_relative_to_train_mean": 0.9810463514871482,
+            "normalized_rmse": 16.95900738047938,
+            "retrieval_candidates": 2,
+            "retrieval_chance": 0.5,
+            "rmse": 0.8695444403639196
+          },
+          "T_of_S_language": {
+            "cosine_retrieval_top1": 0.5,
+            "mean_matched_cosine": 0.5726737535642398,
+            "mse": 0.7914914177790164,
+            "mse_relative_to_train_mean": 0.9509390969616099,
+            "normalized_rmse": 7.6872166359715,
+            "retrieval_candidates": 2,
+            "retrieval_chance": 0.5,
+            "rmse": 0.8896580341788728
+          },
+          "interpretation": "F(F(x,y)) is a consistency diagnostic; an invertible wrong correspondence can also pass it."
+        },
+        "status": "completed",
+        "test": {
+          "count": 2,
+          "families": [
+            "implication_chain",
+            "implication_chain"
+          ],
+          "ids": [
+            "9334ffebf4b2148267dba001b091026ed5b6a66f9c40c8b9fd247c7cedd65722",
+            "e662f8e0d0119aaec891ec51c9fb7f8de632fa6ccbb8b5c918ccd8962d6a881d"
+          ],
+          "language_dimension": 32,
+          "language_vectors_sha256": "106b02e036c7d8a303f9abc01987d216a1f3f7224adf981b1dfabf8a1520a3c2",
+          "math_dimension": 32,
+          "math_vectors_sha256": "c718d38481443b103aeec252e877d64533566f3d2ed18e784af1e0e008ceca74",
+          "split": "test"
+        },
+        "test_metrics": {
+          "language_to_math": {
+            "paired": {
+              "cosine_retrieval_top1": 0.5,
+              "mean_matched_cosine": 0.5615803047177768,
+              "mse": 0.80452671509418,
+              "mse_relative_to_train_mean": 1.0438700360304438,
+              "normalized_rmse": 17.039326204591053,
+              "retrieval_candidates": 2,
+              "retrieval_chance": 0.5,
+              "rmse": 0.8969541321016253
+            },
+            "shuffled_training_pairs": {
+              "cosine_retrieval_top1": 0.5,
+              "mean_matched_cosine": 0.5528331616404802,
+              "mse": 0.8193430494373595,
+              "mse_relative_to_train_mean": 1.063094167652777,
+              "normalized_rmse": 16.861988119238458,
+              "retrieval_candidates": 2,
+              "retrieval_chance": 0.5,
+              "rmse": 0.9051757008655057
+            },
+            "training_mean": {
+              "cosine_retrieval_top1": 0.5,
+              "mean_matched_cosine": 0.5716692455095033,
+              "mse": 0.7707154026123578,
+              "mse_relative_to_train_mean": 1.0,
+              "normalized_rmse": 16.945326530382847,
+              "retrieval_candidates": 2,
+              "retrieval_chance": 0.5,
+              "rmse": 0.8779039825700518
+            }
+          },
+          "math_to_language": {
+            "paired": {
+              "cosine_retrieval_top1": 0.5,
+              "mean_matched_cosine": 0.5431821882823855,
+              "mse": 0.837048286992105,
+              "mse_relative_to_train_mean": 1.005673497230228,
+              "normalized_rmse": 7.7003655927798444,
+              "retrieval_candidates": 2,
+              "retrieval_chance": 0.5,
+              "rmse": 0.9149034304188093
+            },
+            "shuffled_training_pairs": {
+              "cosine_retrieval_top1": 0.5,
+              "mean_matched_cosine": 0.5354738477201628,
+              "mse": 0.8520582970024766,
+              "mse_relative_to_train_mean": 1.0237073066235127,
+              "normalized_rmse": 7.729771008268664,
+              "retrieval_candidates": 2,
+              "retrieval_chance": 0.5,
+              "rmse": 0.9230700390558002
+            },
+            "training_mean": {
+              "cosine_retrieval_top1": 0.5,
+              "mean_matched_cosine": 0.5435355573838483,
+              "mse": 0.8323260872414939,
+              "mse_relative_to_train_mean": 1.0,
+              "normalized_rmse": 7.710453255553109,
+              "retrieval_candidates": 2,
+              "retrieval_chance": 0.5,
+              "rmse": 0.9123190709622889
+            }
+          }
+        }
+      },
+      "checkpoints": {
+        "mean_control": {
+          "cumulative_updates": 2,
+          "parameter_sha256": "c57a78b8da48fa84b85624b27b79e170acaabc4da480f9cc9bf1d228a025c659",
+          "path": "runs/constructive-loop-v3/iteration-000/mean_control.pt",
+          "sha256": "77089ed970616b5f54b0404b0a18a62be79203a4b418f0a4851fdcedc85db32d"
+        },
+        "ordinary_control": {
+          "cumulative_updates": 2,
+          "parameter_sha256": "31069ca9bea2c294232a9d4af1968c4895712e46718fd7c3a86c2504cdc165b0",
+          "path": "runs/constructive-loop-v3/iteration-000/ordinary_control.pt",
+          "sha256": "18b0b4e5ecf430e3a0391032be45ba772d12911d4909590c8f97503291b66646"
+        },
+        "shuffled_control": {
+          "cumulative_updates": 2,
+          "parameter_sha256": "2d2bff11d5f896b951af8bb1a68e4db931791b93266bf7eed25bbbf4cc449f9d",
+          "path": "runs/constructive-loop-v3/iteration-000/shuffled_control.pt",
+          "sha256": "39b336f52fec8407a5a5108da02cbe81953110adaf807e3352c622f9660c015f"
+        },
+        "text_control": {
+          "cumulative_updates": 2,
+          "parameter_sha256": "3a81b1bfb80537a47067cb66b82f7af3647af6a07c4d219a97950dd2ed5ca864",
+          "path": "runs/constructive-loop-v3/iteration-000/text_control.pt",
+          "sha256": "67ccf70bfb89767f839f117d3b0393ea57379384f8c1c19921bcbe97750a5d57"
+        },
+        "verified": {
+          "cumulative_updates": 2,
+          "parameter_sha256": "b83c60b8facaaaee023af0efb06f99b497079c170e6603a0020ec716db6e3978",
+          "path": "runs/constructive-loop-v3/iteration-000/verified.pt",
+          "sha256": "31f76bc0f9c25b070ec275fcbdab9fcc64956f664470766ea67956c6f106615e"
+        }
+      },
+      "comparisons": {
+        "mean_control": {
+          "accuracy_difference_treatment_minus_control": 0.0,
+          "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+          "risk_difference_bootstrap_95": [
+            2.208550771077474e-05,
+            0.00027174353599548326
+          ],
+          "risk_difference_treatment_minus_control": 0.0001521905263264974
+        },
+        "ordinary_control": {
+          "accuracy_difference_treatment_minus_control": 0.0,
+          "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+          "risk_difference_bootstrap_95": [
+            -0.00915858248869578,
+            -0.000764592488606775
+          ],
+          "risk_difference_treatment_minus_control": -0.004839619000752767
+        },
+        "shuffled_control": {
+          "accuracy_difference_treatment_minus_control": 0.0,
+          "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+          "risk_difference_bootstrap_95": [
+            -0.0005963941415150961,
+            -5.736450354258227e-05
+          ],
+          "risk_difference_treatment_minus_control": -0.00031749407450358075
+        },
+        "text_control": {
+          "accuracy_difference_treatment_minus_control": 0.0,
+          "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+          "risk_difference_bootstrap_95": [
+            0.03698637882868449,
+            0.06271128356456757
+          ],
+          "risk_difference_treatment_minus_control": 0.048974951108296715
+        }
+      },
+      "dependency_reusing_records": 0,
+      "evaluation": {
+        "mean_control": {
+          "accuracy": 0.5833333333333334,
+          "count": 24,
+          "cumulative_updates": 2,
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+          "recipient_parameter_sha256": "c57a78b8da48fa84b85624b27b79e170acaabc4da480f9cc9bf1d228a025c659",
+          "records": [
+            {
+              "answer": "A",
+              "answer_nll": 16.768869400024414,
+              "answer_token_nll": 5.589623133341472,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.768869400024414,
+                "B": 16.570167541503906
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_000",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.66907501220703,
+              "answer_token_nll": 5.889691670735677,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.890090942382812,
+                "B": 17.66907501220703
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_001",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.350767135620117,
+              "answer_token_nll": 5.450255711873372,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.350767135620117,
+                "B": 15.71941089630127
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_002",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.635819435119629,
+              "answer_token_nll": 5.211939811706543,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.070140838623047,
+                "B": 15.635819435119629
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_003",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.234195709228516,
+              "answer_token_nll": 5.744731903076172,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.234195709228516,
+                "B": 16.514392852783203
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_004",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.731521606445312,
+              "answer_token_nll": 5.2438405354817705,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.37664222717285,
+                "B": 15.731521606445312
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_005",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.784944534301758,
+              "answer_token_nll": 5.928314844767253,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.784944534301758,
+                "B": 16.986801147460938
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_006",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.325611114501953,
+              "answer_token_nll": 5.441870371500651,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.467435836791992,
+                "B": 16.325611114501953
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_007",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.601829528808594,
+              "answer_token_nll": 5.533943176269531,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.601829528808594,
+                "B": 16.475425720214844
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_008",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.988941192626953,
+              "answer_token_nll": 5.329647064208984,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.924835205078125,
+                "B": 15.988941192626953
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_009",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.95450210571289,
+              "answer_token_nll": 5.651500701904297,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.95450210571289,
+                "B": 17.754472732543945
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_010",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.147573471069336,
+              "answer_token_nll": 5.715857823689778,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.2774715423584,
+                "B": 17.147573471069336
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_011",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.305503845214844,
+              "answer_token_nll": 5.768501281738281,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.305503845214844,
+                "B": 16.78173065185547
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_012",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.997130393981934,
+              "answer_token_nll": 5.332376797993978,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.077102661132812,
+                "B": 15.997130393981934
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_013",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.254886627197266,
+              "answer_token_nll": 5.751628875732422,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.254886627197266,
+                "B": 17.422618865966797
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_014",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.6109561920166,
+              "answer_token_nll": 5.536985397338867,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.149240493774414,
+                "B": 16.6109561920166
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_015",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.10175323486328,
+              "answer_token_nll": 5.700584411621094,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.10175323486328,
+                "B": 16.579368591308594
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_016",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.579113960266113,
+              "answer_token_nll": 5.193037986755371,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.841838836669922,
+                "B": 15.579113960266113
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_017",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 15.735389709472656,
+              "answer_token_nll": 5.245129903157552,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.735389709472656,
+                "B": 16.105060577392578
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_018",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.3720760345459,
+              "answer_token_nll": 5.457358678181966,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.843381881713867,
+                "B": 16.3720760345459
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_019",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.481048583984375,
+              "answer_token_nll": 5.493682861328125,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.481048583984375,
+                "B": 16.717510223388672
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_020",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.027507781982422,
+              "answer_token_nll": 5.342502593994141,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.259937286376953,
+                "B": 16.027507781982422
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_021",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.837093353271484,
+              "answer_token_nll": 5.945697784423828,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.837093353271484,
+                "B": 18.0585880279541
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_022",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.157869338989258,
+              "answer_token_nll": 5.385956446329753,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.822701454162598,
+                "B": 16.157869338989258
+              },
+              "correct": false,
+              "family": "everyday_rules",
+              "id": "independent_023",
+              "prediction": "A"
+            }
+          ],
+          "risk_mean_answer_nll": 16.61058247089386
+        },
+        "ordinary_control": {
+          "accuracy": 0.5833333333333334,
+          "count": 24,
+          "cumulative_updates": 2,
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+          "recipient_parameter_sha256": "31069ca9bea2c294232a9d4af1968c4895712e46718fd7c3a86c2504cdc165b0",
+          "records": [
+            {
+              "answer": "A",
+              "answer_nll": 16.77402687072754,
+              "answer_token_nll": 5.591342290242513,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.77402687072754,
+                "B": 16.57598876953125
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_000",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.6641788482666,
+              "answer_token_nll": 5.888059616088867,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.896652221679688,
+                "B": 17.6641788482666
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_001",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.35501480102539,
+              "answer_token_nll": 5.451671600341797,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.35501480102539,
+                "B": 15.717710494995117
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_002",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.62994384765625,
+              "answer_token_nll": 5.209981282552083,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.078121185302734,
+                "B": 15.62994384765625
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_003",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.2431640625,
+              "answer_token_nll": 5.747721354166667,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.2431640625,
+                "B": 16.52135467529297
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_004",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.726770401000977,
+              "answer_token_nll": 5.242256800333659,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.380054473876953,
+                "B": 15.726770401000977
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_005",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.81039810180664,
+              "answer_token_nll": 5.93679936726888,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.81039810180664,
+                "B": 16.99728775024414
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_006",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.323089599609375,
+              "answer_token_nll": 5.441029866536458,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.490459442138672,
+                "B": 16.323089599609375
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_007",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.603221893310547,
+              "answer_token_nll": 5.534407297770183,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.603221893310547,
+                "B": 16.453285217285156
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_008",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.992513656616211,
+              "answer_token_nll": 5.330837885538737,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.93794059753418,
+                "B": 15.992513656616211
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_009",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.94733428955078,
+              "answer_token_nll": 5.649111429850261,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.94733428955078,
+                "B": 17.733531951904297
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_010",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.147079467773438,
+              "answer_token_nll": 5.7156931559244795,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.279325485229492,
+                "B": 17.147079467773438
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_011",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.313173294067383,
+              "answer_token_nll": 5.771057764689128,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.313173294067383,
+                "B": 16.777992248535156
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_012",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.983290672302246,
+              "answer_token_nll": 5.327763557434082,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.089704513549805,
+                "B": 15.983290672302246
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_013",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.258920669555664,
+              "answer_token_nll": 5.752973556518555,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.258920669555664,
+                "B": 17.41071319580078
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_014",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.629085540771484,
+              "answer_token_nll": 5.543028513590495,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.176937103271484,
+                "B": 16.629085540771484
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_015",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.12661361694336,
+              "answer_token_nll": 5.708871205647786,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.12661361694336,
+                "B": 16.59276008605957
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_016",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.582023620605469,
+              "answer_token_nll": 5.194007873535156,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.862512588500977,
+                "B": 15.582023620605469
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_017",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 15.733479499816895,
+              "answer_token_nll": 5.244493166605632,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.733479499816895,
+                "B": 16.091846466064453
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_018",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.374732971191406,
+              "answer_token_nll": 5.458244323730469,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.858959197998047,
+                "B": 16.374732971191406
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_019",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.498077392578125,
+              "answer_token_nll": 5.499359130859375,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.498077392578125,
+                "B": 16.71554946899414
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_020",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.04889488220215,
+              "answer_token_nll": 5.349631627400716,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.28559684753418,
+                "B": 16.04889488220215
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_021",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.855655670166016,
+              "answer_token_nll": 5.951885223388672,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.855655670166016,
+                "B": 18.06694793701172
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_022",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.153099060058594,
+              "answer_token_nll": 5.384366353352864,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.828107833862305,
+                "B": 16.153099060058594
+              },
+              "correct": false,
+              "family": "everyday_rules",
+              "id": "independent_023",
+              "prediction": "A"
+            }
+          ],
+          "risk_mean_answer_nll": 16.61557428042094
+        },
+        "shuffled_control": {
+          "accuracy": 0.5833333333333334,
+          "count": 24,
+          "cumulative_updates": 2,
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+          "recipient_parameter_sha256": "2d2bff11d5f896b951af8bb1a68e4db931791b93266bf7eed25bbbf4cc449f9d",
+          "records": [
+            {
+              "answer": "A",
+              "answer_nll": 16.76995849609375,
+              "answer_token_nll": 5.589986165364583,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.76995849609375,
+                "B": 16.570598602294922
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_000",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.669763565063477,
+              "answer_token_nll": 5.889921188354492,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.890695571899414,
+                "B": 17.669763565063477
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_001",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.35179901123047,
+              "answer_token_nll": 5.450599670410156,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.35179901123047,
+                "B": 15.719735145568848
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_002",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.63606071472168,
+              "answer_token_nll": 5.21202023824056,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.070833206176758,
+                "B": 15.63606071472168
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_003",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.23520851135254,
+              "answer_token_nll": 5.74506950378418,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.23520851135254,
+                "B": 16.514362335205078
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_004",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.731780052185059,
+              "answer_token_nll": 5.2439266840616865,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.377639770507812,
+                "B": 15.731780052185059
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_005",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.785694122314453,
+              "answer_token_nll": 5.928564707438151,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.785694122314453,
+                "B": 16.98754119873047
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_006",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.3255558013916,
+              "answer_token_nll": 5.4418519337972,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.468650817871094,
+                "B": 16.3255558013916
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_007",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.60234260559082,
+              "answer_token_nll": 5.5341142018636065,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.60234260559082,
+                "B": 16.474952697753906
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_008",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.988280296325684,
+              "answer_token_nll": 5.3294267654418945,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.925281524658203,
+                "B": 15.988280296325684
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_009",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.955394744873047,
+              "answer_token_nll": 5.651798248291016,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.955394744873047,
+                "B": 17.754173278808594
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_010",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.14798355102539,
+              "answer_token_nll": 5.715994517008464,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.278430938720703,
+                "B": 17.14798355102539
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_011",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.306076049804688,
+              "answer_token_nll": 5.7686920166015625,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.306076049804688,
+                "B": 16.781917572021484
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_012",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.997148513793945,
+              "answer_token_nll": 5.332382837931315,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.077354431152344,
+                "B": 15.997148513793945
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_013",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.255081176757812,
+              "answer_token_nll": 5.7516937255859375,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.255081176757812,
+                "B": 17.421985626220703
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_014",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.611114501953125,
+              "answer_token_nll": 5.537038167317708,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.150062561035156,
+                "B": 16.611114501953125
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_015",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.102588653564453,
+              "answer_token_nll": 5.700862884521484,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.102588653564453,
+                "B": 16.57955551147461
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_016",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.579158782958984,
+              "answer_token_nll": 5.193052927652995,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.843347549438477,
+                "B": 15.579158782958984
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_017",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 15.735465049743652,
+              "answer_token_nll": 5.245155016581218,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.735465049743652,
+                "B": 16.105213165283203
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_018",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.372934341430664,
+              "answer_token_nll": 5.457644780476888,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.844289779663086,
+                "B": 16.372934341430664
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_019",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.482421875,
+              "answer_token_nll": 5.494140625,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.482421875,
+                "B": 16.717687606811523
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_020",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.02796173095703,
+              "answer_token_nll": 5.342653910319011,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.260770797729492,
+                "B": 16.02796173095703
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_021",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.83734703063965,
+              "answer_token_nll": 5.94578234354655,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.83734703063965,
+                "B": 18.058788299560547
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_022",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.158132553100586,
+              "answer_token_nll": 5.386044184366862,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.822769165039062,
+                "B": 16.158132553100586
+              },
+              "correct": false,
+              "family": "everyday_rules",
+              "id": "independent_023",
+              "prediction": "A"
+            }
+          ],
+          "risk_mean_answer_nll": 16.61105215549469
+        },
+        "text_control": {
+          "accuracy": 0.5833333333333334,
+          "count": 24,
+          "cumulative_updates": 2,
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+          "recipient_parameter_sha256": "3a81b1bfb80537a47067cb66b82f7af3647af6a07c4d219a97950dd2ed5ca864",
+          "records": [
+            {
+              "answer": "A",
+              "answer_nll": 16.72340202331543,
+              "answer_token_nll": 5.5744673411051435,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.72340202331543,
+                "B": 16.518033981323242
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_000",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.618736267089844,
+              "answer_token_nll": 5.872912089029948,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.854137420654297,
+                "B": 17.618736267089844
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_001",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.205097198486328,
+              "answer_token_nll": 5.401699066162109,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.205097198486328,
+                "B": 15.591882705688477
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_002",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.57536506652832,
+              "answer_token_nll": 5.19178835550944,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.984576225280762,
+                "B": 15.57536506652832
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_003",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.192874908447266,
+              "answer_token_nll": 5.730958302815755,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.192874908447266,
+                "B": 16.479957580566406
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_004",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.60511589050293,
+              "answer_token_nll": 5.20170529683431,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.23210334777832,
+                "B": 15.60511589050293
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_005",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.72557830810547,
+              "answer_token_nll": 5.908526102701823,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.72557830810547,
+                "B": 16.9263916015625
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_006",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.26546859741211,
+              "answer_token_nll": 5.421822865804036,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.444428443908691,
+                "B": 16.26546859741211
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_007",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.552631378173828,
+              "answer_token_nll": 5.517543792724609,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.552631378173828,
+                "B": 16.437223434448242
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_008",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.988168716430664,
+              "answer_token_nll": 5.329389572143555,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.963737487792969,
+                "B": 15.988168716430664
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_009",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.912036895751953,
+              "answer_token_nll": 5.637345631917317,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.912036895751953,
+                "B": 17.719654083251953
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_010",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.071884155273438,
+              "answer_token_nll": 5.6906280517578125,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.185691833496094,
+                "B": 17.071884155273438
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_011",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.25192642211914,
+              "answer_token_nll": 5.75064214070638,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.25192642211914,
+                "B": 16.712276458740234
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_012",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.979988098144531,
+              "answer_token_nll": 5.326662699381511,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.066978454589844,
+                "B": 15.979988098144531
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_013",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.185489654541016,
+              "answer_token_nll": 5.728496551513672,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.185489654541016,
+                "B": 17.368684768676758
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_014",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.601985931396484,
+              "answer_token_nll": 5.533995310465495,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.10802459716797,
+                "B": 16.601985931396484
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_015",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.060619354248047,
+              "answer_token_nll": 5.686873118082683,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.060619354248047,
+                "B": 16.568422317504883
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_016",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.534921646118164,
+              "answer_token_nll": 5.178307215372722,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.788084030151367,
+                "B": 15.534921646118164
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_017",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 15.71192741394043,
+              "answer_token_nll": 5.2373091379801435,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.71192741394043,
+                "B": 16.095075607299805
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_018",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.341869354248047,
+              "answer_token_nll": 5.447289784749349,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.83100700378418,
+                "B": 16.341869354248047
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_019",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.42365264892578,
+              "answer_token_nll": 5.474550882975261,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.42365264892578,
+                "B": 16.646644592285156
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_020",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.00718116760254,
+              "answer_token_nll": 5.335727055867513,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.236539840698242,
+                "B": 16.00718116760254
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_021",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.80209732055664,
+              "answer_token_nll": 5.934032440185547,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.80209732055664,
+                "B": 18.024932861328125
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_022",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.144214630126953,
+              "answer_token_nll": 5.381404876708984,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.796855926513672,
+                "B": 16.144214630126953
+              },
+              "correct": false,
+              "family": "everyday_rules",
+              "id": "independent_023",
+              "prediction": "A"
+            }
+          ],
+          "risk_mean_answer_nll": 16.56175971031189
+        },
+        "verified": {
+          "accuracy": 0.5833333333333334,
+          "count": 24,
+          "cumulative_updates": 2,
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+          "recipient_parameter_sha256": "b83c60b8facaaaee023af0efb06f99b497079c170e6603a0020ec716db6e3978",
+          "records": [
+            {
+              "answer": "A",
+              "answer_nll": 16.769126892089844,
+              "answer_token_nll": 5.589708964029948,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.769126892089844,
+                "B": 16.570594787597656
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_000",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.669677734375,
+              "answer_token_nll": 5.889892578125,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.890975952148438,
+                "B": 17.669677734375
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_001",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.350547790527344,
+              "answer_token_nll": 5.450182596842448,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.350547790527344,
+                "B": 15.719442367553711
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_002",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.635665893554688,
+              "answer_token_nll": 5.2118886311848955,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.069398880004883,
+                "B": 15.635665893554688
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_003",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.23420524597168,
+              "answer_token_nll": 5.74473508199056,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.23420524597168,
+                "B": 16.514892578125
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_004",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.731592178344727,
+              "answer_token_nll": 5.243864059448242,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.37650489807129,
+                "B": 15.731592178344727
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_005",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.785327911376953,
+              "answer_token_nll": 5.928442637125651,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.785327911376953,
+                "B": 16.986942291259766
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_006",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.32588768005371,
+              "answer_token_nll": 5.441962560017903,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.466861724853516,
+                "B": 16.32588768005371
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_007",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.60182762145996,
+              "answer_token_nll": 5.533942540486653,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.60182762145996,
+                "B": 16.47571563720703
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_008",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.9896879196167,
+              "answer_token_nll": 5.329895973205566,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.925383567810059,
+                "B": 15.9896879196167
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_009",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.95391845703125,
+              "answer_token_nll": 5.65130615234375,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.95391845703125,
+                "B": 17.754732131958008
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_010",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.147762298583984,
+              "answer_token_nll": 5.715920766194661,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.277315139770508,
+                "B": 17.147762298583984
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_011",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.305633544921875,
+              "answer_token_nll": 5.768544514973958,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.305633544921875,
+                "B": 16.782054901123047
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_012",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.997136116027832,
+              "answer_token_nll": 5.33237870534261,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.077251434326172,
+                "B": 15.997136116027832
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_013",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.255470275878906,
+              "answer_token_nll": 5.751823425292969,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.255470275878906,
+                "B": 17.423221588134766
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_014",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.611343383789062,
+              "answer_token_nll": 5.5371144612630205,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.149614334106445,
+                "B": 16.611343383789062
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_015",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.102092742919922,
+              "answer_token_nll": 5.700697580973308,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.102092742919922,
+                "B": 16.57976722717285
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_016",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.57967472076416,
+              "answer_token_nll": 5.193224906921387,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.841346740722656,
+                "B": 15.57967472076416
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_017",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 15.735462188720703,
+              "answer_token_nll": 5.245154062906901,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.735462188720703,
+                "B": 16.105121612548828
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_018",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.372343063354492,
+              "answer_token_nll": 5.457447687784831,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.8438777923584,
+                "B": 16.372343063354492
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_019",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.480735778808594,
+              "answer_token_nll": 5.493578592936198,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.480735778808594,
+                "B": 16.718059539794922
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_020",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.027164459228516,
+              "answer_token_nll": 5.342388153076172,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.259578704833984,
+                "B": 16.027164459228516
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_021",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.83742332458496,
+              "answer_token_nll": 5.945807774861653,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.83742332458496,
+                "B": 18.058969497680664
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_022",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.15792465209961,
+              "answer_token_nll": 5.385974884033203,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.822891235351562,
+                "B": 16.15792465209961
+              },
+              "correct": false,
+              "family": "everyday_rules",
+              "id": "independent_023",
+              "prediction": "A"
+            }
+          ],
+          "risk_mean_answer_nll": 16.610734661420185
+        }
+      },
+      "feedback_for_next_generation": {
+        "external_evaluation_used": false,
+        "family_losses": {
+          "and_elimination": 17.360297203063965,
+          "and_introduction": 16.830469131469727,
+          "implication_chain": 17.064762115478516
+        },
+        "iteration": 0,
+        "mastery_threshold": 0.7,
+        "recipient_parameter_sha256": "b83c60b8facaaaee023af0efb06f99b497079c170e6603a0020ec716db6e3978",
+        "source": "training_curriculum_only"
+      },
+      "iteration": 0,
+      "library_after": {
+        "foundation_hash": "39d0bae34a454bb6ce69fc0fc12733500ac431bb21c65420567c77f72c2bd338",
+        "head": "ab39828d833e47ad8b7fa39247f7de4d9967c2453e35783a2d035de5efc3018e",
+        "record_count": 6,
+        "record_ids": [
+          "9334ffebf4b2148267dba001b091026ed5b6a66f9c40c8b9fd247c7cedd65722",
+          "94501138590923a501a6cc26ee2cb7df72183e51bb2ecf0ab0885f1a268d3fde",
+          "7336460e22551e875fb6202e3cc7ca97c1985659e2896c9b7a30edee14d0e01c",
+          "e662f8e0d0119aaec891ec51c9fb7f8de632fa6ccbb8b5c918ccd8962d6a881d",
+          "0f103a03f9f36ddb4beb8c364afc6c047e2fd66b72938d59bd20008607ed1b89",
+          "ab39828d833e47ad8b7fa39247f7de4d9967c2453e35783a2d035de5efc3018e"
+        ],
+        "snapshot_hash": "93669ce758827b68747c60f20e9245cdfe77b6e17ad69bad9079aa7f1cc9eea1"
+      },
+      "library_before": {
+        "foundation_hash": "39d0bae34a454bb6ce69fc0fc12733500ac431bb21c65420567c77f72c2bd338",
+        "head": null,
+        "record_count": 0,
+        "record_ids": [],
+        "snapshot_hash": "3168b7cc70e16efeafa732390a6b31749121ded6124b96d8b3ae237acc1a9f9e"
+      },
+      "training": {
+        "mean_control": {
+          "backend": "tiny_byte_causal",
+          "budget": {
+            "auxiliary_weight": 0.1,
+            "batch_size": 1,
+            "gradient_clip": 1.0,
+            "learning_rate": 0.001,
+            "max_length": 2048,
+            "steps": 2,
+            "weight_decay": 0.01
+          },
+          "cumulative_updates": 2,
+          "examples_seen": 2,
+          "examples_sha256": "7ccdd7643c0209e2659f26fe23de179d7685fd0cc8e7b04ca206d37ea6061e02",
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "mean_auxiliary_hidden_mse": 2.0102752447128296,
+          "mean_total_training_loss": 5.954334735870361,
+          "mean_training_token_nll": 5.753307342529297,
+          "nonpadding_tokens": 333,
+          "parameter_sha256_after": "c57a78b8da48fa84b85624b27b79e170acaabc4da480f9cc9bf1d228a025c659",
+          "parameter_sha256_before": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+          "processed_padded_tokens": 4096,
+          "scope": "randomly initialized small causal language model; not general-purpose capability evidence",
+          "seed": 1729,
+          "step_losses": [
+            5.89398717880249,
+            6.014682292938232
+          ],
+          "supervised_answer_tokens": 6,
+          "updates_this_iteration": 2
+        },
+        "ordinary_control": {
+          "backend": "tiny_byte_causal",
+          "budget": {
+            "auxiliary_weight": 0.1,
+            "batch_size": 1,
+            "gradient_clip": 1.0,
+            "learning_rate": 0.001,
+            "max_length": 2048,
+            "steps": 2,
+            "weight_decay": 0.01
+          },
+          "cumulative_updates": 2,
+          "examples_seen": 2,
+          "examples_sha256": "aa21484bf0440a45fc5c87f95ac635992a5ce36896918434aea9ece359543a75",
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "mean_auxiliary_hidden_mse": 0.00020491263422425625,
+          "mean_total_training_loss": 5.69298529624939,
+          "mean_training_token_nll": 5.692964792251587,
+          "nonpadding_tokens": 333,
+          "parameter_sha256_after": "31069ca9bea2c294232a9d4af1968c4895712e46718fd7c3a86c2504cdc165b0",
+          "parameter_sha256_before": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+          "processed_padded_tokens": 4096,
+          "scope": "randomly initialized small causal language model; not general-purpose capability evidence",
+          "seed": 1729,
+          "step_losses": [
+            5.6663689613342285,
+            5.719601631164551
+          ],
+          "supervised_answer_tokens": 6,
+          "updates_this_iteration": 2
+        },
+        "shuffled_control": {
+          "backend": "tiny_byte_causal",
+          "budget": {
+            "auxiliary_weight": 0.1,
+            "batch_size": 1,
+            "gradient_clip": 1.0,
+            "learning_rate": 0.001,
+            "max_length": 2048,
+            "steps": 2,
+            "weight_decay": 0.01
+          },
+          "cumulative_updates": 2,
+          "examples_seen": 2,
+          "examples_sha256": "3b4e222836ce38ffeb8d4ead6bc20b369f474ee0329de0f4cb0d73b1fe7e1f23",
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "mean_auxiliary_hidden_mse": 1.9618909358978271,
+          "mean_total_training_loss": 5.949517011642456,
+          "mean_training_token_nll": 5.7533278465271,
+          "nonpadding_tokens": 333,
+          "parameter_sha256_after": "2d2bff11d5f896b951af8bb1a68e4db931791b93266bf7eed25bbbf4cc449f9d",
+          "parameter_sha256_before": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+          "processed_padded_tokens": 4096,
+          "scope": "randomly initialized small causal language model; not general-purpose capability evidence",
+          "seed": 1729,
+          "step_losses": [
+            5.8844218254089355,
+            6.014612197875977
+          ],
+          "supervised_answer_tokens": 6,
+          "updates_this_iteration": 2
+        },
+        "text_control": {
+          "backend": "tiny_byte_causal",
+          "budget": {
+            "auxiliary_weight": 0.1,
+            "batch_size": 1,
+            "gradient_clip": 1.0,
+            "learning_rate": 0.001,
+            "max_length": 2048,
+            "steps": 2,
+            "weight_decay": 0.01
+          },
+          "cumulative_updates": 2,
+          "examples_seen": 2,
+          "examples_sha256": "03a2948f294de5308ed05a5b9744f3b9bfad2c99f86a5fb3fce26cbb753707c0",
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "mean_auxiliary_hidden_mse": 0.0002476387016958179,
+          "mean_total_training_loss": 5.4776318073272705,
+          "mean_training_token_nll": 5.477607011795044,
+          "nonpadding_tokens": 1236,
+          "parameter_sha256_after": "3a81b1bfb80537a47067cb66b82f7af3647af6a07c4d219a97950dd2ed5ca864",
+          "parameter_sha256_before": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+          "processed_padded_tokens": 4096,
+          "scope": "randomly initialized small causal language model; not general-purpose capability evidence",
+          "seed": 1729,
+          "step_losses": [
+            5.55776834487915,
+            5.397495269775391
+          ],
+          "supervised_answer_tokens": 6,
+          "updates_this_iteration": 2
+        },
+        "verified": {
+          "backend": "tiny_byte_causal",
+          "budget": {
+            "auxiliary_weight": 0.1,
+            "batch_size": 1,
+            "gradient_clip": 1.0,
+            "learning_rate": 0.001,
+            "max_length": 2048,
+            "steps": 2,
+            "weight_decay": 0.01
+          },
+          "cumulative_updates": 2,
+          "examples_seen": 2,
+          "examples_sha256": "ae07f395b2e0237539bdf58d8c444ad1abb65faf4ffde40f626a7c394056e9fe",
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "mean_auxiliary_hidden_mse": 2.0934020280838013,
+          "mean_total_training_loss": 5.962701082229614,
+          "mean_training_token_nll": 5.753360748291016,
+          "nonpadding_tokens": 333,
+          "parameter_sha256_after": "b83c60b8facaaaee023af0efb06f99b497079c170e6603a0020ec716db6e3978",
+          "parameter_sha256_before": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+          "processed_padded_tokens": 4096,
+          "scope": "randomly initialized small causal language model; not general-purpose capability evidence",
+          "seed": 1729,
+          "step_losses": [
+            5.91055154800415,
+            6.014850616455078
+          ],
+          "supervised_answer_tokens": 6,
+          "updates_this_iteration": 2
+        }
+      }
+    },
+    {
+      "admitted": 6,
+      "calibration": {
+        "artifacts": {
+          "activations": "activations.npz",
+          "activations_sha256": "9dbda8f2b38ee2394e3b32dc3f541bc52d2c98951fea0175805e99282c07ca0f",
+          "correspondence_manifest": "views/manifest.json",
+          "map_manifest": "maps/manifest.json",
+          "map_manifest_content_sha256": "0037bbbbe678cf83a0c347de569281348bec98b25184db4c9bd108ab7be911a9"
+        },
+        "protocol": {
+          "extraction": {
+            "calibration_scope": "Library-only structural-family geometric holdout; these records may subsequently be used for training. No frozen capability evaluation task P is used.",
+            "correspondence_manifest_content_sha256": "c356184aa34702eb82d1edc2fac252048c50a331071af0f1f4f024973ebd19e4",
+            "family_split": {
+              "and_elimination": "train",
+              "and_introduction": "val",
+              "implication_chain": "test"
+            },
+            "library_snapshot_sha256": "f491a3c31d36725fffd1432aa90fad252a83096561417e6e0bdddf2d8b30d60a",
+            "models": {
+              "language": {
+                "backend": "tiny_byte_causal",
+                "boundary": "final layer-normalized hidden state at last prompt token before output head",
+                "config": {
+                  "device": "cpu",
+                  "heads": 2,
+                  "hidden": 32,
+                  "layers": 1,
+                  "max_length": 2048,
+                  "seed": 1729
+                },
+                "config_sha256": "2de58d1e6d6a9f0f5562558e5c333da65e693e3e35fd0ea7f8e81d125e280026",
+                "hidden_size": 32,
+                "position": "last prompt token; no answer tokens",
+                "role": "untrained or deterministic pipeline fixture; not a mathematical specialist or general-purpose transfer result"
+              },
+              "math": {
+                "backend": "tiny_byte_causal",
+                "boundary": "final layer-normalized hidden state at last prompt token before output head",
+                "config": {
+                  "device": "cpu",
+                  "heads": 2,
+                  "hidden": 32,
+                  "layers": 1,
+                  "max_length": 2048,
+                  "seed": 1730
+                },
+                "config_sha256": "ad8e97b0d487123a7a1afc22992c519c55a13249021f9362835cd59f013aa0da",
+                "hidden_size": 32,
+                "position": "last prompt token; no answer tokens",
+                "role": "untrained or deterministic pipeline fixture; not a mathematical specialist or general-purpose transfer result"
+              }
+            },
+            "parameters_unchanged": true,
+            "timing": "before the current recipient training update",
+            "trainable_parameter_sha256_after": {
+              "language": "b83c60b8facaaaee023af0efb06f99b497079c170e6603a0020ec716db6e3978",
+              "math": "c67731601f6416fdd0dd08a8f4ab3e25f5004a8d6cda34a5b6e58ab90e0a8f26"
+            },
+            "trainable_parameter_sha256_before": {
+              "language": "b83c60b8facaaaee023af0efb06f99b497079c170e6603a0020ec716db6e3978",
+              "math": "c67731601f6416fdd0dd08a8f4ab3e25f5004a8d6cda34a5b6e58ab90e0a8f26"
+            }
+          },
+          "lambda_grid": [
+            0.0,
+            0.001,
+            0.1,
+            1.0
+          ],
+          "objective": "sum_i ||W x_i + b - y_i||^2 + lambda ||W||_F^2; b unpenalized",
+          "objective_mode": "raw_sum",
+          "reference_policy": "Frozen training mean unless an explicit fixed vector was supplied; a missing slot supplies no inferred semantic pairing.",
+          "refit_after_selection": false,
+          "schema": "lemmaferry.rosetta.v1",
+          "scope": "Supervised geometric correspondence; round-trip consistency does not establish semantics or reasoning transfer.",
+          "seed": 1729,
+          "selection": {
+            "S": {
+              "selected_lambda": 1.0,
+              "validation_scores": [
+                {
+                  "lambda": 0.0,
+                  "validation_mse": 1.0385797777707526
+                },
+                {
+                  "lambda": 0.001,
+                  "validation_mse": 1.038527804067868
+                },
+                {
+                  "lambda": 0.1,
+                  "validation_mse": 1.0334801137243153
+                },
+                {
+                  "lambda": 1.0,
+                  "validation_mse": 0.9949743479073949
+                }
+              ]
+            },
+            "S_shuffled": {
+              "selected_lambda": 1.0,
+              "validation_scores": [
+                {
+                  "lambda": 0.0,
+                  "validation_mse": 0.8108898419035576
+                },
+                {
+                  "lambda": 0.001,
+                  "validation_mse": 0.8108562875772289
+                },
+                {
+                  "lambda": 0.1,
+                  "validation_mse": 0.8076140852863517
+                },
+                {
+                  "lambda": 1.0,
+                  "validation_mse": 0.7840807241795579
+                }
+              ]
+            },
+            "T": {
+              "selected_lambda": 1.0,
+              "validation_scores": [
+                {
+                  "lambda": 0.0,
+                  "validation_mse": 0.8377453438960373
+                },
+                {
+                  "lambda": 0.001,
+                  "validation_mse": 0.8376722651894575
+                },
+                {
+                  "lambda": 0.1,
+                  "validation_mse": 0.8305858132856265
+                },
+                {
+                  "lambda": 1.0,
+                  "validation_mse": 0.7772832496287797
+                }
+              ]
+            },
+            "T_shuffled": {
+              "selected_lambda": 1.0,
+              "validation_scores": [
+                {
+                  "lambda": 0.0,
+                  "validation_mse": 0.5458629643429215
+                },
+                {
+                  "lambda": 0.001,
+                  "validation_mse": 0.5458277696905252
+                },
+                {
+                  "lambda": 0.1,
+                  "validation_mse": 0.5424342207107888
+                },
+                {
+                  "lambda": 1.0,
+                  "validation_mse": 0.5182291197380592
+                }
+              ]
+            }
+          },
+          "selection_metric": "raw coordinate mean squared error on validation only",
+          "shuffled_train_permutation": [
+            4,
+            2,
+            1,
+            5,
+            0,
+            3
+          ],
+          "train": {
+            "count": 6,
+            "families": [
+              "and_elimination",
+              "and_elimination",
+              "and_elimination",
+              "and_elimination",
+              "and_elimination",
+              "and_elimination"
+            ],
+            "ids": [
+              "7336460e22551e875fb6202e3cc7ca97c1985659e2896c9b7a30edee14d0e01c",
+              "ab39828d833e47ad8b7fa39247f7de4d9967c2453e35783a2d035de5efc3018e",
+              "7809b7fef332bf2ba696d0cdcde152d1e1e2ab3f8b8ee212122621a5face557e",
+              "f295e588713869b831580535cd2062616601823391c82cb3acb14bca0b99e172",
+              "ad79619a8771c08c71ed64ddd16a74597ddeb5b04ba60479f9993b38f2c6332d",
+              "fb4fa095d1e760db4292a7d29facfd16f62c2fb8f4de270a4cad5595b2ed92f6"
+            ],
+            "language_dimension": 32,
+            "language_vectors_sha256": "c5eba6a70a3e8876e5c9a51305709da4bf0fc8db4d37bb86a72b526d8d57f07c",
+            "math_dimension": 32,
+            "math_vectors_sha256": "3ff16ddba669366a047589e543e6cfe568089bb66c0d81396ff86327d06f2962",
+            "split": "train"
+          },
+          "validation": {
+            "count": 3,
+            "families": [
+              "and_introduction",
+              "and_introduction",
+              "and_introduction"
+            ],
+            "ids": [
+              "94501138590923a501a6cc26ee2cb7df72183e51bb2ecf0ab0885f1a268d3fde",
+              "0f103a03f9f36ddb4beb8c364afc6c047e2fd66b72938d59bd20008607ed1b89",
+              "bad92265923ad6b1b810d9efdb90b2f260df0742ae54b5748df3673fbd94ad69"
+            ],
+            "language_dimension": 32,
+            "language_vectors_sha256": "ec72254e6e02d42a60ecc4a04a86bc5272fde8acf4cd19f3f89b265ff59332f6",
+            "math_dimension": 32,
+            "math_vectors_sha256": "fdd014444f6d5595e427b4c2d90dded307cb63445eaf85199f65136253a85f03",
+            "split": "val"
+          }
+        },
+        "round_trip": {
+          "S_of_T_math": {
+            "cosine_retrieval_top1": 1.0,
+            "mean_matched_cosine": 0.7471925423551191,
+            "mse": 0.4468398636956112,
+            "mse_relative_to_train_mean": 0.7522325324336148,
+            "normalized_rmse": 1.4946069200009822,
+            "retrieval_candidates": 3,
+            "retrieval_chance": 0.3333333333333333,
+            "rmse": 0.6684608168738173
+          },
+          "T_of_S_language": {
+            "cosine_retrieval_top1": 1.0,
+            "mean_matched_cosine": 0.6676651368894903,
+            "mse": 0.576384578105707,
+            "mse_relative_to_train_mean": 0.794992200103169,
+            "normalized_rmse": 1.5600201087015948,
+            "retrieval_candidates": 3,
+            "retrieval_chance": 0.3333333333333333,
+            "rmse": 0.759199959237161
+          },
+          "interpretation": "F(F(x,y)) is a consistency diagnostic; an invertible wrong correspondence can also pass it."
+        },
+        "status": "completed",
+        "test": {
+          "count": 3,
+          "families": [
+            "implication_chain",
+            "implication_chain",
+            "implication_chain"
+          ],
+          "ids": [
+            "9334ffebf4b2148267dba001b091026ed5b6a66f9c40c8b9fd247c7cedd65722",
+            "e662f8e0d0119aaec891ec51c9fb7f8de632fa6ccbb8b5c918ccd8962d6a881d",
+            "c6a5b287b3515d231c94a88da879dc538816788a2045cd45da051ed2536b8999"
+          ],
+          "language_dimension": 32,
+          "language_vectors_sha256": "6a01cae91009e46f618b50ea462a587e4f09459084cccb665585b77b07a0a51a",
+          "math_dimension": 32,
+          "math_vectors_sha256": "400c0569bd3aac66f3be89f3d3a39a137ebcaceac63ceaea1a97e66c67bf50f4",
+          "split": "test"
+        },
+        "test_metrics": {
+          "language_to_math": {
+            "paired": {
+              "cosine_retrieval_top1": 0.3333333333333333,
+              "mean_matched_cosine": 0.5811328965153022,
+              "mse": 0.7408368860214681,
+              "mse_relative_to_train_mean": 1.2471617959130528,
+              "normalized_rmse": 1.7176454577412927,
+              "retrieval_candidates": 3,
+              "retrieval_chance": 0.3333333333333333,
+              "rmse": 0.8607188193721966
+            },
+            "shuffled_training_pairs": {
+              "cosine_retrieval_top1": 0.3333333333333333,
+              "mean_matched_cosine": 0.5859639596207348,
+              "mse": 0.7625267255534108,
+              "mse_relative_to_train_mean": 1.2836755545205578,
+              "normalized_rmse": 1.6709509223571068,
+              "retrieval_candidates": 3,
+              "retrieval_chance": 0.3333333333333333,
+              "rmse": 0.8732277627019258
+            },
+            "training_mean": {
+              "cosine_retrieval_top1": 0.3333333333333333,
+              "mean_matched_cosine": 0.6494197550622309,
+              "mse": 0.5940182648708366,
+              "mse_relative_to_train_mean": 1.0,
+              "normalized_rmse": 1.6098117698515173,
+              "retrieval_candidates": 3,
+              "retrieval_chance": 0.3333333333333333,
+              "rmse": 0.7707258039477053
+            }
+          },
+          "math_to_language": {
+            "paired": {
+              "cosine_retrieval_top1": 0.3333333333333333,
+              "mean_matched_cosine": 0.4758933137130575,
+              "mse": 1.0388400217311367,
+              "mse_relative_to_train_mean": 1.4328449195248913,
+              "normalized_rmse": 1.9419413191050716,
+              "retrieval_candidates": 3,
+              "retrieval_chance": 0.3333333333333333,
+              "rmse": 1.0192350179085963
+            },
+            "shuffled_training_pairs": {
+              "cosine_retrieval_top1": 0.6666666666666666,
+              "mean_matched_cosine": 0.5219957107751512,
+              "mse": 0.8825893412498532,
+              "mse_relative_to_train_mean": 1.217332435392029,
+              "normalized_rmse": 1.8133393788948733,
+              "retrieval_candidates": 3,
+              "retrieval_chance": 0.3333333333333333,
+              "rmse": 0.939462261748631
+            },
+            "training_mean": {
+              "cosine_retrieval_top1": 0.3333333333333333,
+              "mean_matched_cosine": 0.5641952444346915,
+              "mse": 0.7250191612331637,
+              "mse_relative_to_train_mean": 1.0,
+              "normalized_rmse": 1.6870342980424897,
+              "retrieval_candidates": 3,
+              "retrieval_chance": 0.3333333333333333,
+              "rmse": 0.8514805700855209
+            }
+          }
+        }
+      },
+      "checkpoints": {
+        "mean_control": {
+          "cumulative_updates": 4,
+          "parameter_sha256": "b124df8566e6abea3745dcc30fc3a2cfd5b0e129a282d456f988ca5bfabfe0c8",
+          "path": "runs/constructive-loop-v3/iteration-001/mean_control.pt",
+          "sha256": "159aaecb749d694bfe0350b403b75c4bb9f778e51d4a9b3dae7e530b475bca1c"
+        },
+        "ordinary_control": {
+          "cumulative_updates": 4,
+          "parameter_sha256": "caec6cb489fad14e91740ec926a5a0035f69ea138d0b84ba08168b5b3f0df7f3",
+          "path": "runs/constructive-loop-v3/iteration-001/ordinary_control.pt",
+          "sha256": "a8759e9c8d51150aef96131351f1da28a950617845b8c1f48e191204c8e0cc08"
+        },
+        "shuffled_control": {
+          "cumulative_updates": 4,
+          "parameter_sha256": "3e79101837e9aa71b0483d312ffa3a464fbd75b582fa81cd8d1d396fce4bd03f",
+          "path": "runs/constructive-loop-v3/iteration-001/shuffled_control.pt",
+          "sha256": "e53dde5b07f3b23e44a85b5019c78c102830ae3bc12859116abc74ce506b3d73"
+        },
+        "text_control": {
+          "cumulative_updates": 4,
+          "parameter_sha256": "4fc014d16d7c5e3c97fad5b3167a986122aef360e3e5b278fe5f335b423144cf",
+          "path": "runs/constructive-loop-v3/iteration-001/text_control.pt",
+          "sha256": "1dc8b1da5f44570dd7127be75e7a13523f91806ccbd15dcd760e98bb27f3b4a6"
+        },
+        "verified": {
+          "cumulative_updates": 4,
+          "parameter_sha256": "ad5b708bc259a23776837e9bc883d9529d0e8524002cf946a73c0b800ee710e3",
+          "path": "runs/constructive-loop-v3/iteration-001/verified.pt",
+          "sha256": "9dc11fde510e33db846b22813d2a5317575a1eae6bf9c09fa831a697f69d6f68"
+        }
+      },
+      "comparisons": {
+        "mean_control": {
+          "accuracy_difference_treatment_minus_control": 0.0,
+          "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+          "risk_difference_bootstrap_95": [
+            5.02626101175944e-05,
+            0.0005692362785339355
+          ],
+          "risk_difference_treatment_minus_control": 0.0003179311752319336
+        },
+        "ordinary_control": {
+          "accuracy_difference_treatment_minus_control": 0.0,
+          "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+          "risk_difference_bootstrap_95": [
+            -0.011596732338269551,
+            0.00291572411855061
+          ],
+          "risk_difference_treatment_minus_control": -0.00410008430480957
+        },
+        "shuffled_control": {
+          "accuracy_difference_treatment_minus_control": 0.0,
+          "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+          "risk_difference_bootstrap_95": [
+            -0.0012801925341288248,
+            -3.771285216013632e-05
+          ],
+          "risk_difference_treatment_minus_control": -0.000648657480875651
+        },
+        "text_control": {
+          "accuracy_difference_treatment_minus_control": 0.0,
+          "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+          "risk_difference_bootstrap_95": [
+            0.05584378937880198,
+            0.1001498719056447
+          ],
+          "risk_difference_treatment_minus_control": 0.07703479131062825
+        }
+      },
+      "dependency_reusing_records": 6,
+      "evaluation": {
+        "mean_control": {
+          "accuracy": 0.5833333333333334,
+          "count": 24,
+          "cumulative_updates": 4,
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+          "recipient_parameter_sha256": "b124df8566e6abea3745dcc30fc3a2cfd5b0e129a282d456f988ca5bfabfe0c8",
+          "records": [
+            {
+              "answer": "A",
+              "answer_nll": 16.46438980102539,
+              "answer_token_nll": 5.48812993367513,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.46438980102539,
+                "B": 16.28663444519043
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_000",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.363693237304688,
+              "answer_token_nll": 5.7878977457682295,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.528034210205078,
+                "B": 17.363693237304688
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_001",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.054668426513672,
+              "answer_token_nll": 5.351556142171224,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.054668426513672,
+                "B": 15.465194702148438
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_002",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.375791549682617,
+              "answer_token_nll": 5.125263849894206,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.73356819152832,
+                "B": 15.375791549682617
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_003",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.907217025756836,
+              "answer_token_nll": 5.635739008585612,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.907217025756836,
+                "B": 16.204654693603516
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_004",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.476921081542969,
+              "answer_token_nll": 5.158973693847656,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.080520629882812,
+                "B": 15.476921081542969
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_005",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.44097328186035,
+              "answer_token_nll": 5.813657760620117,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.44097328186035,
+                "B": 16.710220336914062
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_006",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.071035385131836,
+              "answer_token_nll": 5.357011795043945,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.176965713500977,
+                "B": 16.071035385131836
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_007",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.27842140197754,
+              "answer_token_nll": 5.426140467325847,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.27842140197754,
+                "B": 16.18124008178711
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_008",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.669617652893066,
+              "answer_token_nll": 5.2232058842976885,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.547937393188477,
+                "B": 15.669617652893066
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_009",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.641353607177734,
+              "answer_token_nll": 5.547117869059245,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.641353607177734,
+                "B": 17.4827938079834
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_010",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.862613677978516,
+              "answer_token_nll": 5.620871225992839,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.929941177368164,
+                "B": 16.862613677978516
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_011",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.003353118896484,
+              "answer_token_nll": 5.667784372965495,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.003353118896484,
+                "B": 16.538984298706055
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_012",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.741422653198242,
+              "answer_token_nll": 5.247140884399414,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.773454666137695,
+                "B": 15.741422653198242
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_013",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.936473846435547,
+              "answer_token_nll": 5.645491282145183,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.936473846435547,
+                "B": 17.144556045532227
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_014",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.324926376342773,
+              "answer_token_nll": 5.441642125447591,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.822345733642578,
+                "B": 16.324926376342773
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_015",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.77723503112793,
+              "answer_token_nll": 5.5924116770426435,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.77723503112793,
+                "B": 16.294179916381836
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_016",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.324341773986816,
+              "answer_token_nll": 5.108113924662272,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.530813217163086,
+                "B": 15.324341773986816
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_017",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 15.371901512145996,
+              "answer_token_nll": 5.123967170715332,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.371901512145996,
+                "B": 15.813112258911133
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_018",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.049070358276367,
+              "answer_token_nll": 5.349690119425456,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.487817764282227,
+                "B": 16.049070358276367
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_019",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.153947830200195,
+              "answer_token_nll": 5.384649276733398,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.153947830200195,
+                "B": 16.44747543334961
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_020",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.732906341552734,
+              "answer_token_nll": 5.244302113850911,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.92769718170166,
+                "B": 15.732906341552734
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_021",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.526500701904297,
+              "answer_token_nll": 5.842166900634766,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.526500701904297,
+                "B": 17.79724884033203
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_022",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.862510681152344,
+              "answer_token_nll": 5.287503560384114,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.455202102661133,
+                "B": 15.862510681152344
+              },
+              "correct": false,
+              "family": "everyday_rules",
+              "id": "independent_023",
+              "prediction": "A"
+            }
+          ],
+          "risk_mean_answer_nll": 16.30880359808604
+        },
+        "ordinary_control": {
+          "accuracy": 0.5833333333333334,
+          "count": 24,
+          "cumulative_updates": 4,
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+          "recipient_parameter_sha256": "caec6cb489fad14e91740ec926a5a0035f69ea138d0b84ba08168b5b3f0df7f3",
+          "records": [
+            {
+              "answer": "A",
+              "answer_nll": 16.47266387939453,
+              "answer_token_nll": 5.490887959798177,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.47266387939453,
+                "B": 16.288471221923828
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_000",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.34695816040039,
+              "answer_token_nll": 5.78231938680013,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.53312110900879,
+                "B": 17.34695816040039
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_001",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.062639236450195,
+              "answer_token_nll": 5.3542130788167315,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.062639236450195,
+                "B": 15.459794044494629
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_002",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.36274242401123,
+              "answer_token_nll": 5.120914141337077,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.744248390197754,
+                "B": 15.36274242401123
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_003",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.92644691467285,
+              "answer_token_nll": 5.642148971557617,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.92644691467285,
+                "B": 16.216026306152344
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_004",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.465967178344727,
+              "answer_token_nll": 5.155322392781575,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.085498809814453,
+                "B": 15.465967178344727
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_005",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.47886848449707,
+              "answer_token_nll": 5.8262894948323565,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.47886848449707,
+                "B": 16.721893310546875
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_006",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.066173553466797,
+              "answer_token_nll": 5.355391184488933,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.204357147216797,
+                "B": 16.066173553466797
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_007",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.270977020263672,
+              "answer_token_nll": 5.423659006754558,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.270977020263672,
+                "B": 16.137943267822266
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_008",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.662240028381348,
+              "answer_token_nll": 5.220746676127116,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.555307388305664,
+                "B": 15.662240028381348
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_009",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.622323989868164,
+              "answer_token_nll": 5.540774663289388,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.622323989868164,
+                "B": 17.439563751220703
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_010",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.858110427856445,
+              "answer_token_nll": 5.619370142618815,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.935508728027344,
+                "B": 16.858110427856445
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_011",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.011842727661133,
+              "answer_token_nll": 5.670614242553711,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.011842727661133,
+                "B": 16.528881072998047
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_012",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.722131729125977,
+              "answer_token_nll": 5.240710576375325,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.788469314575195,
+                "B": 15.722131729125977
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_013",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.94109344482422,
+              "answer_token_nll": 5.647031148274739,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.94109344482422,
+                "B": 17.125459671020508
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_014",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.348905563354492,
+              "answer_token_nll": 5.449635187784831,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.866535186767578,
+                "B": 16.348905563354492
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_015",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.815805435180664,
+              "answer_token_nll": 5.605268478393555,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.815805435180664,
+                "B": 16.309528350830078
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_016",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.326668739318848,
+              "answer_token_nll": 5.108889579772949,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.561834335327148,
+                "B": 15.326668739318848
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_017",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 15.364097595214844,
+              "answer_token_nll": 5.121365865071614,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.364097595214844,
+                "B": 15.7852783203125
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_018",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.040836334228516,
+              "answer_token_nll": 5.346945444742839,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.50303840637207,
+                "B": 16.040836334228516
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_019",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.18100929260254,
+              "answer_token_nll": 5.393669764200847,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.18100929260254,
+                "B": 16.44470977783203
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_020",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.760637283325195,
+              "answer_token_nll": 5.253545761108398,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.96790599822998,
+                "B": 15.760637283325195
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_021",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.55739974975586,
+              "answer_token_nll": 5.852466583251953,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.55739974975586,
+                "B": 17.80896759033203
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_022",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.85077953338623,
+              "answer_token_nll": 5.28359317779541,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.462867736816406,
+                "B": 15.85077953338623
+              },
+              "correct": false,
+              "family": "everyday_rules",
+              "id": "independent_023",
+              "prediction": "A"
+            }
+          ],
+          "risk_mean_answer_nll": 16.313221613566082
+        },
+        "shuffled_control": {
+          "accuracy": 0.5833333333333334,
+          "count": 24,
+          "cumulative_updates": 4,
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+          "recipient_parameter_sha256": "3e79101837e9aa71b0483d312ffa3a464fbd75b582fa81cd8d1d396fce4bd03f",
+          "records": [
+            {
+              "answer": "A",
+              "answer_nll": 16.466655731201172,
+              "answer_token_nll": 5.488885243733724,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.466655731201172,
+                "B": 16.28765296936035
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_000",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.364704132080078,
+              "answer_token_nll": 5.788234710693359,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.529085159301758,
+                "B": 17.364704132080078
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_001",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.05660629272461,
+              "answer_token_nll": 5.35220209757487,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.05660629272461,
+                "B": 15.465704917907715
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_002",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.375869750976562,
+              "answer_token_nll": 5.1252899169921875,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.735311508178711,
+                "B": 15.375869750976562
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_003",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.909290313720703,
+              "answer_token_nll": 5.636430104573567,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.909290313720703,
+                "B": 16.204505920410156
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_004",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.477346420288086,
+              "answer_token_nll": 5.159115473429362,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.082433700561523,
+                "B": 15.477346420288086
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_005",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.44231414794922,
+              "answer_token_nll": 5.814104715983073,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.44231414794922,
+                "B": 16.710872650146484
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_006",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.07061767578125,
+              "answer_token_nll": 5.35687255859375,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.179094314575195,
+                "B": 16.07061767578125
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_007",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.27967643737793,
+              "answer_token_nll": 5.42655881245931,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.27967643737793,
+                "B": 16.180709838867188
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_008",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.668525695800781,
+              "answer_token_nll": 5.222841898600261,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.548954010009766,
+                "B": 15.668525695800781
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_009",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.643199920654297,
+              "answer_token_nll": 5.547733306884766,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.643199920654297,
+                "B": 17.482624053955078
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_010",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.863109588623047,
+              "answer_token_nll": 5.621036529541016,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.931814193725586,
+                "B": 16.863109588623047
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_011",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.00532341003418,
+              "answer_token_nll": 5.66844113667806,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.00532341003418,
+                "B": 16.5396728515625
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_012",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.742105484008789,
+              "answer_token_nll": 5.247368494669597,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.774362564086914,
+                "B": 15.742105484008789
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_013",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.93751335144043,
+              "answer_token_nll": 5.645837783813477,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.93751335144043,
+                "B": 17.14381217956543
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_014",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.32494354248047,
+              "answer_token_nll": 5.441647847493489,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.82416343688965,
+                "B": 16.32494354248047
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_015",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.77914810180664,
+              "answer_token_nll": 5.59304936726888,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.77914810180664,
+                "B": 16.29425048828125
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_016",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.323707580566406,
+              "answer_token_nll": 5.107902526855469,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.533467292785645,
+                "B": 15.323707580566406
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_017",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 15.372750282287598,
+              "answer_token_nll": 5.124250094095866,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.372750282287598,
+                "B": 15.813613891601562
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_018",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.04982566833496,
+              "answer_token_nll": 5.349941889444987,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.4901065826416,
+                "B": 16.04982566833496
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_019",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.156909942626953,
+              "answer_token_nll": 5.385636647542317,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.156909942626953,
+                "B": 16.448020935058594
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_020",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.733524322509766,
+              "answer_token_nll": 5.244508107503255,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.929208755493164,
+                "B": 15.733524322509766
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_021",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.527694702148438,
+              "answer_token_nll": 5.8425649007161455,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.527694702148438,
+                "B": 17.79766845703125
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_022",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.86312198638916,
+              "answer_token_nll": 5.287707328796387,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.456022262573242,
+                "B": 15.86312198638916
+              },
+              "correct": false,
+              "family": "everyday_rules",
+              "id": "independent_023",
+              "prediction": "A"
+            }
+          ],
+          "risk_mean_answer_nll": 16.309770186742146
+        },
+        "text_control": {
+          "accuracy": 0.5833333333333334,
+          "count": 24,
+          "cumulative_updates": 4,
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+          "recipient_parameter_sha256": "4fc014d16d7c5e3c97fad5b3167a986122aef360e3e5b278fe5f335b423144cf",
+          "records": [
+            {
+              "answer": "A",
+              "answer_nll": 16.3568058013916,
+              "answer_token_nll": 5.452268600463867,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.3568058013916,
+                "B": 16.160137176513672
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_000",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.29481315612793,
+              "answer_token_nll": 5.76493771870931,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.474882125854492,
+                "B": 17.29481315612793
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_001",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 15.818375587463379,
+              "answer_token_nll": 5.272791862487793,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.818375587463379,
+                "B": 15.267971992492676
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_002",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.274375915527344,
+              "answer_token_nll": 5.091458638509114,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.596446990966797,
+                "B": 15.274375915527344
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_003",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.850994110107422,
+              "answer_token_nll": 5.616998036702474,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.850994110107422,
+                "B": 16.166391372680664
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_004",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.280218124389648,
+              "answer_token_nll": 5.093406041463216,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.843852996826172,
+                "B": 15.280218124389648
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_005",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.330007553100586,
+              "answer_token_nll": 5.776669184366862,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.330007553100586,
+                "B": 16.604692459106445
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_006",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.974674224853516,
+              "answer_token_nll": 5.324891408284505,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.12966537475586,
+                "B": 15.974674224853516
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_007",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.229143142700195,
+              "answer_token_nll": 5.409714380900065,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.229143142700195,
+                "B": 16.161067962646484
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_008",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.661933898925781,
+              "answer_token_nll": 5.220644632975261,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.59599494934082,
+                "B": 15.661933898925781
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_009",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.60511589050293,
+              "answer_token_nll": 5.5350386301676435,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.60511589050293,
+                "B": 17.475486755371094
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_010",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.747072219848633,
+              "answer_token_nll": 5.582357406616211,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.811222076416016,
+                "B": 16.747072219848633
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_011",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.884353637695312,
+              "answer_token_nll": 5.6281178792317705,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.884353637695312,
+                "B": 16.42645263671875
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_012",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.739875793457031,
+              "answer_token_nll": 5.246625264485677,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.75267219543457,
+                "B": 15.739875793457031
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_013",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.82406234741211,
+              "answer_token_nll": 5.608020782470703,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.82406234741211,
+                "B": 17.078086853027344
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_014",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.306255340576172,
+              "answer_token_nll": 5.435418446858724,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.742612838745117,
+                "B": 16.306255340576172
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_015",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.698049545288086,
+              "answer_token_nll": 5.566016515096028,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.698049545288086,
+                "B": 16.273099899291992
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_016",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.241965293884277,
+              "answer_token_nll": 5.080655097961426,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.461084365844727,
+                "B": 15.241965293884277
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_017",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 15.348405838012695,
+              "answer_token_nll": 5.116135279337565,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.348405838012695,
+                "B": 15.79446792602539
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_018",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.041954040527344,
+              "answer_token_nll": 5.347318013509114,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.499786376953125,
+                "B": 16.041954040527344
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_019",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.07103729248047,
+              "answer_token_nll": 5.357012430826823,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.07103729248047,
+                "B": 16.34967041015625
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_020",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.676843643188477,
+              "answer_token_nll": 5.225614547729492,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.867837905883789,
+                "B": 15.676843643188477
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_021",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.47418212890625,
+              "answer_token_nll": 5.824727376302083,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.47418212890625,
+                "B": 17.739459991455078
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_022",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.839567184448242,
+              "answer_token_nll": 5.279855728149414,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.427558898925781,
+                "B": 15.839567184448242
+              },
+              "correct": false,
+              "family": "everyday_rules",
+              "id": "independent_023",
+              "prediction": "A"
+            }
+          ],
+          "risk_mean_answer_nll": 16.23208673795064
+        },
+        "verified": {
+          "accuracy": 0.5833333333333334,
+          "count": 24,
+          "cumulative_updates": 4,
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+          "recipient_parameter_sha256": "ad5b708bc259a23776837e9bc883d9529d0e8524002cf946a73c0b800ee710e3",
+          "records": [
+            {
+              "answer": "A",
+              "answer_nll": 16.464488983154297,
+              "answer_token_nll": 5.488162994384766,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.464488983154297,
+                "B": 16.287132263183594
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_000",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 17.36446189880371,
+              "answer_token_nll": 5.788153966267903,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.529117584228516,
+                "B": 17.36446189880371
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_001",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.054367065429688,
+              "answer_token_nll": 5.3514556884765625,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.054367065429688,
+                "B": 15.465744018554688
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_002",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.375936508178711,
+              "answer_token_nll": 5.125312169392903,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.732797622680664,
+                "B": 15.375936508178711
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_003",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.90715789794922,
+              "answer_token_nll": 5.635719299316406,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.90715789794922,
+                "B": 16.205673217773438
+              },
+              "correct": false,
+              "family": "arithmetic",
+              "id": "independent_004",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.477544784545898,
+              "answer_token_nll": 5.159181594848633,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.080305099487305,
+                "B": 15.477544784545898
+              },
+              "correct": true,
+              "family": "arithmetic",
+              "id": "independent_005",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.441417694091797,
+              "answer_token_nll": 5.813805898030599,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.441417694091797,
+                "B": 16.710468292236328
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_006",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.07213020324707,
+              "answer_token_nll": 5.35737673441569,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.176250457763672,
+                "B": 16.07213020324707
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_007",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.278465270996094,
+              "answer_token_nll": 5.426155090332031,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.278465270996094,
+                "B": 16.18198013305664
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_008",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.671218872070312,
+              "answer_token_nll": 5.2237396240234375,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.548554420471191,
+                "B": 15.671218872070312
+              },
+              "correct": false,
+              "family": "ordering",
+              "id": "independent_009",
+              "prediction": "A"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.640422821044922,
+              "answer_token_nll": 5.546807607014974,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.640422821044922,
+                "B": 17.48319435119629
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_010",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.86307144165039,
+              "answer_token_nll": 5.621023813883464,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.929397583007812,
+                "B": 16.86307144165039
+              },
+              "correct": true,
+              "family": "ordering",
+              "id": "independent_011",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.003129959106445,
+              "answer_token_nll": 5.667709986368815,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.003129959106445,
+                "B": 16.5394229888916
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_012",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.741317749023438,
+              "answer_token_nll": 5.2471059163411455,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.77414321899414,
+                "B": 15.741317749023438
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_013",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.93737030029297,
+              "answer_token_nll": 5.645790100097656,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.93737030029297,
+                "B": 17.14590072631836
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_014",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.325618743896484,
+              "answer_token_nll": 5.441872914632161,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.822341918945312,
+                "B": 16.325618743896484
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_015",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.77716827392578,
+              "answer_token_nll": 5.592389424641927,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.77716827392578,
+                "B": 16.294876098632812
+              },
+              "correct": false,
+              "family": "strings",
+              "id": "independent_016",
+              "prediction": "B"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.326093673706055,
+              "answer_token_nll": 5.108697891235352,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.530508041381836,
+                "B": 15.326093673706055
+              },
+              "correct": true,
+              "family": "strings",
+              "id": "independent_017",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 15.37208366394043,
+              "answer_token_nll": 5.1240278879801435,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.37208366394043,
+                "B": 15.813495635986328
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_018",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 16.0496768951416,
+              "answer_token_nll": 5.349892298380534,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.487773895263672,
+                "B": 16.0496768951416
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_019",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 16.152935028076172,
+              "answer_token_nll": 5.384311676025391,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 16.152935028076172,
+                "B": 16.448291778564453
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_020",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.733081817626953,
+              "answer_token_nll": 5.244360605875651,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.927541732788086,
+                "B": 15.733081817626953
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_021",
+              "prediction": "B"
+            },
+            {
+              "answer": "A",
+              "answer_nll": 17.526813507080078,
+              "answer_token_nll": 5.842271169026692,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 17.526813507080078,
+                "B": 17.797975540161133
+              },
+              "correct": true,
+              "family": "everyday_rules",
+              "id": "independent_022",
+              "prediction": "A"
+            },
+            {
+              "answer": "B",
+              "answer_nll": 15.862943649291992,
+              "answer_token_nll": 5.287647883097331,
+              "answer_tokens": 3,
+              "choice_nll": {
+                "A": 15.455546379089355,
+                "B": 15.862943649291992
+              },
+              "correct": false,
+              "family": "everyday_rules",
+              "id": "independent_023",
+              "prediction": "A"
+            }
+          ],
+          "risk_mean_answer_nll": 16.309121529261272
+        }
+      },
+      "feedback_for_next_generation": {
+        "external_evaluation_used": false,
+        "family_losses": {
+          "and_elimination": 16.188541889190674,
+          "and_introduction": 16.164892196655273,
+          "implication_chain": 17.639135360717773
+        },
+        "iteration": 1,
+        "mastery_threshold": 0.7,
+        "recipient_parameter_sha256": "ad5b708bc259a23776837e9bc883d9529d0e8524002cf946a73c0b800ee710e3",
+        "source": "training_curriculum_only"
+      },
+      "iteration": 1,
+      "library_after": {
+        "foundation_hash": "39d0bae34a454bb6ce69fc0fc12733500ac431bb21c65420567c77f72c2bd338",
+        "head": "bad92265923ad6b1b810d9efdb90b2f260df0742ae54b5748df3673fbd94ad69",
+        "record_count": 12,
+        "record_ids": [
+          "9334ffebf4b2148267dba001b091026ed5b6a66f9c40c8b9fd247c7cedd65722",
+          "94501138590923a501a6cc26ee2cb7df72183e51bb2ecf0ab0885f1a268d3fde",
+          "7336460e22551e875fb6202e3cc7ca97c1985659e2896c9b7a30edee14d0e01c",
+          "e662f8e0d0119aaec891ec51c9fb7f8de632fa6ccbb8b5c918ccd8962d6a881d",
+          "0f103a03f9f36ddb4beb8c364afc6c047e2fd66b72938d59bd20008607ed1b89",
+          "ab39828d833e47ad8b7fa39247f7de4d9967c2453e35783a2d035de5efc3018e",
+          "7809b7fef332bf2ba696d0cdcde152d1e1e2ab3f8b8ee212122621a5face557e",
+          "f295e588713869b831580535cd2062616601823391c82cb3acb14bca0b99e172",
+          "ad79619a8771c08c71ed64ddd16a74597ddeb5b04ba60479f9993b38f2c6332d",
+          "fb4fa095d1e760db4292a7d29facfd16f62c2fb8f4de270a4cad5595b2ed92f6",
+          "c6a5b287b3515d231c94a88da879dc538816788a2045cd45da051ed2536b8999",
+          "bad92265923ad6b1b810d9efdb90b2f260df0742ae54b5748df3673fbd94ad69"
+        ],
+        "snapshot_hash": "f491a3c31d36725fffd1432aa90fad252a83096561417e6e0bdddf2d8b30d60a"
+      },
+      "library_before": {
+        "foundation_hash": "39d0bae34a454bb6ce69fc0fc12733500ac431bb21c65420567c77f72c2bd338",
+        "head": "ab39828d833e47ad8b7fa39247f7de4d9967c2453e35783a2d035de5efc3018e",
+        "record_count": 6,
+        "record_ids": [
+          "9334ffebf4b2148267dba001b091026ed5b6a66f9c40c8b9fd247c7cedd65722",
+          "94501138590923a501a6cc26ee2cb7df72183e51bb2ecf0ab0885f1a268d3fde",
+          "7336460e22551e875fb6202e3cc7ca97c1985659e2896c9b7a30edee14d0e01c",
+          "e662f8e0d0119aaec891ec51c9fb7f8de632fa6ccbb8b5c918ccd8962d6a881d",
+          "0f103a03f9f36ddb4beb8c364afc6c047e2fd66b72938d59bd20008607ed1b89",
+          "ab39828d833e47ad8b7fa39247f7de4d9967c2453e35783a2d035de5efc3018e"
+        ],
+        "snapshot_hash": "93669ce758827b68747c60f20e9245cdfe77b6e17ad69bad9079aa7f1cc9eea1"
+      },
+      "training": {
+        "mean_control": {
+          "backend": "tiny_byte_causal",
+          "budget": {
+            "auxiliary_weight": 0.1,
+            "batch_size": 1,
+            "gradient_clip": 1.0,
+            "learning_rate": 0.001,
+            "max_length": 2048,
+            "steps": 2,
+            "weight_decay": 0.01
+          },
+          "cumulative_updates": 4,
+          "examples_seen": 2,
+          "examples_sha256": "5e297c3eac69e2c483c787a53323717339d375f29fcce16d75d5e18688f52f2a",
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "mean_auxiliary_hidden_mse": 1.372807800769806,
+          "mean_total_training_loss": 5.67602801322937,
+          "mean_training_token_nll": 5.538747310638428,
+          "nonpadding_tokens": 371,
+          "parameter_sha256_after": "b124df8566e6abea3745dcc30fc3a2cfd5b0e129a282d456f988ca5bfabfe0c8",
+          "parameter_sha256_before": "c57a78b8da48fa84b85624b27b79e170acaabc4da480f9cc9bf1d228a025c659",
+          "processed_padded_tokens": 4096,
+          "scope": "randomly initialized small causal language model; not general-purpose capability evidence",
+          "seed": 1730,
+          "step_losses": [
+            5.839591026306152,
+            5.512465000152588
+          ],
+          "supervised_answer_tokens": 6,
+          "updates_this_iteration": 2
+        },
+        "ordinary_control": {
+          "backend": "tiny_byte_causal",
+          "budget": {
+            "auxiliary_weight": 0.1,
+            "batch_size": 1,
+            "gradient_clip": 1.0,
+            "learning_rate": 0.001,
+            "max_length": 2048,
+            "steps": 2,
+            "weight_decay": 0.01
+          },
+          "cumulative_updates": 4,
+          "examples_seen": 2,
+          "examples_sha256": "452a25ceb042d8052ebb6c8649c91ff06f8d320fdd43f9de249b93008f898372",
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "mean_auxiliary_hidden_mse": 0.00027845270233840314,
+          "mean_total_training_loss": 5.4508678913116455,
+          "mean_training_token_nll": 5.450839996337891,
+          "nonpadding_tokens": 371,
+          "parameter_sha256_after": "caec6cb489fad14e91740ec926a5a0035f69ea138d0b84ba08168b5b3f0df7f3",
+          "parameter_sha256_before": "31069ca9bea2c294232a9d4af1968c4895712e46718fd7c3a86c2504cdc165b0",
+          "processed_padded_tokens": 4096,
+          "scope": "randomly initialized small causal language model; not general-purpose capability evidence",
+          "seed": 1730,
+          "step_losses": [
+            5.614297389984131,
+            5.28743839263916
+          ],
+          "supervised_answer_tokens": 6,
+          "updates_this_iteration": 2
+        },
+        "shuffled_control": {
+          "backend": "tiny_byte_causal",
+          "budget": {
+            "auxiliary_weight": 0.1,
+            "batch_size": 1,
+            "gradient_clip": 1.0,
+            "learning_rate": 0.001,
+            "max_length": 2048,
+            "steps": 2,
+            "weight_decay": 0.01
+          },
+          "cumulative_updates": 4,
+          "examples_seen": 2,
+          "examples_sha256": "ab776b10f2988119bfe030c766f720524d531544ead99dbb48c24bcd9e9dea09",
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "mean_auxiliary_hidden_mse": 1.4415432214736938,
+          "mean_total_training_loss": 5.683189392089844,
+          "mean_training_token_nll": 5.539035081863403,
+          "nonpadding_tokens": 371,
+          "parameter_sha256_after": "3e79101837e9aa71b0483d312ffa3a464fbd75b582fa81cd8d1d396fce4bd03f",
+          "parameter_sha256_before": "2d2bff11d5f896b951af8bb1a68e4db931791b93266bf7eed25bbbf4cc449f9d",
+          "processed_padded_tokens": 4096,
+          "scope": "randomly initialized small causal language model; not general-purpose capability evidence",
+          "seed": 1730,
+          "step_losses": [
+            5.846529006958008,
+            5.51984977722168
+          ],
+          "supervised_answer_tokens": 6,
+          "updates_this_iteration": 2
+        },
+        "text_control": {
+          "backend": "tiny_byte_causal",
+          "budget": {
+            "auxiliary_weight": 0.1,
+            "batch_size": 1,
+            "gradient_clip": 1.0,
+            "learning_rate": 0.001,
+            "max_length": 2048,
+            "steps": 2,
+            "weight_decay": 0.01
+          },
+          "cumulative_updates": 4,
+          "examples_seen": 2,
+          "examples_sha256": "9a18429117507517818c6c67eaf6d5dedd386324f80d6dbad1d79c71a490d3ae",
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "mean_auxiliary_hidden_mse": 0.00012567349768117912,
+          "mean_total_training_loss": 5.707916975021362,
+          "mean_training_token_nll": 5.70790433883667,
+          "nonpadding_tokens": 2227,
+          "parameter_sha256_after": "4fc014d16d7c5e3c97fad5b3167a986122aef360e3e5b278fe5f335b423144cf",
+          "parameter_sha256_before": "3a81b1bfb80537a47067cb66b82f7af3647af6a07c4d219a97950dd2ed5ca864",
+          "processed_padded_tokens": 4096,
+          "scope": "randomly initialized small causal language model; not general-purpose capability evidence",
+          "seed": 1730,
+          "step_losses": [
+            6.098973751068115,
+            5.316860198974609
+          ],
+          "supervised_answer_tokens": 6,
+          "updates_this_iteration": 2
+        },
+        "verified": {
+          "backend": "tiny_byte_causal",
+          "budget": {
+            "auxiliary_weight": 0.1,
+            "batch_size": 1,
+            "gradient_clip": 1.0,
+            "learning_rate": 0.001,
+            "max_length": 2048,
+            "steps": 2,
+            "weight_decay": 0.01
+          },
+          "cumulative_updates": 4,
+          "examples_seen": 2,
+          "examples_sha256": "721d6a9138002fff644341f0f77ce7aa4454808a15726f740c537b30cfad088c",
+          "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+          "mean_auxiliary_hidden_mse": 1.6904175877571106,
+          "mean_total_training_loss": 5.7079174518585205,
+          "mean_training_token_nll": 5.538875579833984,
+          "nonpadding_tokens": 371,
+          "parameter_sha256_after": "ad5b708bc259a23776837e9bc883d9529d0e8524002cf946a73c0b800ee710e3",
+          "parameter_sha256_before": "b83c60b8facaaaee023af0efb06f99b497079c170e6603a0020ec716db6e3978",
+          "processed_padded_tokens": 4096,
+          "scope": "randomly initialized small causal language model; not general-purpose capability evidence",
+          "seed": 1730,
+          "step_losses": [
+            5.8775553703308105,
+            5.5382795333862305
+          ],
+          "supervised_answer_tokens": 6,
+          "updates_this_iteration": 2
+        }
+      }
+    }
+  ],
+  "library": {
+    "foundation_hash": "39d0bae34a454bb6ce69fc0fc12733500ac431bb21c65420567c77f72c2bd338",
+    "head": "bad92265923ad6b1b810d9efdb90b2f260df0742ae54b5748df3673fbd94ad69",
+    "record_count": 12,
+    "record_ids": [
+      "9334ffebf4b2148267dba001b091026ed5b6a66f9c40c8b9fd247c7cedd65722",
+      "94501138590923a501a6cc26ee2cb7df72183e51bb2ecf0ab0885f1a268d3fde",
+      "7336460e22551e875fb6202e3cc7ca97c1985659e2896c9b7a30edee14d0e01c",
+      "e662f8e0d0119aaec891ec51c9fb7f8de632fa6ccbb8b5c918ccd8962d6a881d",
+      "0f103a03f9f36ddb4beb8c364afc6c047e2fd66b72938d59bd20008607ed1b89",
+      "ab39828d833e47ad8b7fa39247f7de4d9967c2453e35783a2d035de5efc3018e",
+      "7809b7fef332bf2ba696d0cdcde152d1e1e2ab3f8b8ee212122621a5face557e",
+      "f295e588713869b831580535cd2062616601823391c82cb3acb14bca0b99e172",
+      "ad79619a8771c08c71ed64ddd16a74597ddeb5b04ba60479f9993b38f2c6332d",
+      "fb4fa095d1e760db4292a7d29facfd16f62c2fb8f4de270a4cad5595b2ed92f6",
+      "c6a5b287b3515d231c94a88da879dc538816788a2045cd45da051ed2536b8999",
+      "bad92265923ad6b1b810d9efdb90b2f260df0742ae54b5748df3673fbd94ad69"
+    ],
+    "snapshot_hash": "f491a3c31d36725fffd1432aa90fad252a83096561417e6e0bdddf2d8b30d60a"
+  },
+  "protocol_sha256": "6f72542194b34f4687884d03c9a13b01f2b33cb871cf544610d00e7aa4cfe9e9",
+  "schema": "lemmaferry.constructive-loop.v1",
+  "scope": "tiny randomly initialized neural fixtures; no specialist or general-purpose capability claim",
+  "source_checkpoint": {
+    "cumulative_updates": 0,
+    "parameter_sha256": "c67731601f6416fdd0dd08a8f4ab3e25f5004a8d6cda34a5b6e58ab90e0a8f26",
+    "path": "runs/constructive-loop-v3/source-initial.pt",
+    "sha256": "2dc9c9f11f0ea09762f7e11ba6bdf326cacee7740016c28ee94e27acc1558b3e"
+  },
+  "status": "completed",
+  "sustained_broad_improvement_established": false
+}

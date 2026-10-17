@@ -1,0 +1,241 @@
+{
+  "status": "passed",
+  "started_at_utc": "2026-10-17T07:16:20.573988+00:00",
+  "scope": "One optimizer step validates the actual pretrained adapter backend; not a verified-data transfer or capability-gain experiment.",
+  "model_id": "Qwen/Qwen2.5-1.5B",
+  "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "tokenizer_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "local_files_only": true,
+  "device": "mps",
+  "torch_version": "2.14.1",
+  "command": ".venv-llm/bin/python experiments/smoke_pretrained_recipient.py",
+  "training_fixture": {
+    "lean_verified": false,
+    "use": "synthetic_fixture_backend_smoke"
+  },
+  "fixed_evaluation": {
+    "path": "artifacts/constructive-loop/hf-adapter-evaluation.json",
+    "sha256": "069476e6e2c01368b08837158477920a96214e3859dc86699469a95bcd023301",
+    "examples": [
+      {
+        "id": "adapter-smoke-external:0",
+        "prompt": "What is two plus three?\nA: five\nB: six\nAnswer:",
+        "answer": "A",
+        "family": "independent_arithmetic",
+        "choices": [
+          "A",
+          "B"
+        ],
+        "split": "independent_evaluation",
+        "provenance": {
+          "use": "independent_evaluation_only"
+        }
+      },
+      {
+        "id": "adapter-smoke-external:1",
+        "prompt": "The report states that the parcel is blue. What color is the parcel?\nA: red\nB: blue\nAnswer:",
+        "answer": "B",
+        "family": "independent_fact_retrieval",
+        "choices": [
+          "A",
+          "B"
+        ],
+        "split": "independent_evaluation",
+        "provenance": {
+          "use": "independent_evaluation_only"
+        }
+      }
+    ]
+  },
+  "training_example": {
+    "id": "adapter-smoke-training:0",
+    "prompt": "If the green lamp is on, the bell rings. The green lamp is on. What follows?\nA: the bell rings\nB: the bell is silent\nAnswer:",
+    "answer": "A",
+    "family": "fixture_modus_ponens",
+    "split": "train",
+    "provenance": {
+      "use": "synthetic_fixture_backend_smoke",
+      "lean_verified": false
+    }
+  },
+  "runner_sha256": "b946fa9991b441865cd0158548259de773561fa66259f96856c0b89f65a8bfa3",
+  "implementation_sha256": "3fc8fbcdbf217ce590b7d5d3d2e4ca4e3ed858abaa000d3428a3b7d27fecd7bf",
+  "load_seconds": 3.4487560420529917,
+  "parameter_counts": {
+    "frozen_base": 1543714304,
+    "trainable_adapter": 24576
+  },
+  "boundary": "post-adapter final hidden state at last prompt token before output head",
+  "base_requires_grad_false": true,
+  "before_evaluation": {
+    "count": 2,
+    "risk_mean_answer_nll": 5.290423154830933,
+    "accuracy": 0.5,
+    "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+    "records": [
+      {
+        "id": "adapter-smoke-external:0",
+        "family": "independent_arithmetic",
+        "answer": "A",
+        "prediction": "B",
+        "correct": false,
+        "answer_nll": 5.927440643310547,
+        "answer_token_nll": 2.9637203216552734,
+        "answer_tokens": 2,
+        "choice_nll": {
+          "A": 5.927440643310547,
+          "B": 5.195187568664551
+        }
+      },
+      {
+        "id": "adapter-smoke-external:1",
+        "family": "independent_fact_retrieval",
+        "answer": "B",
+        "prediction": "B",
+        "correct": true,
+        "answer_nll": 4.653405666351318,
+        "answer_token_nll": 2.326702833175659,
+        "answer_tokens": 2,
+        "choice_nll": {
+          "A": 7.441719055175781,
+          "B": 4.653405666351318
+        }
+      }
+    ],
+    "fixed_evaluation_sha256": "069476e6e2c01368b08837158477920a96214e3859dc86699469a95bcd023301",
+    "recipient_parameter_sha256": "f86e632a8289e5640988ac44bebd5f79b7e75a7eda318455a9fa369bea103960",
+    "cumulative_updates": 0
+  },
+  "update": {
+    "backend": "huggingface_residual_adapter",
+    "scope": "pretrained language model updated by a final-hidden residual adapter",
+    "budget": {
+      "steps": 1,
+      "batch_size": 1,
+      "max_length": 128,
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "gradient_clip": 1.0,
+      "auxiliary_weight": 0.0
+    },
+    "updates_this_iteration": 1,
+    "cumulative_updates": 1,
+    "processed_padded_tokens": 128,
+    "nonpadding_tokens": 37,
+    "supervised_answer_tokens": 2,
+    "examples_seen": 1,
+    "examples_sha256": "826456081a308f13cd1ada3d21cc52566d887dce642e2e0761a10c9103c088d5",
+    "fixed_evaluation_sha256": "069476e6e2c01368b08837158477920a96214e3859dc86699469a95bcd023301",
+    "parameter_sha256_before": "f86e632a8289e5640988ac44bebd5f79b7e75a7eda318455a9fa369bea103960",
+    "parameter_sha256_after": "54b8fc78aafcd5032af71648f6ed60302d2a23e82afd802daf83f4deccfe11bf",
+    "mean_training_token_nll": 3.9740686416625977,
+    "mean_auxiliary_hidden_mse": 0.0,
+    "mean_total_training_loss": 3.9740686416625977,
+    "step_losses": [
+      3.9740686416625977
+    ],
+    "seed": 1729
+  },
+  "training_seconds": 0.12768587499158457,
+  "base_tensor_versions_unchanged": true,
+  "base_has_no_gradients": true,
+  "optimizer_contains_only_adapter": true,
+  "trainable_gradient_l2": {
+    "down.weight": 0.0,
+    "up.weight": 0.9999998807907104
+  },
+  "after_evaluation": {
+    "count": 2,
+    "risk_mean_answer_nll": 3.7540204524993896,
+    "accuracy": 0.5,
+    "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+    "records": [
+      {
+        "id": "adapter-smoke-external:0",
+        "family": "independent_arithmetic",
+        "answer": "A",
+        "prediction": "B",
+        "correct": false,
+        "answer_nll": 4.209913730621338,
+        "answer_token_nll": 2.104956865310669,
+        "answer_tokens": 2,
+        "choice_nll": {
+          "A": 4.209913730621338,
+          "B": 3.689656972885132
+        }
+      },
+      {
+        "id": "adapter-smoke-external:1",
+        "family": "independent_fact_retrieval",
+        "answer": "B",
+        "prediction": "B",
+        "correct": true,
+        "answer_nll": 3.2981271743774414,
+        "answer_token_nll": 1.6490635871887207,
+        "answer_tokens": 2,
+        "choice_nll": {
+          "A": 5.837892532348633,
+          "B": 3.2981271743774414
+        }
+      }
+    ],
+    "fixed_evaluation_sha256": "069476e6e2c01368b08837158477920a96214e3859dc86699469a95bcd023301",
+    "recipient_parameter_sha256": "54b8fc78aafcd5032af71648f6ed60302d2a23e82afd802daf83f4deccfe11bf",
+    "cumulative_updates": 1
+  },
+  "checkpoint": {
+    "path": "runs/constructive-loop/hf-adapter-smoke/adapter.pt",
+    "sha256": "866e9d642527fce78691e64b954cf0948c173de4bc222b45062c6be939fa873b",
+    "parameter_sha256": "54b8fc78aafcd5032af71648f6ed60302d2a23e82afd802daf83f4deccfe11bf",
+    "cumulative_updates": 1
+  },
+  "reload_seconds": 2.2722402079962194,
+  "reload_evaluation": {
+    "count": 2,
+    "risk_mean_answer_nll": 3.7540204524993896,
+    "accuracy": 0.5,
+    "prediction_rule": "minimum full-answer sequence NLL over declared choices, including EOS",
+    "records": [
+      {
+        "id": "adapter-smoke-external:0",
+        "family": "independent_arithmetic",
+        "answer": "A",
+        "prediction": "B",
+        "correct": false,
+        "answer_nll": 4.209913730621338,
+        "answer_token_nll": 2.104956865310669,
+        "answer_tokens": 2,
+        "choice_nll": {
+          "A": 4.209913730621338,
+          "B": 3.689656972885132
+        }
+      },
+      {
+        "id": "adapter-smoke-external:1",
+        "family": "independent_fact_retrieval",
+        "answer": "B",
+        "prediction": "B",
+        "correct": true,
+        "answer_nll": 3.2981271743774414,
+        "answer_token_nll": 1.6490635871887207,
+        "answer_tokens": 2,
+        "choice_nll": {
+          "A": 5.837892532348633,
+          "B": 3.2981271743774414
+        }
+      }
+    ],
+    "fixed_evaluation_sha256": "069476e6e2c01368b08837158477920a96214e3859dc86699469a95bcd023301",
+    "recipient_parameter_sha256": "54b8fc78aafcd5032af71648f6ed60302d2a23e82afd802daf83f4deccfe11bf",
+    "cumulative_updates": 1
+  },
+  "reload_exact_predictions_and_losses": true,
+  "reload_optimizer_steps": [
+    1
+  ],
+  "fixed_evaluation_unchanged": true,
+  "sampled_mps_allocated_bytes": 6225746176,
+  "sampled_mps_driver_bytes": 7478116352,
+  "peak_lifetime_process_rss_bytes": 9791782912,
+  "total_seconds": 6.416594707989134
+}

@@ -1,0 +1,59 @@
+{
+  "config": {
+    "auxiliary_weight": 0.1,
+    "backend": "pretrained",
+    "batch_size": 1,
+    "device": "mps",
+    "experience_mode": "translated",
+    "iterations": 2,
+    "learning_rate": 0.001,
+    "mastery_threshold": 0.7,
+    "math_model": "Qwen/Qwen2.5-Math-1.5B",
+    "math_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "max_length": 1024,
+    "proposals_per_iteration": 6,
+    "recipient_model": "Qwen/Qwen2.5-1.5B",
+    "recipient_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "representations": true,
+    "seed": 1729,
+    "steps": 1
+  },
+  "correspondence_controls": "identical verified prompts and answer supervision, with shuffled-pair or training-mean auxiliary targets",
+  "evaluation_source_sha256": "a4eda3772806721a4dd6e605a28fa123f2c482bf7b2eb96ddcf46c4eaec94f02",
+  "feedback_policy": "only post-update loss on accepted training examples; external evaluation is never a curriculum input",
+  "fixed_evaluation_sha256": "7dd3a102ca3a540e9f28d6224eab19430bf62a14fe8d937a611fb9265bab8840",
+  "foundation": {
+    "lean_commit": "eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "logic": "constructive_prop_v1",
+    "name": "lemmaferry_constructive_foundation_v1",
+    "schema_version": 1
+  },
+  "initial_library": {
+    "foundation_hash": "39d0bae34a454bb6ce69fc0fc12733500ac431bb21c65420567c77f72c2bd338",
+    "head": null,
+    "record_count": 0,
+    "record_ids": [],
+    "snapshot_hash": "3168b7cc70e16efeafa732390a6b31749121ded6124b96d8b3ae237acc1a9f9e"
+  },
+  "iteration_policy": "fixed budget, no evaluation-based early stopping, layer selection, or iterative success claim",
+  "registered_at_utc": "2026-10-17T07:24:16.576727+00:00",
+  "representation_policy": "separate formal phi,p and natural-language derivation r; family-held-out calibration; validation-only lambda selection",
+  "risk": "mean negative log likelihood of the complete declared answer, including EOS",
+  "schema": "lemmaferry.constructive-loop.v1",
+  "scope": "local pinned pretrained specialist and recipient; recipient residual-adapter updates",
+  "source_sha256": {
+    "__init__.py": "e5d1d920010806dc93f59014a014b50219b0ee88ba8f6d6a28101dfad29adad8",
+    "alignment.py": "6c6064733bf35390cb3a62d973dd96a42097de7061a3f2369d9a6a209444abc9",
+    "correspondence.py": "34c8ea54519b1888c35a67eff5230444ae83fcf6c601e2acfecd643c56e316bf",
+    "generation.py": "2c39b12ba5f3e2125c0fc52aea81226c73e525df77aecbfa0339bfa394244011",
+    "learning.py": "3fc8fbcdbf217ce590b7d5d3d2e4ca4e3ed858abaa000d3428a3b7d27fecd7bf",
+    "library.py": "f8ede76cc2ee4bebaec5b813838d05622e46eec234f4619e102f2ec2f37f7622",
+    "logic.py": "1309175d2186679e11916c1d7000af8be2b3c7fa31c29dedb55c1dd49eda7eb7",
+    "loop.py": "a4de6aee6ea4c3f2e4762701d1a05a069b8837a4bebec8248666c72502a9b395",
+    "representations.py": "166d1555240f7d5b349b54a72fe214e6c44986da9df43e63f633bfaefef0f8d2",
+    "rosetta.py": "704d97cf03e535a0998c3d13f4e26de4963bd80a685f59900267a6dc6c8b5f1d"
+  },
+  "training_control": "correct ordinary-language factual supervision; matched steps, padded tokens, answer tokens and initialization",
+  "translated_control": "same formal donor information supplied as text, with an equally computed recipient-state auxiliary loss"
+}

@@ -5,8 +5,192 @@
 @media(max-width:1050px){aside{width:210px;padding:28px 18px}main{margin-left:210px;padding:36px 28px}.brand{font-size:20px}.stats{gap:8px}.stat{padding:14px}.stage-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){aside{position:relative;width:auto;padding:22px}aside nav{display:flex;flex-wrap:wrap;gap:3px}nav a{font-size:12px;padding:5px 8px}.tagline{margin:8px 0 15px}.side-note{display:none}.progress-box{padding:10px 0 0;margin-top:12px}main{margin:0;padding:30px 16px 60px}.intro{font-size:17px}.stats{grid-template-columns:repeat(2,1fr)}.chapter>summary{padding:18px 16px;gap:12px}.chapter-body{padding:5px 17px 25px}.chapter-body h2{font-size:22px}.chapter>summary small{max-width:240px}.stage-grid{gap:8px}.skip-link:focus{left:10px}}
 @media print{aside,.actions,.top-note,.stage-grid,.skip-link{display:none!important}body{background:white;font-size:10.5pt;color:#111}main{margin:0;padding:0;max-width:none}h1{font-size:31pt}.intro{font-size:13pt}.stats{margin:15px 0}.chapter{border:0;border-radius:0;overflow:visible;break-before:page}.chapter>summary{padding:10px 0;border-bottom:1px solid #aaa!important;background:white!important}.chapter-body{padding:0}.chapter-index,.chevron{display:none}.chapter-body h2{font-size:18pt;break-after:avoid}.chapter-body h3{font-size:13pt;break-after:avoid}table{display:table;font-size:8pt}tr,pre,.stage,.stat{break-inside:avoid}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f1f1;color:#111;font-size:8pt}a{color:#32214d}details>summary{list-style:none}footer{font-size:8pt}}
 </style></head><body><a class="skip-link" href="#main">Skip to roadmap</a>
-<aside><div class="brand"><span class="mark">LF</span>LemmaFerry</div><p class="tagline">Verified mathematics.<br>Measurable transfer.</p><nav><a href="#roadmap">Roadmap</a><a href="#issues">26 actionable issues</a><a href="#models">Actual-model experiment</a><a href="#sources">25 primary sources</a><a href="#launch">GitHub and name</a><a href="#validation">What was tested</a><a href="#card">Experiment card</a><a href="#provenance">Provenance</a></nav><div class="progress-box"><div class="progress-label" id="progressLabel">0 checklist items completed</div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div><p class="side-note">Working research plan<br>October 16, 2026<br><br>Checkmarks stay in this browser. Use the export button to keep a separate checklist.</p></aside>
-<main id="main"><div class="eyebrow">Open research starter / Version 0.1</div><h1>Build the smallest useful bridge.</h1><p class="intro">A practical route from verified mathematical tasks to representation alignment, useful model communication, and eventually student learning. One reproducible result at a time.</p><div class="hero-meta">Prepared for Ian Prado and a prospective collaborator. A working plan with explicit assumptions, experiments, and finish lines.</div><div class="actions"><button id="printButton">Print / Save PDF</button><button id="exportButton">Export checklist</button><button id="expandButton">Expand all chapters</button></div><p class="top-note">Use your browser's Find command to search. All content is included in this file; only source links need an internet connection.</p><div class="stats"><div class="stat"><b>26</b><span>actionable issue cards</span></div><div class="stat"><b>10</b><span>concrete toy problems</span></div><div class="stat"><b>25</b><span>annotated primary sources</span></div><div class="stat"><b>6</b><span>research milestones</span></div></div><div class="status"><strong>Research status:</strong> Hosted Python and Lean checks passed. Actual Qwen activations were collected and an affine map fitted. Vector alignment improved, but the single-position patch did not beat proof information supplied as text. The fixed small-student trial also showed no gain over its matched label control. The validation chapter retains the measurements and limits. Ian completed the 15-example correspondence audit and agreed with all examples.</div><div class="stage-grid"><a class="stage" href="#roadmap-milestone-a-establish-the-mechanics"><b>A / Mechanics</b><small>Recover a known vector relationship.</small></a><a class="stage" href="#roadmap-milestone-b-generate-genuinely-checked-formal-data"><b>B / Formal data</b><small>Execute the checker and audit the language view.</small></a><a class="stage" href="#roadmap-milestone-c-align-actual-model-representations"><b>C / Alignment</b><small>Test a map on actual model activations.</small></a><a class="stage" href="#roadmap-milestone-d-establish-functional-transfer"><b>D / Useful communication</b><small>Measure answers, text baselines, and controls.</small></a><a class="stage" href="#roadmap-milestone-e-teach-a-standalone-student"><b>E / Permanent learning</b><small>Evaluate without the teacher present.</small></a><a class="stage" href="#roadmap-milestone-f-test-adaptive-improvement"><b>F / Adaptive curriculum</b><small>Compare against a fixed generator at equal budget.</small></a></div><details class="chapter" id="roadmap" open><summary><span class="chapter-index">01</span><span><strong>Roadmap</strong><small>The first evening, six milestones, ten toys, eight-week plan</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p><strong>Working name:</strong> LemmaFerry. <strong>Working question:</strong> Can verified mathematical experience be translated into useful training signals for a general language model?</p>
+<aside><div class="brand"><span class="mark">LF</span>LemmaFerry</div><p class="tagline">Verified mathematics.<br>Measurable transfer.</p><nav><a href="#loop">Constructive learning loop</a><a href="#roadmap">Roadmap</a><a href="#issues">26 actionable issues</a><a href="#models">Actual-model experiment</a><a href="#sources">25 primary sources</a><a href="#launch">GitHub and name</a><a href="#validation">What was tested</a><a href="#card">Experiment card</a><a href="#provenance">Provenance</a></nav><div class="progress-box"><div class="progress-label" id="progressLabel">0 checklist items completed</div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div><p class="side-note">Working research plan<br>October 17, 2026<br><br>Checkmarks stay in this browser. Use the export button to keep a separate checklist.</p></aside>
+<main id="main"><div class="eyebrow">Constructive learning experiments / Version 0.2</div><h1>Build the smallest useful bridge.</h1><p class="intro">A practical route from verified mathematical tasks to representation alignment, useful model communication, and eventually student learning. One reproducible result at a time.</p><div class="hero-meta">Prepared for Ian Prado and a prospective collaborator. A working plan with explicit assumptions, experiments, and finish lines.</div><div class="actions"><button id="printButton">Print / Save PDF</button><button id="exportButton">Export checklist</button><button id="expandButton">Expand all chapters</button></div><p class="top-note">Use your browser's Find command to search. All content is included in this file; only source links need an internet connection.</p><div class="stats"><div class="stat"><b>26</b><span>actionable issue cards</span></div><div class="stat"><b>10</b><span>concrete toy problems</span></div><div class="stat"><b>25</b><span>annotated primary sources</span></div><div class="stat"><b>6</b><span>research milestones</span></div></div><div class="status"><strong>Research status:</strong> This branch implements cumulative constructive verification, learned maps in both directions, persistent recipient training, fixed independent evaluation, and generation feedback. Bounded local runs exercise the mechanism; sustained broad reasoning improvement remains unestablished. Earlier alignment and negative transfer results remain in the validation chapter. Ian completed the original 15-example audit; new renderings have separate agent review.</div><div class="stage-grid"><a class="stage" href="#roadmap-milestone-a-establish-the-mechanics"><b>A / Mechanics</b><small>Recover a known vector relationship.</small></a><a class="stage" href="#roadmap-milestone-b-generate-genuinely-checked-formal-data"><b>B / Formal data</b><small>Execute the checker and audit the language view.</small></a><a class="stage" href="#roadmap-milestone-c-align-actual-model-representations"><b>C / Alignment</b><small>Test a map on actual model activations.</small></a><a class="stage" href="#roadmap-milestone-d-establish-functional-transfer"><b>D / Useful communication</b><small>Measure answers, text baselines, and controls.</small></a><a class="stage" href="#roadmap-milestone-e-teach-a-standalone-student"><b>E / Permanent learning</b><small>Evaluate without the teacher present.</small></a><a class="stage" href="#roadmap-milestone-f-test-adaptive-improvement"><b>F / Adaptive curriculum</b><small>Compare against a fixed generator at equal budget.</small></a></div><details class="chapter" id="loop" open><summary><span class="chapter-index">01</span><span><strong>Constructive learning loop</strong><small>Cumulative verified library, two maps, persistent learning and independent evaluation</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>This branch implements an executable version of the proposed experimental loop:</p>
+<pre><code class="language-text">verified library C_t
+    -&gt; library-conditioned proposals (statement, proof)
+    -&gt; constructive-policy checks and real Lean verification
+    -&gt; accepted library C_(t+1)
+    -&gt; paired formal and language representations
+    -&gt; learned T and S, with held-out geometric diagnostics
+    -&gt; verified language targets or translated-state training
+    -&gt; updated recipient L_(t+1)
+    -&gt; training-curriculum feedback for the next proposals
+</code></pre>
+<p>The strongest conjecture is that these cycles could sustain increasingly broad
+reasoning improvements. Implementing the mechanism does not establish that
+conjecture. The existing negative experiments remain part of the record.</p>
+<h2 id="loop-foundation-admission-and-library-growth">Foundation, admission, and library growth</h2>
+<p><code>Foundation</code> specifies <code>constructive_prop_v1</code>, Lean 4.35.0, and the exact Lean
+compiler commit. Its restricted formula/proof language permits proposition
+parameters, implication application, conjunction introduction/elimination, and
+calls to previously accepted lemmas. It does not accept arbitrary Lean source,
+new axioms, classical proof operators, placeholders, or caller-supplied approval.
+Permitted premises are explicit theorem arguments.</p>
+<p><code>VerifiedLibrary.accept</code> reconstructs the theorem from that language, checks the
+declared dependency IDs, compiles the cumulative library with real Lean, and
+requires recognized zero-axiom audits for every theorem and generated definition.
+Missing Lean cannot admit a proposal. The compiler, launcher, source, logs,
+foundation, record chain, and immutable library snapshots have recorded hashes.
+Reopening a library performs a fresh Lean replay without changing its files.
+Admission uses an exclusive writer lock and an atomic index replacement.</p>
+<p>The generator produces parameterized implication chains and conjunction
+construction/projection tasks. Later proposals actually invoke earlier accepted
+theorems. Structural hashes discard cosmetic names and proof spelling; changing
+arity, route depth, or projection position can add a new supported structure.
+This is a domain-specific structural filter, not a general test of mathematical
+novelty or learning value. Generation has explicit proposal, proof-node, and
+compiler-time budgets; indefinitely useful experience is a hypothesis, not an
+operational guarantee on finite hardware.</p>
+<h2 id="loop-representations-and-the-two-maps">Representations and the two maps</h2>
+<p>The mathematical view contains the formal statement, proof, definitions, and
+minimal prior-theorem closure. The language view renders the corresponding
+assumptions, conclusion, proof operations, substitutions, and dependency closure.
+The two views have shared record IDs and independently hashed contents. Separate
+collector inputs permit different tokenizers and token lengths.</p>
+<p><code>fit_library_rosetta</code> extracts at the final normalized hidden state, after the
+recipient adapter when present, at the last prompt token. The checkpoint,
+tokenizer revision, boundary, position, input hashes, and parameter hashes are
+recorded. Extraction runs before the current recipient update and cannot change
+model parameters.</p>
+<p>Both maps use paired supervision, with independent validation selection:</p>
+<pre><code class="language-text">T(x) = W x + b
+objective(T) = sum_i ||W x_i + b - y_i||^2 + lambda ||W||_F^2
+S(y) = V y + c
+F(x, y) = (S(y), T(x))
+F(F(x, y)) = (S(T(x)), T(S(y)))
+</code></pre>
+<p>The raw-coordinate sum objective leaves the intercept unpenalized. The earlier
+standardized-coordinate implementation remains available and unchanged for
+reproducing the published baseline. Each direction has shuffled-pair and
+training-mean controls. Fixed reference vectors can fill missing slots in <code>F</code>;
+they supply no semantic correspondence. Round-trip accuracy is a diagnostic,
+not evidence that the learned pairing preserves meaning.</p>
+<p>The current library calibration splits by theorem family. Its held-out geometry
+examples may subsequently enter recipient training, and their proofs can reuse
+earlier family results. They are not an independent capability benchmark.
+Lean validates the formal theorem; correspondence of the language rendering
+still requires a separate semantic audit.</p>
+<h2 id="loop-persistent-recipient-learning-and-controls">Persistent recipient learning and controls</h2>
+<p><code>--experience-mode language</code> trains on admitted language choice examples. Its
+control receives correct ordinary-language factual supervision. Both start from
+identical weights and retain their own optimizer moments across iterations.</p>
+<p><code>--experience-mode translated</code> adds a hidden-state loss against <code>T(E_M(phi,p))</code>
+to answer supervision. Five matched training arms run:</p>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th>Experience and auxiliary target</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Verified translation</td>
+<td>Verified language questions/answers and the paired translated mathematical state</td>
+</tr>
+<tr>
+<td>Same-information text</td>
+<td>The exact donor formal information supplied as text, with its own pre-update state as the auxiliary target</td>
+</tr>
+<tr>
+<td>Shuffled correspondence</td>
+<td>Identical verified questions/answers, with targets from the shuffled-pair translator</td>
+</tr>
+<tr>
+<td>Mean target</td>
+<td>Identical verified questions/answers, with the recipient calibration-training mean as target</td>
+</tr>
+<tr>
+<td>Ordinary-language control</td>
+<td>Correct ordinary fact questions/answers, with its own pre-update state as target</td>
+</tr>
+</tbody></table>
+<p>Updates, examples seen, supervised answer tokens, padded token shapes, optimizer
+settings, and initial weights are checked across arms. Nonpadding input lengths
+can differ, especially for the text baseline. This matches training budgets;
+it does not establish equal total collection, fitting, or inference cost. The
+ordinary factual control is intentionally simple and is not a substitute for
+every useful alternative curriculum.</p>
+<p>The CPU backend is a small randomly initialized causal byte language model.
+It is an engineering fixture. The pretrained backend uses a local, immutable
+Hugging Face causal checkpoint and a trainable residual adapter at the output
+head input. The recipient base is frozen and shared across arms; adapters,
+gradients, and optimizer states remain separate. The mathematical checkpoint
+has a separate frozen base. Neither backend downloads checkpoints by default.</p>
+<h2 id="loop-independent-evaluation-and-feedback">Independent evaluation and feedback</h2>
+<p>The chosen evaluation distribution is frozen and hashed before initialization
+and training. All arms use the same questions, answers, and scoring rule. The
+registered risk is mean negative log likelihood of the complete declared answer,
+including EOS; accuracy chooses the lowest-loss declared answer. This loss
+includes answer formatting/termination, so lower risk need not mean better
+reasoning. Accuracy and control comparisons must also be inspected.</p>
+<p><code>benchmarks/independent-v1.jsonl</code> contains 24 explicitly authored arithmetic,
+ordering, string, and everyday-rule questions outside the theorem generator.
+It is a pipeline fixture, not a broad capability benchmark. Use an independently
+selected, larger <code>--evaluation</code> dataset for research. IDs, prompts, and explicit
+evaluation-role markers are rejected by training and curriculum scoring.</p>
+<p>The next generator receives only post-update losses on accepted training
+examples. Weak families receive more proposals; mastered families can advance
+in constructor depth. The model checkpoint hash and exact feedback are retained.
+External evaluation results never select problems, regularization, iteration
+counts, layers, or stopping conditions. High training loss is a heuristic for
+curriculum selection, not a measure of information gain.</p>
+<h2 id="loop-run-and-inspect">Run and inspect</h2>
+<p>Use Python 3.10+ and the pinned Lean installation described in <code>lean/README.md</code>.
+The optional learning runtime is required:</p>
+<pre><code class="language-bash">python3 -m venv .venv-loop
+source .venv-loop/bin/activate
+python -m pip install -e &#39;.[llm]&#39;
+python -m unittest discover -s tests -v
+python experiments/run_constructive_loop.py \
+  --output runs/my-loop --experience-mode translated \
+  --evaluation benchmarks/independent-v1.jsonl \
+  --iterations 2 --steps 2 --torch-threads 1
+python experiments/verify_constructive_run.py runs/my-loop
+</code></pre>
+<p>Choose a fresh output directory for every registered experiment. Completed runs
+retain the library, proposals, admission logs, formal/language pairs, raw
+activations, both maps, initial and per-iteration checkpoints, optimizer states,
+training budgets, evaluation rows, feedback, protocol, and complete file hashes.
+The independent verifier replays Lean, reloads checkpoints, checks optimizer
+continuity, recomputes evaluation, and validates translated/control targets.</p>
+<p>For already-cached pretrained checkpoints, the same command supports actual
+general-model adapter learning:</p>
+<pre><code class="language-bash">python experiments/run_constructive_loop.py \
+  --output runs/my-pretrained-loop --backend pretrained \
+  --experience-mode translated --iterations 2 --steps 1 \
+  --recipient-model Qwen/Qwen2.5-1.5B \
+  --recipient-revision 8faed761d45a263340a0528343f099c05c9a4323 \
+  --math-model Qwen/Qwen2.5-Math-1.5B \
+  --math-revision 4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2 \
+  --evaluation benchmarks/independent-v1.jsonl \
+  --device mps --max-length 1024 --torch-threads 1
+</code></pre>
+<p>The command rejects overlong inputs instead of truncating mathematical context.
+Larger libraries need larger context/resource budgets or a separately evaluated
+representation policy. Pinned model licenses remain separate; pretrained base
+weights are not bundled.</p>
+<h2 id="loop-evidence-and-remaining-research">Evidence and remaining research</h2>
+<p>The <a href="../artifacts/constructive-loop/hf-adapter-smoke.json">backend smoke</a> checks a
+real cached Qwen adapter update, frozen base parameters, and exact checkpoint
+reload. The <a href="../artifacts/constructive-loop/semantic-audit.json">new semantic audit</a>
+checks five examples from each constructive family, including dependency reuse
+and 15 corresponding wrong constructions rejected by Lean. This is agent review;
+Ian&#39;s earlier human approval covers only the original 15 baseline examples.</p>
+<p>The <a href="../artifacts/constructive-loop/independent-review.json">independent run review</a>
+recomputes extraction, maps, auxiliary targets, controls, feedback, and checkpoint
+evaluations. Execution measurements are retained alongside this document in
+the published branch artifacts and release bundle. Earlier three-arm runs were
+exploratory; shuffled and mean training controls were added before the final
+five-arm executions, without changing the seed, layer, optimizer, or budget.</p>
+<p>The next scientific gate is reproducible improvement over informative,
+equal-budget controls on a larger fixed independent distribution, with multiple
+seeds and structural/task-family uncertainty. Sustained improvement requires
+further cycles where the learned capability demonstrably improves the value of
+subsequent generated experience. Neither a growing proof archive, a low vector
+error, nor successful execution of this loop establishes that result.</p>
+</div></details>
+<details class="chapter" id="roadmap" ><summary><span class="chapter-index">02</span><span><strong>Roadmap</strong><small>The first evening, six milestones, ten toys, eight-week plan</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p><strong>Working name:</strong> LemmaFerry. <strong>Working question:</strong> Can verified mathematical experience be translated into useful training signals for a general language model?</p>
 <p>Prepared for Ian Prado and a prospective collaborator on October 16, 2026. The schedule assumes each person can contribute roughly four to six hours per week, an existing laptop, and no paid compute for the first milestone. These are planning assumptions, not requirements. The project can proceed more slowly without changing its scientific question.</p>
 <h2 id="roadmap-1-what-you-are-actually-starting">1. What you are actually starting</h2>
 <p>You have a plausible research direction and several separable hypotheses. The credible first open-source contribution is a small benchmark, generator, translator baseline, and evaluation protocol that other people can reproduce. You do not need to claim that you can build AGI to publish that. Nor do you need to master statistical mechanics or topology before running an affine regression experiment.</p>
@@ -404,7 +588,7 @@
 </tbody></table>
 <p>Your next concrete deliverable is small: a public repository with a tested numeric translator, an accurately labeled formal-data pipeline, and one experiment another person can reproduce. Everything larger can be earned one result at a time.</p>
 </div></details>
-<details class="chapter" id="issues" ><summary><span class="chapter-index">02</span><span><strong>26 actionable issues</strong><small>Tasks, owners, dependencies, effort and acceptance criteria</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Copy the first three cards into GitHub issues after creating the repository. Estimates are focused work time for someone with the stated prerequisites, not deadlines. Use the experiment issue template for new research claims. The research lead and implementation lead are suggested roles, not fixed ownership.</p>
+<details class="chapter" id="issues" ><summary><span class="chapter-index">03</span><span><strong>26 actionable issues</strong><small>Tasks, owners, dependencies, effort and acceptance criteria</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Copy the first three cards into GitHub issues after creating the repository. Estimates are focused work time for someone with the stated prerequisites, not deadlines. Use the experiment issue template for new research claims. The research lead and implementation lead are suggested roles, not fixed ownership.</p>
 <h2 id="issues-first-three-issue-bodies">First three issue bodies</h2>
 <h3 id="issues-lf-001-reproduce-both-artificial-alignment-runs">LF-001: Reproduce both artificial alignment runs</h3>
 <p><strong>Owner:</strong> Ian. <strong>Estimate:</strong> 45 to 90 minutes. <strong>Dependencies:</strong> none. <strong>Labels:</strong> good first issue, reproduction.</p>
@@ -602,7 +786,7 @@
 </ul>
 <p>For every issue, attach the smallest artifact that lets the other collaborator check it: a JSON result, five inspected examples, a failing input, a shape trace, a plot, or a reproduction command.</p>
 </div></details>
-<details class="chapter" id="models" ><summary><span class="chapter-index">03</span><span><strong>Actual-model experiment</strong><small>Checkpoint choices, activation collection, regression and interventions</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p><strong>Execution update:</strong> this plan has now been run as a proof-assistance experiment.
+<details class="chapter" id="models" ><summary><span class="chapter-index">04</span><span><strong>Actual-model experiment</strong><small>Checkpoint choices, activation collection, regression and interventions</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p><strong>Execution update:</strong> this plan has now been run as a proof-assistance experiment.
 The <a href="#validation">measured results</a> retain the
 30-prompt pilot and the separate 448-prompt collection, fitted map, intervention
 controls, and fixed-student comparison. The donor receives a verified proof;
@@ -929,7 +1113,7 @@ across hardware or package releases. See
 <p>Sources checked on 2026-10-17 UTC. Pin the exact model commits and runtime
 versions used by the actual experiment.</p>
 </div></details>
-<details class="chapter" id="sources" ><summary><span class="chapter-index">04</span><span><strong>25 primary sources</strong><small>Nearest projects, annotated papers and learning materials</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Prepared for Ian Prado, October 16, 2026. Primary sources checked during this session. This is a research map, not a claim that the complete proposal is already implemented or that it yields general intelligence.</p>
+<details class="chapter" id="sources" ><summary><span class="chapter-index">05</span><span><strong>25 primary sources</strong><small>Nearest projects, annotated papers and learning materials</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Prepared for Ian Prado, October 16, 2026. Primary sources checked during this session. This is a research map, not a claim that the complete proposal is already implemented or that it yields general intelligence.</p>
 <h2 id="sources-where-this-project-sits">Where this project sits</h2>
 <p>The proposal combines four established research areas: verified synthetic theorem generation, adaptive theorem-proving curricula, representation alignment between neural models, and distillation into a general language model. The integration question remains open: does a verified mathematical curriculum improve a general model, and does a learned vector interface beat simply supplying well-designed text?</p>
 <p>Lean is a programming language and proof assistant. Its kernel checks proof terms against formal statements and assumptions. A neural encoder can turn those terms, statements, or proof states into vectors. Lean itself does not continuously generate neural embeddings or automatically add knowledge to another model&#39;s weights.</p>
@@ -1128,7 +1312,7 @@ versions used by the actual experiment.</p>
 <p>After actual Lean checking, recipient interventions, and student-alone evaluations have run, a bounded claim could be: &quot;We release a reproducible benchmark and baselines for translating representations of Lean-verified synthetic reasoning tasks into a small language model. We measure alignment, exact downstream answers, and standalone student learning separately.&quot; The starter does not yet establish that result.</p>
 <p>An improvement on this bounded experiment would justify the next experiment. A negative result with clean controls would still give other contributors a useful open-source artifact.</p>
 </div></details>
-<details class="chapter" id="launch" ><summary><span class="chapter-index">05</span><span><strong>GitHub and name</strong><small>Repository upload, GitHub Pages, domain observations and license</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Research checked on 2026-10-16, Pacific time. Domain endpoint checks began at 2026-10-17T03:22:04Z, equivalent to October 16 at 8:22 p.m. Pacific. These checks are observations, not reservations or purchases.</p>
+<details class="chapter" id="launch" ><summary><span class="chapter-index">06</span><span><strong>GitHub and name</strong><small>Repository upload, GitHub Pages, domain observations and license</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Research checked on 2026-10-16, Pacific time. Domain endpoint checks began at 2026-10-17T03:22:04Z, equivalent to October 16 at 8:22 p.m. Pacific. These checks are observations, not reservations or purchases.</p>
 <h2 id="launch-recommended-name">Recommended name</h2>
 <p><strong>LemmaFerry</strong>, repository slug <code>lemmaferry</code>, subtitle: <strong>Verified mathematics, measurable transfer.</strong></p>
 <p>The ferry metaphor describes carrying verified mathematical structure into a general model. It suits an experimental toolkit without promising AGI. The initial README description can be:</p>
@@ -1228,7 +1412,7 @@ git push -u origin main
 <p>Primary license sources: <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener noreferrer">Apache&#39;s official license and application instructions</a>, <a href="https://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank" rel="noopener noreferrer">plain text license</a>, and <a href="https://spdx.org/licenses/Apache-2.0.html" target="_blank" rel="noopener noreferrer">SPDX Apache-2.0</a>.</p>
 <p>The starter also contains <code>name-check.json</code> with a second independent registry check and its exact UTC timestamp. No registrar transaction was attempted.</p>
 </div></details>
-<details class="chapter" id="validation" ><summary><span class="chapter-index">06</span><span><strong>What was tested</strong><small>Measured CPU results and the work that remains unrun</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>These records describe what was actually executed while preparing the starter on October 16, 2026, Pacific time. They are not results from a language model.</p>
+<details class="chapter" id="validation" ><summary><span class="chapter-index">07</span><span><strong>What was tested</strong><small>Measured CPU results and the work that remains unrun</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>This chapter retains preparation-time checks and later measured experiments. Historical sections preserve their original execution scope; the later actual-model and constructive-loop sections report real language-model runs.</p>
 <h2 id="validation-follow-up-runs">Follow-up runs</h2>
 <p>The <a href="../artifacts/lf-001/reproduction.json">LF-001 reproduction record</a> contains fresh seed-7 and seed-19 JSON results, plots, environment versions, commands, source hashes, and the 23-test passing log. Every result field agrees with the bundled reference at relative tolerance <code>1e-8</code> and absolute tolerance <code>1e-10</code>; the largest absolute numeric difference is below <code>2.2e-13</code>. Both predefined seeds were retained, and preprocessing and recipient decoding used training data only. This run used Python 3.14.7, NumPy 2.5.4, and Matplotlib 3.11.2 on macOS arm64.</p>
 <p>The separate <a href="lf-002-lean-verification.md">LF-002 Lean-verification record</a> supersedes the preparation-time missing-Lean limitation below: real Lean 4.35.0 verified all 60 generated examples and both proof variants, with 120 recognized zero-axiom audits. Corrupted inputs failed, missing Lean remained <code>not_run</code>, and all 12 logic/checker tests passed. Inputs, checked records, and unedited logs are retained under <a href="../results/lf-002/"><code>results/lf-002/</code></a>. No generator or checker fixes were needed.</p>
@@ -1586,8 +1770,97 @@ intervals, student budgets and hashes, and a real-Qwen self-patch control. The
 independent cached self-patch error was <code>1.86e-5</code>, and the full-prompt self-patch
 error was zero. That immutable agent record predates the separate human
 correspondence signoff above; its historical pending status is preserved.</p>
+<h2 id="validation-constructive-loop-refactor">Constructive-loop refactor</h2>
+<p>The <a href="#loop">constructive-loop protocol</a> implements cumulative
+library-conditioned verification, distinct formal/language extraction, learned
+maps in both directions, persistent recipient updates, independent evaluation,
+and training-only feedback for subsequent generation. Final executions used
+five training arms; the earlier three-arm runs were exploratory. Adding the
+shuffled and mean auxiliary-target controls did not change seed, layer,
+optimizer, or training budget.</p>
+<p>The <a href="../artifacts/constructive-loop/tiny-run-summary.json">tiny run</a> completed two
+iterations with twelve admitted lemmas, including six second-iteration proofs
+that invoke earlier accepted lemmas. Each arm performed four persistent optimizer
+updates. The <a href="../artifacts/constructive-loop/independent-review.json">independent review</a>
+recomputed maps, extraction, auxiliary targets, feedback, ten checkpoints, and
+all 88 run-file hashes. All five arms scored 14/24 on the fixed pipeline fixture;
+the mean target slightly outperformed the paired translator on sequence loss.</p>
+<p>The <a href="../artifacts/constructive-loop/qwen-run-summary.json">pretrained run</a> used
+the same pinned Qwen Math/general 1.5B pair as the first experiment, with a
+trainable 24,576-parameter residual adapter for each recipient arm. It completed
+two iterations, admitted twelve lemmas, and performed two AdamW updates per arm.
+The recipient base was shared and frozen; mathematical source weights were
+separate and frozen. All arms had identical initialization, update counts,
+supervised answer tokens, padded training shapes, and optimizer settings.</p>
+<table>
+<thead>
+<tr>
+<th>Final pretrained arm</th>
+<th align="right">Full-answer NLL, including EOS</th>
+<th align="right">Full-answer choice accuracy</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Paired translated target</td>
+<td align="right">1.923652</td>
+<td align="right">15/24</td>
+</tr>
+<tr>
+<td>Shuffled-pair target</td>
+<td align="right">1.923826</td>
+<td align="right">15/24</td>
+</tr>
+<tr>
+<td>Recipient training-mean target</td>
+<td align="right">1.923824</td>
+<td align="right">15/24</td>
+</tr>
+<tr>
+<td>Same donor information as text</td>
+<td align="right">3.144004</td>
+<td align="right">15/24</td>
+</tr>
+<tr>
+<td>Ordinary-language training control</td>
+<td align="right">4.559997</td>
+<td align="right">15/24</td>
+</tr>
+<tr>
+<td>Initial ordinary recipient</td>
+<td align="right">4.681065</td>
+<td align="right">16/24</td>
+</tr>
+</tbody></table>
+<p>The near-identical paired, shuffled, and mean results do not support a benefit
+from learned semantic correspondence. A separately labeled
+<a href="../artifacts/constructive-loop/qwen-answer-diagnostics.json">posthoc token diagnostic</a>
+reproduced every saved prediction and per-example loss within <code>6e-7</code>. It found
+that the paired arm&#39;s lower sequence loss came from EOS calibration: mean EOS
+NLL fell from 4.0140 to 1.2221, while answer-content NLL worsened from 0.6671 to
+0.7015. Content-only choice accuracy remained 15/24; the text arm reached 16/24.
+The registered full-answer metric was retained; these diagnostics did not select
+hyperparameters or trigger retraining.</p>
+<p>The <a href="../artifacts/constructive-loop/qwen-run-verification.json">full pretrained-run verification</a>
+replayed the twelve-theorem Lean library, checked all 88 execution-file hashes,
+reloaded all ten intermediate/final adapter checkpoints, reproduced per-example
+scores, and checked continued optimizer moments, identical initial weights,
+translated targets, and both controls&#39; pre-update state targets. The same checks
+passed for the <a href="../artifacts/constructive-loop/tiny-run-verification.json">tiny run</a>.</p>
+<p>The evaluation fixture was authored separately from the proof generator and
+frozen before training. It contains only 24 simple questions from four domains,
+and these runs use one seed and very small update budgets. These measurements
+validate the mechanism and expose a misleading loss signal. They do not
+establish broad reasoning transfer or sustained improvement.</p>
+<p>The <a href="../artifacts/constructive-loop/semantic-audit.json">new semantic audit</a>
+checks five examples from each constructive family and fifteen corresponding
+wrong constructions rejected by actual Lean. It includes dependency reuse,
+immutable replay, and a real concurrent-writer control. This is agent review;
+the human approval recorded earlier applies to the original baseline examples.
+The <a href="../artifacts/constructive-loop/commands.json">commands and source hashes</a>,
+runtime, test logs, protocols, and checked example libraries are retained beside
+the code. The release bundle restores raw activations, maps, and checkpoints.</p>
 </div></details>
-<details class="chapter" id="card" ><summary><span class="chapter-index">07</span><span><strong>Experiment card</strong><small>Register a question, budget, controls and stop rule</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Copy this into an issue before running a new experiment.</p>
+<details class="chapter" id="card" ><summary><span class="chapter-index">08</span><span><strong>Experiment card</strong><small>Register a question, budget, controls and stop rule</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Copy this into an issue before running a new experiment.</p>
 <table>
 <thead>
 <tr>
@@ -1654,7 +1927,7 @@ correspondence signoff above; its historical pending status is preserved.</p>
 </tbody></table>
 <p>Afterward record the observed result, any deviations, and the narrowest claim justified by it. A low embedding error by itself is not a functional transfer result. A proof supplied at inference is assistance, not evidence of knowledge retained without it.</p>
 </div></details>
-<details class="chapter" id="provenance" ><summary><span class="chapter-index">08</span><span><strong>Provenance</strong><small>Licenses, dataset origins and reproducibility records</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Original code and documentation in this starter use Apache-2.0. This does not change the licenses of Python dependencies, Lean, models, source corpora, or borrowed code. No external model weights, private messages, scans, or paper PDFs are included.</p>
+<details class="chapter" id="provenance" ><summary><span class="chapter-index">09</span><span><strong>Provenance</strong><small>Licenses, dataset origins and reproducibility records</small></span><span class="chevron">+</span></summary><div class="chapter-body"><p>Original code and documentation in this starter use Apache-2.0. This does not change the licenses of Python dependencies, Lean, models, source corpora, or borrowed code. No external model weights, private messages, scans, or paper PDFs are included.</p>
 <h2 id="provenance-required-record-for-every-new-dataset">Required record for every new dataset</h2>
 <p>Store the generator version/commit and seed, source family and lineage, formal statement, assumptions and dependency identifiers, proof, semantic view, answer certificate, Lean toolchain/import revisions, checker status and axiom audit, and any human review status. Preserve failed attempts separately from accepted data.</p>
 <p>Use distinct fields for <code>python_certificate</code>, <code>lean</code>, <code>lean_axioms</code>, and rendering/semantic checks. Do not rename <code>not_run</code> to <code>verified</code> to make a dataset convenient. A generated formal proof and a controlled Python certificate are valuable, but they are different from having executed Lean.</p>

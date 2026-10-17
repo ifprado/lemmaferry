@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "purpose": "fixed independent evaluation; not curriculum",
+  "registered_at_utc": "2026-10-17T07:16:20.574226+00:00",
+  "examples_sha256": "b2b97a2ca24b2d9e6c6fd178c7085d7a0cb26db6c4a5d208dd84f13e32e6a993",
+  "examples": [
+    {
+      "id": "adapter-smoke-external:0",
+      "prompt": "What is two plus three?\nA: five\nB: six\nAnswer:",
+      "answer": "A",
+      "family": "independent_arithmetic",
+      "choices": [
+        "A",
+        "B"
+      ],
+      "split": "independent_evaluation",
+      "provenance": {
+        "use": "independent_evaluation_only"
+      }
+    },
+    {
+      "id": "adapter-smoke-external:1",
+      "prompt": "The report states that the parcel is blue. What color is the parcel?\nA: red\nB: blue\nAnswer:",
+      "answer": "B",
+      "family": "independent_fact_retrieval",
+      "choices": [
+        "A",
+        "B"
+      ],
+      "split": "independent_evaluation",
+      "provenance": {
+        "use": "independent_evaluation_only"
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "verifier_sha256": "4203d5214d4d2dce57d3c6958c19f9833eb3484f081a7ac8f10cac41dd5d2bf3",
+  "command": [
+    ".venv-llm/bin/python",
+    "experiments/verify_constructive_run.py",
+    "runs/constructive-loop-qwen-v2",
+    "--device",
+    "mps"
+  ],
+  "result": {
+    "status": "passed",
+    "hashed_files_checked": 88,
+    "real_lean_replay": true,
+    "verified_library_records": 12,
+    "iterations": 2,
+    "fixed_evaluation_sha256": "7dd3a102ca3a540e9f28d6224eab19430bf62a14fe8d937a611fb9265bab8840",
+    "standalone_checkpoint_reloads": [
+      {
+        "iteration": 0,
+        "arm": "mean_control",
+        "updates": 1,
+        "risk_mean_answer_nll": 3.510225012898445,
+        "accuracy": 0.6666666666666666
+      },
+      {
+        "iteration": 0,
+        "arm": "ordinary_control",
+        "updates": 1,
+        "risk_mean_answer_nll": 4.609485616286595,
+        "accuracy": 0.625
+      },
+      {
+        "iteration": 0,
+        "arm": "shuffled_control",
+        "updates": 1,
+        "risk_mean_answer_nll": 3.5101461509863534,
+        "accuracy": 0.6666666666666666
+      },
+      {
+        "iteration": 0,
+        "arm": "text_control",
+        "updates": 1,
+        "risk_mean_answer_nll": 3.933259146908919,
+        "accuracy": 0.625
+      },
+      {
+        "iteration": 0,
+        "arm": "verified",
+        "updates": 1,
+        "risk_mean_answer_nll": 3.510143667459488,
+        "accuracy": 0.6666666666666666
+      },
+      {
+        "iteration": 1,
+        "arm": "mean_control",
+        "updates": 2,
+        "risk_mean_answer_nll": 1.923823571453492,
+        "accuracy": 0.625
+      },
+      {
+        "iteration": 1,
+        "arm": "ordinary_control",
+        "updates": 2,
+        "risk_mean_answer_nll": 4.559997419516246,
+        "accuracy": 0.625
+      },
+      {
+        "iteration": 1,
+        "arm": "shuffled_control",
+        "updates": 2,
+        "risk_mean_answer_nll": 1.923826362316807,
+        "accuracy": 0.625
+      },
+      {
+        "iteration": 1,
+        "arm": "text_control",
+        "updates": 2,
+        "risk_mean_answer_nll": 3.144004449248314,
+        "accuracy": 0.625
+      },
+      {
+        "iteration": 1,
+        "arm": "verified",
+        "updates": 2,
+        "risk_mean_answer_nll": 1.9236517529934645,
+        "accuracy": 0.625
+      }
+    ],
+    "evaluation_feedback_detected": false,
+    "training_budgets_matched": true
+  }
+}

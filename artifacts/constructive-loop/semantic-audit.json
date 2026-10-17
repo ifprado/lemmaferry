@@ -1,0 +1,1079 @@
+{
+  "status": "passed",
+  "reviewer": {
+    "kind": "delegated cousin AI agent",
+    "human_approved": false,
+    "human_review": "pending"
+  },
+  "started_utc": "2026-10-17T07:20:41.010490+00:00",
+  "foundation": {
+    "name": "lemmaferry_constructive_foundation_v1",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "lean_commit": "eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+    "logic": "constructive_prop_v1",
+    "schema_version": 1
+  },
+  "foundation_hash": "39d0bae34a454bb6ce69fc0fc12733500ac431bb21c65420567c77f72c2bd338",
+  "library_root": "runs/constructive-loop/semantic-audit-library",
+  "examples": [
+    {
+      "id": "676e1b49c06c54943615d1aed6b8502cbd20bc5dd5ed7966af0ee106fe6a96c2",
+      "family": "implication_chain",
+      "size": 2,
+      "index": 0,
+      "dependency_ids": [],
+      "structural_hash": "4baf48f3d936468cc75f068e3cfff2d94a2b70db3d5762983d32a6bf771abd4f",
+      "definition": "def lf_def_676e1b49c06c54943615d1aed6b8502cbd20bc5dd5ed7966af0ee106fe6a96c2 (p0 p1 p2 : Prop) : Prop := p2\n",
+      "lean_declaration": "theorem lf_lib_676e1b49c06c54943615d1aed6b8502cbd20bc5dd5ed7966af0ee106fe6a96c2 (p0 p1 p2 : Prop)\n    (h0 : p0)\n    (h1 : (p0 \u2192 p1))\n    (h2 : (p1 \u2192 p2))\n    : lf_def_676e1b49c06c54943615d1aed6b8502cbd20bc5dd5ed7966af0ee106fe6a96c2 p0 p1 p2 :=\n  (h2 ((h1 (h0))))\n",
+      "natural_language": "Assume T0; (T0 \u2192 T1); (T1 \u2192 T2). Establish T2. Certificate: Starting from T0, apply implication assumptions in order from r1 through r2.",
+      "question": {
+        "id": "construction_4baf48f3d936468cc75f068e3cfff2d94a2b70db3d5762983d32a6bf771abd4f",
+        "prompt": "Initially T0 holds. r1: T0 implies T1; r2: T1 implies T2. Which ordered rule list establishes T2?\nA: r2, r1\nB: r1, r2\nAnswer:",
+        "answer": "B",
+        "choices": {
+          "A": "r2, r1",
+          "B": "r1, r2"
+        },
+        "family": "implication_chain",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "4baf48f3d936468cc75f068e3cfff2d94a2b70db3d5762983d32a6bf771abd4f",
+          "size": 2,
+          "constructive_operation": "implication_chain",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "T0 reaches T2 by r1 through r2; the wrong option starts r2 before T1 is available. The prior chain, when present, proves the prefix and the final rule extends it.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/74d8b5269c0047369ac81f9edfbc95c4.lean",
+        "log_path": "audits/74d8b5269c0047369ac81f9edfbc95c4.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/314acbec8b3e492c84c23fe79d6ddc4a.lean",
+        "source_sha256": "ec6408233d42068933b73d2c147d4deb00597ffa30fc0072d2be3114d1214878",
+        "log_path": "audits/314acbec8b3e492c84c23fe79d6ddc4a.log",
+        "log_sha256": "e480e22f45736c3430935a1b01467c7e116633df087c035eca271ffd09503c34",
+        "audited_declarations": 2
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/314acbec8b3e492c84c23fe79d6ddc4a.lean": "ec6408233d42068933b73d2c147d4deb00597ffa30fc0072d2be3114d1214878",
+        "runs/constructive-loop/semantic-audit-library/audits/314acbec8b3e492c84c23fe79d6ddc4a.log": "e480e22f45736c3430935a1b01467c7e116633df087c035eca271ffd09503c34",
+        "runs/constructive-loop/semantic-audit-library/audits/74d8b5269c0047369ac81f9edfbc95c4.lean": "b998f2bc4cae54da300091ce99b52e5f4fe8ebc765040a661930be03ebb52af1",
+        "runs/constructive-loop/semantic-audit-library/audits/74d8b5269c0047369ac81f9edfbc95c4.log": "e8c730b1fac524aa3490b54e07c769e199dfb0c0ad9cb7305e475de1e6a1b6a2"
+      }
+    },
+    {
+      "id": "54e037d360591b2be54bf3d11a5e288d924d55c3c89169cdb1e40c1fa9839293",
+      "family": "and_introduction",
+      "size": 2,
+      "index": 0,
+      "dependency_ids": [],
+      "structural_hash": "7fe0721099851d6cf40ebeaa89763cdd7937712baa84ac477f263a6aaf0032f0",
+      "definition": "def lf_def_54e037d360591b2be54bf3d11a5e288d924d55c3c89169cdb1e40c1fa9839293 (p0 p1 : Prop) : Prop := (p0 \u2227 p1)\n",
+      "lean_declaration": "theorem lf_lib_54e037d360591b2be54bf3d11a5e288d924d55c3c89169cdb1e40c1fa9839293 (p0 p1 : Prop)\n    (h0 : p0)\n    (h1 : p1)\n    : lf_def_54e037d360591b2be54bf3d11a5e288d924d55c3c89169cdb1e40c1fa9839293 p0 p1 :=\n  (And.intro (h0) (h1))\n",
+      "natural_language": "Assume T0; T1. Establish (T0 \u2227 T1). Certificate: Introduce the right-associated conjunction using the individual facts in their listed order.",
+      "question": {
+        "id": "construction_7fe0721099851d6cf40ebeaa89763cdd7937712baa84ac477f263a6aaf0032f0",
+        "prompt": "Known individual facts: T0, T1. Which assembly supplies every conjunct exactly as required by (T0 \u2227 T1)?\nA: assemble T0, T1\nB: assemble T0, T0\nAnswer:",
+        "answer": "A",
+        "choices": {
+          "A": "assemble T0, T1",
+          "B": "assemble T0, T0"
+        },
+        "family": "and_introduction",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "7fe0721099851d6cf40ebeaa89763cdd7937712baa84ac477f263a6aaf0032f0",
+          "size": 2,
+          "constructive_operation": "and_introduction",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "All 2 distinct facts T0 through T1 are available. The correct assembly has each required conjunct; the bad assembly repeats T0 and omits T1. Its constructed result has the wrong type, even though the omitted fact remains separately assumed. Prior conjunction is instantiated on the suffix, then T0 is introduced.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/08a5bc33a5a5496c9d7d69bdbb1f5c81.lean",
+        "log_path": "audits/08a5bc33a5a5496c9d7d69bdbb1f5c81.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/e13e08f4b5a24f04a0c5a9b35dee11c2.lean",
+        "source_sha256": "1df27528833110bc3d6f337bd5347a8c32498bcce782a05d31804b738c3eb833",
+        "log_path": "audits/e13e08f4b5a24f04a0c5a9b35dee11c2.log",
+        "log_sha256": "a6d251dbc9a0ed6b77528248f7920536a5c03375c2376593cc9cbdddf4827d84",
+        "audited_declarations": 4
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/e13e08f4b5a24f04a0c5a9b35dee11c2.lean": "1df27528833110bc3d6f337bd5347a8c32498bcce782a05d31804b738c3eb833",
+        "runs/constructive-loop/semantic-audit-library/audits/e13e08f4b5a24f04a0c5a9b35dee11c2.log": "a6d251dbc9a0ed6b77528248f7920536a5c03375c2376593cc9cbdddf4827d84",
+        "runs/constructive-loop/semantic-audit-library/audits/08a5bc33a5a5496c9d7d69bdbb1f5c81.lean": "bbd3ec2d64eed8915c65273128f87357934e0eb519b55742e568d62a42ade5b8",
+        "runs/constructive-loop/semantic-audit-library/audits/08a5bc33a5a5496c9d7d69bdbb1f5c81.log": "771c40b92a92aba61e5b49801b95277fa5278044d4de966ef596eb48130f32aa"
+      }
+    },
+    {
+      "id": "91d20fb86a7ed503d6c5d7ccf7fa660835a13d1c1d0685913065bb3937392595",
+      "family": "and_elimination",
+      "size": 2,
+      "index": 0,
+      "dependency_ids": [],
+      "structural_hash": "6a3a614a739792de9e2f95f9f56b29e895a84cc8902cdcbe40eaf4172e3f33c4",
+      "definition": "def lf_def_91d20fb86a7ed503d6c5d7ccf7fa660835a13d1c1d0685913065bb3937392595 (p0 p1 : Prop) : Prop := p0\n",
+      "lean_declaration": "theorem lf_lib_91d20fb86a7ed503d6c5d7ccf7fa660835a13d1c1d0685913065bb3937392595 (p0 p1 : Prop)\n    (h0 : (p0 \u2227 p1))\n    : lf_def_91d20fb86a7ed503d6c5d7ccf7fa660835a13d1c1d0685913065bb3937392595 p0 p1 :=\n  (And.left (h0))\n",
+      "natural_language": "Assume (T0 \u2227 T1). Establish T0. Certificate: Project the right component 0 times, then the left component.",
+      "question": {
+        "id": "construction_6a3a614a739792de9e2f95f9f56b29e895a84cc8902cdcbe40eaf4172e3f33c4",
+        "prompt": "Known conjunction: (T0 \u2227 T1). Positions are numbered from zero. Which projection establishes T0?\nA: project position 0\nB: project position 1\nAnswer:",
+        "answer": "A",
+        "choices": {
+          "A": "project position 0",
+          "B": "project position 1"
+        },
+        "family": "and_elimination",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "6a3a614a739792de9e2f95f9f56b29e895a84cc8902cdcbe40eaf4172e3f33c4",
+          "size": 2,
+          "constructive_operation": "and_elimination",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "Right-associated conjunction of 2 facts; goal T0. Project right 0 times, then left. The wrong position 1 yields T1, a different free proposition. Reused projection is applied to the right suffix.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/c3cc96ea1e484a62a60ce4b7067e9821.lean",
+        "log_path": "audits/c3cc96ea1e484a62a60ce4b7067e9821.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/98a53f8a9db947cc869376c34501b469.lean",
+        "source_sha256": "76a56aac8321f5d00f2ef2bc36bb08249fcf0000abec66d2dbb6fdee56fd51d6",
+        "log_path": "audits/98a53f8a9db947cc869376c34501b469.log",
+        "log_sha256": "054cce59d7f891e8f240fadb7a4e07394069ced0011a24108b14b32b9b960c66",
+        "audited_declarations": 6
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/98a53f8a9db947cc869376c34501b469.lean": "76a56aac8321f5d00f2ef2bc36bb08249fcf0000abec66d2dbb6fdee56fd51d6",
+        "runs/constructive-loop/semantic-audit-library/audits/98a53f8a9db947cc869376c34501b469.log": "054cce59d7f891e8f240fadb7a4e07394069ced0011a24108b14b32b9b960c66",
+        "runs/constructive-loop/semantic-audit-library/audits/c3cc96ea1e484a62a60ce4b7067e9821.lean": "5d4e1d1fa0b4389b17b380b18ba58f1cf546d4f0560f4b00aa736d192c0d3e49",
+        "runs/constructive-loop/semantic-audit-library/audits/c3cc96ea1e484a62a60ce4b7067e9821.log": "27e7eb39206752c21d51b50eaa3a9f32827db4b8b8d29f285cabd5e071ac2dd7"
+      }
+    },
+    {
+      "id": "9806bccda8ba3d9bfedd1fdf813ef309025613336c9c03b4a4471d10dbf3c129",
+      "family": "implication_chain",
+      "size": 3,
+      "index": 0,
+      "dependency_ids": [
+        "676e1b49c06c54943615d1aed6b8502cbd20bc5dd5ed7966af0ee106fe6a96c2"
+      ],
+      "structural_hash": "5ebc03bf2306a7fb412aabbcc1558cda14e04dbc5e140d6bd758736ae3b9f0fb",
+      "definition": "def lf_def_9806bccda8ba3d9bfedd1fdf813ef309025613336c9c03b4a4471d10dbf3c129 (p0 p1 p2 p3 : Prop) : Prop := p3\n",
+      "lean_declaration": "theorem lf_lib_9806bccda8ba3d9bfedd1fdf813ef309025613336c9c03b4a4471d10dbf3c129 (p0 p1 p2 p3 : Prop)\n    (h0 : p0)\n    (h1 : (p0 \u2192 p1))\n    (h2 : (p1 \u2192 p2))\n    (h3 : (p2 \u2192 p3))\n    : lf_def_9806bccda8ba3d9bfedd1fdf813ef309025613336c9c03b4a4471d10dbf3c129 p0 p1 p2 p3 :=\n  (h3 ((lf_lib_676e1b49c06c54943615d1aed6b8502cbd20bc5dd5ed7966af0ee106fe6a96c2 (p0) (p1) (p2) (h0) (h1) (h2))))\n",
+      "natural_language": "Assume T0; (T0 \u2192 T1); (T1 \u2192 T2); (T2 \u2192 T3). Establish T3. Certificate: Starting from T0, apply implication assumptions in order from r1 through r3. Formal proof reuse: 676e1b49c06c54943615d1aed6b8502cbd20bc5dd5ed7966af0ee106fe6a96c2.",
+      "question": {
+        "id": "construction_5ebc03bf2306a7fb412aabbcc1558cda14e04dbc5e140d6bd758736ae3b9f0fb",
+        "prompt": "Initially T0 holds. r1: T0 implies T1; r2: T1 implies T2; r3: T2 implies T3. Which ordered rule list establishes T3?\nA: r2, r1, r3\nB: r1, r2, r3\nAnswer:",
+        "answer": "B",
+        "choices": {
+          "A": "r2, r1, r3",
+          "B": "r1, r2, r3"
+        },
+        "family": "implication_chain",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "5ebc03bf2306a7fb412aabbcc1558cda14e04dbc5e140d6bd758736ae3b9f0fb",
+          "size": 3,
+          "constructive_operation": "implication_chain",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "T0 reaches T3 by r1 through r3; the wrong option starts r2 before T1 is available. The prior chain, when present, proves the prefix and the final rule extends it.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/adc3e10c90334fdf9d79e0b124161cfe.lean",
+        "log_path": "audits/adc3e10c90334fdf9d79e0b124161cfe.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/cf7345de3a5047aa941729821a4e2cdc.lean",
+        "source_sha256": "0b9cfd3e41ac822e7e84af0b140c8d69cd96760192c8dc1b226617ca8e1eb848",
+        "log_path": "audits/cf7345de3a5047aa941729821a4e2cdc.log",
+        "log_sha256": "a10f24a245eb3c694ffa7b2df36d0d9e9949f9c791a374e198a387a4aca160ae",
+        "audited_declarations": 8
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/cf7345de3a5047aa941729821a4e2cdc.lean": "0b9cfd3e41ac822e7e84af0b140c8d69cd96760192c8dc1b226617ca8e1eb848",
+        "runs/constructive-loop/semantic-audit-library/audits/cf7345de3a5047aa941729821a4e2cdc.log": "a10f24a245eb3c694ffa7b2df36d0d9e9949f9c791a374e198a387a4aca160ae",
+        "runs/constructive-loop/semantic-audit-library/audits/adc3e10c90334fdf9d79e0b124161cfe.lean": "907bed1f615b7ded781689479030bac698ce6db642bfd352b4a565300127db1d",
+        "runs/constructive-loop/semantic-audit-library/audits/adc3e10c90334fdf9d79e0b124161cfe.log": "d74476e9cfdb914445ce5f93e9e1c0fc7db67578a66874e1cdab5e3c876ad1c8"
+      }
+    },
+    {
+      "id": "76daeaaf2ffa950ea11515dbf62d3db5c692d0927203abbc1a24805ff79552c2",
+      "family": "and_introduction",
+      "size": 3,
+      "index": 0,
+      "dependency_ids": [
+        "54e037d360591b2be54bf3d11a5e288d924d55c3c89169cdb1e40c1fa9839293"
+      ],
+      "structural_hash": "28cf51ddb02d2d9eb508956996ac87c548ccdf36e0dc8d92587dce57a6c49e57",
+      "definition": "def lf_def_76daeaaf2ffa950ea11515dbf62d3db5c692d0927203abbc1a24805ff79552c2 (p0 p1 p2 : Prop) : Prop := (p0 \u2227 (p1 \u2227 p2))\n",
+      "lean_declaration": "theorem lf_lib_76daeaaf2ffa950ea11515dbf62d3db5c692d0927203abbc1a24805ff79552c2 (p0 p1 p2 : Prop)\n    (h0 : p0)\n    (h1 : p1)\n    (h2 : p2)\n    : lf_def_76daeaaf2ffa950ea11515dbf62d3db5c692d0927203abbc1a24805ff79552c2 p0 p1 p2 :=\n  (And.intro (h0) ((lf_lib_54e037d360591b2be54bf3d11a5e288d924d55c3c89169cdb1e40c1fa9839293 (p1) (p2) (h1) (h2))))\n",
+      "natural_language": "Assume T0; T1; T2. Establish (T0 \u2227 (T1 \u2227 T2)). Certificate: Introduce the right-associated conjunction using the individual facts in their listed order. Formal proof reuse: 54e037d360591b2be54bf3d11a5e288d924d55c3c89169cdb1e40c1fa9839293.",
+      "question": {
+        "id": "construction_28cf51ddb02d2d9eb508956996ac87c548ccdf36e0dc8d92587dce57a6c49e57",
+        "prompt": "Known individual facts: T0, T1, T2. Which assembly supplies every conjunct exactly as required by (T0 \u2227 (T1 \u2227 T2))?\nA: assemble T0, T1, T0\nB: assemble T0, T1, T2\nAnswer:",
+        "answer": "B",
+        "choices": {
+          "A": "assemble T0, T1, T0",
+          "B": "assemble T0, T1, T2"
+        },
+        "family": "and_introduction",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "28cf51ddb02d2d9eb508956996ac87c548ccdf36e0dc8d92587dce57a6c49e57",
+          "size": 3,
+          "constructive_operation": "and_introduction",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "All 3 distinct facts T0 through T2 are available. The correct assembly has each required conjunct; the bad assembly repeats T0 and omits T2. Its constructed result has the wrong type, even though the omitted fact remains separately assumed. Prior conjunction is instantiated on the suffix, then T0 is introduced.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/e4f032a75bb74c8e823c13d3f5e8bf4e.lean",
+        "log_path": "audits/e4f032a75bb74c8e823c13d3f5e8bf4e.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/423ce743375c48eebe3f55c29328cb7b.lean",
+        "source_sha256": "ad8308b82f029097b27b52839e0a2cecb358e3d21a7379889365e0dc94751862",
+        "log_path": "audits/423ce743375c48eebe3f55c29328cb7b.log",
+        "log_sha256": "05d0b0b6f6fdc941390d66dedc9df02074f540d51ed170e61cfa012358143c87",
+        "audited_declarations": 10
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/423ce743375c48eebe3f55c29328cb7b.lean": "ad8308b82f029097b27b52839e0a2cecb358e3d21a7379889365e0dc94751862",
+        "runs/constructive-loop/semantic-audit-library/audits/423ce743375c48eebe3f55c29328cb7b.log": "05d0b0b6f6fdc941390d66dedc9df02074f540d51ed170e61cfa012358143c87",
+        "runs/constructive-loop/semantic-audit-library/audits/e4f032a75bb74c8e823c13d3f5e8bf4e.lean": "0739ce4c8bbfc74f779f525d04816a3e56c49e513998a5f6312bed03011075de",
+        "runs/constructive-loop/semantic-audit-library/audits/e4f032a75bb74c8e823c13d3f5e8bf4e.log": "b6e0a6dcfb9716a9e322bb6769edabf0e985fece5f0188fd037ce2e4911b26e7"
+      }
+    },
+    {
+      "id": "b9baba65716c93d776edc8988b72f48f8c90b36302fed98b20b2c46c83507651",
+      "family": "and_elimination",
+      "size": 3,
+      "index": 1,
+      "dependency_ids": [
+        "91d20fb86a7ed503d6c5d7ccf7fa660835a13d1c1d0685913065bb3937392595"
+      ],
+      "structural_hash": "cd2748788976aeb8b0a720602446c6e019fd0bf4ba3f6ed77aac7e3edd95fac4",
+      "definition": "def lf_def_b9baba65716c93d776edc8988b72f48f8c90b36302fed98b20b2c46c83507651 (p0 p1 p2 : Prop) : Prop := p1\n",
+      "lean_declaration": "theorem lf_lib_b9baba65716c93d776edc8988b72f48f8c90b36302fed98b20b2c46c83507651 (p0 p1 p2 : Prop)\n    (h0 : (p0 \u2227 (p1 \u2227 p2)))\n    : lf_def_b9baba65716c93d776edc8988b72f48f8c90b36302fed98b20b2c46c83507651 p0 p1 p2 :=\n  (lf_lib_91d20fb86a7ed503d6c5d7ccf7fa660835a13d1c1d0685913065bb3937392595 (p1) (p2) ((And.right (h0))))\n",
+      "natural_language": "Assume (T0 \u2227 (T1 \u2227 T2)). Establish T1. Certificate: Project the right component 1 times, then the left component. Formal proof reuse: 91d20fb86a7ed503d6c5d7ccf7fa660835a13d1c1d0685913065bb3937392595.",
+      "question": {
+        "id": "construction_cd2748788976aeb8b0a720602446c6e019fd0bf4ba3f6ed77aac7e3edd95fac4",
+        "prompt": "Known conjunction: (T0 \u2227 (T1 \u2227 T2)). Positions are numbered from zero. Which projection establishes T1?\nA: project position 1\nB: project position 2\nAnswer:",
+        "answer": "A",
+        "choices": {
+          "A": "project position 1",
+          "B": "project position 2"
+        },
+        "family": "and_elimination",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "cd2748788976aeb8b0a720602446c6e019fd0bf4ba3f6ed77aac7e3edd95fac4",
+          "size": 3,
+          "constructive_operation": "and_elimination",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "Right-associated conjunction of 3 facts; goal T1. Project right 1 times, then left. The wrong position 2 yields T2, a different free proposition. Reused projection is applied to the right suffix.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/b0294acc4a584aedb32ebb133123c8e7.lean",
+        "log_path": "audits/b0294acc4a584aedb32ebb133123c8e7.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/f65bc2406e114093bbd0eb42c7e4e496.lean",
+        "source_sha256": "aee85f77362c456e31ae1ce1117219a4f59076c53ee83347018edf3305e8bedc",
+        "log_path": "audits/f65bc2406e114093bbd0eb42c7e4e496.log",
+        "log_sha256": "419c894bb3430e9b3b3d18a1230d8ad77fc30cd5c5c4984553c10c14a89759f0",
+        "audited_declarations": 12
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/f65bc2406e114093bbd0eb42c7e4e496.lean": "aee85f77362c456e31ae1ce1117219a4f59076c53ee83347018edf3305e8bedc",
+        "runs/constructive-loop/semantic-audit-library/audits/f65bc2406e114093bbd0eb42c7e4e496.log": "419c894bb3430e9b3b3d18a1230d8ad77fc30cd5c5c4984553c10c14a89759f0",
+        "runs/constructive-loop/semantic-audit-library/audits/b0294acc4a584aedb32ebb133123c8e7.lean": "3b33395468f2205eaad9ffcc42193c577ebb3c65f8450e32a499cd811d26fd30",
+        "runs/constructive-loop/semantic-audit-library/audits/b0294acc4a584aedb32ebb133123c8e7.log": "b12f6eee133508a6f04a0df92524e8e3088e527bdb68deba04c05558dfd87ec7"
+      }
+    },
+    {
+      "id": "07521fdedec8740ab0b126ca5a1d73ba53a7ca9be561ed1d5bbd46cc39828741",
+      "family": "implication_chain",
+      "size": 4,
+      "index": 0,
+      "dependency_ids": [
+        "9806bccda8ba3d9bfedd1fdf813ef309025613336c9c03b4a4471d10dbf3c129"
+      ],
+      "structural_hash": "529f7049c81e6a2fcd4a171bda5150fb4761664966dd19e4f45906221c39785c",
+      "definition": "def lf_def_07521fdedec8740ab0b126ca5a1d73ba53a7ca9be561ed1d5bbd46cc39828741 (p0 p1 p2 p3 p4 : Prop) : Prop := p4\n",
+      "lean_declaration": "theorem lf_lib_07521fdedec8740ab0b126ca5a1d73ba53a7ca9be561ed1d5bbd46cc39828741 (p0 p1 p2 p3 p4 : Prop)\n    (h0 : p0)\n    (h1 : (p0 \u2192 p1))\n    (h2 : (p1 \u2192 p2))\n    (h3 : (p2 \u2192 p3))\n    (h4 : (p3 \u2192 p4))\n    : lf_def_07521fdedec8740ab0b126ca5a1d73ba53a7ca9be561ed1d5bbd46cc39828741 p0 p1 p2 p3 p4 :=\n  (h4 ((lf_lib_9806bccda8ba3d9bfedd1fdf813ef309025613336c9c03b4a4471d10dbf3c129 (p0) (p1) (p2) (p3) (h0) (h1) (h2) (h3))))\n",
+      "natural_language": "Assume T0; (T0 \u2192 T1); (T1 \u2192 T2); (T2 \u2192 T3); (T3 \u2192 T4). Establish T4. Certificate: Starting from T0, apply implication assumptions in order from r1 through r4. Formal proof reuse: 9806bccda8ba3d9bfedd1fdf813ef309025613336c9c03b4a4471d10dbf3c129.",
+      "question": {
+        "id": "construction_529f7049c81e6a2fcd4a171bda5150fb4761664966dd19e4f45906221c39785c",
+        "prompt": "Initially T0 holds. r1: T0 implies T1; r2: T1 implies T2; r3: T2 implies T3; r4: T3 implies T4. Which ordered rule list establishes T4?\nA: r1, r2, r3, r4\nB: r2, r1, r3, r4\nAnswer:",
+        "answer": "A",
+        "choices": {
+          "A": "r1, r2, r3, r4",
+          "B": "r2, r1, r3, r4"
+        },
+        "family": "implication_chain",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "529f7049c81e6a2fcd4a171bda5150fb4761664966dd19e4f45906221c39785c",
+          "size": 4,
+          "constructive_operation": "implication_chain",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "T0 reaches T4 by r1 through r4; the wrong option starts r2 before T1 is available. The prior chain, when present, proves the prefix and the final rule extends it.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/cd72051d088a448eaf2d7474999dfa5b.lean",
+        "log_path": "audits/cd72051d088a448eaf2d7474999dfa5b.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/53466e0b814947b7baa103ace392e594.lean",
+        "source_sha256": "d3645c0b4e2b20bd68f954bb846f46728af25ad1ab66c2549395393afac5f31b",
+        "log_path": "audits/53466e0b814947b7baa103ace392e594.log",
+        "log_sha256": "3ae24fbc5b82da180584d7b40099830fc9e3138caee0bb1c1e46b7b97a911e7d",
+        "audited_declarations": 14
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/53466e0b814947b7baa103ace392e594.lean": "d3645c0b4e2b20bd68f954bb846f46728af25ad1ab66c2549395393afac5f31b",
+        "runs/constructive-loop/semantic-audit-library/audits/53466e0b814947b7baa103ace392e594.log": "3ae24fbc5b82da180584d7b40099830fc9e3138caee0bb1c1e46b7b97a911e7d",
+        "runs/constructive-loop/semantic-audit-library/audits/cd72051d088a448eaf2d7474999dfa5b.lean": "a469962d240b6ba479865af063f1b12aba10a7c21143fff78cbe6a4cb6a3ac01",
+        "runs/constructive-loop/semantic-audit-library/audits/cd72051d088a448eaf2d7474999dfa5b.log": "0b818068f3dcf52c845057755937133a991f6c8383b00b8c078702f2936252e3"
+      }
+    },
+    {
+      "id": "a87b57e7acfa26d74ff77cfad7a7bff43b65d0d47948478ad1cd6516943c9c92",
+      "family": "and_introduction",
+      "size": 4,
+      "index": 0,
+      "dependency_ids": [
+        "76daeaaf2ffa950ea11515dbf62d3db5c692d0927203abbc1a24805ff79552c2"
+      ],
+      "structural_hash": "2523aeae5a6d559c5bdaee342dd0f9d3f425dec7ea95620f56566466884271d9",
+      "definition": "def lf_def_a87b57e7acfa26d74ff77cfad7a7bff43b65d0d47948478ad1cd6516943c9c92 (p0 p1 p2 p3 : Prop) : Prop := (p0 \u2227 (p1 \u2227 (p2 \u2227 p3)))\n",
+      "lean_declaration": "theorem lf_lib_a87b57e7acfa26d74ff77cfad7a7bff43b65d0d47948478ad1cd6516943c9c92 (p0 p1 p2 p3 : Prop)\n    (h0 : p0)\n    (h1 : p1)\n    (h2 : p2)\n    (h3 : p3)\n    : lf_def_a87b57e7acfa26d74ff77cfad7a7bff43b65d0d47948478ad1cd6516943c9c92 p0 p1 p2 p3 :=\n  (And.intro (h0) ((lf_lib_76daeaaf2ffa950ea11515dbf62d3db5c692d0927203abbc1a24805ff79552c2 (p1) (p2) (p3) (h1) (h2) (h3))))\n",
+      "natural_language": "Assume T0; T1; T2; T3. Establish (T0 \u2227 (T1 \u2227 (T2 \u2227 T3))). Certificate: Introduce the right-associated conjunction using the individual facts in their listed order. Formal proof reuse: 76daeaaf2ffa950ea11515dbf62d3db5c692d0927203abbc1a24805ff79552c2.",
+      "question": {
+        "id": "construction_2523aeae5a6d559c5bdaee342dd0f9d3f425dec7ea95620f56566466884271d9",
+        "prompt": "Known individual facts: T0, T1, T2, T3. Which assembly supplies every conjunct exactly as required by (T0 \u2227 (T1 \u2227 (T2 \u2227 T3)))?\nA: assemble T0, T1, T2, T0\nB: assemble T0, T1, T2, T3\nAnswer:",
+        "answer": "B",
+        "choices": {
+          "A": "assemble T0, T1, T2, T0",
+          "B": "assemble T0, T1, T2, T3"
+        },
+        "family": "and_introduction",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "2523aeae5a6d559c5bdaee342dd0f9d3f425dec7ea95620f56566466884271d9",
+          "size": 4,
+          "constructive_operation": "and_introduction",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "All 4 distinct facts T0 through T3 are available. The correct assembly has each required conjunct; the bad assembly repeats T0 and omits T3. Its constructed result has the wrong type, even though the omitted fact remains separately assumed. Prior conjunction is instantiated on the suffix, then T0 is introduced.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/c77e02e79c5f4b5d95d5685f884914b8.lean",
+        "log_path": "audits/c77e02e79c5f4b5d95d5685f884914b8.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/9a7972ade696405a9743622c37c0ab15.lean",
+        "source_sha256": "1e3d8c8c2784de8f7422efba143c282eb0c05d0358bb978493079b77510ff093",
+        "log_path": "audits/9a7972ade696405a9743622c37c0ab15.log",
+        "log_sha256": "f87f1940ea2fd4dbada966b645e83eea1fcaee264b34397733b61e8dab974f81",
+        "audited_declarations": 16
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/9a7972ade696405a9743622c37c0ab15.lean": "1e3d8c8c2784de8f7422efba143c282eb0c05d0358bb978493079b77510ff093",
+        "runs/constructive-loop/semantic-audit-library/audits/9a7972ade696405a9743622c37c0ab15.log": "f87f1940ea2fd4dbada966b645e83eea1fcaee264b34397733b61e8dab974f81",
+        "runs/constructive-loop/semantic-audit-library/audits/c77e02e79c5f4b5d95d5685f884914b8.lean": "1ee7aede97aceeebe5ea87ad058ec9877d8fb477d95b5b676a00ad614b015f0b",
+        "runs/constructive-loop/semantic-audit-library/audits/c77e02e79c5f4b5d95d5685f884914b8.log": "d4d4bc74877666f45a9b3542db303618cb243c5eadf90a24c5ae7f06226eccca"
+      }
+    },
+    {
+      "id": "2f4ed7c9f10710a93c7981a134aa692543275e01b43856db37070156f22c46b0",
+      "family": "and_elimination",
+      "size": 4,
+      "index": 2,
+      "dependency_ids": [
+        "b9baba65716c93d776edc8988b72f48f8c90b36302fed98b20b2c46c83507651"
+      ],
+      "structural_hash": "a56fd2469ff141fa509dfa4515b6be157b9146d46e200009c9e0a761f812a38d",
+      "definition": "def lf_def_2f4ed7c9f10710a93c7981a134aa692543275e01b43856db37070156f22c46b0 (p0 p1 p2 p3 : Prop) : Prop := p2\n",
+      "lean_declaration": "theorem lf_lib_2f4ed7c9f10710a93c7981a134aa692543275e01b43856db37070156f22c46b0 (p0 p1 p2 p3 : Prop)\n    (h0 : (p0 \u2227 (p1 \u2227 (p2 \u2227 p3))))\n    : lf_def_2f4ed7c9f10710a93c7981a134aa692543275e01b43856db37070156f22c46b0 p0 p1 p2 p3 :=\n  (lf_lib_b9baba65716c93d776edc8988b72f48f8c90b36302fed98b20b2c46c83507651 (p1) (p2) (p3) ((And.right (h0))))\n",
+      "natural_language": "Assume (T0 \u2227 (T1 \u2227 (T2 \u2227 T3))). Establish T2. Certificate: Project the right component 2 times, then the left component. Formal proof reuse: b9baba65716c93d776edc8988b72f48f8c90b36302fed98b20b2c46c83507651.",
+      "question": {
+        "id": "construction_a56fd2469ff141fa509dfa4515b6be157b9146d46e200009c9e0a761f812a38d",
+        "prompt": "Known conjunction: (T0 \u2227 (T1 \u2227 (T2 \u2227 T3))). Positions are numbered from zero. Which projection establishes T2?\nA: project position 3\nB: project position 2\nAnswer:",
+        "answer": "B",
+        "choices": {
+          "A": "project position 3",
+          "B": "project position 2"
+        },
+        "family": "and_elimination",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "a56fd2469ff141fa509dfa4515b6be157b9146d46e200009c9e0a761f812a38d",
+          "size": 4,
+          "constructive_operation": "and_elimination",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "Right-associated conjunction of 4 facts; goal T2. Project right 2 times, then left. The wrong position 3 yields T3, a different free proposition. Reused projection is applied to the right suffix.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/9988c2f6295f4e4f9deeb82e1a32ea12.lean",
+        "log_path": "audits/9988c2f6295f4e4f9deeb82e1a32ea12.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/1966fde405144c03ae8295b282ae8b97.lean",
+        "source_sha256": "8fb0f40f516c43f49277b313d140f90a81ae16a53fa85cf6457cf8bfe9776283",
+        "log_path": "audits/1966fde405144c03ae8295b282ae8b97.log",
+        "log_sha256": "193331a88a3a07b71781390bbb7fbb07aaaced30bd3ee74f4a5f6583ac5042c4",
+        "audited_declarations": 18
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/1966fde405144c03ae8295b282ae8b97.lean": "8fb0f40f516c43f49277b313d140f90a81ae16a53fa85cf6457cf8bfe9776283",
+        "runs/constructive-loop/semantic-audit-library/audits/1966fde405144c03ae8295b282ae8b97.log": "193331a88a3a07b71781390bbb7fbb07aaaced30bd3ee74f4a5f6583ac5042c4",
+        "runs/constructive-loop/semantic-audit-library/audits/9988c2f6295f4e4f9deeb82e1a32ea12.lean": "d83db2482dff16e693acf770730a61f25a3bfc0fc0b463029e0b4b2e36e9be4a",
+        "runs/constructive-loop/semantic-audit-library/audits/9988c2f6295f4e4f9deeb82e1a32ea12.log": "aade64698a2c1f0a60d8f8117f3ddc4a5e3f968178a886d57a9137e52edc2391"
+      }
+    },
+    {
+      "id": "b15013e3dc0e14572ddb2e598dbc536d5306394180bd46fe7f30035350aa3edb",
+      "family": "implication_chain",
+      "size": 5,
+      "index": 0,
+      "dependency_ids": [
+        "07521fdedec8740ab0b126ca5a1d73ba53a7ca9be561ed1d5bbd46cc39828741"
+      ],
+      "structural_hash": "05a9abffbeaef204103066bd42c17fe8542721422fc5dc6ef8a100ded7a6554a",
+      "definition": "def lf_def_b15013e3dc0e14572ddb2e598dbc536d5306394180bd46fe7f30035350aa3edb (p0 p1 p2 p3 p4 p5 : Prop) : Prop := p5\n",
+      "lean_declaration": "theorem lf_lib_b15013e3dc0e14572ddb2e598dbc536d5306394180bd46fe7f30035350aa3edb (p0 p1 p2 p3 p4 p5 : Prop)\n    (h0 : p0)\n    (h1 : (p0 \u2192 p1))\n    (h2 : (p1 \u2192 p2))\n    (h3 : (p2 \u2192 p3))\n    (h4 : (p3 \u2192 p4))\n    (h5 : (p4 \u2192 p5))\n    : lf_def_b15013e3dc0e14572ddb2e598dbc536d5306394180bd46fe7f30035350aa3edb p0 p1 p2 p3 p4 p5 :=\n  (h5 ((lf_lib_07521fdedec8740ab0b126ca5a1d73ba53a7ca9be561ed1d5bbd46cc39828741 (p0) (p1) (p2) (p3) (p4) (h0) (h1) (h2) (h3) (h4))))\n",
+      "natural_language": "Assume T0; (T0 \u2192 T1); (T1 \u2192 T2); (T2 \u2192 T3); (T3 \u2192 T4); (T4 \u2192 T5). Establish T5. Certificate: Starting from T0, apply implication assumptions in order from r1 through r5. Formal proof reuse: 07521fdedec8740ab0b126ca5a1d73ba53a7ca9be561ed1d5bbd46cc39828741.",
+      "question": {
+        "id": "construction_05a9abffbeaef204103066bd42c17fe8542721422fc5dc6ef8a100ded7a6554a",
+        "prompt": "Initially T0 holds. r1: T0 implies T1; r2: T1 implies T2; r3: T2 implies T3; r4: T3 implies T4; r5: T4 implies T5. Which ordered rule list establishes T5?\nA: r1, r2, r3, r4, r5\nB: r2, r1, r3, r4, r5\nAnswer:",
+        "answer": "A",
+        "choices": {
+          "A": "r1, r2, r3, r4, r5",
+          "B": "r2, r1, r3, r4, r5"
+        },
+        "family": "implication_chain",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "05a9abffbeaef204103066bd42c17fe8542721422fc5dc6ef8a100ded7a6554a",
+          "size": 5,
+          "constructive_operation": "implication_chain",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "T0 reaches T5 by r1 through r5; the wrong option starts r2 before T1 is available. The prior chain, when present, proves the prefix and the final rule extends it.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/578a71465d58445f8946c7859e89b498.lean",
+        "log_path": "audits/578a71465d58445f8946c7859e89b498.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/ea167bc3cb5b4ad1918cae6eecbb4cd6.lean",
+        "source_sha256": "72f1a5db13bb3eaa8dd6d0714a8712c08c53f53003a06509c1a4c996ef026cc9",
+        "log_path": "audits/ea167bc3cb5b4ad1918cae6eecbb4cd6.log",
+        "log_sha256": "3d40359c5b12a52027092e9cce1085f3c6a047896901b78af96ec80042e5c31b",
+        "audited_declarations": 20
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/ea167bc3cb5b4ad1918cae6eecbb4cd6.lean": "72f1a5db13bb3eaa8dd6d0714a8712c08c53f53003a06509c1a4c996ef026cc9",
+        "runs/constructive-loop/semantic-audit-library/audits/ea167bc3cb5b4ad1918cae6eecbb4cd6.log": "3d40359c5b12a52027092e9cce1085f3c6a047896901b78af96ec80042e5c31b",
+        "runs/constructive-loop/semantic-audit-library/audits/578a71465d58445f8946c7859e89b498.lean": "46b226259d1030d5cc6b7c0d75cc735b24ae64335f294d680cfb556a58fcf4c3",
+        "runs/constructive-loop/semantic-audit-library/audits/578a71465d58445f8946c7859e89b498.log": "363c549bcc39ae28c9004495076e5c5fa9fff8be73e526597df3b0044a196e9a"
+      }
+    },
+    {
+      "id": "89056b5a777cd4712a7af4a7fa84d098d2b30109d86bf3c417de106ec9c2c49f",
+      "family": "and_introduction",
+      "size": 5,
+      "index": 0,
+      "dependency_ids": [
+        "a87b57e7acfa26d74ff77cfad7a7bff43b65d0d47948478ad1cd6516943c9c92"
+      ],
+      "structural_hash": "73a779f4db8b5c0fbdef0db0693f26ea5d299a1ec8249b7f13691504880b3c70",
+      "definition": "def lf_def_89056b5a777cd4712a7af4a7fa84d098d2b30109d86bf3c417de106ec9c2c49f (p0 p1 p2 p3 p4 : Prop) : Prop := (p0 \u2227 (p1 \u2227 (p2 \u2227 (p3 \u2227 p4))))\n",
+      "lean_declaration": "theorem lf_lib_89056b5a777cd4712a7af4a7fa84d098d2b30109d86bf3c417de106ec9c2c49f (p0 p1 p2 p3 p4 : Prop)\n    (h0 : p0)\n    (h1 : p1)\n    (h2 : p2)\n    (h3 : p3)\n    (h4 : p4)\n    : lf_def_89056b5a777cd4712a7af4a7fa84d098d2b30109d86bf3c417de106ec9c2c49f p0 p1 p2 p3 p4 :=\n  (And.intro (h0) ((lf_lib_a87b57e7acfa26d74ff77cfad7a7bff43b65d0d47948478ad1cd6516943c9c92 (p1) (p2) (p3) (p4) (h1) (h2) (h3) (h4))))\n",
+      "natural_language": "Assume T0; T1; T2; T3; T4. Establish (T0 \u2227 (T1 \u2227 (T2 \u2227 (T3 \u2227 T4)))). Certificate: Introduce the right-associated conjunction using the individual facts in their listed order. Formal proof reuse: a87b57e7acfa26d74ff77cfad7a7bff43b65d0d47948478ad1cd6516943c9c92.",
+      "question": {
+        "id": "construction_73a779f4db8b5c0fbdef0db0693f26ea5d299a1ec8249b7f13691504880b3c70",
+        "prompt": "Known individual facts: T0, T1, T2, T3, T4. Which assembly supplies every conjunct exactly as required by (T0 \u2227 (T1 \u2227 (T2 \u2227 (T3 \u2227 T4))))?\nA: assemble T0, T1, T2, T3, T4\nB: assemble T0, T1, T2, T3, T0\nAnswer:",
+        "answer": "A",
+        "choices": {
+          "A": "assemble T0, T1, T2, T3, T4",
+          "B": "assemble T0, T1, T2, T3, T0"
+        },
+        "family": "and_introduction",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "73a779f4db8b5c0fbdef0db0693f26ea5d299a1ec8249b7f13691504880b3c70",
+          "size": 5,
+          "constructive_operation": "and_introduction",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "All 5 distinct facts T0 through T4 are available. The correct assembly has each required conjunct; the bad assembly repeats T0 and omits T4. Its constructed result has the wrong type, even though the omitted fact remains separately assumed. Prior conjunction is instantiated on the suffix, then T0 is introduced.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/1bea03c36d6345dcba466bb0eeb64f4d.lean",
+        "log_path": "audits/1bea03c36d6345dcba466bb0eeb64f4d.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/4e26e842426f4486bed322506b185a5c.lean",
+        "source_sha256": "4852d332cf1e49916d574a6122760079bfe213926ff1c7e6123e03af7dfe8eba",
+        "log_path": "audits/4e26e842426f4486bed322506b185a5c.log",
+        "log_sha256": "019b51c550471d26a3d7e32d6738c006f34fa4452558ce2ec6c71e138645fd60",
+        "audited_declarations": 22
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/4e26e842426f4486bed322506b185a5c.lean": "4852d332cf1e49916d574a6122760079bfe213926ff1c7e6123e03af7dfe8eba",
+        "runs/constructive-loop/semantic-audit-library/audits/4e26e842426f4486bed322506b185a5c.log": "019b51c550471d26a3d7e32d6738c006f34fa4452558ce2ec6c71e138645fd60",
+        "runs/constructive-loop/semantic-audit-library/audits/1bea03c36d6345dcba466bb0eeb64f4d.lean": "3e522f23bbfb377fe66f006df3dabf7a966e5b37738c39ef787c6a20fd180db7",
+        "runs/constructive-loop/semantic-audit-library/audits/1bea03c36d6345dcba466bb0eeb64f4d.log": "d182936a4e501e6e2e86e82672a9ce4588f22776da44aa28f6625c42af53fb1b"
+      }
+    },
+    {
+      "id": "832f30d01d821a429b5e1b181001251538a5045532419517f82844431ea7118c",
+      "family": "and_elimination",
+      "size": 5,
+      "index": 3,
+      "dependency_ids": [
+        "2f4ed7c9f10710a93c7981a134aa692543275e01b43856db37070156f22c46b0"
+      ],
+      "structural_hash": "48bafd363bb4bdd9b73e6bdbc537facd93db84620358e8dfeb4b842d3cf342ed",
+      "definition": "def lf_def_832f30d01d821a429b5e1b181001251538a5045532419517f82844431ea7118c (p0 p1 p2 p3 p4 : Prop) : Prop := p3\n",
+      "lean_declaration": "theorem lf_lib_832f30d01d821a429b5e1b181001251538a5045532419517f82844431ea7118c (p0 p1 p2 p3 p4 : Prop)\n    (h0 : (p0 \u2227 (p1 \u2227 (p2 \u2227 (p3 \u2227 p4)))))\n    : lf_def_832f30d01d821a429b5e1b181001251538a5045532419517f82844431ea7118c p0 p1 p2 p3 p4 :=\n  (lf_lib_2f4ed7c9f10710a93c7981a134aa692543275e01b43856db37070156f22c46b0 (p1) (p2) (p3) (p4) ((And.right (h0))))\n",
+      "natural_language": "Assume (T0 \u2227 (T1 \u2227 (T2 \u2227 (T3 \u2227 T4)))). Establish T3. Certificate: Project the right component 3 times, then the left component. Formal proof reuse: 2f4ed7c9f10710a93c7981a134aa692543275e01b43856db37070156f22c46b0.",
+      "question": {
+        "id": "construction_48bafd363bb4bdd9b73e6bdbc537facd93db84620358e8dfeb4b842d3cf342ed",
+        "prompt": "Known conjunction: (T0 \u2227 (T1 \u2227 (T2 \u2227 (T3 \u2227 T4)))). Positions are numbered from zero. Which projection establishes T3?\nA: project position 4\nB: project position 3\nAnswer:",
+        "answer": "B",
+        "choices": {
+          "A": "project position 4",
+          "B": "project position 3"
+        },
+        "family": "and_elimination",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "48bafd363bb4bdd9b73e6bdbc537facd93db84620358e8dfeb4b842d3cf342ed",
+          "size": 5,
+          "constructive_operation": "and_elimination",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "Right-associated conjunction of 5 facts; goal T3. Project right 3 times, then left. The wrong position 4 yields T4, a different free proposition. Reused projection is applied to the right suffix.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/84cd25dc5fb54d5ca5888aa948f2aa65.lean",
+        "log_path": "audits/84cd25dc5fb54d5ca5888aa948f2aa65.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/8cbbaacad8d04917886c6fb8290ae79a.lean",
+        "source_sha256": "8c8a83a0d48bf2dc9ea1ca501111243639cbc1eebc54c5b4a5678a29acb5cd0e",
+        "log_path": "audits/8cbbaacad8d04917886c6fb8290ae79a.log",
+        "log_sha256": "54dddf860d7dc818a4874cbe1aec09fd97bb2e5a70b9a95ff177adcb9888462d",
+        "audited_declarations": 24
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/8cbbaacad8d04917886c6fb8290ae79a.lean": "8c8a83a0d48bf2dc9ea1ca501111243639cbc1eebc54c5b4a5678a29acb5cd0e",
+        "runs/constructive-loop/semantic-audit-library/audits/8cbbaacad8d04917886c6fb8290ae79a.log": "54dddf860d7dc818a4874cbe1aec09fd97bb2e5a70b9a95ff177adcb9888462d",
+        "runs/constructive-loop/semantic-audit-library/audits/84cd25dc5fb54d5ca5888aa948f2aa65.lean": "109bf00801477f029b79b8bbb0a04910001e91ebc241bb348b2905d1e17acaf7",
+        "runs/constructive-loop/semantic-audit-library/audits/84cd25dc5fb54d5ca5888aa948f2aa65.log": "d1bc03f75fc6276d854a6e9608ae9d40c39b1f57aacef83d6105c52af530d565"
+      }
+    },
+    {
+      "id": "371296e561cf5f1f444d437115aa26daeec94ea9083564431c5894fca3c246d0",
+      "family": "implication_chain",
+      "size": 6,
+      "index": 0,
+      "dependency_ids": [
+        "b15013e3dc0e14572ddb2e598dbc536d5306394180bd46fe7f30035350aa3edb"
+      ],
+      "structural_hash": "89d3d9ac1340ca58c52f7e843c96be37b015c650397f2e019ca135f5cf21b749",
+      "definition": "def lf_def_371296e561cf5f1f444d437115aa26daeec94ea9083564431c5894fca3c246d0 (p0 p1 p2 p3 p4 p5 p6 : Prop) : Prop := p6\n",
+      "lean_declaration": "theorem lf_lib_371296e561cf5f1f444d437115aa26daeec94ea9083564431c5894fca3c246d0 (p0 p1 p2 p3 p4 p5 p6 : Prop)\n    (h0 : p0)\n    (h1 : (p0 \u2192 p1))\n    (h2 : (p1 \u2192 p2))\n    (h3 : (p2 \u2192 p3))\n    (h4 : (p3 \u2192 p4))\n    (h5 : (p4 \u2192 p5))\n    (h6 : (p5 \u2192 p6))\n    : lf_def_371296e561cf5f1f444d437115aa26daeec94ea9083564431c5894fca3c246d0 p0 p1 p2 p3 p4 p5 p6 :=\n  (h6 ((lf_lib_b15013e3dc0e14572ddb2e598dbc536d5306394180bd46fe7f30035350aa3edb (p0) (p1) (p2) (p3) (p4) (p5) (h0) (h1) (h2) (h3) (h4) (h5))))\n",
+      "natural_language": "Assume T0; (T0 \u2192 T1); (T1 \u2192 T2); (T2 \u2192 T3); (T3 \u2192 T4); (T4 \u2192 T5); (T5 \u2192 T6). Establish T6. Certificate: Starting from T0, apply implication assumptions in order from r1 through r6. Formal proof reuse: b15013e3dc0e14572ddb2e598dbc536d5306394180bd46fe7f30035350aa3edb.",
+      "question": {
+        "id": "construction_89d3d9ac1340ca58c52f7e843c96be37b015c650397f2e019ca135f5cf21b749",
+        "prompt": "Initially T0 holds. r1: T0 implies T1; r2: T1 implies T2; r3: T2 implies T3; r4: T3 implies T4; r5: T4 implies T5; r6: T5 implies T6. Which ordered rule list establishes T6?\nA: r2, r1, r3, r4, r5, r6\nB: r1, r2, r3, r4, r5, r6\nAnswer:",
+        "answer": "B",
+        "choices": {
+          "A": "r2, r1, r3, r4, r5, r6",
+          "B": "r1, r2, r3, r4, r5, r6"
+        },
+        "family": "implication_chain",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "89d3d9ac1340ca58c52f7e843c96be37b015c650397f2e019ca135f5cf21b749",
+          "size": 6,
+          "constructive_operation": "implication_chain",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "T0 reaches T6 by r1 through r6; the wrong option starts r2 before T1 is available. The prior chain, when present, proves the prefix and the final rule extends it.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/2d5be97b0b0a45b7933dbace3a23f509.lean",
+        "log_path": "audits/2d5be97b0b0a45b7933dbace3a23f509.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/6e9da32576e84990b48983e5fa74fb40.lean",
+        "source_sha256": "aa846460f2704ba3f94be010642d7a5e09fd97d32b0b33003122d9245bb6ca0a",
+        "log_path": "audits/6e9da32576e84990b48983e5fa74fb40.log",
+        "log_sha256": "5eb7fcc0c1af0b892bf6173be8ab8befd71ad8621fba560c40e06ac3f3bbe7ae",
+        "audited_declarations": 26
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/6e9da32576e84990b48983e5fa74fb40.lean": "aa846460f2704ba3f94be010642d7a5e09fd97d32b0b33003122d9245bb6ca0a",
+        "runs/constructive-loop/semantic-audit-library/audits/6e9da32576e84990b48983e5fa74fb40.log": "5eb7fcc0c1af0b892bf6173be8ab8befd71ad8621fba560c40e06ac3f3bbe7ae",
+        "runs/constructive-loop/semantic-audit-library/audits/2d5be97b0b0a45b7933dbace3a23f509.lean": "b3f0af85054d0685ea7e325d3614bc17e8a595cef43a4397d3906e9989035ba7",
+        "runs/constructive-loop/semantic-audit-library/audits/2d5be97b0b0a45b7933dbace3a23f509.log": "067640d43e1bcaf33b160a7791d90d4211175c917b7180e40b49b0fd3c18c644"
+      }
+    },
+    {
+      "id": "59115fb0191b648b19564ac195978b9a1140b429486c73af799c46f9de97fb3d",
+      "family": "and_introduction",
+      "size": 6,
+      "index": 0,
+      "dependency_ids": [
+        "89056b5a777cd4712a7af4a7fa84d098d2b30109d86bf3c417de106ec9c2c49f"
+      ],
+      "structural_hash": "809957d48587bdac05903457a510571b5d1601fb5d21732746963943feb7847b",
+      "definition": "def lf_def_59115fb0191b648b19564ac195978b9a1140b429486c73af799c46f9de97fb3d (p0 p1 p2 p3 p4 p5 : Prop) : Prop := (p0 \u2227 (p1 \u2227 (p2 \u2227 (p3 \u2227 (p4 \u2227 p5)))))\n",
+      "lean_declaration": "theorem lf_lib_59115fb0191b648b19564ac195978b9a1140b429486c73af799c46f9de97fb3d (p0 p1 p2 p3 p4 p5 : Prop)\n    (h0 : p0)\n    (h1 : p1)\n    (h2 : p2)\n    (h3 : p3)\n    (h4 : p4)\n    (h5 : p5)\n    : lf_def_59115fb0191b648b19564ac195978b9a1140b429486c73af799c46f9de97fb3d p0 p1 p2 p3 p4 p5 :=\n  (And.intro (h0) ((lf_lib_89056b5a777cd4712a7af4a7fa84d098d2b30109d86bf3c417de106ec9c2c49f (p1) (p2) (p3) (p4) (p5) (h1) (h2) (h3) (h4) (h5))))\n",
+      "natural_language": "Assume T0; T1; T2; T3; T4; T5. Establish (T0 \u2227 (T1 \u2227 (T2 \u2227 (T3 \u2227 (T4 \u2227 T5))))). Certificate: Introduce the right-associated conjunction using the individual facts in their listed order. Formal proof reuse: 89056b5a777cd4712a7af4a7fa84d098d2b30109d86bf3c417de106ec9c2c49f.",
+      "question": {
+        "id": "construction_809957d48587bdac05903457a510571b5d1601fb5d21732746963943feb7847b",
+        "prompt": "Known individual facts: T0, T1, T2, T3, T4, T5. Which assembly supplies every conjunct exactly as required by (T0 \u2227 (T1 \u2227 (T2 \u2227 (T3 \u2227 (T4 \u2227 T5)))))?\nA: assemble T0, T1, T2, T3, T4, T0\nB: assemble T0, T1, T2, T3, T4, T5\nAnswer:",
+        "answer": "B",
+        "choices": {
+          "A": "assemble T0, T1, T2, T3, T4, T0",
+          "B": "assemble T0, T1, T2, T3, T4, T5"
+        },
+        "family": "and_introduction",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "809957d48587bdac05903457a510571b5d1601fb5d21732746963943feb7847b",
+          "size": 6,
+          "constructive_operation": "and_introduction",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "All 6 distinct facts T0 through T5 are available. The correct assembly has each required conjunct; the bad assembly repeats T0 and omits T5. Its constructed result has the wrong type, even though the omitted fact remains separately assumed. Prior conjunction is instantiated on the suffix, then T0 is introduced.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/c500a55c92134a48aa7c556874d97b4e.lean",
+        "log_path": "audits/c500a55c92134a48aa7c556874d97b4e.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/1a6132fbe70d4c64888aab4179cecc91.lean",
+        "source_sha256": "77ce68a1e1248b45080d99fc3e8684ceed2a9a2445131e11d25953f1772f2780",
+        "log_path": "audits/1a6132fbe70d4c64888aab4179cecc91.log",
+        "log_sha256": "8faf5a420f097d34896413d039d0cef8acea3b14b599aceaec30a756d24ddb02",
+        "audited_declarations": 28
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/1a6132fbe70d4c64888aab4179cecc91.lean": "77ce68a1e1248b45080d99fc3e8684ceed2a9a2445131e11d25953f1772f2780",
+        "runs/constructive-loop/semantic-audit-library/audits/1a6132fbe70d4c64888aab4179cecc91.log": "8faf5a420f097d34896413d039d0cef8acea3b14b599aceaec30a756d24ddb02",
+        "runs/constructive-loop/semantic-audit-library/audits/c500a55c92134a48aa7c556874d97b4e.lean": "74dbf8075708a875dcf49245d1ed9b86888c455e5a533fb8b681b0080c3a18f4",
+        "runs/constructive-loop/semantic-audit-library/audits/c500a55c92134a48aa7c556874d97b4e.log": "112bec8110cdbcdc047c05594227d340aa6402ba2b2744a4c5857d58636a4531"
+      }
+    },
+    {
+      "id": "c2f1a296d9a265127fb0a971dbc9d675ca981d2275e124b46380f177fde2dee2",
+      "family": "and_elimination",
+      "size": 6,
+      "index": 4,
+      "dependency_ids": [
+        "832f30d01d821a429b5e1b181001251538a5045532419517f82844431ea7118c"
+      ],
+      "structural_hash": "313525d521cd713c319b06848e8c5e9cfb43553b19e3cc68dd57d278215ec13c",
+      "definition": "def lf_def_c2f1a296d9a265127fb0a971dbc9d675ca981d2275e124b46380f177fde2dee2 (p0 p1 p2 p3 p4 p5 : Prop) : Prop := p4\n",
+      "lean_declaration": "theorem lf_lib_c2f1a296d9a265127fb0a971dbc9d675ca981d2275e124b46380f177fde2dee2 (p0 p1 p2 p3 p4 p5 : Prop)\n    (h0 : (p0 \u2227 (p1 \u2227 (p2 \u2227 (p3 \u2227 (p4 \u2227 p5))))))\n    : lf_def_c2f1a296d9a265127fb0a971dbc9d675ca981d2275e124b46380f177fde2dee2 p0 p1 p2 p3 p4 p5 :=\n  (lf_lib_832f30d01d821a429b5e1b181001251538a5045532419517f82844431ea7118c (p1) (p2) (p3) (p4) (p5) ((And.right (h0))))\n",
+      "natural_language": "Assume (T0 \u2227 (T1 \u2227 (T2 \u2227 (T3 \u2227 (T4 \u2227 T5))))). Establish T4. Certificate: Project the right component 4 times, then the left component. Formal proof reuse: 832f30d01d821a429b5e1b181001251538a5045532419517f82844431ea7118c.",
+      "question": {
+        "id": "construction_313525d521cd713c319b06848e8c5e9cfb43553b19e3cc68dd57d278215ec13c",
+        "prompt": "Known conjunction: (T0 \u2227 (T1 \u2227 (T2 \u2227 (T3 \u2227 (T4 \u2227 T5))))). Positions are numbered from zero. Which projection establishes T4?\nA: project position 4\nB: project position 5\nAnswer:",
+        "answer": "A",
+        "choices": {
+          "A": "project position 4",
+          "B": "project position 5"
+        },
+        "family": "and_elimination",
+        "split": "train",
+        "provenance": {
+          "structural_hash": "313525d521cd713c319b06848e8c5e9cfb43553b19e3cc68dd57d278215ec13c",
+          "size": 6,
+          "constructive_operation": "and_elimination",
+          "source": "restricted_constructive_DSL"
+        }
+      },
+      "observation": "Right-associated conjunction of 6 facts; goal T4. Project right 4 times, then left. The wrong position 5 yields T5, a different free proposition. Reused projection is applied to the right suffix.",
+      "wrong_option_real_lean_result": {
+        "status": "rejected",
+        "reason": "lean_proof_or_zero_axiom_audit_failed",
+        "source_path": "audits/023cf971c33143db9d321471b240e990.lean",
+        "log_path": "audits/023cf971c33143db9d321471b240e990.log",
+        "record": null
+      },
+      "verification": {
+        "status": "verified",
+        "reason": "real_lean_zero_axiom_audits",
+        "lean": "verified",
+        "axioms": [],
+        "actual_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "executable": "/Users/ianprado02/.elan/bin/lean",
+        "launcher_sha256": "d52c4516a6c6f0cc14cab0ecf36e5058a764f39b109d8609be7dd1279ca41e9f",
+        "compiler_path": "/Users/ianprado02/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+        "cleared_environment_overrides": [
+          "ELAN_TOOLCHAIN",
+          "LEAN_PATH",
+          "LEAN_SRC_PATH",
+          "LEAN_SYSROOT"
+        ],
+        "source_path": "audits/bb5d700a13234fdda21b17661aedd0f3.lean",
+        "source_sha256": "98fa608ed9481c0ca78449e185045cb232ea88e0215f7c97f98942147d743516",
+        "log_path": "audits/bb5d700a13234fdda21b17661aedd0f3.log",
+        "log_sha256": "cf50e2f08f9399e6d5c016eb005939d52f26c028e5f76151e29eb215e4d304a6",
+        "audited_declarations": 30
+      },
+      "retained_artifact_sha256": {
+        "runs/constructive-loop/semantic-audit-library/audits/bb5d700a13234fdda21b17661aedd0f3.lean": "98fa608ed9481c0ca78449e185045cb232ea88e0215f7c97f98942147d743516",
+        "runs/constructive-loop/semantic-audit-library/audits/bb5d700a13234fdda21b17661aedd0f3.log": "cf50e2f08f9399e6d5c016eb005939d52f26c028e5f76151e29eb215e4d304a6",
+        "runs/constructive-loop/semantic-audit-library/audits/023cf971c33143db9d321471b240e990.lean": "4c9eba25bbfe51e249a2a6f5f5ac87dd2c05873cfff8da032b63cf0be2f05806",
+        "runs/constructive-loop/semantic-audit-library/audits/023cf971c33143db9d321471b240e990.log": "36d78c885e22733b40acbcdb60c433b5fb061191b38709319b417e73179bec05"
+      }
+    }
+  ],
+  "integrity_review": {
+    "writer_exclusion": "Atomic directory lock; second writer is rejected before reading or compiling.",
+    "commit_policy": "Immutable record written exclusively, index append replaces one temporary index atomically.",
+    "reader_during_commit": "Reader may fail closed between record creation and index replacement; it never treats an incomplete index as accepted.",
+    "interrupted_writer": "A stale lock blocks further admissions and requires explicit recovery.",
+    "read_replay": "Reopening runs actual Lean in a cleaned temporary directory, leaving persisted file contents/keyset unchanged.",
+    "trust_boundary": "The official pinned Lean installation and filesystem are trust anchors. Whole-directory deletion/replacement by a privileged external actor is not prevented by content hashes.",
+    "novelty": "Canonical family/size/projection structure, independent of names, provenance and proof spelling; not a decision procedure for arbitrary logical equivalence."
+  },
+  "completed_utc": "2026-10-17T07:20:46.866058+00:00",
+  "final_snapshot": {
+    "foundation_hash": "39d0bae34a454bb6ce69fc0fc12733500ac431bb21c65420567c77f72c2bd338",
+    "record_ids": [
+      "676e1b49c06c54943615d1aed6b8502cbd20bc5dd5ed7966af0ee106fe6a96c2",
+      "54e037d360591b2be54bf3d11a5e288d924d55c3c89169cdb1e40c1fa9839293",
+      "91d20fb86a7ed503d6c5d7ccf7fa660835a13d1c1d0685913065bb3937392595",
+      "9806bccda8ba3d9bfedd1fdf813ef309025613336c9c03b4a4471d10dbf3c129",
+      "76daeaaf2ffa950ea11515dbf62d3db5c692d0927203abbc1a24805ff79552c2",
+      "b9baba65716c93d776edc8988b72f48f8c90b36302fed98b20b2c46c83507651",
+      "07521fdedec8740ab0b126ca5a1d73ba53a7ca9be561ed1d5bbd46cc39828741",
+      "a87b57e7acfa26d74ff77cfad7a7bff43b65d0d47948478ad1cd6516943c9c92",
+      "2f4ed7c9f10710a93c7981a134aa692543275e01b43856db37070156f22c46b0",
+      "b15013e3dc0e14572ddb2e598dbc536d5306394180bd46fe7f30035350aa3edb",
+      "89056b5a777cd4712a7af4a7fa84d098d2b30109d86bf3c417de106ec9c2c49f",
+      "832f30d01d821a429b5e1b181001251538a5045532419517f82844431ea7118c",
+      "371296e561cf5f1f444d437115aa26daeec94ea9083564431c5894fca3c246d0",
+      "59115fb0191b648b19564ac195978b9a1140b429486c73af799c46f9de97fb3d",
+      "c2f1a296d9a265127fb0a971dbc9d675ca981d2275e124b46380f177fde2dee2"
+    ],
+    "record_count": 15,
+    "head": "c2f1a296d9a265127fb0a971dbc9d675ca981d2275e124b46380f177fde2dee2",
+    "snapshot_hash": "aa3cfea71e427ecf4ac5fa0584a0cd5dabfcb0299448a1daf3810cbad36528c3"
+  },
+  "read_replay_preserves_file_keyset_and_hashes": true,
+  "summary": {
+    "examples_per_family": 5,
+    "total_accepted_examples": 15,
+    "dependency_reusing_examples_per_family": 4,
+    "wrong_constructions_rejected_by_actual_Lean": 15,
+    "human_approval": false
+  },
+  "source_sha256": {
+    "src/lemmaferry/library.py": "f8ede76cc2ee4bebaec5b813838d05622e46eec234f4619e102f2ec2f37f7622",
+    "src/lemmaferry/generation.py": "2c39b12ba5f3e2125c0fc52aea81226c73e525df77aecbfa0339bfa394244011",
+    "tests/test_library.py": "704ee5ef1ce7d7ced7577664fa4eff3ce382c6cd11d7c23786e08bdac43d36fb",
+    "tests/test_generation.py": "be3c998d795b0908300d69cccb8041597dfe02daa82c2691f500558618fa52d7"
+  },
+  "manual_review_completed_utc": "2026-10-17T07:21:39.660567+00:00",
+  "manual_review_notes": [
+    "Reviewed all15 displayed theorem/proof/choice pairs at sizes2through6. Chain reuse extends the prior prefix by the final implication; all five reversed-first-two-rule options require T1 before it is obtained.",
+    "All five And-introduction proofs instantiate the prior conjunction on the suffix and add T0. The bad assembly duplicates T0 and omits the final required conjunct. This labels a particular construction as ill-typed; it does not label the goal false under assumptions that already include every fact.",
+    "And-elimination goals are T0,T1,T2,T3,T4 for conjunction sizes2,3,4,5,6. Prior projection is applied to the right suffix. The wrong option always chooses the final different proposition; all15 corresponding bad proof terms were rejected by realLean.",
+    "Controlled language uses Ti as the rendered name of formal proposition pi; right-associated conjunction order and zero-based projection positions agree with the formal terms.",
+    "All15 correct admissions have recognized zero-axiom audits for their fresh definition and theorem. Twelve admissions actually call accepted prior lemmas. This is an AI semantic review; user human approval is pending."
+  ],
+  "integrity_controls": {
+    "concurrent_writer": {
+      "status": "passed",
+      "coordination": "The first writer paused at compiler entry while holding the actual directory lock, then called the original real Lean gate unchanged.",
+      "second_writer_status": {
+        "status": "rejected",
+        "reason": "library_writer_already_active",
+        "record": null
+      },
+      "snapshot_unchanged_while_first_writer_in_progress": true,
+      "first_writer_status": "accepted",
+      "final_record_count": 1,
+      "lock_removed_after_completion": true,
+      "reopening_preserves_exact_files_and_hashes": true,
+      "library_root": "runs/constructive-loop/concurrency-audit-library",
+      "accepted_record_id": "b75ed37b09e2197874d8bc2f4f98fc6fafbb3bc0783417217554c1af193560d3",
+      "source_sha256": "b6e8eb93b75d53dc044fe43e805df882ac8dc303fa2b63a0ac0670c06e508de0",
+      "log_sha256": "08ee694d53a6a6708437844ed891939aae8611094fba41fca77679d84f054045"
+    }
+  }
+}

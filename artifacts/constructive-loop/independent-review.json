@@ -1,0 +1,239 @@
+{
+  "status": "passed",
+  "reviewed_at_utc": "2026-10-17T07:27:15.455302+00:00",
+  "reviewer": "independent Rosetta implementation agent; not human review",
+  "run": "runs/constructive-loop-v3",
+  "command": [
+    "/Users/ianprado02/Downloads/lemmaferry/.venv-llm/bin/python",
+    "experiments/verify_constructive_run.py",
+    "runs/constructive-loop-v3",
+    "--torch-threads",
+    "1"
+  ],
+  "execution": {
+    "returncode": 0,
+    "parsed_stdout": {
+      "status": "passed",
+      "hashed_files_checked": 88,
+      "real_lean_replay": true,
+      "verified_library_records": 12,
+      "iterations": 2,
+      "fixed_evaluation_sha256": "dba4b0a46b4c1f5aec5bdabe746381162dceaf6859f7cd7e381239f59f98f7c7",
+      "standalone_checkpoint_reloads": [
+        {
+          "iteration": 0,
+          "arm": "mean_control",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.61058247089386,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 0,
+          "arm": "ordinary_control",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.61557428042094,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 0,
+          "arm": "shuffled_control",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.61105215549469,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 0,
+          "arm": "text_control",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.56175971031189,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 0,
+          "arm": "verified",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.610734661420185,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "mean_control",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.30880359808604,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "ordinary_control",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.313221613566082,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "shuffled_control",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.309770186742146,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "text_control",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.23208673795064,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "verified",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.309121529261272,
+          "accuracy": 0.5833333333333334
+        }
+      ],
+      "evaluation_feedback_detected": false,
+      "training_budgets_matched": true
+    },
+    "stderr": ""
+  },
+  "run_artifact_manifest_sha256": "384105f9f9359bcd28a7d94568e02f1fd175a6664a89057de6b4d9791dc41b46",
+  "source_sha256": {
+    "src/lemmaferry/__init__.py": "e5d1d920010806dc93f59014a014b50219b0ee88ba8f6d6a28101dfad29adad8",
+    "src/lemmaferry/alignment.py": "6c6064733bf35390cb3a62d973dd96a42097de7061a3f2369d9a6a209444abc9",
+    "src/lemmaferry/correspondence.py": "34c8ea54519b1888c35a67eff5230444ae83fcf6c601e2acfecd643c56e316bf",
+    "src/lemmaferry/generation.py": "2c39b12ba5f3e2125c0fc52aea81226c73e525df77aecbfa0339bfa394244011",
+    "src/lemmaferry/learning.py": "3fc8fbcdbf217ce590b7d5d3d2e4ca4e3ed858abaa000d3428a3b7d27fecd7bf",
+    "src/lemmaferry/library.py": "f8ede76cc2ee4bebaec5b813838d05622e46eec234f4619e102f2ec2f37f7622",
+    "src/lemmaferry/logic.py": "1309175d2186679e11916c1d7000af8be2b3c7fa31c29dedb55c1dd49eda7eb7",
+    "src/lemmaferry/loop.py": "a4de6aee6ea4c3f2e4762701d1a05a069b8837a4bebec8248666c72502a9b395",
+    "src/lemmaferry/representations.py": "166d1555240f7d5b349b54a72fe214e6c44986da9df43e63f633bfaefef0f8d2",
+    "src/lemmaferry/rosetta.py": "704d97cf03e535a0998c3d13f4e26de4963bd80a685f59900267a6dc6c8b5f1d",
+    "experiments/verify_constructive_run.py": "4203d5214d4d2dce57d3c6958c19f9833eb3484f081a7ac8f10cac41dd5d2bf3",
+    "artifacts/constructive-loop/independent-review.py": "0b87dc13ab856bdbb3fece12c93bdd84834da40cead03f711770a35e3c7005c7"
+  },
+  "registered_source_matches_current": {
+    "__init__.py": true,
+    "alignment.py": true,
+    "correspondence.py": true,
+    "generation.py": true,
+    "learning.py": true,
+    "library.py": true,
+    "logic.py": true,
+    "loop.py": true,
+    "representations.py": true,
+    "rosetta.py": true
+  },
+  "complete_artifact_hash_keyset_checked": true,
+  "historical_notes": {
+    "unhashed_replay_artifacts": [],
+    "source_changed_after_run": []
+  },
+  "study_history": {
+    "earlier_three_arm_run": "runs/constructive-loop-v2",
+    "earlier_status": "exploratory engineering execution; preceded addition of correspondence-specific functional controls",
+    "protocol_change": "Added shuffled-pair and training-mean auxiliary targets with identical verified prompts and labels; no layer, lambda grid, task set or success threshold was selected from those results.",
+    "earlier_review": "artifacts/constructive-loop/independent-review-three-arm-exploratory.json"
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "risks": {
+        "mean_control": 16.61058247089386,
+        "ordinary_control": 16.61557428042094,
+        "shuffled_control": 16.61105215549469,
+        "text_control": 16.56175971031189,
+        "verified": 16.610734661420185
+      },
+      "accuracies": {
+        "mean_control": 0.5833333333333334,
+        "ordinary_control": 0.5833333333333334,
+        "shuffled_control": 0.5833333333333334,
+        "text_control": 0.5833333333333334,
+        "verified": 0.5833333333333334
+      },
+      "matched_training_budgets": {
+        "updates_this_iteration": 2,
+        "cumulative_updates": 2,
+        "processed_padded_tokens": 4096,
+        "supervised_answer_tokens": 6,
+        "examples_seen": 2
+      },
+      "round_trip_mse": {
+        "S_of_T_math": 0.7561075337678022,
+        "T_of_S_language": 0.7914914177790164
+      },
+      "maps_refit_from_raw_activations": true,
+      "source_and_recipient_extraction_recomputed": true,
+      "translated_targets_match_T_of_math": true,
+      "text_control_has_exact_donor_information": true,
+      "control_auxiliary_targets_match_own_preupdate_states": true,
+      "correspondence_controls": {
+        "shuffled_control": {
+          "target_formula_verified": true,
+          "identical_prompts_answers_and_choices": true
+        },
+        "mean_control": {
+          "target_formula_verified": true,
+          "identical_prompts_answers_and_choices": true
+        }
+      },
+      "feedback_recomputed_from_training_only": true
+    },
+    {
+      "iteration": 1,
+      "risks": {
+        "mean_control": 16.30880359808604,
+        "ordinary_control": 16.313221613566082,
+        "shuffled_control": 16.309770186742146,
+        "text_control": 16.23208673795064,
+        "verified": 16.309121529261272
+      },
+      "accuracies": {
+        "mean_control": 0.5833333333333334,
+        "ordinary_control": 0.5833333333333334,
+        "shuffled_control": 0.5833333333333334,
+        "text_control": 0.5833333333333334,
+        "verified": 0.5833333333333334
+      },
+      "matched_training_budgets": {
+        "updates_this_iteration": 2,
+        "cumulative_updates": 4,
+        "processed_padded_tokens": 4096,
+        "supervised_answer_tokens": 6,
+        "examples_seen": 2
+      },
+      "round_trip_mse": {
+        "S_of_T_math": 0.4468398636956112,
+        "T_of_S_language": 0.576384578105707
+      },
+      "maps_refit_from_raw_activations": true,
+      "source_and_recipient_extraction_recomputed": true,
+      "translated_targets_match_T_of_math": true,
+      "text_control_has_exact_donor_information": true,
+      "control_auxiliary_targets_match_own_preupdate_states": true,
+      "correspondence_controls": {
+        "shuffled_control": {
+          "target_formula_verified": true,
+          "identical_prompts_answers_and_choices": true
+        },
+        "mean_control": {
+          "target_formula_verified": true,
+          "identical_prompts_answers_and_choices": true
+        }
+      },
+      "feedback_recomputed_from_training_only": true
+    }
+  ],
+  "static_review": {
+    "external_P_values_used_for_generation": false,
+    "evaluation_flow": "P is measured before/after updates; proposal feedback is recomputed only on accepted training experience.",
+    "budget_scope": "Equal optimizer steps, padded training tokens, supervised answer tokens and initial weights. This is not equal total end-to-end runtime: calibration and extraction add overhead.",
+    "target_scope": "T maps formal-certificate states to natural-derivation states; its targets supervise a recipient question-prompt state via an auxiliary loss."
+  },
+  "limitations": [
+    "Randomly initialized tiny models and 24 explicitly authored evaluation fixtures; no specialist or general-purpose capability evidence.",
+    "All arms have identical answer accuracy after both iterations; text control has lower answer NLL than translated treatment.",
+    "Family-held-out calibration examples can subsequently enter D_t, and proof dependency constituents need not be held out.",
+    "Round-trip consistency and geometric alignment do not establish semantic preservation or sustained broad reasoning improvements."
+  ]
+}

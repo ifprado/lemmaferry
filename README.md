@@ -2,14 +2,16 @@
 
 **Verified mathematics, measurable transfer.**
 
-LemmaFerry is an open research starter for generating formal reasoning tasks, fitting translators between representation spaces, and testing whether mathematical experience improves language-model reasoning.
+LemmaFerry is an experimental workbench for growing a verified constructive library, learning correspondences between mathematical and language representations, and testing whether that experience improves a language model.
 
-The first question is deliberately small: **can a learned affine map carry useful structure between two representations, and can we tell that apart from a misleading geometric match?** The larger hypothesis is that an adaptive supply of verified mathematics can become useful training experience for a general model. This repository does not establish that hypothesis.
+The hypothesis is that constructive mathematics can supply expandable, verifiable learning experience, and that a learned correspondence can make it useful beyond the generated proofs. This branch implements bounded **generation → verification → translation → learning → feedback-guided generation** cycles. Sustained broad improvement remains a conjecture to test.
 
 ## Start here
 
-- Download the [published source and numerical evidence](https://github.com/ifprado/lemmaferry/releases/tag/research-2026-10-17), with SHA256 checksums. The immutable source snapshot predates the separate human audit confirmation linked below.
-- Read the [first actual-model results](docs/validation.md#first-actual-model-experiment): vector alignment improved, but the translated state did not beat ordinary answers or supplying the same proof as text.
+- Read the [constructive learning-loop implementation](docs/constructive-loop.md), including the foundation, cumulative library, two translators, persistent recipient updates, independent evaluation, and feedback controls.
+- Download the [constructive-loop branch release](https://github.com/ifprado/lemmaferry/releases/tag/constructive-loop-v0.2.0), with source, execution evidence, and SHA256 checksums.
+- The [earlier frozen baseline and first-model release](https://github.com/ifprado/lemmaferry/releases/tag/research-2026-10-17) remains available; its source snapshot predates the separate human audit confirmation linked below.
+- Read the [first actual-model results](docs/validation.md#first-actual-model-experiment): vector alignment improved, but the translated state did not beat ordinary answers or supplying the same proof as text in answer accuracy.
 - Inspect the [latest alignment reproduction](artifacts/lf-001/reproduction.json) and [real Lean-verification report](docs/lf-002-lean-verification.md). The accepted dataset is in [`results/lf-002/checked/`](results/lf-002/checked/), with 20 verified examples per split; `examples/logic/` retains the original three-example preparation samples.
 - Read the [actionable roadmap](docs/roadmap.md), or open [the interactive roadmap](docs/index.html) in your browser.
 - Run the first two CPU experiments below.
@@ -40,6 +42,8 @@ python experiments/toy_alignment.py --seed 7 --output artifacts/my_alignment.jso
 
 | Component | Status and scope |
 | --- | --- |
+| Cumulative constructive library | Content-addressed, append-only records, explicit foundation and premises, dependency reuse, structural deduplication, real Lean admission, and fresh replay on reopening. |
+| Library-conditioned generation | Parameterized implication chains and conjunction introduction/elimination. Later proofs invoke prior accepted lemmas; recipient training losses guide subsequent family/depth allocation. |
 | Affine ridge translator | Implemented and tested on artificial numeric vectors with planted shared factors. Includes training-only preprocessing and held-out data. |
 | Misalignment controls | Shuffled-anchor and mean-output baselines; symmetric-cloud counterexample with correct geometry and wrong semantics. |
 | Formal task generator | Implemented constructive propositional implication graphs. Short and longer valid rule chains share the same theorem. |
@@ -47,11 +51,25 @@ python experiments/toy_alignment.py --seed 7 --output artifacts/my_alignment.jso
 | Lean runner | Implemented timeouts, per-example statuses and zero-axiom audit. A [follow-up run](docs/lf-002-lean-verification.md) verified 60 generated examples and both proofs of each with Lean 4.35.0 and recognized zero-axiom audits. |
 | Actual LLM collector | Executed on pinned Qwen2.5 Math/general 1.5B checkpoints: CPU smoke checks, a 30-pair pilot, and a separate 448-pair collection with matching tokenizers and input hashes. |
 | Real-model affine fitter | Executed with 256 training, 64 validation, and 128 test pairs. Validation selected ridge alpha `1.0`; test MSE was 0.290 times the training-mean baseline. |
+| Bidirectional Rosetta maps | Learned `T` and `S`, the exact raw-coordinate ridge objective, separate formal/language inputs, validation-selected regularization, round trips, fixed reference slots, shuffled-pair and mean controls. |
 | Activation intervention | Implemented last-prompt-token patching at layer 14 with self-patch and shuffled/mean/zero controls. Accuracy was 51.6%, versus 53.9% ordinary and 64.1% with identical proof information as text. |
 | Small student training | Executed a 539,437-parameter causal student on fixed verified data, with three seeds and exactly matched label-permutation controls. No held-out improvement; this is a restricted from-scratch student, not general-model distillation. |
-| Adaptive self-play | Not run. The fixed-data experiment did not establish value that would justify iteration. |
+| Persistent recipient learning | Tiny causal model and local pinned pretrained-model adapters; weights and AdamW state persist through iterations. Language-only and translated-state training modes have matched controls. |
+| Bounded feedback loop | Executable two-cycle workflow with a frozen independent evaluation set kept out of curriculum feedback. Mechanism execution does not establish sustained capability improvement. |
 
 The implication generator always chooses a reachable target. Its useful answer is a rule chain. Binary reachable/not-reachable accuracy on these records would be trivial and must not be used as evidence of reasoning.
+
+## Run the constructive learning loop
+
+Install the pinned Lean toolchain, then use the optional learning environment:
+
+```bash
+python -m pip install -e '.[llm]'
+python experiments/run_constructive_loop.py --output runs/my-loop --experience-mode translated --iterations 2 --steps 2
+python experiments/verify_constructive_run.py runs/my-loop
+```
+
+This default is a small CPU mechanism test. The [full protocol](docs/constructive-loop.md) provides the cached-pretrained-model command, five training arms, fixed evaluation format, artifact layout, and scientific limits. No checkpoint download occurs implicitly.
 
 ## Run the formal checker
 
@@ -76,7 +94,7 @@ The [actual-model milestone](docs/llm-experiment.md) starts with related Qwen ma
 3. Improved answers after training, without the mathematical teacher present.
 4. Repeated improvements from an adaptive generation loop at a fixed budget.
 
-Each requires a separate experiment. The current starter demonstrates artificial-vector experiments and bounded formal-data verification.
+Each requires separate evidence. The repository includes artificial-vector checks, actual frozen-model interventions, a fixed-student experiment, and the new bounded constructive learning-loop implementation.
 
 ## First reproducible results
 

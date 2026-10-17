@@ -1,6 +1,6 @@
 # Preparation checks and measured results
 
-These records describe what was actually executed while preparing the starter on October 16, 2026, Pacific time. They are not results from a language model.
+This chapter retains preparation-time checks and later measured experiments. Historical sections preserve their original execution scope; the later actual-model and constructive-loop sections report real language-model runs.
 
 ## Follow-up runs
 
@@ -239,3 +239,70 @@ intervals, student budgets and hashes, and a real-Qwen self-patch control. The
 independent cached self-patch error was `1.86e-5`, and the full-prompt self-patch
 error was zero. That immutable agent record predates the separate human
 correspondence signoff above; its historical pending status is preserved.
+
+## Constructive-loop refactor
+
+The [constructive-loop protocol](constructive-loop.md) implements cumulative
+library-conditioned verification, distinct formal/language extraction, learned
+maps in both directions, persistent recipient updates, independent evaluation,
+and training-only feedback for subsequent generation. Final executions used
+five training arms; the earlier three-arm runs were exploratory. Adding the
+shuffled and mean auxiliary-target controls did not change seed, layer,
+optimizer, or training budget.
+
+The [tiny run](../artifacts/constructive-loop/tiny-run-summary.json) completed two
+iterations with twelve admitted lemmas, including six second-iteration proofs
+that invoke earlier accepted lemmas. Each arm performed four persistent optimizer
+updates. The [independent review](../artifacts/constructive-loop/independent-review.json)
+recomputed maps, extraction, auxiliary targets, feedback, ten checkpoints, and
+all 88 run-file hashes. All five arms scored 14/24 on the fixed pipeline fixture;
+the mean target slightly outperformed the paired translator on sequence loss.
+
+The [pretrained run](../artifacts/constructive-loop/qwen-run-summary.json) used
+the same pinned Qwen Math/general 1.5B pair as the first experiment, with a
+trainable 24,576-parameter residual adapter for each recipient arm. It completed
+two iterations, admitted twelve lemmas, and performed two AdamW updates per arm.
+The recipient base was shared and frozen; mathematical source weights were
+separate and frozen. All arms had identical initialization, update counts,
+supervised answer tokens, padded training shapes, and optimizer settings.
+
+| Final pretrained arm | Full-answer NLL, including EOS | Full-answer choice accuracy |
+| --- | ---: | ---: |
+| Paired translated target | 1.923652 | 15/24 |
+| Shuffled-pair target | 1.923826 | 15/24 |
+| Recipient training-mean target | 1.923824 | 15/24 |
+| Same donor information as text | 3.144004 | 15/24 |
+| Ordinary-language training control | 4.559997 | 15/24 |
+| Initial ordinary recipient | 4.681065 | 16/24 |
+
+The near-identical paired, shuffled, and mean results do not support a benefit
+from learned semantic correspondence. A separately labeled
+[posthoc token diagnostic](../artifacts/constructive-loop/qwen-answer-diagnostics.json)
+reproduced every saved prediction and per-example loss within `6e-7`. It found
+that the paired arm's lower sequence loss came from EOS calibration: mean EOS
+NLL fell from 4.0140 to 1.2221, while answer-content NLL worsened from 0.6671 to
+0.7015. Content-only choice accuracy remained 15/24; the text arm reached 16/24.
+The registered full-answer metric was retained; these diagnostics did not select
+hyperparameters or trigger retraining.
+
+The [full pretrained-run verification](../artifacts/constructive-loop/qwen-run-verification.json)
+replayed the twelve-theorem Lean library, checked all 88 execution-file hashes,
+reloaded all ten intermediate/final adapter checkpoints, reproduced per-example
+scores, and checked continued optimizer moments, identical initial weights,
+translated targets, and both controls' pre-update state targets. The same checks
+passed for the [tiny run](../artifacts/constructive-loop/tiny-run-verification.json).
+
+The evaluation fixture was authored separately from the proof generator and
+frozen before training. It contains only 24 simple questions from four domains,
+and these runs use one seed and very small update budgets. These measurements
+validate the mechanism and expose a misleading loss signal. They do not
+establish broad reasoning transfer or sustained improvement.
+
+The [new semantic audit](../artifacts/constructive-loop/semantic-audit.json)
+checks five examples from each constructive family and fifteen corresponding
+wrong constructions rejected by actual Lean. It includes dependency reuse,
+immutable replay, and a real concurrent-writer control. This is agent review;
+the human approval recorded earlier applies to the original baseline examples.
+The [commands and source hashes](../artifacts/constructive-loop/commands.json),
+runtime, test logs, protocols, and checked example libraries are retained beside
+the code. The release bundle restores raw activations, maps, and checkpoints.

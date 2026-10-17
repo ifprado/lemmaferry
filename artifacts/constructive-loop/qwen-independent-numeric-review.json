@@ -1,0 +1,95 @@
+{
+  "status": "passed_limited_numeric_review",
+  "reviewed_at_utc": "2026-10-17T07:28:20.339816+00:00",
+  "reviewer": "independent Rosetta implementation agent; not human review",
+  "run": "runs/constructive-loop-qwen-v2",
+  "command": [
+    "/Users/ianprado02/Downloads/lemmaferry/.venv-llm/bin/python",
+    "artifacts/constructive-loop/independent-qwen-numeric-review.py"
+  ],
+  "hashed_files_checked": 88,
+  "complete_hash_keyset_checked": true,
+  "verified_library_records_real_Lean_replayed": 12,
+  "source_hashes_match_execution": {
+    "__init__.py": true,
+    "alignment.py": true,
+    "correspondence.py": true,
+    "generation.py": true,
+    "learning.py": true,
+    "library.py": true,
+    "logic.py": true,
+    "loop.py": true,
+    "representations.py": true,
+    "rosetta.py": true
+  },
+  "source_sha256": {
+    "artifacts/constructive-loop/independent-qwen-numeric-review.py": "40acdb125f4fbdd115159d381ecdf883a949bc449130f13b82dead7a0bab0d00",
+    "src/lemmaferry/rosetta.py": "704d97cf03e535a0998c3d13f4e26de4963bd80a685f59900267a6dc6c8b5f1d",
+    "src/lemmaferry/loop.py": "a4de6aee6ea4c3f2e4762701d1a05a069b8837a4bebec8248666c72502a9b395",
+    "src/lemmaferry/learning.py": "3fc8fbcdbf217ce590b7d5d3d2e4ca4e3ed858abaa000d3428a3b7d27fecd7bf"
+  },
+  "run_artifact_manifest_sha256": "326f4c243b40d0b428a577ac1622018a56d3d2187ea78765af39eb4eb585127c",
+  "iterations": [
+    {
+      "iteration": 0,
+      "reported_risks": {
+        "mean_control": 3.510225012898445,
+        "ordinary_control": 4.609485616286595,
+        "shuffled_control": 3.5101461509863534,
+        "text_control": 3.933259146908919,
+        "verified": 3.510143667459488
+      },
+      "reported_accuracies": {
+        "mean_control": 0.6666666666666666,
+        "ordinary_control": 0.625,
+        "shuffled_control": 0.6666666666666666,
+        "text_control": 0.625,
+        "verified": 0.6666666666666666
+      },
+      "T_S_and_shuffled_maps_refit_from_raw_arrays": true,
+      "translated_shuffled_and_mean_targets_recomputed": true,
+      "identical_prompt_and_label_correspondence_controls": true,
+      "exact_donor_text_control": true,
+      "adapter_tensor_hashes_and_optimizer_steps_verified": true,
+      "round_trip_mse": {
+        "S_of_T_math": 0.5181329024370159,
+        "T_of_S_language": 1.063971483132238
+      }
+    },
+    {
+      "iteration": 1,
+      "reported_risks": {
+        "mean_control": 1.923823571453492,
+        "ordinary_control": 4.559997419516246,
+        "shuffled_control": 1.923826362316807,
+        "text_control": 3.144004449248314,
+        "verified": 1.9236517529934645
+      },
+      "reported_accuracies": {
+        "mean_control": 0.625,
+        "ordinary_control": 0.625,
+        "shuffled_control": 0.625,
+        "text_control": 0.625,
+        "verified": 0.625
+      },
+      "T_S_and_shuffled_maps_refit_from_raw_arrays": true,
+      "translated_shuffled_and_mean_targets_recomputed": true,
+      "identical_prompt_and_label_correspondence_controls": true,
+      "exact_donor_text_control": true,
+      "adapter_tensor_hashes_and_optimizer_steps_verified": true,
+      "round_trip_mse": {
+        "S_of_T_math": 0.4508043752321718,
+        "T_of_S_language": 0.6174236856497178
+      }
+    }
+  ],
+  "not_independently_recomputed": [
+    "pretrained model activation extraction",
+    "ordinary/text self-state auxiliary targets",
+    "capability answer NLL and predictions",
+    "training-example feedback loss values"
+  ],
+  "scope": "Stored numeric and provenance consistency only. No pretrained models were instantiated. The separate full verifier is required for model-dependent checks.",
+  "history": "The earlier three-arm Qwen run was exploratory; the five-arm follow-up adds shuffled-pair and mean-target functional controls without tuning layers, regularization grid, tasks, or success thresholds.",
+  "claim": "No semantic correspondence, useful transfer, or sustained broad reasoning improvement is established by this review."
+}

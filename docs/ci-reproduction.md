@@ -90,3 +90,23 @@ under [`artifacts/clean-checkout-baseline/`](../artifacts/clean-checkout-baselin
 This reproduces the published baseline locally. The later CI changes add five
 evidence-validator tests and the missing Lake manifest; hosted status must be
 read from the workflow run for the corresponding commit.
+
+## Constructive-loop branch
+
+`research/constructive-learning-loop` also triggers the workflow directly.
+The original Python 3.10/3.12 and Lean jobs remain. A fourth job installs the
+optional CPU learning runtime and pinned Lean, runs the complete test suite,
+executes two translated-learning iterations with five matched training arms,
+and independently verifies the resulting library, maps, targets, evaluation,
+initial weights, continued AdamW state, and all checkpoint reloads.
+
+The job uploads `constructive-loop-evidence`, including its environment, tests,
+registered protocol, fixed evaluation, proof sources/logs, activation arrays,
+maps, and checkpoints. It uses tiny neural fixtures and does not download
+pretrained checkpoints. Separate local pretrained-run evidence is retained in
+[`artifacts/constructive-loop/`](../artifacts/constructive-loop/).
+
+Run the same checks locally with the commands in the
+[constructive-loop protocol](constructive-loop.md). Read hosted status from the
+run for the exact branch commit; baseline success alone does not validate a
+later refactor.

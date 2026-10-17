@@ -1,0 +1,178 @@
+{
+  "status": "passed",
+  "reviewed_at_utc": "2026-10-17T07:21:49.538836+00:00",
+  "reviewer": "independent Rosetta implementation agent; not human review",
+  "run": "runs/constructive-loop-v2",
+  "command": [
+    "/Users/ianprado02/Downloads/lemmaferry/.venv-llm/bin/python",
+    "experiments/verify_constructive_run.py",
+    "runs/constructive-loop-v2",
+    "--torch-threads",
+    "1"
+  ],
+  "execution": {
+    "returncode": 0,
+    "parsed_stdout": {
+      "status": "passed",
+      "hashed_files_checked": 82,
+      "real_lean_replay": true,
+      "verified_library_records": 12,
+      "iterations": 2,
+      "fixed_evaluation_sha256": "74c3555c08e2094c748328eb9e5f2ce51fece89ae92beed9630ed73b33c8d437",
+      "standalone_checkpoint_reloads": [
+        {
+          "iteration": 0,
+          "arm": "ordinary_control",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.61557428042094,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 0,
+          "arm": "text_control",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.56175971031189,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 0,
+          "arm": "verified",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.610734661420185,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "ordinary_control",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.313221613566082,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "text_control",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.23208673795064,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "verified",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.309121529261272,
+          "accuracy": 0.5833333333333334
+        }
+      ],
+      "evaluation_feedback_detected": false,
+      "training_budgets_matched": true
+    },
+    "stderr": ""
+  },
+  "run_artifact_manifest_sha256": "c34edd1a9973ee75ebad0c83c0a1f8f65451a0ad987bd2c576577d244272507b",
+  "source_sha256": {
+    "src/lemmaferry/__init__.py": "e5d1d920010806dc93f59014a014b50219b0ee88ba8f6d6a28101dfad29adad8",
+    "src/lemmaferry/alignment.py": "6c6064733bf35390cb3a62d973dd96a42097de7061a3f2369d9a6a209444abc9",
+    "src/lemmaferry/correspondence.py": "34c8ea54519b1888c35a67eff5230444ae83fcf6c601e2acfecd643c56e316bf",
+    "src/lemmaferry/generation.py": "2c39b12ba5f3e2125c0fc52aea81226c73e525df77aecbfa0339bfa394244011",
+    "src/lemmaferry/learning.py": "3fc8fbcdbf217ce590b7d5d3d2e4ca4e3ed858abaa000d3428a3b7d27fecd7bf",
+    "src/lemmaferry/library.py": "f8ede76cc2ee4bebaec5b813838d05622e46eec234f4619e102f2ec2f37f7622",
+    "src/lemmaferry/logic.py": "1309175d2186679e11916c1d7000af8be2b3c7fa31c29dedb55c1dd49eda7eb7",
+    "src/lemmaferry/loop.py": "ffd8232840c9ca81843085cacbc0d0c91de6bcb9a02801e4e622e1339e3a9045",
+    "src/lemmaferry/representations.py": "1035399c1e271a934b344d2d6dde133fc483ed7308d28f08cfc8237481b9673f",
+    "src/lemmaferry/rosetta.py": "704d97cf03e535a0998c3d13f4e26de4963bd80a685f59900267a6dc6c8b5f1d",
+    "experiments/verify_constructive_run.py": "b69f37d8e813cd3cd8a3e9109c700167fc931468959493cda473f0881255ffff",
+    "artifacts/constructive-loop/independent-review.py": "b1328fc395f1381572a1733491de6ca3fa8fa03f92d617a4a3230ebcc5c906b9"
+  },
+  "registered_source_matches_current": {
+    "__init__.py": true,
+    "alignment.py": true,
+    "correspondence.py": true,
+    "generation.py": true,
+    "learning.py": true,
+    "library.py": true,
+    "logic.py": true,
+    "loop.py": true,
+    "representations.py": true,
+    "rosetta.py": true
+  },
+  "complete_artifact_hash_keyset_checked": true,
+  "historical_notes": {
+    "unhashed_replay_artifacts": [],
+    "source_changed_after_run": []
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "risks": {
+        "ordinary_control": 16.61557428042094,
+        "text_control": 16.56175971031189,
+        "verified": 16.610734661420185
+      },
+      "accuracies": {
+        "ordinary_control": 0.5833333333333334,
+        "text_control": 0.5833333333333334,
+        "verified": 0.5833333333333334
+      },
+      "matched_training_budgets": {
+        "updates_this_iteration": 2,
+        "cumulative_updates": 2,
+        "processed_padded_tokens": 4096,
+        "supervised_answer_tokens": 6,
+        "examples_seen": 2
+      },
+      "round_trip_mse": {
+        "S_of_T_math": 0.7561075337678022,
+        "T_of_S_language": 0.7914914177790164
+      },
+      "maps_refit_from_raw_activations": true,
+      "source_and_recipient_extraction_recomputed": true,
+      "translated_targets_match_T_of_math": true,
+      "text_control_has_exact_donor_information": true,
+      "control_auxiliary_targets_match_own_preupdate_states": true,
+      "feedback_recomputed_from_training_only": true
+    },
+    {
+      "iteration": 1,
+      "risks": {
+        "ordinary_control": 16.313221613566082,
+        "text_control": 16.23208673795064,
+        "verified": 16.309121529261272
+      },
+      "accuracies": {
+        "ordinary_control": 0.5833333333333334,
+        "text_control": 0.5833333333333334,
+        "verified": 0.5833333333333334
+      },
+      "matched_training_budgets": {
+        "updates_this_iteration": 2,
+        "cumulative_updates": 4,
+        "processed_padded_tokens": 4096,
+        "supervised_answer_tokens": 6,
+        "examples_seen": 2
+      },
+      "round_trip_mse": {
+        "S_of_T_math": 0.4468398636956112,
+        "T_of_S_language": 0.576384578105707
+      },
+      "maps_refit_from_raw_activations": true,
+      "source_and_recipient_extraction_recomputed": true,
+      "translated_targets_match_T_of_math": true,
+      "text_control_has_exact_donor_information": true,
+      "control_auxiliary_targets_match_own_preupdate_states": true,
+      "feedback_recomputed_from_training_only": true
+    }
+  ],
+  "static_review": {
+    "external_P_values_used_for_generation": false,
+    "evaluation_flow": "P is measured before/after updates; proposal feedback is recomputed only on accepted training experience.",
+    "budget_scope": "Equal optimizer steps, padded training tokens, supervised answer tokens and initial weights. This is not equal total end-to-end runtime: calibration and extraction add overhead.",
+    "target_scope": "T maps formal-certificate states to natural-derivation states; its targets supervise a recipient question-prompt state via an auxiliary loss."
+  },
+  "limitations": [
+    "Randomly initialized tiny models and 24 explicitly authored evaluation fixtures; no specialist or general-purpose capability evidence.",
+    "All arms have identical answer accuracy after both iterations; text control has lower answer NLL than translated treatment.",
+    "Family-held-out calibration examples can subsequently enter D_t, and proof dependency constituents need not be held out.",
+    "Round-trip consistency and geometric alignment do not establish semantic preservation or sustained broad reasoning improvements."
+  ],
+  "study_status": "exploratory_three_arm_engineering_run; functional shuffled-pair and mean controls were added afterward"
+}
