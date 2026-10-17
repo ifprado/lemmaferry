@@ -16,7 +16,8 @@ from typing import Any, Callable, Iterable, Mapping
 import numpy as np
 
 from .correspondence import build_correspondence, write_correspondence
-from .rosetta import PairedSplit, RosettaPair
+from .rosetta import PairedSplit
+from .translators import fit_translator
 
 
 def _canonical(value: Any) -> bytes:
@@ -130,7 +131,8 @@ def _state_hash(model) -> str | None:
 def fit_library_rosetta(
     records: Iterable[Mapping[str, Any]], snapshot_hash: str, math_model, language_model,
     output: str | Path, lambdas=(0.0, 0.001, 0.1, 1.0), seed: int = 1729, *,
-    extractor: Callable | None = None,
+    extractor: Callable | None = None, translator: str = "affine",
+    objective: str = "raw_sum", swap_config=None,
 ) -> dict[str, Any]:
     """Extract before learning, fit T/S, and supply per-record auxiliary targets.
 
@@ -194,15 +196,16 @@ def fit_library_rosetta(
     pairs = {split: PairedSplit(x[idx], y[idx], [rows[i]["id"] for i in idx],
                                [rows[i]["family"] for i in idx], split)
              for split, idx in indices.items()}
-    pair = RosettaPair.fit(pairs["train"], pairs["val"], lambdas=lambdas, seed=seed)
+    pair = fit_translator(pairs["train"], pairs["val"], translator=translator,
+                          lambdas=lambdas, objective=objective, seed=seed, swap_config=swap_config)
     pair.protocol["extraction"] = {
         "library_snapshot_sha256": snapshot_hash, "models": metadata,
         "trainable_parameter_sha256_before": before, "trainable_parameter_sha256_after": after,
         "parameters_unchanged": True if all(before.values()) else "hash unavailable for a fixture",
         "family_split": family_splits, "timing": "before the current recipient training update",
+        "gradient_boundary": "detached NumPy activation snapshots; no donor or recipient model tensors enter translator training",
         "calibration_scope": "Library-only structural-family geometric holdout; these records may subsequently be used for training. No frozen capability evaluation task P is used.",
     }
-    report = pair.evaluate(pairs["test"])
     output.mkdir(parents=True, exist_ok=False)
     correspondence_manifest = write_correspondence(views, output / "views")
     pair.protocol["extraction"]["correspondence_manifest_content_sha256"] = correspondence_manifest["manifest_content_sha256"]
@@ -210,6 +213,7 @@ def fit_library_rosetta(
                         ids=np.asarray([row["id"] for row in rows]),
                         families=np.asarray([row["family"] for row in rows]))
     saved = pair.save(output / "maps")
+    report = pair.evaluate(pairs["test"])
     report["artifacts"] = {
         "activations": "activations.npz", "activations_sha256": _sha((output / "activations.npz").read_bytes()),
         "map_manifest": "maps/manifest.json", "map_manifest_content_sha256": saved["manifest_content_sha256"],
@@ -217,11 +221,12 @@ def fit_library_rosetta(
     }
     (output / "results.json").write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
     translated = pair.to_language(x)
-    shuffled = pair.maps["T_shuffled"].predict(x)
+    shuffled = pair.to_language(x, control="shuffled")
+    mean = pair.to_language(x, control="mean")
     return {
         "pair": pair, "report": report,
         "translated_targets": {row["id"]: value.tolist() for row, value in zip(rows, translated)},
         "language_targets": {row["id"]: value.tolist() for row, value in zip(rows, y)},
         "shuffled_targets": {row["id"]: value.tolist() for row, value in zip(rows, shuffled)},
-        "mean_targets": {row["id"]: pair.language_scaler.mean.tolist() for row in rows},
+        "mean_targets": {row["id"]: value.tolist() for row, value in zip(rows, mean)},
     }

@@ -12,13 +12,189 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 
+def _target_tolerances(pair) -> tuple[float, float]:
+    """Keep affine float64 checks; allow 64 float32 eps for neural replay.
+
+    The neural bundle stores float32 parameters and normalization buffers. CPU
+    versus accelerator GEMM/GELU evaluation can differ by a few ULPs; 64 eps
+    covers that rounding without accepting meaningful target changes. This is
+    also the tolerance for re-extracting float32 recipient states. It never
+    relaxes the historical affine tolerance.
+    """
+    if getattr(pair, "backend", None) == "swap_autoencoder":
+        import numpy as np
+        epsilon = float(np.finfo(np.float32).eps) * 64
+        return epsilon, epsilon
+    return 1e-8, 1e-8
+
+
+def _registered_swap_config(config: dict) -> dict:
+    from dataclasses import asdict
+    from lemmaferry.translators import SwapConfig
+    names = ("latent_dim", "hidden_dim", "steps", "batch_size", "learning_rate", "validation_every")
+    # Bridge optimization is registered on CPU independently of the recipient
+    # extraction device; recipient MPS/CUDA does not change this bridge budget.
+    return asdict(SwapConfig(**{name: config["swap_" + name] for name in names}, device="cpu"))
+
+
+def _verify_swap_calibration(pair, manifest, arrays, iteration, protocol, by_id):
+    """Bind a neural bundle to registered settings and the accepted data.
+
+    Unlike envelope hashes, these checks also reject self-consistent edits to a
+    bundle's manifest, row labels, pairing permutation or training statistics.
+    Actual model extraction is checked separately, so rewriting array hashes
+    cannot make fabricated activations into model evidence.
+    """
+    import numpy as np
+    from lemmaferry.representations import _canonical, _language_view
+    from lemmaferry.rosetta import PairedSplit
+
+    if protocol["config"].get("translator") != "swap":
+        raise ValueError("neural translator differs from the registered backend")
+    if pair.protocol["config"] != _registered_swap_config(protocol["config"]):
+        raise ValueError("neural translator configuration differs from registration")
+    if pair.protocol["seed"] != protocol["config"]["seed"]:
+        raise ValueError("neural translator seed differs from registration")
+    if pair.protocol["source_sha256"] != protocol["source_sha256"]["swap.py"]:
+        raise ValueError("neural implementation provenance differs from registration")
+    identifiers = [str(value) for value in arrays["ids"]]
+    if identifiers != iteration["library_after"]["record_ids"]:
+        raise ValueError("neural activation row order differs from the library snapshot")
+    known = {identifier: by_id[identifier] for identifier in identifiers}
+    families = [known[identifier]["family"] for identifier in identifiers]
+    if list(arrays["families"]) != families:
+        raise ValueError("neural activation families differ from accepted records")
+    family_split = {family: ("train", "val", "test")[i % 3]
+                    for i, family in enumerate(sorted(set(families)))}
+    extraction = pair.protocol["extraction"]
+    if extraction["family_split"] != family_split:
+        raise ValueError("neural family split differs from the accepted curriculum")
+    expected_ids = set(identifiers)
+    actual_ids = set()
+    splits = {}
+    for split in ("train", "val", "test"):
+        rows = manifest["splits"][split]["pairs"]
+        indices = [i for i, family in enumerate(families) if family_split[family] == split]
+        if [row["id"] for row in rows] != [identifiers[i] for i in indices]:
+            raise ValueError("neural correspondence rows differ from the accepted family split")
+        for row in rows:
+            record = known[row["id"]]
+            provenance = row["provenance"]
+            if (row["family"] != record["family"] or row["formal_text"] != record["formal_text"]
+                    or row["language_text"] != _language_view(record, known)
+                    or provenance["record_sha256"] != hashlib.sha256(_canonical(record)).hexdigest()
+                    or provenance["record_provenance"] != record.get("provenance", {})
+                    or provenance["library_snapshot_sha256"] != iteration["library_after"]["snapshot_hash"]):
+                raise ValueError("neural correspondence provenance differs from the accepted theorem")
+            actual_ids.add(row["id"])
+        splits[split] = PairedSplit(arrays["math"][indices], arrays["language"][indices],
+                                    [identifiers[i] for i in indices],
+                                    [families[i] for i in indices], split)
+    if actual_ids != expected_ids:
+        raise ValueError("neural correspondences do not cover the library snapshot")
+    for name, split in (("train", "train"), ("validation", "val")):
+        if pair.protocol[name] != splits[split].fingerprint():
+            raise ValueError("neural calibration activations differ from the fitted split fingerprint")
+    rng = np.random.default_rng(pair.protocol["seed"] + 10000)
+    for _ in range(100):
+        permutation = rng.permutation(len(splits["train"].ids))
+        if np.all(permutation != np.arange(len(permutation))):
+            break
+    else:
+        permutation = np.roll(np.arange(len(splits["train"].ids)), 1)
+    if pair.protocol["shuffled_train_permutation"] != permutation.tolist():
+        raise ValueError("neural pairing permutation differs from the registered seed")
+    atol, rtol = _target_tolerances(pair)
+    for name, values in (("math", splits["train"].x), ("language", splits["train"].y)):
+        values = np.asarray(values, dtype=np.float32)
+        mean = values.mean(axis=0, dtype=np.float32)
+        scale = values.std(axis=0, dtype=np.float32)
+        scale = np.where(scale > 1e-6, scale, np.ones_like(scale))
+        scaler = getattr(pair, name + "_scaler")
+        if not (np.allclose(scaler.mean, mean, atol=atol, rtol=rtol)
+                and np.allclose(scaler.scale, scale, atol=atol, rtol=rtol)):
+            raise ValueError("neural normalization is not fitted exclusively on training activations")
+    pair.validate_training_data(splits["train"], splits["val"])
+    # A selected-step label and a self-consistent trace are insufficient: the
+    # retained weights must actually attain that recorded validation score.
+    validation = splits["val"]
+    for control in ("paired", "shuffled"):
+        forward = (pair.to_language(validation.x, control=control) - validation.y) / pair.language_scaler.scale
+        reverse = (pair.to_math(validation.y, control=control) - validation.x) / pair.math_scaler.scale
+        score = float(np.mean(forward ** 2) + np.mean(reverse ** 2))
+        training = pair.protocol["training"][control]
+        selected = next(row for row in training["trace"] if row["step"] == training["selected_step"])
+        if not np.isclose(score, selected["validation_bidirectional_normalized_mse"], atol=atol, rtol=rtol):
+            raise ValueError("neural selected checkpoint does not reproduce its validation score")
+    return splits["test"]
+
+
+def _check_neural_report(measured, reported, atol, rtol) -> bool:
+    """Compare the held-out numeric report without relaxing counts or labels."""
+    import numpy as np
+    if isinstance(measured, dict):
+        return (isinstance(reported, dict) and set(measured) == set(reported)
+                and all(_check_neural_report(value, reported[key], atol, rtol) for key, value in measured.items()))
+    if isinstance(measured, list):
+        return (isinstance(reported, list) and len(measured) == len(reported)
+                and all(_check_neural_report(a, b, atol, rtol) for a, b in zip(measured, reported)))
+    if type(measured) is float:
+        return isinstance(reported, (int, float)) and np.isfinite(reported) and bool(np.isclose(measured, reported, atol=atol, rtol=rtol))
+    return type(measured) is type(reported) and measured == reported
+
+
+def _replay_swap_extraction(directory, pair, manifest, arrays, iteration, protocol, result, device) -> None:
+    import numpy as np
+    import torch
+    from lemmaferry.learning import load_recipient, parameter_sha256, represent
+    from lemmaferry.representations import _model_metadata
+
+    source = Path(__file__).resolve().parents[1] / "src" / "lemmaferry"
+    current_hashes = {str(path.relative_to(source)): hashlib.sha256(path.read_bytes()).hexdigest()
+                      for path in sorted(source.rglob("*.py"))}
+    if protocol["source_sha256"] != current_hashes:
+        raise ValueError("neural replay source provenance differs from the registered recursive source hashes")
+    extraction = pair.protocol["extraction"]
+    if extraction.get("parameters_unchanged") is not True or extraction.get("timing") != "before the current recipient training update":
+        raise ValueError("neural extraction is not bound to unchanged pre-update models")
+    index = iteration["iteration"]
+    paths = {"math": directory / "source-initial.pt",
+             "language": directory / (f"iteration-{index-1:03d}/verified.pt" if index else "initial/verified.pt")}
+    source_receipt = result["source_checkpoint"]
+    if hashlib.sha256(paths["math"].read_bytes()).hexdigest() != source_receipt["sha256"]:
+        raise ValueError("mathematical source checkpoint differs from its receipt")
+    rows = {row["id"]: row for part in manifest["splits"].values() for row in part["pairs"]}
+    atol, rtol = _target_tolerances(pair)
+    for domain, field in (("math", "formal_text"), ("language", "language_text")):
+        checkpoint = torch.load(paths[domain], map_location="cpu", weights_only=True)
+        model = load_recipient(paths[domain], device=device)
+        digest = parameter_sha256(model)
+        if (extraction["trainable_parameter_sha256_before"][domain] != digest
+                or extraction["trainable_parameter_sha256_after"][domain] != digest):
+            raise ValueError("neural model parameter provenance differs from its checkpoint")
+        metadata = _model_metadata(model)
+        # Device is an execution choice; the saved metadata must still describe
+        # the original checkpoint, even when replay explicitly requests CPU.
+        metadata["config"] = checkpoint["config"]
+        metadata["config_sha256"] = hashlib.sha256(json.dumps(checkpoint["config"], sort_keys=True,
+                                                     separators=(",", ":"), allow_nan=False).encode()).hexdigest()
+        if metadata != extraction["models"][domain]:
+            raise ValueError("neural extraction model configuration differs from its checkpoint")
+        values = represent(model, [rows[str(identifier)][field] for identifier in arrays["ids"]])
+        if values.shape != arrays[domain].shape or not np.allclose(values, arrays[domain], atol=atol, rtol=rtol):
+            raise ValueError("neural saved activations do not reproduce from the pre-update model")
+        if parameter_sha256(model) != digest:
+            raise ValueError("neural replay changed extraction model parameters")
+        del model
+
+
 def verify_run(directory: Path, *, device: str = "cpu") -> dict:
     import numpy as np
     import torch
     from lemmaferry.learning import (evaluate, load_evaluation, load_recipient,
                                     parameter_sha256, represent, useful_control)
     from lemmaferry.library import VerifiedLibrary
-    from lemmaferry.rosetta import RosettaPair
+    from lemmaferry.translators import load_translator
     from lemmaferry.correspondence import load_correspondence
 
     directory = directory.resolve()
@@ -66,6 +242,7 @@ def verify_run(directory: Path, *, device: str = "cpu") -> dict:
     if len(set(previous.values())) != 1 or previous != result["initial_parameter_sha256"]:
         raise ValueError("training arms did not start with identical registered weights")
     reloads = []
+    translator_replays = []
     prior_snapshot = protocol["initial_library"]
     for iteration in result["iterations"]:
         index = iteration["iteration"]
@@ -99,6 +276,12 @@ def verify_run(directory: Path, *, device: str = "cpu") -> dict:
                 raise ValueError("independent evaluation leaked into training")
             if arm in previous and training["parameter_sha256_before"] != previous[arm]:
                 raise ValueError("recipient parameters were reset between iterations")
+            if protocol["config"].get("translator") == "swap" and protocol["config"]["experience_mode"] == "translated":
+                targets = np.asarray([r["translated_target"] for r in experience[arm]], dtype=np.float32)
+                target_hash = hashlib.sha256(targets.tobytes(order="C")).hexdigest()
+                if (training.get("auxiliary_targets_sha256") != target_hash
+                        or training.get("auxiliary_targets_detached") is not True):
+                    raise ValueError("neural recipient target snapshot differs from the detached training receipt")
             previous[arm] = training["parameter_sha256_after"]
             checkpoint = folder / f"{arm}.pt"
             if hashlib.sha256(checkpoint.read_bytes()).hexdigest() != iteration["checkpoints"][arm]["sha256"]:
@@ -131,7 +314,7 @@ def verify_run(directory: Path, *, device: str = "cpu") -> dict:
                             "risk_mean_answer_nll": measured["risk_mean_answer_nll"], "accuracy": measured["accuracy"]})
             del model
         if iteration["calibration"] is not None:
-            pair = RosettaPair.load(folder / "rosetta/maps")
+            pair = load_translator(folder / "rosetta/maps")
             manifest = load_correspondence(folder / "rosetta/views/manifest.json")
             if manifest["library_snapshots_sha256"] != [iteration["library_after"]["snapshot_hash"]]:
                 raise ValueError("Rosetta correspondences refer to a different library")
@@ -142,18 +325,36 @@ def verify_run(directory: Path, *, device: str = "cpu") -> dict:
                 indices = {str(identifier): i for i, identifier in enumerate(arrays["ids"])}
                 if set(indices) != set(iteration["library_after"]["record_ids"]):
                     raise ValueError("Rosetta activations differ from the accepted library snapshot")
+                neural = getattr(pair, "backend", None) == "swap_autoencoder"
+                if protocol["config"].get("translator", "affine") == "swap" and not neural:
+                    raise ValueError("saved translator differs from the registered neural backend")
+                if neural:
+                    saved_report = json.loads((folder / "rosetta/results.json").read_text())
+                    if saved_report != iteration["calibration"] or pair.protocol != saved_report["protocol"]:
+                        raise ValueError("neural calibration report differs from the saved bundle")
+                    if saved_report["artifacts"]["activations_sha256"] != hashlib.sha256((folder / "rosetta/activations.npz").read_bytes()).hexdigest():
+                        raise ValueError("neural activation archive differs from the calibration receipt")
+                    test = _verify_swap_calibration(pair, manifest, arrays, iteration, protocol, by_id)
+                    _replay_swap_extraction(directory, pair, manifest, arrays, iteration, protocol, result, device)
+                    measured_report = pair.evaluate(test)
+                    reported_geometry = {key: value for key, value in saved_report.items() if key != "artifacts"}
+                    if not _check_neural_report(measured_report, reported_geometry, *_target_tolerances(pair)):
+                        raise ValueError("neural held-out calibration report does not reproduce")
+                atol, rtol = _target_tolerances(pair)
+                translator_replays.append({"iteration": index, "backend": getattr(pair, "backend", "affine"),
+                                           "atol": atol, "rtol": rtol, "activation_reextraction": neural})
                 if protocol["config"]["experience_mode"] == "translated":
                     targets = pair.to_language(arrays["math"])
-                    if any(not np.allclose(row["translated_target"], targets[indices[row["id"]]], atol=1e-8, rtol=1e-8)
+                    if any(not np.allclose(row["translated_target"], targets[indices[row["id"]]], atol=atol, rtol=rtol)
                            for row in experience["verified"]):
                         raise ValueError("training targets were not produced by the selected translator")
-                    for arm, expected_targets in (("shuffled_control", pair.maps["T_shuffled"].predict(arrays["math"])),
-                                                  ("mean_control", np.broadcast_to(pair.language_scaler.mean, targets.shape))):
+                    for arm, expected_targets in (("shuffled_control", pair.to_language(arrays["math"], control="shuffled")),
+                                                  ("mean_control", pair.to_language(arrays["math"], control="mean"))):
                         for row in experience[arm]:
                             identifier = row["provenance"]["matched_to"]
                             source = next(r for r in experience["verified"] if r["id"] == identifier)
                             if (row["prompt"] != source["prompt"] or row["answer"] != source["answer"]
-                                    or not np.allclose(row["translated_target"], expected_targets[indices[identifier]], atol=1e-8, rtol=1e-8)):
+                                    or not np.allclose(row["translated_target"], expected_targets[indices[identifier]], atol=atol, rtol=rtol)):
                                 raise ValueError("correspondence control differs from its declared mapping")
                     text_rows = {r["provenance"]["matched_to"]: r for r in experience["text_control"]}
                     for row in experience["verified"]:
@@ -163,7 +364,8 @@ def verify_run(directory: Path, *, device: str = "cpu") -> dict:
     return {"status": "passed", "hashed_files_checked": len(hashes), "real_lean_replay": True,
             "verified_library_records": len(records), "iterations": len(result["iterations"]),
             "fixed_evaluation_sha256": evaluation.sha256, "standalone_checkpoint_reloads": reloads,
-            "evaluation_feedback_detected": False, "training_budgets_matched": True}
+            "evaluation_feedback_detected": False, "training_budgets_matched": True,
+            "translator_replays": translator_replays}
 
 
 def main() -> None:

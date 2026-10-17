@@ -2,7 +2,7 @@ name: Reproduce starter checks
 
 on:
   push:
-    branches: [main, research/constructive-learning-loop]
+    branches: [main, research/constructive-learning-loop, 'feature/swap-autoencoder*']
   pull_request:
   workflow_dispatch:
 
@@ -123,6 +123,10 @@ jobs:
         run: |
           python experiments/run_constructive_loop.py --output runs/ci-loop/execution --experience-mode translated --iterations 2 --steps 1 --torch-threads 1
           python experiments/verify_constructive_run.py runs/ci-loop/execution
+      - name: Execute and independently verify the opt-in swap translator
+        run: |
+          python experiments/run_constructive_loop.py --output runs/ci-loop/swap-execution --experience-mode translated --translator swap --iterations 2 --steps 2 --torch-threads 1 --swap-latent-dim 8 --swap-hidden-dim 16 --swap-steps 32 --swap-batch-size 4 --swap-learning-rate 0.002 --swap-validation-every 8
+          python experiments/verify_constructive_run.py runs/ci-loop/swap-execution
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
         with:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fit an affine map to completed activation collections, without loading LLMs.
+"""Fit a translator to audited same-input activations, without loading LLMs.
 
 Validation selects ridge strength; the selected training-only map is evaluated
 on test once. Geometric alignment is not a capability-transfer experiment.
@@ -18,6 +18,9 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from lemmaferry.alignment import AffineRidge, regression_metrics  # noqa: E402
+from lemmaferry.rosetta import PairedSplit  # noqa: E402
+from lemmaferry.translators import fit_translator  # noqa: E402
+from lemmaferry.translator_cli import add_translator_arguments, swap_options  # noqa: E402
 
 SPLITS = ("train", "val", "test")
 
@@ -156,14 +159,42 @@ def _evaluate(prediction: np.ndarray, actual: np.ndarray, mean: np.ndarray, scal
 def fit_collections(
     source: Path, target: Path, output: Path,
     alphas: list[float] | None = None, seed: int = 1729,
+    *, translator: str = "affine", swap_config=None,
 ) -> dict:
     """Select on validation; do not refit on validation or tune against test."""
     if output.exists():
         raise ValueError("Output directory already exists; choose a new directory")
+    if translator not in ("affine", "swap"):
+        raise ValueError("translator must be affine or swap")
     grid = sorted(set([0.0001, 0.001, 0.01, 0.1, 1.0] if alphas is None else alphas))
     if not grid or any(not np.isfinite(a) or a < 0 for a in grid):
         raise ValueError("alphas must be a nonempty list of finite nonnegative values")
     sm, sx, tm, ty = paired_collections(source, target)
+    if translator == "swap":
+        pairs = {split: PairedSplit(
+            sx[split]["vectors"], ty[split]["vectors"], sx[split]["ids"].tolist(),
+            sx[split]["families"].tolist(), split,
+            source_ids=sx[split]["ids"].tolist(), target_ids=ty[split]["ids"].tolist(),
+        ) for split in SPLITS}
+        pair = fit_translator(pairs["train"], pairs["val"], translator="swap",
+                              seed=seed, swap_config=swap_config)
+        pair.protocol["extraction"] = {
+            "math": sm, "language": tm,
+            "math_manifest_sha256": digest(source / "manifest.json"),
+            "language_manifest_sha256": digest(target / "manifest.json"),
+            "pairing_policy": "Legacy identical-input collections: equal tokenizer, input hashes, ordered IDs, families, token hashes and lengths.",
+        }
+        report = pair.evaluate(pairs["test"])
+        report.update(experiment="same_input_frozen_activation_swap_alignment",
+                      scope="Geometric alignment of saved vectors only; no recipient update or inference assistance.")
+        saved = pair.save(output)
+        report["bundle"] = {key: saved[key] for key in (
+            "archive_sha256", "manifest_content_sha256"
+        )}
+        result_path = output / "results.json"
+        result_path.write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
+        (output / "results.json.sha256").write_text(f"{digest(result_path)}  results.json\n")
+        return report
     train_x, train_y = sx["train"]["vectors"], ty["train"]["vectors"]
     validation = []
     best_model, best_score, selected_alpha = None, float("inf"), None
@@ -236,12 +267,18 @@ def main() -> None:
     parser.add_argument("--output", required=True, type=Path, help="New directory for map and results")
     parser.add_argument("--alphas", nargs="+", type=float, default=[0.0001, 0.001, 0.01, 0.1, 1.0])
     parser.add_argument("--seed", type=int, default=1729)
+    add_translator_arguments(parser)
     args = parser.parse_args()
     try:
-        report = fit_collections(args.source, args.target, args.output, args.alphas, args.seed)
+        report = fit_collections(args.source, args.target, args.output, args.alphas, args.seed,
+                                translator=args.translator,
+                                swap_config=swap_options(args) if args.translator == "swap" else None)
     except (ValueError, OSError) as exc:
         raise SystemExit(str(exc)) from exc
-    print(f"Selected alpha={report['selected_alpha']}; wrote {args.output / 'results.json'}")
+    if args.translator == "affine":
+        print(f"Selected alpha={report['selected_alpha']}; wrote {args.output / 'results.json'}")
+    else:
+        print(f"Completed swap fitting; wrote {args.output / 'results.json'}")
 
 
 if __name__ == "__main__":

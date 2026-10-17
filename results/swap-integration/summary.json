@@ -1,0 +1,1280 @@
+{
+  "schema": "lemmaferry.swap.integration-summary.v1",
+  "created_at_utc": "2026-10-17T23:21:14.916575+00:00",
+  "base_sha": "dc4ff35e6dccd24f9250d3a7b12ad55e8c55bab8",
+  "branch": "feature/swap-autoencoder",
+  "preregistration_sha256": "78241da69342e88958e084f3adcf227a36d19a066182790c99a1a9fe1462076d",
+  "raw_evidence_directory": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/swap-integration-20261017T231218Z",
+  "tests": {
+    "numpy_only": {
+      "discovered": 110,
+      "passed": 73,
+      "skipped_optional": 37,
+      "seconds": 5.02,
+      "log_sha256": "11bb567648e976a9f411b8614f9b0610649e3c397bbf32f784fd231020c41312"
+    },
+    "torch": {
+      "discovered": 110,
+      "passed": 110,
+      "skipped": 0,
+      "seconds": 14.458,
+      "log_sha256": "bfef76a7130fcf12d06fb8fc448e1e5d18492615285fbcc5da1ca39a7b5d6928"
+    }
+  },
+  "environment_sha256": "31a25317a5714c0348636a0c262aa11236b6631f615c42718766e0b2f5b4ce53",
+  "synthetic": {
+    "counts": {
+      "train": 512,
+      "val": 96,
+      "test": 128
+    },
+    "scope": "Saved-vector geometric alignment; no model collection, recipient training, inference assistance or capability evidence.",
+    "compute_comparison": "Paired and shuffled neural arms are matched. Affine is descriptive and not compute matched.",
+    "raw_summary_sha256": "47e09811e43e6c7324963d805922fc99393dd6b9185de5bd1d0c8bd50bc30de5",
+    "raw_protocol_sha256": "5fb1762c8d4322a9084339549bcbdca503f32a158ff94ba39263404aebb78cc6",
+    "raw_artifact_inventory_sha256": "4003bf54a4f71d24758cde2e441346c4d5de05e1298fec2375bd25b242ba706f",
+    "runs": [
+      {
+        "seed": 7,
+        "backend": "swap",
+        "fitting_wall_seconds": 0.9394399169832468,
+        "reload_predictions_exact": true,
+        "bundle_manifest_sha256": "20d4fb19674b9686b21adfc33e5136356776038cf4aac61aae8a2db1320ebaa8",
+        "test_metrics": {
+          "math_to_language": {
+            "paired": {
+              "normalized_rmse": 0.09521455228490405,
+              "mse": 0.0038496291039352114,
+              "mse_relative_to_train_mean": 0.00877705193957917,
+              "cosine_retrieval_top1": 1.0,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 0.96407415297054,
+              "mse": 0.4201906955806443,
+              "mse_relative_to_train_mean": 0.9580236069675362,
+              "cosine_retrieval_top1": 0.015625,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 0.9872205005247862,
+              "mse": 0.4386016091092868,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          },
+          "language_to_math": {
+            "paired": {
+              "normalized_rmse": 0.10183309721800314,
+              "mse": 0.003714905080103158,
+              "mse_relative_to_train_mean": 0.010062813905999128,
+              "cosine_retrieval_top1": 1.0,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 0.9758050307319953,
+              "mse": 0.3543647067087275,
+              "mse_relative_to_train_mean": 0.9598915777317424,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 0.9963352332736208,
+              "mse": 0.36917159701109553,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          }
+        },
+        "round_trip_normalized_rmse": {
+          "S_of_T_math": 0.10316458399576693,
+          "T_of_S_language": 0.09578749362852407
+        },
+        "self_reconstruction": {
+          "math": {
+            "normalized_rmse": 0.09362166351543989,
+            "mse": 0.003110260841772948,
+            "mse_relative_to_train_mean": 0.00842497328330345,
+            "cosine_retrieval_top1": 1.0,
+            "retrieval_candidates": 128,
+            "retrieval_chance": 0.0078125
+          },
+          "language": {
+            "normalized_rmse": 0.09707302301716655,
+            "mse": 0.004037972448059106,
+            "mse_relative_to_train_mean": 0.009206469753404303,
+            "cosine_retrieval_top1": 1.0,
+            "retrieval_candidates": 128,
+            "retrieval_chance": 0.0078125
+          }
+        },
+        "empty_routing": {
+          "empty_payloads_exact_zero": true,
+          "empty_flags_crossed": true,
+          "two_swaps_presence_restored": true,
+          "interpretation": "Presence routing is architectural, not learned semantic evidence."
+        },
+        "config": {
+          "latent_dim": 8,
+          "hidden_dim": 32,
+          "steps": 512,
+          "batch_size": 32,
+          "learning_rate": 0.002,
+          "validation_every": 64,
+          "self_weight": 0.25,
+          "cycle_weight": 0.1,
+          "latent_weight": 0.01,
+          "weight_decay": 0.0001,
+          "gradient_clip": 5.0,
+          "device": "cpu"
+        },
+        "training": {
+          "paired": {
+            "initial_state_sha256": "e9c6d4b634837ab93c1f388612ef56776ccc5e8007c30920f7110d3dbfa7bc0c",
+            "batch_order_sha256": "e241a9938bb34b292a6765bb55b7bc37d0d05ba28d1d0ee104d90f4ae4fe67ac",
+            "updates": 512,
+            "pair_exposures": 16384,
+            "validation_steps": [
+              64,
+              128,
+              192,
+              256,
+              320,
+              384,
+              448,
+              512
+            ],
+            "selected_step": 512,
+            "selected_state_sha256": "1d95f13f3133c76627db9bb76b6f65da25b3134e8ec0387d0d697b6e03cae480"
+          },
+          "shuffled": {
+            "initial_state_sha256": "e9c6d4b634837ab93c1f388612ef56776ccc5e8007c30920f7110d3dbfa7bc0c",
+            "batch_order_sha256": "e241a9938bb34b292a6765bb55b7bc37d0d05ba28d1d0ee104d90f4ae4fe67ac",
+            "updates": 512,
+            "pair_exposures": 16384,
+            "validation_steps": [
+              64,
+              128,
+              192,
+              256,
+              320,
+              384,
+              448,
+              512
+            ],
+            "selected_step": 64,
+            "selected_state_sha256": "ae8ddcea3ce36abb9685cacce24a6e9a1c0c48395aeb046cae4826fc066b1811"
+          }
+        },
+        "parameters_per_neural_arm": 2598
+      },
+      {
+        "seed": 7,
+        "backend": "affine",
+        "fitting_wall_seconds": 0.0014375419705174863,
+        "reload_predictions_exact": true,
+        "bundle_manifest_sha256": "42ba4ee7d25b84fd5e8ffe871c1239839e782fc2aeb3fe40ad75078fc64d0c70",
+        "test_metrics": {
+          "math_to_language": {
+            "paired": {
+              "normalized_rmse": 0.35781518752040653,
+              "mse": 0.05325681804384874,
+              "mse_relative_to_train_mean": 0.12142412938390794,
+              "cosine_retrieval_top1": 0.7578125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 0.9714417708942399,
+              "mse": 0.42356068290029913,
+              "mse_relative_to_train_mean": 0.9657070972598717,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 0.9872205033652153,
+              "mse": 0.4386016050851483,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          },
+          "language_to_math": {
+            "paired": {
+              "normalized_rmse": 0.49805412071458466,
+              "mse": 0.08937896344740448,
+              "mse_relative_to_train_mean": 0.2421068270877269,
+              "cosine_retrieval_top1": 0.5546875,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 0.9985253657216515,
+              "mse": 0.3648168542000462,
+              "mse_relative_to_train_mean": 0.9882040206303597,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 0.9963352379061645,
+              "mse": 0.3691715947151635,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          }
+        },
+        "round_trip_normalized_rmse": {
+          "S_of_T_math": 0.48559498391938644,
+          "T_of_S_language": 0.35421803912011485
+        }
+      }
+    ],
+    "synthetic_acceptance_passed": true,
+    "raw_directory": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/swap-integration-20261017T231218Z/cli-fix-validation/synthetic"
+  },
+  "actual_vectors": {
+    "counts": {
+      "train": 256,
+      "val": 64,
+      "test": 128
+    },
+    "scope": "Saved-vector geometric alignment; no model collection, recipient training, inference assistance or capability evidence.",
+    "compute_comparison": "Paired and shuffled neural arms are matched. Affine is descriptive and not compute matched.",
+    "raw_summary_sha256": "2a64bb1d59a2db1429517f290e7d58758528e304f27c5c64e14c9df55b86e298",
+    "raw_protocol_sha256": "809b7b42cf9dd67f7f636ae6db0785d21e3a44cbd63ca906520903fc91ab8ca7",
+    "raw_artifact_inventory_sha256": "ed7721b87d8d8c42364429effaf9549b888995f27c97a6fe6e0a2a0656e5fc81",
+    "runs": [
+      {
+        "seed": 7,
+        "backend": "swap",
+        "fitting_wall_seconds": 1.2481508750352077,
+        "reload_predictions_exact": true,
+        "bundle_manifest_sha256": "de78dd728b886418891145c30e555756d098e4fb49b1fd292d9dcfb330ca0133",
+        "test_metrics": {
+          "math_to_language": {
+            "paired": {
+              "normalized_rmse": 0.7583234850311983,
+              "mse": 0.0012002071430900197,
+              "mse_relative_to_train_mean": 0.36868344409378784,
+              "cosine_retrieval_top1": 0.390625,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.153848978274737,
+              "mse": 0.003430215434032442,
+              "mse_relative_to_train_mean": 1.0537044771678166,
+              "cosine_retrieval_top1": 0.0,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.125679736956875,
+              "mse": 0.0032553865987665666,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          },
+          "language_to_math": {
+            "paired": {
+              "normalized_rmse": 0.7593145862626316,
+              "mse": 0.010691423236277425,
+              "mse_relative_to_train_mean": 0.3760299492715561,
+              "cosine_retrieval_top1": 0.3125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.061556141636504,
+              "mse": 0.02510510236569223,
+              "mse_relative_to_train_mean": 0.8829760229673048,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.095688153944179,
+              "mse": 0.028432371562395,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          }
+        },
+        "round_trip_normalized_rmse": {
+          "S_of_T_math": 0.7308989734306628,
+          "T_of_S_language": 0.7174734827183201
+        },
+        "self_reconstruction": {
+          "math": {
+            "normalized_rmse": 0.7080691356187042,
+            "mse": 0.009287613546504266,
+            "mse_relative_to_train_mean": 0.32665630885283503,
+            "cosine_retrieval_top1": 0.453125,
+            "retrieval_candidates": 128,
+            "retrieval_chance": 0.0078125
+          },
+          "language": {
+            "normalized_rmse": 0.6989869366773416,
+            "mse": 0.0010077970048659008,
+            "mse_relative_to_train_mean": 0.3095782864154276,
+            "cosine_retrieval_top1": 0.59375,
+            "retrieval_candidates": 128,
+            "retrieval_chance": 0.0078125
+          }
+        },
+        "empty_routing": {
+          "empty_payloads_exact_zero": true,
+          "empty_flags_crossed": true,
+          "two_swaps_presence_restored": true,
+          "interpretation": "Presence routing is architectural, not learned semantic evidence."
+        },
+        "config": {
+          "latent_dim": 16,
+          "hidden_dim": 64,
+          "steps": 256,
+          "batch_size": 32,
+          "learning_rate": 0.002,
+          "validation_every": 32,
+          "self_weight": 0.25,
+          "cycle_weight": 0.1,
+          "latent_weight": 0.01,
+          "weight_decay": 0.0001,
+          "gradient_clip": 5.0,
+          "device": "cpu"
+        },
+        "training": {
+          "paired": {
+            "initial_state_sha256": "93f1b984a60cf7f8ab4e1152422e8a8e1d5030e0096696c5bcea1b04c4c567a7",
+            "batch_order_sha256": "53054490a48b975da5e3f09f4a9e58d882a8a078b14ddfd21a06f1b3979ab43a",
+            "updates": 256,
+            "pair_exposures": 8192,
+            "validation_steps": [
+              32,
+              64,
+              96,
+              128,
+              160,
+              192,
+              224,
+              256
+            ],
+            "selected_step": 256,
+            "selected_state_sha256": "80d6d066d3480bd9042f52210a239501e800cbf1b833969901dd3f2074af14e2"
+          },
+          "shuffled": {
+            "initial_state_sha256": "93f1b984a60cf7f8ab4e1152422e8a8e1d5030e0096696c5bcea1b04c4c567a7",
+            "batch_order_sha256": "53054490a48b975da5e3f09f4a9e58d882a8a078b14ddfd21a06f1b3979ab43a",
+            "updates": 256,
+            "pair_exposures": 8192,
+            "validation_steps": [
+              32,
+              64,
+              96,
+              128,
+              160,
+              192,
+              224,
+              256
+            ],
+            "selected_step": 32,
+            "selected_state_sha256": "9281a41982706fa067e02fc70c8762edb5555fb3d655fb17a3c45bb8c4b4c66a"
+          }
+        },
+        "parameters_per_neural_arm": 400672
+      },
+      {
+        "seed": 7,
+        "backend": "affine",
+        "fitting_wall_seconds": 0.48628908302634954,
+        "reload_predictions_exact": true,
+        "bundle_manifest_sha256": "8cb62d70a73237111b892ea6729d488f444dffe95043d0df2bff25319f43f01b",
+        "test_metrics": {
+          "math_to_language": {
+            "paired": {
+              "normalized_rmse": 0.6767679127690917,
+              "mse": 0.0009406156943671309,
+              "mse_relative_to_train_mean": 0.2889413262013867,
+              "cosine_retrieval_top1": 0.875,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.5571807985061532,
+              "mse": 0.006373184284265888,
+              "mse_relative_to_train_mean": 1.9577350561438496,
+              "cosine_retrieval_top1": 0.0,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.1256797533954488,
+              "mse": 0.003255386506087881,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          },
+          "language_to_math": {
+            "paired": {
+              "normalized_rmse": 0.6913117046399158,
+              "mse": 0.008646840153265669,
+              "mse_relative_to_train_mean": 0.3041195453466063,
+              "cosine_retrieval_top1": 0.7265625,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.232705970310508,
+              "mse": 0.038351711001791876,
+              "mse_relative_to_train_mean": 1.3488748151224244,
+              "cosine_retrieval_top1": 0.0,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.0956881483556569,
+              "mse": 0.02843237235347971,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          }
+        },
+        "round_trip_normalized_rmse": {
+          "S_of_T_math": 0.5647553497311839,
+          "T_of_S_language": 0.44691615295029335
+        }
+      },
+      {
+        "seed": 19,
+        "backend": "swap",
+        "fitting_wall_seconds": 0.955296250001993,
+        "reload_predictions_exact": true,
+        "bundle_manifest_sha256": "d42f1df0da5e39651591dd922fe447ec3876f2ac28a377f4813a5aae33e5b493",
+        "test_metrics": {
+          "math_to_language": {
+            "paired": {
+              "normalized_rmse": 0.7563059075449353,
+              "mse": 0.0011865487973123782,
+              "mse_relative_to_train_mean": 0.364487830035901,
+              "cosine_retrieval_top1": 0.3203125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.2826545288135098,
+              "mse": 0.004889288665304795,
+              "mse_relative_to_train_mean": 1.501907228824158,
+              "cosine_retrieval_top1": 0.0,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.125679736956875,
+              "mse": 0.0032553865987665666,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          },
+          "language_to_math": {
+            "paired": {
+              "normalized_rmse": 0.7602942367411886,
+              "mse": 0.010675861245211605,
+              "mse_relative_to_train_mean": 0.37548261571439323,
+              "cosine_retrieval_top1": 0.3359375,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.1368653437511789,
+              "mse": 0.031761950679953306,
+              "mse_relative_to_train_mean": 1.1171052196701752,
+              "cosine_retrieval_top1": 0.0,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.095688153944179,
+              "mse": 0.028432371562395,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          }
+        },
+        "round_trip_normalized_rmse": {
+          "S_of_T_math": 0.7502725914386921,
+          "T_of_S_language": 0.7356743706979739
+        },
+        "self_reconstruction": {
+          "math": {
+            "normalized_rmse": 0.7235547510072742,
+            "mse": 0.00969485818034894,
+            "mse_relative_to_train_mean": 0.34097958234238457,
+            "cosine_retrieval_top1": 0.4609375,
+            "retrieval_candidates": 128,
+            "retrieval_chance": 0.0078125
+          },
+          "language": {
+            "normalized_rmse": 0.7100657869161133,
+            "mse": 0.001045423824716926,
+            "mse_relative_to_train_mean": 0.32113661250342024,
+            "cosine_retrieval_top1": 0.515625,
+            "retrieval_candidates": 128,
+            "retrieval_chance": 0.0078125
+          }
+        },
+        "empty_routing": {
+          "empty_payloads_exact_zero": true,
+          "empty_flags_crossed": true,
+          "two_swaps_presence_restored": true,
+          "interpretation": "Presence routing is architectural, not learned semantic evidence."
+        },
+        "config": {
+          "latent_dim": 16,
+          "hidden_dim": 64,
+          "steps": 256,
+          "batch_size": 32,
+          "learning_rate": 0.002,
+          "validation_every": 32,
+          "self_weight": 0.25,
+          "cycle_weight": 0.1,
+          "latent_weight": 0.01,
+          "weight_decay": 0.0001,
+          "gradient_clip": 5.0,
+          "device": "cpu"
+        },
+        "training": {
+          "paired": {
+            "initial_state_sha256": "083d286995ac649c1b51b693fb7f205a3708f6b3c0c6ec08ae25913ccbd5d819",
+            "batch_order_sha256": "bc0e71f62cc4368b7382c9a3517062ffe13f32bb40d8aa3801860aaf59e1d1d5",
+            "updates": 256,
+            "pair_exposures": 8192,
+            "validation_steps": [
+              32,
+              64,
+              96,
+              128,
+              160,
+              192,
+              224,
+              256
+            ],
+            "selected_step": 224,
+            "selected_state_sha256": "3a319e638da8c56fa7c6d232e8d07dcee941c5d4b39dbbf4166d3c9a62aa180d"
+          },
+          "shuffled": {
+            "initial_state_sha256": "083d286995ac649c1b51b693fb7f205a3708f6b3c0c6ec08ae25913ccbd5d819",
+            "batch_order_sha256": "bc0e71f62cc4368b7382c9a3517062ffe13f32bb40d8aa3801860aaf59e1d1d5",
+            "updates": 256,
+            "pair_exposures": 8192,
+            "validation_steps": [
+              32,
+              64,
+              96,
+              128,
+              160,
+              192,
+              224,
+              256
+            ],
+            "selected_step": 32,
+            "selected_state_sha256": "09fc51815d6a4b0a77a84a04fe072d868efac3113279a4fba83dde02a60dd0a8"
+          }
+        },
+        "parameters_per_neural_arm": 400672
+      },
+      {
+        "seed": 19,
+        "backend": "affine",
+        "fitting_wall_seconds": 0.47684720798861235,
+        "reload_predictions_exact": true,
+        "bundle_manifest_sha256": "43cb2fa1106db782e42be1229359d086f14d886b3427bd1ea51731f5ae90eccd",
+        "test_metrics": {
+          "math_to_language": {
+            "paired": {
+              "normalized_rmse": 0.6767679127690917,
+              "mse": 0.0009406156943671309,
+              "mse_relative_to_train_mean": 0.2889413262013867,
+              "cosine_retrieval_top1": 0.875,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.5511195194053482,
+              "mse": 0.006549046242083249,
+              "mse_relative_to_train_mean": 2.0117568927179343,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.1256797533954488,
+              "mse": 0.003255386506087881,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          },
+          "language_to_math": {
+            "paired": {
+              "normalized_rmse": 0.6913117046399158,
+              "mse": 0.008646840153265669,
+              "mse_relative_to_train_mean": 0.3041195453466063,
+              "cosine_retrieval_top1": 0.7265625,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.2276803833964642,
+              "mse": 0.03500821929911558,
+              "mse_relative_to_train_mean": 1.231280276717081,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.0956881483556569,
+              "mse": 0.02843237235347971,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          }
+        },
+        "round_trip_normalized_rmse": {
+          "S_of_T_math": 0.5647553497311839,
+          "T_of_S_language": 0.44691615295029335
+        }
+      },
+      {
+        "seed": 31,
+        "backend": "swap",
+        "fitting_wall_seconds": 0.9544849999947473,
+        "reload_predictions_exact": true,
+        "bundle_manifest_sha256": "9bf3af1bea63553db650e8cf96094dd660c3c87546dfb384c9d8b018ab243d74",
+        "test_metrics": {
+          "math_to_language": {
+            "paired": {
+              "normalized_rmse": 0.7502848054791532,
+              "mse": 0.0011824537217348617,
+              "mse_relative_to_train_mean": 0.36322989170714215,
+              "cosine_retrieval_top1": 0.390625,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.1997772520600554,
+              "mse": 0.00403075734121231,
+              "mse_relative_to_train_mean": 1.2381808485479187,
+              "cosine_retrieval_top1": 0.0,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.125679736956875,
+              "mse": 0.0032553865987665666,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          },
+          "language_to_math": {
+            "paired": {
+              "normalized_rmse": 0.7561815772604765,
+              "mse": 0.010655631993397197,
+              "mse_relative_to_train_mean": 0.3747711290988637,
+              "cosine_retrieval_top1": 0.375,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.207631856680218,
+              "mse": 0.03837686582887232,
+              "mse_relative_to_train_mean": 1.3497595775524414,
+              "cosine_retrieval_top1": 0.0,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.095688153944179,
+              "mse": 0.028432371562395,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          }
+        },
+        "round_trip_normalized_rmse": {
+          "S_of_T_math": 0.7280298151225827,
+          "T_of_S_language": 0.7310593320460043
+        },
+        "self_reconstruction": {
+          "math": {
+            "normalized_rmse": 0.7039285783682983,
+            "mse": 0.009171378584035678,
+            "mse_relative_to_train_mean": 0.3225681883028658,
+            "cosine_retrieval_top1": 0.5390625,
+            "retrieval_candidates": 128,
+            "retrieval_chance": 0.0078125
+          },
+          "language": {
+            "normalized_rmse": 0.7093346989561058,
+            "mse": 0.0010474027242032484,
+            "mse_relative_to_train_mean": 0.32174449713594655,
+            "cosine_retrieval_top1": 0.5703125,
+            "retrieval_candidates": 128,
+            "retrieval_chance": 0.0078125
+          }
+        },
+        "empty_routing": {
+          "empty_payloads_exact_zero": true,
+          "empty_flags_crossed": true,
+          "two_swaps_presence_restored": true,
+          "interpretation": "Presence routing is architectural, not learned semantic evidence."
+        },
+        "config": {
+          "latent_dim": 16,
+          "hidden_dim": 64,
+          "steps": 256,
+          "batch_size": 32,
+          "learning_rate": 0.002,
+          "validation_every": 32,
+          "self_weight": 0.25,
+          "cycle_weight": 0.1,
+          "latent_weight": 0.01,
+          "weight_decay": 0.0001,
+          "gradient_clip": 5.0,
+          "device": "cpu"
+        },
+        "training": {
+          "paired": {
+            "initial_state_sha256": "cb7131ae837abe68e526981e426e09e126fdfd048c83c03ad59925d469475d96",
+            "batch_order_sha256": "dcd4c0e67e5be70d8ffa571e941b62a02f4fe89d13b25e8dee93fb0dec1e55b6",
+            "updates": 256,
+            "pair_exposures": 8192,
+            "validation_steps": [
+              32,
+              64,
+              96,
+              128,
+              160,
+              192,
+              224,
+              256
+            ],
+            "selected_step": 256,
+            "selected_state_sha256": "879d155b0b62ea0274cb0f99c766189a901ab7c3f41129e5a3d8a2c0b1a8fe3c"
+          },
+          "shuffled": {
+            "initial_state_sha256": "cb7131ae837abe68e526981e426e09e126fdfd048c83c03ad59925d469475d96",
+            "batch_order_sha256": "dcd4c0e67e5be70d8ffa571e941b62a02f4fe89d13b25e8dee93fb0dec1e55b6",
+            "updates": 256,
+            "pair_exposures": 8192,
+            "validation_steps": [
+              32,
+              64,
+              96,
+              128,
+              160,
+              192,
+              224,
+              256
+            ],
+            "selected_step": 32,
+            "selected_state_sha256": "6c2c38bf2bf9baf0be494982d80c25eb2cefaa00b2ee211fb8f5987310b06e8a"
+          }
+        },
+        "parameters_per_neural_arm": 400672
+      },
+      {
+        "seed": 31,
+        "backend": "affine",
+        "fitting_wall_seconds": 0.47556370799429715,
+        "reload_predictions_exact": true,
+        "bundle_manifest_sha256": "ac36218ca7d6ee0082865331e912b9aaafbf2809402ecb1bd750ec2379985998",
+        "test_metrics": {
+          "math_to_language": {
+            "paired": {
+              "normalized_rmse": 0.6767679127690917,
+              "mse": 0.0009406156943671309,
+              "mse_relative_to_train_mean": 0.2889413262013867,
+              "cosine_retrieval_top1": 0.875,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.6304351035360316,
+              "mse": 0.00802720142048491,
+              "mse_relative_to_train_mean": 2.4658213104567714,
+              "cosine_retrieval_top1": 0.015625,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.1256797533954488,
+              "mse": 0.003255386506087881,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          },
+          "language_to_math": {
+            "paired": {
+              "normalized_rmse": 0.6913117046399158,
+              "mse": 0.008646840153265669,
+              "mse_relative_to_train_mean": 0.3041195453466063,
+              "cosine_retrieval_top1": 0.7265625,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "shuffled_training_pairs": {
+              "normalized_rmse": 1.282017368970611,
+              "mse": 0.041525451455226715,
+              "mse_relative_to_train_mean": 1.4604990022981532,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            },
+            "training_mean": {
+              "normalized_rmse": 1.0956881483556569,
+              "mse": 0.02843237235347971,
+              "mse_relative_to_train_mean": 1.0,
+              "cosine_retrieval_top1": 0.0078125,
+              "retrieval_candidates": 128,
+              "retrieval_chance": 0.0078125
+            }
+          }
+        },
+        "round_trip_normalized_rmse": {
+          "S_of_T_math": 0.5647553497311839,
+          "T_of_S_language": 0.44691615295029335
+        }
+      }
+    ],
+    "raw_directory": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/swap-integration-20261017T231218Z/cli-fix-validation/actual-vectors"
+  },
+  "constructive_loop": {
+    "completed_iterations": 2,
+    "library_records": 12,
+    "real_lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+    "summary_sha256": "18bc367b1ad4e7d84e93d4d21a4ac6f39cb2d856a7e067aef3e90e71333858b6",
+    "protocol_sha256": "6223653993a6bd33e11e617098f0cce55afb2ae138473187e2e06dad9c80b937",
+    "artifact_inventory_sha256": "cc4971637b3885d19aabbc63bd7fdce1084d19e97612b54606876dc1345c34fc",
+    "evaluation_used_for_generation": false,
+    "sustained_broad_improvement_established": false,
+    "iterations": [
+      {
+        "iteration": 0,
+        "admitted": 6,
+        "dependency_reusing_records": 0,
+        "extraction_state_hashes": {
+          "language": "e941e3f993aba724d14aa3fcf3e9234d48d2ccd7299b65bd78a2bb8990497032",
+          "math": "c67731601f6416fdd0dd08a8f4ab3e25f5004a8d6cda34a5b6e58ab90e0a8f26"
+        },
+        "bridge_training": {
+          "paired": {
+            "updates": 32,
+            "pair_exposures": 128,
+            "selected_step": 8,
+            "initial_state_sha256": "79b7db0df4f0d7f1974f17c374f9980f5fbd886921a9e84a94389b26de10bab6",
+            "batch_order_sha256": "bad13f466f2602774aedf576af49a8dbf0b25ddc807f0d4b4e50463b9166ea09"
+          },
+          "shuffled": {
+            "updates": 32,
+            "pair_exposures": 128,
+            "selected_step": 32,
+            "initial_state_sha256": "79b7db0df4f0d7f1974f17c374f9980f5fbd886921a9e84a94389b26de10bab6",
+            "batch_order_sha256": "bad13f466f2602774aedf576af49a8dbf0b25ddc807f0d4b4e50463b9166ea09"
+          }
+        },
+        "recipient_training": {
+          "mean_control": {
+            "cumulative_updates": 2,
+            "examples_seen": 2,
+            "processed_padded_tokens": 4096,
+            "supervised_answer_tokens": 6,
+            "auxiliary_targets_sha256": "4e4c1929f04b9cae62b1d73af129bd77e0518f6c49c11e169553784e02b05c10",
+            "auxiliary_targets_detached": true
+          },
+          "ordinary_control": {
+            "cumulative_updates": 2,
+            "examples_seen": 2,
+            "processed_padded_tokens": 4096,
+            "supervised_answer_tokens": 6,
+            "auxiliary_targets_sha256": "368380077b611fc550c7956e7fc6489a1f2c96da93865492eaa2140a25ae1192",
+            "auxiliary_targets_detached": true
+          },
+          "shuffled_control": {
+            "cumulative_updates": 2,
+            "examples_seen": 2,
+            "processed_padded_tokens": 4096,
+            "supervised_answer_tokens": 6,
+            "auxiliary_targets_sha256": "4897c46e2d5d25f3d119ced98ee22f6c2f2f531b13f7b3aa3a3f5d4052c11dc6",
+            "auxiliary_targets_detached": true
+          },
+          "text_control": {
+            "cumulative_updates": 2,
+            "examples_seen": 2,
+            "processed_padded_tokens": 4096,
+            "supervised_answer_tokens": 6,
+            "auxiliary_targets_sha256": "606c2878d3c5d9088215c1b6e34d82ccd714bf4dd6458dd8c55a19f04d065580",
+            "auxiliary_targets_detached": true
+          },
+          "verified": {
+            "cumulative_updates": 2,
+            "examples_seen": 2,
+            "processed_padded_tokens": 4096,
+            "supervised_answer_tokens": 6,
+            "auxiliary_targets_sha256": "e5fdab3e02abe9ed3afd05bfd6aa94216ef0dbf7fcdc4bc7039410ae61b92bbe",
+            "auxiliary_targets_detached": true
+          }
+        },
+        "evaluation": {
+          "mean_control": {
+            "risk_mean_answer_nll": 16.61058247089386,
+            "accuracy": 0.5833333333333334
+          },
+          "ordinary_control": {
+            "risk_mean_answer_nll": 16.61557428042094,
+            "accuracy": 0.5833333333333334
+          },
+          "shuffled_control": {
+            "risk_mean_answer_nll": 16.61043091615041,
+            "accuracy": 0.5833333333333334
+          },
+          "text_control": {
+            "risk_mean_answer_nll": 16.56175971031189,
+            "accuracy": 0.5833333333333334
+          },
+          "verified": {
+            "risk_mean_answer_nll": 16.610854585965473,
+            "accuracy": 0.5833333333333334
+          }
+        },
+        "comparisons": {
+          "mean_control": {
+            "accuracy_difference_treatment_minus_control": 0.0,
+            "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+            "risk_difference_bootstrap_95": [
+              -0.00020282665888468422,
+              0.0007049461205800364
+            ],
+            "risk_difference_treatment_minus_control": 0.0002721150716145833
+          },
+          "ordinary_control": {
+            "accuracy_difference_treatment_minus_control": 0.0,
+            "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+            "risk_difference_bootstrap_95": [
+              -0.008965795238812763,
+              -0.0006674806276957207
+            ],
+            "risk_difference_treatment_minus_control": -0.004719694455464681
+          },
+          "shuffled_control": {
+            "accuracy_difference_treatment_minus_control": 0.0,
+            "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+            "risk_difference_bootstrap_95": [
+              -0.00025877455870310464,
+              0.0010728547970453896
+            ],
+            "risk_difference_treatment_minus_control": 0.00042366981506347656
+          },
+          "text_control": {
+            "accuracy_difference_treatment_minus_control": 0.0,
+            "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+            "risk_difference_bootstrap_95": [
+              0.03696421980857849,
+              0.0630868226289749
+            ],
+            "risk_difference_treatment_minus_control": 0.0490948756535848
+          }
+        }
+      },
+      {
+        "iteration": 1,
+        "admitted": 6,
+        "dependency_reusing_records": 6,
+        "extraction_state_hashes": {
+          "language": "f7f8f08e72e63cc47f3c650f2b588d930001f94a32a638190417fc904f17d539",
+          "math": "c67731601f6416fdd0dd08a8f4ab3e25f5004a8d6cda34a5b6e58ab90e0a8f26"
+        },
+        "bridge_training": {
+          "paired": {
+            "updates": 32,
+            "pair_exposures": 128,
+            "selected_step": 8,
+            "initial_state_sha256": "cf590781aa9e2e7295fab245704329fc1771b436430d496b63b27c031747a609",
+            "batch_order_sha256": "50f6a731db80633776e4e89cae613b4be7b649d571dc39e6cafe932ba9dea2e7"
+          },
+          "shuffled": {
+            "updates": 32,
+            "pair_exposures": 128,
+            "selected_step": 32,
+            "initial_state_sha256": "cf590781aa9e2e7295fab245704329fc1771b436430d496b63b27c031747a609",
+            "batch_order_sha256": "50f6a731db80633776e4e89cae613b4be7b649d571dc39e6cafe932ba9dea2e7"
+          }
+        },
+        "recipient_training": {
+          "mean_control": {
+            "cumulative_updates": 4,
+            "examples_seen": 2,
+            "processed_padded_tokens": 4096,
+            "supervised_answer_tokens": 6,
+            "auxiliary_targets_sha256": "25e28b9d68e6c0571abd7310fa249d6fa52e803059d314893045bb5b5f2144b4",
+            "auxiliary_targets_detached": true
+          },
+          "ordinary_control": {
+            "cumulative_updates": 4,
+            "examples_seen": 2,
+            "processed_padded_tokens": 4096,
+            "supervised_answer_tokens": 6,
+            "auxiliary_targets_sha256": "1eeadf7aeabac4fbf40a89723d61468db3bc1dac41f793d6d2507d83b3b9d61c",
+            "auxiliary_targets_detached": true
+          },
+          "shuffled_control": {
+            "cumulative_updates": 4,
+            "examples_seen": 2,
+            "processed_padded_tokens": 4096,
+            "supervised_answer_tokens": 6,
+            "auxiliary_targets_sha256": "9d1190dbc1041265b6e218de2f5370739ff6a7aa828698e5c746db3d4f6553dd",
+            "auxiliary_targets_detached": true
+          },
+          "text_control": {
+            "cumulative_updates": 4,
+            "examples_seen": 2,
+            "processed_padded_tokens": 4096,
+            "supervised_answer_tokens": 6,
+            "auxiliary_targets_sha256": "e2968d1cb6f10ef869c4ea6386ad802a3a6b9ec070708674ba331cb3d35040ab",
+            "auxiliary_targets_detached": true
+          },
+          "verified": {
+            "cumulative_updates": 4,
+            "examples_seen": 2,
+            "processed_padded_tokens": 4096,
+            "supervised_answer_tokens": 6,
+            "auxiliary_targets_sha256": "b79e62645e20fbd60a4f98d01c1428a14505db9c70d778055728e5670d550e5e",
+            "auxiliary_targets_detached": true
+          }
+        },
+        "evaluation": {
+          "mean_control": {
+            "risk_mean_answer_nll": 16.30880343914032,
+            "accuracy": 0.5833333333333334
+          },
+          "ordinary_control": {
+            "risk_mean_answer_nll": 16.313221613566082,
+            "accuracy": 0.5833333333333334
+          },
+          "shuffled_control": {
+            "risk_mean_answer_nll": 16.30843702952067,
+            "accuracy": 0.5833333333333334
+          },
+          "text_control": {
+            "risk_mean_answer_nll": 16.232136964797974,
+            "accuracy": 0.5833333333333334
+          },
+          "verified": {
+            "risk_mean_answer_nll": 16.3089839220047,
+            "accuracy": 0.5833333333333334
+          }
+        },
+        "comparisons": {
+          "mean_control": {
+            "accuracy_difference_treatment_minus_control": 0.0,
+            "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+            "risk_difference_bootstrap_95": [
+              -0.0005445619424184164,
+              0.0008303622404734284
+            ],
+            "risk_difference_treatment_minus_control": 0.0001804828643798828
+          },
+          "ordinary_control": {
+            "accuracy_difference_treatment_minus_control": 0.0,
+            "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+            "risk_difference_bootstrap_95": [
+              -0.011618086695671081,
+              0.0028002947568893425
+            ],
+            "risk_difference_treatment_minus_control": -0.004237691561381022
+          },
+          "shuffled_control": {
+            "accuracy_difference_treatment_minus_control": 0.0,
+            "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+            "risk_difference_bootstrap_95": [
+              -0.000519278645515442,
+              0.0015936940908432005
+            ],
+            "risk_difference_treatment_minus_control": 0.0005468924840291342
+          },
+          "text_control": {
+            "accuracy_difference_treatment_minus_control": 0.0,
+            "interpretation": "Negative risk difference favors treatment; this interval conditions on this fixed small task set.",
+            "risk_difference_bootstrap_95": [
+              0.055603255828221634,
+              0.10012249946594237
+            ],
+            "risk_difference_treatment_minus_control": 0.07684695720672607
+          }
+        }
+      }
+    ],
+    "independent_verification": {
+      "status": "passed",
+      "hashed_files_checked": 88,
+      "real_lean_replay": true,
+      "verified_library_records": 12,
+      "iterations": 2,
+      "fixed_evaluation_sha256": "9242f37256f564b846902d9855caf120ec4cc27a4bafbbb4c1f3dfb6a2f50c79",
+      "standalone_checkpoint_reloads": [
+        {
+          "iteration": 0,
+          "arm": "mean_control",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.61058247089386,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 0,
+          "arm": "ordinary_control",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.61557428042094,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 0,
+          "arm": "shuffled_control",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.61043091615041,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 0,
+          "arm": "text_control",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.56175971031189,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 0,
+          "arm": "verified",
+          "updates": 2,
+          "risk_mean_answer_nll": 16.610854585965473,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "mean_control",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.30880343914032,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "ordinary_control",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.313221613566082,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "shuffled_control",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.30843702952067,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "text_control",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.232136964797974,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "iteration": 1,
+          "arm": "verified",
+          "updates": 4,
+          "risk_mean_answer_nll": 16.3089839220047,
+          "accuracy": 0.5833333333333334
+        }
+      ],
+      "evaluation_feedback_detected": false,
+      "training_budgets_matched": true,
+      "translator_replays": [
+        {
+          "iteration": 0,
+          "backend": "swap_autoencoder",
+          "atol": 7.62939453125e-06,
+          "rtol": 7.62939453125e-06,
+          "activation_reextraction": true
+        },
+        {
+          "iteration": 1,
+          "backend": "swap_autoencoder",
+          "atol": 7.62939453125e-06,
+          "rtol": 7.62939453125e-06,
+          "activation_reextraction": true
+        }
+      ]
+    },
+    "tampered_target_control": {
+      "argv": [
+        "/Users/ianprado02/Downloads/lemmaferry/.venv-llm/bin/python",
+        "experiments/verify_constructive_run.py",
+        "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/swap-integration-20261017T231218Z/tampered-loop-target-control",
+        "--torch-threads",
+        "1"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 1.1321809579967521,
+      "expected_rejection": true,
+      "mutation": "First verified target coordinate += .25; envelope artifact hash updated, training snapshot receipt unchanged.",
+      "log_sha256": "ddf749bd803d1948594596d1382adfa7a708e218c49b18b6321fa99c746a9cf5",
+      "error": "ValueError: neural recipient target snapshot differs from the detached training receipt"
+    }
+  },
+  "limits": [
+    "Saved-vector fitting measures geometry, not new real-model reasoning transfer.",
+    "Affine comparisons are descriptive, not neural compute matched.",
+    "Tiny recipient and 24 authored evaluation questions are a pipeline fixture.",
+    "No inference-time communication interface or sustained broad capability improvement established.",
+    "Raw checkpoints, activations and logs remain local in the archive; only this small JSON summary is committed."
+  ],
+  "revalidation": {
+    "reason": "A final command-line review found the distinct-view fitter printed affine-only selection metadata after successful neural fitting. Corrected reporting and added a subprocess CLI regression test.",
+    "changed_implementation_file": "experiments/fit_rosetta.py",
+    "fixed_budgets_and_seeds_unchanged": true,
+    "original_evidence_retained": true,
+    "repeated_vector_metrics_identical": true,
+    "final_comparison_directory": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/swap-integration-20261017T231218Z/cli-fix-validation",
+    "initial_comparison_seconds": 12.18820475001121,
+    "final_comparison_seconds": 12.119297457975335
+  }
+}

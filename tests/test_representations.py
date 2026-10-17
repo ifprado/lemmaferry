@@ -3,6 +3,7 @@
 import copy
 import hashlib
 import json
+import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
@@ -11,7 +12,7 @@ import numpy as np
 
 from lemmaferry.correspondence import load_correspondence
 from lemmaferry.representations import fit_library_rosetta
-from lemmaferry.rosetta import RosettaPair
+from lemmaferry.translators import load_translator
 
 
 class FixtureEncoder:
@@ -80,20 +81,53 @@ class RepresentationBridgeTests(unittest.TestCase):
             self.assertTrue(extraction["parameters_unchanged"])
             self.assertIn("pipeline fixture", extraction["models"]["math"]["role"])
             self.assertEqual(extraction["library_snapshot_sha256"], "f" * 64)
-            reloaded = RosettaPair.load(path / "maps")
+            reloaded = load_translator(path / "maps")
             with np.load(path / "activations.npz", allow_pickle=False) as archive:
                 expected = reloaded.to_language(archive["math"])
                 for identifier, value in zip(archive["ids"].tolist(), expected):
                     np.testing.assert_array_equal(result["translated_targets"][identifier], value)
-                shuffled = reloaded.maps["T_shuffled"].predict(archive["math"])
+                shuffled = reloaded.to_language(archive["math"], control="shuffled")
                 for identifier, value in zip(archive["ids"].tolist(), shuffled):
                     np.testing.assert_array_equal(result["shuffled_targets"][identifier], value)
-                    np.testing.assert_array_equal(result["mean_targets"][identifier], reloaded.language_scaler.mean)
+                    mean = reloaded.to_language(archive["math"], control="mean")
+                    np.testing.assert_array_equal(result["mean_targets"][identifier], mean[0])
             # View tampering is detected by the same public correspondence loader.
             with (path / "views" / "math" / "train.jsonl").open("a") as handle:
                 handle.write("\n")
             with self.assertRaisesRegex(ValueError, "checksum"):
                 load_correspondence(path / "views")
+
+    @unittest.skipUnless(importlib.util.find_spec("torch"), "optional Torch runtime required")
+    def test_swap_bridge_saved_controls_match_frozen_target_snapshots(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "swap"
+            math, language = FixtureEncoder("math"), FixtureEncoder("language")
+            result = fit_library_rosetta(records(), "f" * 64, math, language, path,
+                        translator="swap", extractor=fixture_extract, seed=21,
+                        swap_config={"latent_dim": 2, "hidden_dim": 4, "steps": 8,
+                                     "batch_size": 2, "learning_rate": .01, "validation_every": 4})
+            self.assertEqual(math.state, "a" * 64)
+            self.assertEqual(language.state, "a" * 64)
+            reloaded = load_translator(path / "maps")
+            with np.load(path / "activations.npz", allow_pickle=False) as arrays:
+                ids, source = arrays["ids"].tolist(), arrays["math"]
+                for control, key in (("paired", "translated_targets"), ("shuffled", "shuffled_targets"),
+                                     ("mean", "mean_targets")):
+                    expected = reloaded.to_language(source, control=control)
+                    for identifier, vector in zip(ids, expected):
+                        np.testing.assert_allclose(result[key][identifier], vector, rtol=0, atol=0)
+            # The next iteration must extract the recipient's current weights;
+            # previous fitted targets remain plain detached numeric snapshots.
+            language.state = "c" * 64
+            newer = fit_library_rosetta(records(), "e" * 64, math, language, Path(tmp) / "next",
+                        translator="swap", extractor=fixture_extract, seed=21,
+                        swap_config={"latent_dim": 2, "hidden_dim": 4, "steps": 8,
+                                     "batch_size": 2, "learning_rate": .01, "validation_every": 4})
+            old_hash = result["report"]["protocol"]["extraction"]["trainable_parameter_sha256_before"]["language"]
+            new_hash = newer["report"]["protocol"]["extraction"]["trainable_parameter_sha256_before"]["language"]
+            self.assertEqual(old_hash, "a" * 64)
+            self.assertEqual(new_hash, "c" * 64)
+            self.assertEqual(result["report"]["protocol"]["extraction"]["library_snapshot_sha256"], "f" * 64)
 
     def test_exact_lemma_call_and_dependency_closure_are_rendered(self):
         data = records()

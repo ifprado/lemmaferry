@@ -414,14 +414,19 @@ def train_update(model, examples: Iterable[Mapping[str, Any]], *, budget: Traini
         raise ValueError("recipient cannot change its independently registered evaluation")
     model.frozen_evaluation_sha256 = fixed_evaluation.sha256
     encoded = _encoded(model, rows, budget.max_length)
+    frozen_targets = None
     if budget.auxiliary_weight:
         import numpy as np
         try:
-            targets = np.asarray([r.get("translated_target", []) for r in rows], dtype=np.float32)
+            targets = np.array([r.get("translated_target", []) for r in rows], dtype=np.float32, copy=True)
         except (TypeError, ValueError) as exc:
             raise ValueError("translated targets must be numeric fixed-dimensional vectors") from exc
         if targets.shape != (len(rows), model.hidden_size) or not np.isfinite(targets).all():
             raise ValueError("positive auxiliary weight requires a finite translated target at the recipient hidden dimension for every row")
+        # Freeze a detached snapshot before any optimizer step. The bridge and
+        # caller-owned lists cannot change targets during recipient learning.
+        frozen_targets = torch.tensor(targets, device=model.device).detach().clone()
+    examples_hash = _digest(rows)
     config = dict(learning_rate=budget.learning_rate, weight_decay=budget.weight_decay,
                   gradient_clip=budget.gradient_clip)
     if model.optimizer is None:
@@ -460,8 +465,7 @@ def train_update(model, examples: Iterable[Mapping[str, Any]], *, budget: Traini
             prompt_positions = torch.tensor([sum(t == -100 for t in selected[k][1]) - 1
                                              for k in range(len(selected))], device=model.device)
             states = hidden[torch.arange(len(selected), device=model.device), prompt_positions]
-            target = torch.tensor([rows[i]["translated_target"] for i in indices],
-                                  dtype=states.dtype, device=model.device)
+            target = frozen_targets[indices].to(dtype=states.dtype)
             if not bool(torch.isfinite(target).all()):
                 raise ValueError("translated target contains non-finite values")
             auxiliary_loss = torch.nn.functional.mse_loss(states, target)
@@ -485,11 +489,14 @@ def train_update(model, examples: Iterable[Mapping[str, Any]], *, budget: Traini
               "processed_padded_tokens": budget.steps * budget.batch_size * budget.max_length,
               "nonpadding_tokens": actual_tokens, "supervised_answer_tokens": answer_tokens,
               "examples_seen": budget.steps * budget.batch_size,
-              "examples_sha256": _digest(rows), "fixed_evaluation_sha256": fixed_evaluation.sha256,
+              "examples_sha256": examples_hash, "fixed_evaluation_sha256": fixed_evaluation.sha256,
               "parameter_sha256_before": initial, "parameter_sha256_after": final,
               "mean_training_token_nll": sum(language_losses) / len(language_losses),
               "mean_auxiliary_hidden_mse": sum(auxiliary_losses) / len(auxiliary_losses),
               "mean_total_training_loss": sum(losses) / len(losses), "step_losses": losses,
+              "auxiliary_targets_sha256": (hashlib.sha256(frozen_targets.cpu().contiguous().numpy().tobytes()).hexdigest()
+                                             if frozen_targets is not None else None),
+              "auxiliary_targets_detached": frozen_targets is None or not frozen_targets.requires_grad,
               "seed": seed}
     model.history.append(report)
     return report
