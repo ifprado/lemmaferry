@@ -1,0 +1,781 @@
+{
+  "status": "completed",
+  "checkpoint": "runs/student-v1/checkpoints/seed1730-verified_supervision.pt",
+  "checkpoint_sha256": "1712fbff6cf6aa06c73f1f33e54f048d870292882b731393baa3805b0c19c389",
+  "seed": 1730,
+  "arm": "verified_supervision",
+  "device": "mps",
+  "count": 128,
+  "two_choice_accuracy": 0.5078125,
+  "scope": "Standalone small synthetic student; no source model, recipient Qwen, translator, or proof certificate is supplied to the model.",
+  "records": [
+    {
+      "id": "transfer_test_000000",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000001",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000002",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000003",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000004",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000005",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000006",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000007",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000008",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000009",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000010",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000011",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000012",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000013",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000014",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000015",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000016",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000017",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000018",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000019",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000020",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000021",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000022",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000023",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000024",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000025",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000026",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000027",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000028",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000029",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000030",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000031",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000032",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000033",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000034",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000035",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000036",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000037",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000038",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000039",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000040",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000041",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000042",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000043",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000044",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000045",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000046",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000047",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000048",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000049",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000050",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000051",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000052",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000053",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000054",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000055",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000056",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000057",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000058",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000059",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000060",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000061",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000062",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000063",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000064",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000065",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000066",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000067",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000068",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000069",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000070",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000071",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000072",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000073",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000074",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000075",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000076",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000077",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000078",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000079",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000080",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000081",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000082",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000083",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000084",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000085",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000086",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000087",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000088",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000089",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000090",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000091",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000092",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000093",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000094",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000095",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000096",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000097",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000098",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000099",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000100",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000101",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000102",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000103",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000104",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000105",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000106",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000107",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000108",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000109",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000110",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000111",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000112",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000113",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000114",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000115",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000116",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000117",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000118",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000119",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000120",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000121",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000122",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000123",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000124",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false
+    },
+    {
+      "id": "transfer_test_000125",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000126",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true
+    },
+    {
+      "id": "transfer_test_000127",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false
+    }
+  ]
+}

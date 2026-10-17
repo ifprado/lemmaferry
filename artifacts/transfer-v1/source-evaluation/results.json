@@ -1,0 +1,2631 @@
+{
+  "status": "completed",
+  "created_utc": "2026-10-17T06:33:05.071007+00:00",
+  "experiment": "proof_assisted_next_token_intervention",
+  "seed": 1729,
+  "source_only": true,
+  "model": "Qwen/Qwen2.5-Math-1.5B",
+  "revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "layer_index": 14,
+  "position": "last_nonpadding_token",
+  "device": "mps",
+  "dtype": "float32",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "numpy": "2.5.4"
+  },
+  "input_sha256": "af14ac8cd8eecbcf550c5b00c14222fa8a8e71242f03deb38041052eb4fec5e8",
+  "source_manifest_sha256": "b2eaf178b58e25721ae8ce26ba509c7b20ee237a788a36537c879de86fed40f8",
+  "target_manifest_sha256": "08d97e7b19029b8ff7e02c53fe74e8f5310627333dbda4cb7cf7e4cd379b0a58",
+  "translator_report_sha256": "f2ceabf389671b61b1ae0fa577983986450c3d417bb384250349d367fa34e505",
+  "code_sha256": {
+    "runner": "7201102c3c35f5e22cd90d4c8e1f4cc932e991b48f1e993739cc0bf158e93c16",
+    "qwen2_implementation": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb"
+  },
+  "self_patch_tolerance": {
+    "absolute": 0.0001,
+    "relative": 0.0001
+  },
+  "information_policy": "Donor and proof-text baseline see identical certificate and question. Ordinary recipient sees question and rules only.",
+  "control_policy": "Shuffled donor rows use a seeded random derangement. Translated zero donor means T(0)=intercept, not a zero recipient state.",
+  "scope": "One constrained next-token choice; no claim of multi-token reasoning or standalone learning.",
+  "load_seconds": 3.2529723329935223,
+  "donor_derangement": [
+    74,
+    26,
+    105,
+    42,
+    70,
+    62,
+    112,
+    68,
+    122,
+    8,
+    43,
+    65,
+    88,
+    18,
+    99,
+    24,
+    9,
+    80,
+    44,
+    94,
+    78,
+    50,
+    61,
+    31,
+    127,
+    91,
+    106,
+    41,
+    37,
+    5,
+    77,
+    10,
+    53,
+    54,
+    71,
+    86,
+    119,
+    46,
+    103,
+    69,
+    97,
+    13,
+    120,
+    113,
+    28,
+    124,
+    101,
+    92,
+    2,
+    58,
+    72,
+    118,
+    93,
+    15,
+    95,
+    111,
+    45,
+    115,
+    34,
+    87,
+    125,
+    109,
+    55,
+    126,
+    59,
+    100,
+    7,
+    114,
+    27,
+    36,
+    66,
+    63,
+    4,
+    64,
+    104,
+    17,
+    1,
+    14,
+    76,
+    116,
+    102,
+    19,
+    75,
+    48,
+    110,
+    21,
+    98,
+    73,
+    52,
+    49,
+    3,
+    85,
+    56,
+    30,
+    123,
+    16,
+    51,
+    40,
+    121,
+    12,
+    60,
+    57,
+    38,
+    107,
+    117,
+    96,
+    67,
+    83,
+    20,
+    22,
+    23,
+    89,
+    39,
+    84,
+    6,
+    108,
+    25,
+    32,
+    29,
+    35,
+    11,
+    47,
+    79,
+    90,
+    82,
+    81,
+    33,
+    0
+  ],
+  "metrics": {
+    "source_proof_text": {
+      "count": 128,
+      "two_choice_accuracy": 0.5078125,
+      "answer_token_nll": 1.1705268193036318,
+      "two_choice_nll": 0.687941831536591,
+      "greedy_token_accuracy": 0.5078125
+    }
+  },
+  "by_family": {
+    "transfer_chained_diamonds": {
+      "source_proof_text": {
+        "count": 64,
+        "two_choice_accuracy": 0.5,
+        "answer_token_nll": 1.1684249490499496,
+        "two_choice_nll": 0.6919924765825272,
+        "greedy_token_accuracy": 0.5
+      }
+    },
+    "transfer_cyclic_diamonds": {
+      "source_proof_text": {
+        "count": 64,
+        "two_choice_accuracy": 0.515625,
+        "answer_token_nll": 1.172628689557314,
+        "two_choice_nll": 0.683891186490655,
+        "greedy_token_accuracy": 0.515625
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "transfer_test_000000",
+      "family": "transfer_chained_diamonds",
+      "lineage": "2d721de459963e515d79df6b180c38ce7dbdd460c794d15d865c6520339fb570",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1765868663787842,
+          "two_choice_nll": 0.7615756988525391,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000001",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "a5905c771135e32c7ab273c2ad4fb12913f794c554ce2017645ecaa9e1b71d4f",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.217238426208496,
+          "two_choice_nll": 0.6849532127380371,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000002",
+      "family": "transfer_chained_diamonds",
+      "lineage": "3752d27f0ec26a0fb3c60fc21360e438581eb4807d8bee0ea3dde717e3a6d6cb",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.1305736303329468,
+          "two_choice_nll": 0.716733455657959,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000003",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "6a8451e7744a66d2bd77efdf8e1aab9dc0b18f45793a7e72a637feaa07608be3",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1980571746826172,
+          "two_choice_nll": 0.7198173999786377,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000004",
+      "family": "transfer_chained_diamonds",
+      "lineage": "382a517f1ba0b3e778375cb38910de832ba69b03c0bf7746346e69474004504c",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1520265340805054,
+          "two_choice_nll": 0.7056782245635986,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000005",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "8acfdc8edb575436523c9bbd5ef13882e44042e8eb432caa63d200cbd594828d",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1792229413986206,
+          "two_choice_nll": 0.710550844669342,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000006",
+      "family": "transfer_chained_diamonds",
+      "lineage": "2f7f4269758a3fc0353160c11f6ed1898e5c70927610943deded444361b80991",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.093943476676941,
+          "two_choice_nll": 0.6651768684387207,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000007",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "6a8451e7744a66d2bd77efdf8e1aab9dc0b18f45793a7e72a637feaa07608be3",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0515581369400024,
+          "two_choice_nll": 0.6047969460487366,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000008",
+      "family": "transfer_chained_diamonds",
+      "lineage": "71f75e44498acc2eb1c5f3333942835aac1d0bbdccf06deaaa9e64945c96d117",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1626262664794922,
+          "two_choice_nll": 0.7475886940956116,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000009",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "04e435ac95eebb5ab274e3b7e58299ed3e85a191857dfba21d6eab7da55eb36d",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1506168842315674,
+          "two_choice_nll": 0.7548439502716064,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000010",
+      "family": "transfer_chained_diamonds",
+      "lineage": "ae83bf474653f3b2d75212ce8a0548bf776f50bc860a03454169ac5717546497",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1747444868087769,
+          "two_choice_nll": 0.7505217790603638,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000011",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "b14c8535970f25ebe8f7fa98cf180fb05f8b56ce19690a5693a5bf952ae5e756",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.3000822067260742,
+          "two_choice_nll": 0.7526522874832153,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000012",
+      "family": "transfer_chained_diamonds",
+      "lineage": "f58b0200a294be0bf819d6af34c6fb65702e847993a7ea86635dbe1054f3b442",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.132057547569275,
+          "two_choice_nll": 0.6889061331748962,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000013",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "5e48e10fe6eccc5f24b0c0efb16b43f4360de8ecd30a7c5b499fe3f472422189",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2435580492019653,
+          "two_choice_nll": 0.6998701691627502,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000014",
+      "family": "transfer_chained_diamonds",
+      "lineage": "3ad1c33feaaa5a10abf6eafd945494e802e286babf9f4854a436681337b17318",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2350519895553589,
+          "two_choice_nll": 0.6992596983909607,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000015",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "d1019d8e54b43f0fbd024801315ad292a9992a630528f095ac07353c287fba85",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2783321142196655,
+          "two_choice_nll": 0.7787971496582031,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000016",
+      "family": "transfer_chained_diamonds",
+      "lineage": "8078fca19b2c340f9227e3af9ccac6b876b13ab1f3bdf0003e60f7c7847c0111",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.206908941268921,
+          "two_choice_nll": 0.8022698760032654,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000017",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "6defa604d39d3e1e92300d54253408f06f8856054cf6b304182a4d3d54df9461",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.160195231437683,
+          "two_choice_nll": 0.7296594381332397,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000018",
+      "family": "transfer_chained_diamonds",
+      "lineage": "ca48babfcc5dfe773acd830e86a176922cd9d72f4523ddb769310357d045540c",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0591009855270386,
+          "two_choice_nll": 0.5531049966812134,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000019",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "97255de61e65d9f6b32600ff4314db717732c8b0d34de4d4ff00ea2ac96adb69",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1181714534759521,
+          "two_choice_nll": 0.6270114183425903,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000020",
+      "family": "transfer_chained_diamonds",
+      "lineage": "ed2978da59a42811351c914e1fb8a3d6b49a5e243734574c07df48b920a236c7",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1369057893753052,
+          "two_choice_nll": 0.7457053661346436,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000021",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "706129bc7c9ceaa420f6d9562737dbc19409a0acdf377df1713f0c844f19519c",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.2424674034118652,
+          "two_choice_nll": 0.6922268271446228,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000022",
+      "family": "transfer_chained_diamonds",
+      "lineage": "44acc3623e203e641505efc88e804b7b11f2253375055026b8e08352fb75363d",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2675188779830933,
+          "two_choice_nll": 0.7629730105400085,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000023",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "2146cbc84e6c4d35be73e8f1a59ff5fa4740b6cf3c6eeff480b6a5b9c8b044bd",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0138061046600342,
+          "two_choice_nll": 0.6099191904067993,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000024",
+      "family": "transfer_chained_diamonds",
+      "lineage": "882ab9621d866119bef2ebf232045fc483906ab3b16f068945a835667031cb20",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1617759466171265,
+          "two_choice_nll": 0.6894176602363586,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000025",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "2c30e74ea888f5052b2d23ea5e997c6b06903b0507ad6d90e8c41f2512cdb90f",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.093641757965088,
+          "two_choice_nll": 0.6088099479675293,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000026",
+      "family": "transfer_chained_diamonds",
+      "lineage": "66ac18bfe08180ee0ba6d0b7b864873d256111010475e8d522584d14e30814db",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.051474690437317,
+          "two_choice_nll": 0.6611639261245728,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000027",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "04e435ac95eebb5ab274e3b7e58299ed3e85a191857dfba21d6eab7da55eb36d",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 0.965336799621582,
+          "two_choice_nll": 0.6069247126579285,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000028",
+      "family": "transfer_chained_diamonds",
+      "lineage": "bf2b4209bd32f7ee0b31b59fa11d7a862eb492e806b78331202bde2a081680f7",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.107060432434082,
+          "two_choice_nll": 0.6892532706260681,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000029",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "ddc5d9ff39dfbe9701039ca35704af43c75918331ae3a873e67a12d22c836de8",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0004019737243652,
+          "two_choice_nll": 0.5748320817947388,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000030",
+      "family": "transfer_chained_diamonds",
+      "lineage": "2d721de459963e515d79df6b180c38ce7dbdd460c794d15d865c6520339fb570",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.048402190208435,
+          "two_choice_nll": 0.6094486117362976,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000031",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "1dd7202657acf3cfd42e397025cf15f890ebb28c73b0590f95a53914e247a38e",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.219882845878601,
+          "two_choice_nll": 0.6961208581924438,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000032",
+      "family": "transfer_chained_diamonds",
+      "lineage": "8078fca19b2c340f9227e3af9ccac6b876b13ab1f3bdf0003e60f7c7847c0111",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0462920665740967,
+          "two_choice_nll": 0.6151463985443115,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000033",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "ee39289e8a74b86d263d2cd4182fbfb5c0d6b0c3bcf2377300ba680d38b05c09",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1823368072509766,
+          "two_choice_nll": 0.7828990817070007,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000034",
+      "family": "transfer_chained_diamonds",
+      "lineage": "bf2b4209bd32f7ee0b31b59fa11d7a862eb492e806b78331202bde2a081680f7",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1292636394500732,
+          "two_choice_nll": 0.7115321159362793,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000035",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "c775b60b1d00e7314ed40e2cacc4283a2f60e8b30e88703f10e69e8d3fa6a90d",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2408993244171143,
+          "two_choice_nll": 0.7132512927055359,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000036",
+      "family": "transfer_chained_diamonds",
+      "lineage": "44acc3623e203e641505efc88e804b7b11f2253375055026b8e08352fb75363d",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1126633882522583,
+          "two_choice_nll": 0.6183140277862549,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000037",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "d6a2eae29686f5068c3fa9605d50a7f082981ee8e42dd50d82f7f96a9ec56564",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1897165775299072,
+          "two_choice_nll": 0.6618838310241699,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000038",
+      "family": "transfer_chained_diamonds",
+      "lineage": "4f5ffb99464448720495ea357c40f7000fe8eb56073384d66a55bbd7b1946ada",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.2162047624588013,
+          "two_choice_nll": 0.6618708968162537,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000039",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "57a342506f957ff8a73d211cf306bc9f841de3921e58e6e1a95b518e40d4e4c9",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1686738729476929,
+          "two_choice_nll": 0.6975705623626709,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000040",
+      "family": "transfer_chained_diamonds",
+      "lineage": "e3dc038143c7b5d61c7e681cfb0fcef4f5d5317cd00f62fe191e3d81d860df0b",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.143532156944275,
+          "two_choice_nll": 0.6550976634025574,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000041",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "ee39289e8a74b86d263d2cd4182fbfb5c0d6b0c3bcf2377300ba680d38b05c09",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1114689111709595,
+          "two_choice_nll": 0.6809228658676147,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000042",
+      "family": "transfer_chained_diamonds",
+      "lineage": "2f7f4269758a3fc0353160c11f6ed1898e5c70927610943deded444361b80991",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.084036111831665,
+          "two_choice_nll": 0.7055136561393738,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000043",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "9365beb075ec496e2955d7f9e12194f45ad0c2ac95b2198913516133b55a93f6",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1428788900375366,
+          "two_choice_nll": 0.7044864892959595,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000044",
+      "family": "transfer_chained_diamonds",
+      "lineage": "7cdc2d9b64641d8aede3a5601887663d4bab4777933991a6b42adeae677470fc",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1448049545288086,
+          "two_choice_nll": 0.5970835089683533,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000045",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "b36ca58186a7ae49c6018a61e7acd26aa255e15bbd79463c21d1ffab9a9c933b",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.212498664855957,
+          "two_choice_nll": 0.7165861129760742,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000046",
+      "family": "transfer_chained_diamonds",
+      "lineage": "ed2978da59a42811351c914e1fb8a3d6b49a5e243734574c07df48b920a236c7",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2493505477905273,
+          "two_choice_nll": 0.8123090267181396,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000047",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "78d7a781ea20fbf79568361b8ac116a12e8c9dfa11843533eb66c09a5526e28a",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.3202077150344849,
+          "two_choice_nll": 0.7427119016647339,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000048",
+      "family": "transfer_chained_diamonds",
+      "lineage": "7f04ee66e2a0014f52ff0264bfab2b3273cc4fd82094f3ef2a10316d11763e9b",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.3296244144439697,
+          "two_choice_nll": 0.9096182584762573,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000049",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "97255de61e65d9f6b32600ff4314db717732c8b0d34de4d4ff00ea2ac96adb69",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.2269840240478516,
+          "two_choice_nll": 0.6968696117401123,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000050",
+      "family": "transfer_chained_diamonds",
+      "lineage": "eea23ddbb46564cbe41b1b587967d8623d95ee0b3b8a300a4df6f5a2278ac1b2",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1961944103240967,
+          "two_choice_nll": 0.7473832964897156,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000051",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "4b50548369f1cb7d4128f155cc34d1ca97f50cfdc66005952978d49b4e15172e",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.2126734256744385,
+          "two_choice_nll": 0.7242408990859985,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000052",
+      "family": "transfer_chained_diamonds",
+      "lineage": "2d721de459963e515d79df6b180c38ce7dbdd460c794d15d865c6520339fb570",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.0739611387252808,
+          "two_choice_nll": 0.6655679941177368,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000053",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "1dd7202657acf3cfd42e397025cf15f890ebb28c73b0590f95a53914e247a38e",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.288494348526001,
+          "two_choice_nll": 0.7593998908996582,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000054",
+      "family": "transfer_chained_diamonds",
+      "lineage": "6a9a5e7d526d5c7f63e657f76597e3034b07c998f15b0960c02f6d9de95200ee",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.2249079942703247,
+          "two_choice_nll": 0.6477263569831848,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000055",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "6a8451e7744a66d2bd77efdf8e1aab9dc0b18f45793a7e72a637feaa07608be3",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1773430109024048,
+          "two_choice_nll": 0.7094619870185852,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000056",
+      "family": "transfer_chained_diamonds",
+      "lineage": "20295ae5f7e4bacc9f0ebc312019c04a7a4300690496b1ffc776f8981e8e9307",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.1970264911651611,
+          "two_choice_nll": 0.704580545425415,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000057",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "1289f3f5eaa5c8247a46b37c109954a68550211c53a4ca8fd735e94dbe0f962d",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.2626307010650635,
+          "two_choice_nll": 0.7272434234619141,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000058",
+      "family": "transfer_chained_diamonds",
+      "lineage": "382a517f1ba0b3e778375cb38910de832ba69b03c0bf7746346e69474004504c",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1285816431045532,
+          "two_choice_nll": 0.6376190781593323,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000059",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "78d7a781ea20fbf79568361b8ac116a12e8c9dfa11843533eb66c09a5526e28a",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.3360058069229126,
+          "two_choice_nll": 0.7845026850700378,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000060",
+      "family": "transfer_chained_diamonds",
+      "lineage": "ca48babfcc5dfe773acd830e86a176922cd9d72f4523ddb769310357d045540c",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.1698567867279053,
+          "two_choice_nll": 0.700176477432251,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000061",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "5e48e10fe6eccc5f24b0c0efb16b43f4360de8ecd30a7c5b499fe3f472422189",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1887784004211426,
+          "two_choice_nll": 0.6389838457107544,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000062",
+      "family": "transfer_chained_diamonds",
+      "lineage": "9c407190fbc1318bd986845ce3d820aba92262386da7b488b6cff728e7a50177",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1893866062164307,
+          "two_choice_nll": 0.6986252069473267,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000063",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "1289f3f5eaa5c8247a46b37c109954a68550211c53a4ca8fd735e94dbe0f962d",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.2993957996368408,
+          "two_choice_nll": 0.7021427750587463,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000064",
+      "family": "transfer_chained_diamonds",
+      "lineage": "eea23ddbb46564cbe41b1b587967d8623d95ee0b3b8a300a4df6f5a2278ac1b2",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1181162595748901,
+          "two_choice_nll": 0.6069529056549072,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000065",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "5e48e10fe6eccc5f24b0c0efb16b43f4360de8ecd30a7c5b499fe3f472422189",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.185838222503662,
+          "two_choice_nll": 0.6531320214271545,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000066",
+      "family": "transfer_chained_diamonds",
+      "lineage": "a15ff0238fb46b4630723a06fc1c1e4c2bc8caba990d894da47de78d7e14e7ba",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1975843906402588,
+          "two_choice_nll": 0.6876548528671265,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000067",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "732590eaacc59a58d971a61e775538944e399f0019a9e8dd35d8882cbdc6da89",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2286393642425537,
+          "two_choice_nll": 0.8166861534118652,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000068",
+      "family": "transfer_chained_diamonds",
+      "lineage": "9c407190fbc1318bd986845ce3d820aba92262386da7b488b6cff728e7a50177",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.327430248260498,
+          "two_choice_nll": 0.7391320466995239,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000069",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "5e48e10fe6eccc5f24b0c0efb16b43f4360de8ecd30a7c5b499fe3f472422189",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2714234590530396,
+          "two_choice_nll": 0.732101321220398,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000070",
+      "family": "transfer_chained_diamonds",
+      "lineage": "e3e1f2720d716653eb9cc988a969fcbf1848ad6c882ac9192efb876f08f44198",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 0.9871945381164551,
+          "two_choice_nll": 0.5721802115440369,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000071",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "9365beb075ec496e2955d7f9e12194f45ad0c2ac95b2198913516133b55a93f6",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0751577615737915,
+          "two_choice_nll": 0.65259850025177,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000072",
+      "family": "transfer_chained_diamonds",
+      "lineage": "5f93302f88ede94366546ab1d43dbbea5da7eca5001bb66061173be07bda21b9",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.3633639812469482,
+          "two_choice_nll": 0.8568052649497986,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000073",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "b7403e5b800cae987a004029e6c4b503083dd2e0d246bee9740614aabbde0da6",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.187312126159668,
+          "two_choice_nll": 0.7175793647766113,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000074",
+      "family": "transfer_chained_diamonds",
+      "lineage": "e3dc038143c7b5d61c7e681cfb0fcef4f5d5317cd00f62fe191e3d81d860df0b",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1920979022979736,
+          "two_choice_nll": 0.746319591999054,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000075",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "ee39289e8a74b86d263d2cd4182fbfb5c0d6b0c3bcf2377300ba680d38b05c09",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0462309122085571,
+          "two_choice_nll": 0.6292657256126404,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000076",
+      "family": "transfer_chained_diamonds",
+      "lineage": "8c6508d936cb73c1585317118b8ee65cf5e75501fd7bcef64f57a02bd5e7550e",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1992995738983154,
+          "two_choice_nll": 0.625371515750885,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000077",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "81dc888fec14079170cbb21f91fd6f9091d067dc8e8828f3ead6033b2634e8c9",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1167265176773071,
+          "two_choice_nll": 0.6704548001289368,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000078",
+      "family": "transfer_chained_diamonds",
+      "lineage": "6da9d6537b7d2da1a8a445c8ea95cfaa1e577c0af411b8515a2f31afe0b90829",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0571720600128174,
+          "two_choice_nll": 0.591558039188385,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000079",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "5711d768bb5bd3923a7bd5b76769dc6a732da7687ee746d71efc9a31dc7175d8",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1314871311187744,
+          "two_choice_nll": 0.6521866917610168,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000080",
+      "family": "transfer_chained_diamonds",
+      "lineage": "7f04ee66e2a0014f52ff0264bfab2b3273cc4fd82094f3ef2a10316d11763e9b",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.279137134552002,
+          "two_choice_nll": 0.7491246461868286,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000081",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "57a342506f957ff8a73d211cf306bc9f841de3921e58e6e1a95b518e40d4e4c9",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0804123878479004,
+          "two_choice_nll": 0.6227872371673584,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000082",
+      "family": "transfer_chained_diamonds",
+      "lineage": "3ad1c33feaaa5a10abf6eafd945494e802e286babf9f4854a436681337b17318",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1878559589385986,
+          "two_choice_nll": 0.6786840558052063,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000083",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "9365beb075ec496e2955d7f9e12194f45ad0c2ac95b2198913516133b55a93f6",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.121658444404602,
+          "two_choice_nll": 0.6851920485496521,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000084",
+      "family": "transfer_chained_diamonds",
+      "lineage": "eea23ddbb46564cbe41b1b587967d8623d95ee0b3b8a300a4df6f5a2278ac1b2",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.2301008701324463,
+          "two_choice_nll": 0.7417685389518738,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000085",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "5711d768bb5bd3923a7bd5b76769dc6a732da7687ee746d71efc9a31dc7175d8",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1265314817428589,
+          "two_choice_nll": 0.6182796955108643,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000086",
+      "family": "transfer_chained_diamonds",
+      "lineage": "71f75e44498acc2eb1c5f3333942835aac1d0bbdccf06deaaa9e64945c96d117",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1201015710830688,
+          "two_choice_nll": 0.6708363890647888,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000087",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "faea38c0b6be0ada2ba04222ae0805758f902a1b4a954a04384bd0822f325069",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1532636880874634,
+          "two_choice_nll": 0.6261731386184692,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000088",
+      "family": "transfer_chained_diamonds",
+      "lineage": "5f93302f88ede94366546ab1d43dbbea5da7eca5001bb66061173be07bda21b9",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1432408094406128,
+          "two_choice_nll": 0.6804161667823792,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000089",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "5e48e10fe6eccc5f24b0c0efb16b43f4360de8ecd30a7c5b499fe3f472422189",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.2472952604293823,
+          "two_choice_nll": 0.7417455315589905,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000090",
+      "family": "transfer_chained_diamonds",
+      "lineage": "eea23ddbb46564cbe41b1b587967d8623d95ee0b3b8a300a4df6f5a2278ac1b2",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2202447652816772,
+          "two_choice_nll": 0.7302706241607666,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000091",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "732590eaacc59a58d971a61e775538944e399f0019a9e8dd35d8882cbdc6da89",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0264345407485962,
+          "two_choice_nll": 0.6070670485496521,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000092",
+      "family": "transfer_chained_diamonds",
+      "lineage": "caa424aeed0891c045b85279b6f2a38226adb9fb1bf51385986cdb15a0315b69",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1114885807037354,
+          "two_choice_nll": 0.6150302886962891,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000093",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "646541d5691e76a545d1a79ffcdbbec7e82f564c1c67ee3fffcfb4d366846498",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0000048875808716,
+          "two_choice_nll": 0.5923386216163635,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000094",
+      "family": "transfer_chained_diamonds",
+      "lineage": "eea23ddbb46564cbe41b1b587967d8623d95ee0b3b8a300a4df6f5a2278ac1b2",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.258721947669983,
+          "two_choice_nll": 0.730265736579895,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000095",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "4b50548369f1cb7d4128f155cc34d1ca97f50cfdc66005952978d49b4e15172e",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1032637357711792,
+          "two_choice_nll": 0.6340746879577637,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000096",
+      "family": "transfer_chained_diamonds",
+      "lineage": "7cdc2d9b64641d8aede3a5601887663d4bab4777933991a6b42adeae677470fc",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.264578104019165,
+          "two_choice_nll": 0.7050209641456604,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000097",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "732590eaacc59a58d971a61e775538944e399f0019a9e8dd35d8882cbdc6da89",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0140272378921509,
+          "two_choice_nll": 0.5621022582054138,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000098",
+      "family": "transfer_chained_diamonds",
+      "lineage": "28cc35c2bc71814da709194b15127ac26aadd4c7b0034df9032ac716d3c96cc9",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2346981763839722,
+          "two_choice_nll": 0.7205865383148193,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000099",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "b14c8535970f25ebe8f7fa98cf180fb05f8b56ce19690a5693a5bf952ae5e756",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.2362643480300903,
+          "two_choice_nll": 0.6390337944030762,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000100",
+      "family": "transfer_chained_diamonds",
+      "lineage": "2f7f4269758a3fc0353160c11f6ed1898e5c70927610943deded444361b80991",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0661672353744507,
+          "two_choice_nll": 0.6455605626106262,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000101",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "3ac8515b178ad7ea704866238e8b9384f224c11aea9589bef23eee565f4b2770",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.3022207021713257,
+          "two_choice_nll": 0.848865807056427,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000102",
+      "family": "transfer_chained_diamonds",
+      "lineage": "22d75e20dbea761e40ef9f752b1d25f8367ba822ffbb6a68de0ad7bd556f852c",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1085766553878784,
+          "two_choice_nll": 0.6077455878257751,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000103",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "5e48e10fe6eccc5f24b0c0efb16b43f4360de8ecd30a7c5b499fe3f472422189",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1004841327667236,
+          "two_choice_nll": 0.6216703653335571,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000104",
+      "family": "transfer_chained_diamonds",
+      "lineage": "bf700927c338c18ef12e439190c052e82d91702daea90debafa5de9ba5d87a63",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.0014234781265259,
+          "two_choice_nll": 0.6002818942070007,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000105",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "2c30e74ea888f5052b2d23ea5e997c6b06903b0507ad6d90e8c41f2512cdb90f",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.2352240085601807,
+          "two_choice_nll": 0.6570059061050415,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000106",
+      "family": "transfer_chained_diamonds",
+      "lineage": "77df7f59f5121f6493362c09cbf27244d376e96480723850f2b8c9cc44dd92c4",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.221221685409546,
+          "two_choice_nll": 0.6946470141410828,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000107",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "c3bc786affe9e7a4cff81722d714d1b8e56bfc8e4c75987e2192f5213bdafa55",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.2787176370620728,
+          "two_choice_nll": 0.7211625576019287,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000108",
+      "family": "transfer_chained_diamonds",
+      "lineage": "7cdc2d9b64641d8aede3a5601887663d4bab4777933991a6b42adeae677470fc",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.191567301750183,
+          "two_choice_nll": 0.6020231246948242,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000109",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "fc6852f5566e6d3377805ec80b12ca72c76c51d6b562dd8a3d9fef4270184db4",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.293891429901123,
+          "two_choice_nll": 0.7141246795654297,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000110",
+      "family": "transfer_chained_diamonds",
+      "lineage": "7f04ee66e2a0014f52ff0264bfab2b3273cc4fd82094f3ef2a10316d11763e9b",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.2014209032058716,
+          "two_choice_nll": 0.6882501840591431,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000111",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "ee39289e8a74b86d263d2cd4182fbfb5c0d6b0c3bcf2377300ba680d38b05c09",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.221230149269104,
+          "two_choice_nll": 0.7044884562492371,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000112",
+      "family": "transfer_chained_diamonds",
+      "lineage": "ed2978da59a42811351c914e1fb8a3d6b49a5e243734574c07df48b920a236c7",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2400890588760376,
+          "two_choice_nll": 0.7944638133049011,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000113",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "15f1c07e21073e7a8f3478e52b65c09b283858ddac976b97bb96ecef291698bd",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1632540225982666,
+          "two_choice_nll": 0.7223525643348694,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000114",
+      "family": "transfer_chained_diamonds",
+      "lineage": "2d721de459963e515d79df6b180c38ce7dbdd460c794d15d865c6520339fb570",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.2251529693603516,
+          "two_choice_nll": 0.8209128975868225,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000115",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "b7403e5b800cae987a004029e6c4b503083dd2e0d246bee9740614aabbde0da6",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.179212212562561,
+          "two_choice_nll": 0.6581897139549255,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000116",
+      "family": "transfer_chained_diamonds",
+      "lineage": "4f5ffb99464448720495ea357c40f7000fe8eb56073384d66a55bbd7b1946ada",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.188093900680542,
+          "two_choice_nll": 0.6581225991249084,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000117",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "04e435ac95eebb5ab274e3b7e58299ed3e85a191857dfba21d6eab7da55eb36d",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.0617514848709106,
+          "two_choice_nll": 0.6241211891174316,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000118",
+      "family": "transfer_chained_diamonds",
+      "lineage": "c2dcf3ab4482bb258d221426d19efda826a07150fad7be9ed2a19ef6fbd9eb10",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1348130702972412,
+          "two_choice_nll": 0.5998377799987793,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000119",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "5711d768bb5bd3923a7bd5b76769dc6a732da7687ee746d71efc9a31dc7175d8",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.105563759803772,
+          "two_choice_nll": 0.6477749943733215,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000120",
+      "family": "transfer_chained_diamonds",
+      "lineage": "bf700927c338c18ef12e439190c052e82d91702daea90debafa5de9ba5d87a63",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.155531883239746,
+          "two_choice_nll": 0.712660551071167,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000121",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "78d7a781ea20fbf79568361b8ac116a12e8c9dfa11843533eb66c09a5526e28a",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": false,
+          "answer_token_nll": 1.239011526107788,
+          "two_choice_nll": 0.7085853219032288,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000122",
+      "family": "transfer_chained_diamonds",
+      "lineage": "12ac8cb0dbc55bc488e23b7a8114acfc54a40d32f121f92a23279c19dbfc5745",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.1857627630233765,
+          "two_choice_nll": 0.7054943442344666,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000123",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "81dc888fec14079170cbb21f91fd6f9091d067dc8e8828f3ead6033b2634e8c9",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1178953647613525,
+          "two_choice_nll": 0.6881082653999329,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000124",
+      "family": "transfer_chained_diamonds",
+      "lineage": "4f5ffb99464448720495ea357c40f7000fe8eb56073384d66a55bbd7b1946ada",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "A",
+          "correct": true,
+          "answer_token_nll": 1.1910964250564575,
+          "two_choice_nll": 0.6067919135093689,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000125",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "d1019d8e54b43f0fbd024801315ad292a9992a630528f095ac07353c287fba85",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.1618696451187134,
+          "two_choice_nll": 0.6343671679496765,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000126",
+      "family": "transfer_chained_diamonds",
+      "lineage": "2294d57d7d711d60703563f18849722e07f68c43775b1dd61c9eb7cb8c2d64ab",
+      "answer": "A",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": false,
+          "answer_token_nll": 1.2434067726135254,
+          "two_choice_nll": 0.7658060789108276,
+          "greedy_token_correct": false,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer_test_000127",
+      "family": "transfer_cyclic_diamonds",
+      "lineage": "78d7a781ea20fbf79568361b8ac116a12e8c9dfa11843533eb66c09a5526e28a",
+      "answer": "B",
+      "scores": {
+        "source_proof_text": {
+          "prediction": "B",
+          "correct": true,
+          "answer_token_nll": 1.2423827648162842,
+          "two_choice_nll": 0.6704766154289246,
+          "greedy_token_correct": true,
+          "choice_token_ids": [
+            362,
+            425
+          ]
+        }
+      }
+    }
+  ],
+  "total_seconds": 53.9483868330135,
+  "peak_process_rss_bytes": 9699147776
+}

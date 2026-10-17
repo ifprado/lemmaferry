@@ -1,0 +1,613 @@
+{
+  "counts": {
+    "test": 128,
+    "train": 256,
+    "val": 64
+  },
+  "experiment": "same_input_frozen_activation_affine_alignment",
+  "map": {
+    "formula": "target_row = source_row @ coef.T + intercept",
+    "path": "translator.npz",
+    "sha256": "d17b8076db4109fa5846e0c76994a3fba58eb59e30d0c7948a97b7a431be9b89"
+  },
+  "normalization": "Per-coordinate target standard deviation fitted on training rows only; constant columns use 1.",
+  "retrieval": "Raw cosine retrieval within each reported test candidate pool; ties select first row.",
+  "scope": "Geometric alignment only. No activation intervention, capability transfer, or LLM training performed.",
+  "seed": 1729,
+  "selected_alpha": 1.0,
+  "selection": "Lowest validation normalized RMSE; ties favor smaller alpha. No train-plus-validation refit.",
+  "source": {
+    "directory": "runs/transfer-v1/source",
+    "manifest": {
+      "batch_size": 1,
+      "collector_sha256": "4ff6aec2ca5837ced9c075c484087ecd13c9d2e4c38c2ba7bcfa18c99a96e6d9",
+      "config": {
+        "_name_or_path": "Qwen/Qwen2.5-Math-1.5B",
+        "add_cross_attention": false,
+        "architectures": [
+          "Qwen2ForCausalLM"
+        ],
+        "attention_dropout": 0.0,
+        "bad_words_ids": null,
+        "begin_suppress_tokens": null,
+        "bos_token_id": 151643,
+        "chunk_size_feed_forward": 0,
+        "cross_attention_hidden_size": null,
+        "decoder_start_token_id": null,
+        "diversity_penalty": 0.0,
+        "do_sample": false,
+        "dtype": "float32",
+        "early_stopping": false,
+        "encoder_no_repeat_ngram_size": 0,
+        "eos_token_id": 151643,
+        "exponential_decay_length_penalty": null,
+        "finetuning_task": null,
+        "forced_bos_token_id": null,
+        "forced_eos_token_id": null,
+        "hidden_act": "silu",
+        "hidden_size": 1536,
+        "id2label": {
+          "0": "LABEL_0",
+          "1": "LABEL_1"
+        },
+        "initializer_range": 0.02,
+        "intermediate_size": 8960,
+        "is_decoder": false,
+        "is_encoder_decoder": false,
+        "label2id": {
+          "LABEL_0": 0,
+          "LABEL_1": 1
+        },
+        "layer_types": [
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention"
+        ],
+        "length_penalty": 1.0,
+        "max_length": 20,
+        "max_position_embeddings": 4096,
+        "max_window_layers": 21,
+        "min_length": 0,
+        "model_type": "qwen2",
+        "no_repeat_ngram_size": 0,
+        "num_attention_heads": 12,
+        "num_beam_groups": 1,
+        "num_beams": 1,
+        "num_hidden_layers": 28,
+        "num_key_value_heads": 2,
+        "num_return_sequences": 1,
+        "output_attentions": false,
+        "output_hidden_states": false,
+        "output_scores": false,
+        "pad_token_id": null,
+        "prefix": null,
+        "problem_type": null,
+        "pruned_heads": {},
+        "remove_invalid_values": false,
+        "repetition_penalty": 1.0,
+        "return_dict": true,
+        "return_dict_in_generate": false,
+        "rms_norm_eps": 1e-06,
+        "rope_scaling": null,
+        "rope_theta": 10000,
+        "sep_token_id": null,
+        "sliding_window": null,
+        "suppress_tokens": null,
+        "task_specific_params": null,
+        "temperature": 1.0,
+        "tf_legacy_loss": false,
+        "tie_encoder_decoder": false,
+        "tie_word_embeddings": true,
+        "tokenizer_class": null,
+        "top_k": 50,
+        "top_p": 1.0,
+        "torchscript": false,
+        "transformers_version": "4.57.6",
+        "typical_p": 1.0,
+        "use_bfloat16": false,
+        "use_cache": true,
+        "use_mrope": false,
+        "use_sliding_window": false,
+        "vocab_size": 151936
+      },
+      "created_utc": "2026-10-17T06:26:31.565457+00:00",
+      "deterministic_algorithms": "enabled_warn_only; not a cross-platform guarantee",
+      "device": "mps",
+      "dtype": "float32",
+      "eval_mode": true,
+      "inference_mode": true,
+      "input_format": "literal_text_no_chat_template_no_special_tokens",
+      "inputs": {
+        "test": {
+          "count": 128,
+          "path": "data/transfer-v1/anchors/test.jsonl",
+          "sha256": "af14ac8cd8eecbcf550c5b00c14222fa8a8e71242f03deb38041052eb4fec5e8"
+        },
+        "train": {
+          "count": 256,
+          "path": "data/transfer-v1/anchors/train.jsonl",
+          "sha256": "d1fcc429e691f7ce235c7e1169020a9fbaa78092d0175b113735be2dfb819a6e"
+        },
+        "val": {
+          "count": 64,
+          "path": "data/transfer-v1/anchors/val.jsonl",
+          "sha256": "db1643545f3421b7248c19c6fc7049d244c865563dc7278c21d918eae69eb7c6"
+        }
+      },
+      "layer_index": 14,
+      "max_length": 2048,
+      "measurement": {
+        "collected_examples": 448,
+        "collection_wall_seconds": 164.4495667499723,
+        "examples_per_second": 2.724239466566278,
+        "input_tokens": 349615,
+        "model_load_wall_seconds": 3.347613457997795,
+        "mps_memory_sampling": "after model load and each completed batch; not a continuous peak",
+        "mps_peak_memory_api": "not_available; only sampled public allocator counters",
+        "mps_sampled_max_allocated_bytes": 6476362496,
+        "mps_sampled_max_driver_allocated_bytes": 7433060352,
+        "peak_process_rss_bytes": 9726279680,
+        "peak_process_rss_method": "getrusage(RUSAGE_SELF).ru_maxrss; process lifetime",
+        "tokenizer_and_tokenization_wall_seconds": 0.6394110419787467,
+        "total_wall_seconds": 169.66601987503236
+      },
+      "model": "Qwen/Qwen2.5-Math-1.5B",
+      "model_implementation": {
+        "module": "transformers.models.qwen2.modeling_qwen2",
+        "sha256": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb"
+      },
+      "outputs": {
+        "test": {
+          "collection_wall_seconds": 49.49797520803986,
+          "input_tokens": 105914,
+          "path": "test.npz",
+          "sha256": "e4328fd026ce5b69705a17d2f503c16c9f4b272daad10d0063f6bdd134788e30",
+          "shape": [
+            128,
+            1536
+          ]
+        },
+        "train": {
+          "collection_wall_seconds": 83.78484550002031,
+          "input_tokens": 176875,
+          "path": "train.npz",
+          "sha256": "6cb729d8a33c834c3a26d17cddeb86c6c7f08b87f9aee3faa365e1894d8c84b1",
+          "shape": [
+            256,
+            1536
+          ]
+        },
+        "val": {
+          "collection_wall_seconds": 31.166006374987774,
+          "input_tokens": 66826,
+          "path": "val.npz",
+          "sha256": "b4f03a81624b302f0307275eae07dd66246edfe0ecb2269e55656386c33bf312",
+          "shape": [
+            64,
+            1536
+          ]
+        }
+      },
+      "packages": {
+        "huggingface-hub": "0.36.2",
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "transformers": "4.57.6"
+      },
+      "padding_side": "right",
+      "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+      "pooling": "none",
+      "position": "last_nonpadding_token",
+      "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+      "revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "seed": 1729,
+      "status": "completed",
+      "tokenizer_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "tokenizer_sha256": "f884026e05f6dfffe68b72d580b588006d98b3bc0a128bb1ac425c76f7fc438c",
+      "trust_remote_code": false,
+      "use_safetensors": true
+    },
+    "manifest_sha256": "b2eaf178b58e25721ae8ce26ba509c7b20ee237a788a36537c879de86fed40f8"
+  },
+  "source_dim": 1536,
+  "status": "completed",
+  "target": {
+    "directory": "runs/transfer-v1/target",
+    "manifest": {
+      "batch_size": 1,
+      "collector_sha256": "4ff6aec2ca5837ced9c075c484087ecd13c9d2e4c38c2ba7bcfa18c99a96e6d9",
+      "config": {
+        "_name_or_path": "Qwen/Qwen2.5-1.5B",
+        "add_cross_attention": false,
+        "architectures": [
+          "Qwen2ForCausalLM"
+        ],
+        "attention_dropout": 0.0,
+        "bad_words_ids": null,
+        "begin_suppress_tokens": null,
+        "bos_token_id": 151643,
+        "chunk_size_feed_forward": 0,
+        "cross_attention_hidden_size": null,
+        "decoder_start_token_id": null,
+        "diversity_penalty": 0.0,
+        "do_sample": false,
+        "dtype": "float32",
+        "early_stopping": false,
+        "encoder_no_repeat_ngram_size": 0,
+        "eos_token_id": 151643,
+        "exponential_decay_length_penalty": null,
+        "finetuning_task": null,
+        "forced_bos_token_id": null,
+        "forced_eos_token_id": null,
+        "hidden_act": "silu",
+        "hidden_size": 1536,
+        "id2label": {
+          "0": "LABEL_0",
+          "1": "LABEL_1"
+        },
+        "initializer_range": 0.02,
+        "intermediate_size": 8960,
+        "is_decoder": false,
+        "is_encoder_decoder": false,
+        "label2id": {
+          "LABEL_0": 0,
+          "LABEL_1": 1
+        },
+        "layer_types": [
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention"
+        ],
+        "length_penalty": 1.0,
+        "max_length": 20,
+        "max_position_embeddings": 131072,
+        "max_window_layers": 28,
+        "min_length": 0,
+        "model_type": "qwen2",
+        "no_repeat_ngram_size": 0,
+        "num_attention_heads": 12,
+        "num_beam_groups": 1,
+        "num_beams": 1,
+        "num_hidden_layers": 28,
+        "num_key_value_heads": 2,
+        "num_return_sequences": 1,
+        "output_attentions": false,
+        "output_hidden_states": false,
+        "output_scores": false,
+        "pad_token_id": null,
+        "prefix": null,
+        "problem_type": null,
+        "pruned_heads": {},
+        "remove_invalid_values": false,
+        "repetition_penalty": 1.0,
+        "return_dict": true,
+        "return_dict_in_generate": false,
+        "rms_norm_eps": 1e-06,
+        "rope_scaling": null,
+        "rope_theta": 1000000.0,
+        "sep_token_id": null,
+        "sliding_window": null,
+        "suppress_tokens": null,
+        "task_specific_params": null,
+        "temperature": 1.0,
+        "tf_legacy_loss": false,
+        "tie_encoder_decoder": false,
+        "tie_word_embeddings": true,
+        "tokenizer_class": null,
+        "top_k": 50,
+        "top_p": 1.0,
+        "torchscript": false,
+        "transformers_version": "4.57.6",
+        "typical_p": 1.0,
+        "use_bfloat16": false,
+        "use_cache": true,
+        "use_mrope": false,
+        "use_sliding_window": false,
+        "vocab_size": 151936
+      },
+      "created_utc": "2026-10-17T06:29:33.990265+00:00",
+      "deterministic_algorithms": "enabled_warn_only; not a cross-platform guarantee",
+      "device": "mps",
+      "dtype": "float32",
+      "eval_mode": true,
+      "inference_mode": true,
+      "input_format": "literal_text_no_chat_template_no_special_tokens",
+      "inputs": {
+        "test": {
+          "count": 128,
+          "path": "data/transfer-v1/anchors/test.jsonl",
+          "sha256": "af14ac8cd8eecbcf550c5b00c14222fa8a8e71242f03deb38041052eb4fec5e8"
+        },
+        "train": {
+          "count": 256,
+          "path": "data/transfer-v1/anchors/train.jsonl",
+          "sha256": "d1fcc429e691f7ce235c7e1169020a9fbaa78092d0175b113735be2dfb819a6e"
+        },
+        "val": {
+          "count": 64,
+          "path": "data/transfer-v1/anchors/val.jsonl",
+          "sha256": "db1643545f3421b7248c19c6fc7049d244c865563dc7278c21d918eae69eb7c6"
+        }
+      },
+      "layer_index": 14,
+      "max_length": 2048,
+      "measurement": {
+        "collected_examples": 448,
+        "collection_wall_seconds": 164.04654216696508,
+        "examples_per_second": 2.7309322956897786,
+        "input_tokens": 349615,
+        "model_load_wall_seconds": 3.0835702079930343,
+        "mps_memory_sampling": "after model load and each completed batch; not a continuous peak",
+        "mps_peak_memory_api": "not_available; only sampled public allocator counters",
+        "mps_sampled_max_allocated_bytes": 6476362496,
+        "mps_sampled_max_driver_allocated_bytes": 7433043968,
+        "peak_process_rss_bytes": 9727246336,
+        "peak_process_rss_method": "getrusage(RUSAGE_SELF).ru_maxrss; process lifetime",
+        "tokenizer_and_tokenization_wall_seconds": 0.6190627499599941,
+        "total_wall_seconds": 168.89071054197848
+      },
+      "model": "Qwen/Qwen2.5-1.5B",
+      "model_implementation": {
+        "module": "transformers.models.qwen2.modeling_qwen2",
+        "sha256": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb"
+      },
+      "outputs": {
+        "test": {
+          "collection_wall_seconds": 49.589879958017264,
+          "input_tokens": 105914,
+          "path": "test.npz",
+          "sha256": "4acc044a0a89cb9166b9a32a9610467f0f6649c80b654bd32c604e222d6af830",
+          "shape": [
+            128,
+            1536
+          ]
+        },
+        "train": {
+          "collection_wall_seconds": 83.27899920800701,
+          "input_tokens": 176875,
+          "path": "train.npz",
+          "sha256": "f39067cc78bdc116edce14ba485df34ea18d313cb050e7c0dc22c3224d58f963",
+          "shape": [
+            256,
+            1536
+          ]
+        },
+        "val": {
+          "collection_wall_seconds": 31.17691062501399,
+          "input_tokens": 66826,
+          "path": "val.npz",
+          "sha256": "b32a8059d4ffee86f1de3cb641675b46f99cab22109a851563a50dfab2d052e1",
+          "shape": [
+            64,
+            1536
+          ]
+        }
+      },
+      "packages": {
+        "huggingface-hub": "0.36.2",
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "transformers": "4.57.6"
+      },
+      "padding_side": "right",
+      "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+      "pooling": "none",
+      "position": "last_nonpadding_token",
+      "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "seed": 1729,
+      "status": "completed",
+      "tokenizer_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "tokenizer_sha256": "f884026e05f6dfffe68b72d580b588006d98b3bc0a128bb1ac425c76f7fc438c",
+      "trust_remote_code": false,
+      "use_safetensors": true
+    },
+    "manifest_sha256": "08d97e7b19029b8ff7e02c53fe74e8f5310627333dbda4cb7cf7e4cd379b0a58"
+  },
+  "target_dim": 1536,
+  "test_metrics": {
+    "paired_affine": {
+      "cosine_retrieval_top1_accuracy": 0.828125,
+      "mean_matched_cosine_similarity": 0.9996749342698739,
+      "mse": 0.0009425572891237048,
+      "mse_divided_by_training_mean_baseline_mse": 0.28953774275739363,
+      "normalized_rmse": 0.676455566358153,
+      "retrieval_candidate_count": 128,
+      "retrieval_chance_accuracy": 0.0078125,
+      "rmse": 0.03070109589450684
+    },
+    "raw_identity": {
+      "cosine_retrieval_top1_accuracy": 0.015625,
+      "mean_matched_cosine_similarity": 0.6748968362808228,
+      "mse": 3.6072044372558594,
+      "mse_divided_by_training_mean_baseline_mse": 1108.072519813108,
+      "normalized_rmse": 37.74087514760859,
+      "retrieval_candidate_count": 128,
+      "retrieval_chance_accuracy": 0.0078125,
+      "rmse": 1.8992641936926984
+    },
+    "shuffled_training_pairs": {
+      "cosine_retrieval_top1_accuracy": 0.0078125,
+      "mean_matched_cosine_similarity": 0.998549774231121,
+      "mse": 0.004217418387833531,
+      "mse_divided_by_training_mean_baseline_mse": 1.2955199799177242,
+      "normalized_rmse": 1.2653948447501215,
+      "retrieval_candidate_count": 128,
+      "retrieval_chance_accuracy": 0.0078125,
+      "rmse": 0.06494165371957762
+    },
+    "training_mean": {
+      "cosine_retrieval_top1_accuracy": 0.0078125,
+      "mean_matched_cosine_similarity": 0.9988771677017212,
+      "mse": 0.0032553866039961576,
+      "mse_divided_by_training_mean_baseline_mse": 1.0,
+      "normalized_rmse": 1.1256797890068437,
+      "retrieval_candidate_count": 128,
+      "retrieval_chance_accuracy": 0.0078125,
+      "rmse": 0.05705599459806685
+    }
+  },
+  "test_metrics_by_family": {
+    "transfer_chained_diamonds": {
+      "paired_affine": {
+        "cosine_retrieval_top1_accuracy": 0.875,
+        "mean_matched_cosine_similarity": 0.9996897790118575,
+        "mse": 0.0008982512369380497,
+        "mse_divided_by_training_mean_baseline_mse": 0.29703554094644385,
+        "normalized_rmse": 0.6632365848123151,
+        "retrieval_candidate_count": 64,
+        "retrieval_chance_accuracy": 0.015625,
+        "rmse": 0.029970839776990728
+      },
+      "raw_identity": {
+        "cosine_retrieval_top1_accuracy": 0.03125,
+        "mean_matched_cosine_similarity": 0.6750900745391846,
+        "mse": 3.616398572921753,
+        "mse_divided_by_training_mean_baseline_mse": 1195.8780152059455,
+        "normalized_rmse": 37.797821343444305,
+        "retrieval_candidate_count": 64,
+        "retrieval_chance_accuracy": 0.015625,
+        "rmse": 1.9016831323114591
+      },
+      "shuffled_training_pairs": {
+        "cosine_retrieval_top1_accuracy": 0.03125,
+        "mean_matched_cosine_similarity": 0.9986713009255039,
+        "mse": 0.0038658384336891535,
+        "mse_divided_by_training_mean_baseline_mse": 1.2783632943013759,
+        "normalized_rmse": 1.2359484133806886,
+        "retrieval_candidate_count": 64,
+        "retrieval_chance_accuracy": 0.015625,
+        "rmse": 0.06217586697175322
+      },
+      "training_mean": {
+        "cosine_retrieval_top1_accuracy": 0.015625,
+        "mean_matched_cosine_similarity": 0.9989562034606934,
+        "mse": 0.0030240530613809824,
+        "mse_divided_by_training_mean_baseline_mse": 1.0,
+        "normalized_rmse": 1.1016008001622293,
+        "retrieval_candidate_count": 64,
+        "retrieval_chance_accuracy": 0.015625,
+        "rmse": 0.05499139243843658
+      }
+    },
+    "transfer_cyclic_diamonds": {
+      "paired_affine": {
+        "cosine_retrieval_top1_accuracy": 0.859375,
+        "mean_matched_cosine_similarity": 0.9996600895278901,
+        "mse": 0.00098686334130936,
+        "mse_divided_by_training_mean_baseline_mse": 0.283034895721948,
+        "normalized_rmse": 0.6894211333287917,
+        "retrieval_candidate_count": 64,
+        "retrieval_chance_accuracy": 0.015625,
+        "rmse": 0.03141438112249484
+      },
+      "raw_identity": {
+        "cosine_retrieval_top1_accuracy": 0.03125,
+        "mean_matched_cosine_similarity": 0.6747037172317505,
+        "mse": 3.598010301589966,
+        "mse_divided_by_training_mean_baseline_mse": 1031.9184307381993,
+        "normalized_rmse": 37.68384289723946,
+        "retrieval_candidate_count": 64,
+        "retrieval_chance_accuracy": 0.015625,
+        "rmse": 1.8968421703369074
+      },
+      "shuffled_training_pairs": {
+        "cosine_retrieval_top1_accuracy": 0.015625,
+        "mean_matched_cosine_similarity": 0.998428247536738,
+        "mse": 0.004568998341977908,
+        "mse_divided_by_training_mean_baseline_mse": 1.3104002501092855,
+        "normalized_rmse": 1.2941714514321998,
+        "retrieval_candidate_count": 64,
+        "retrieval_chance_accuracy": 0.015625,
+        "rmse": 0.06759436619998672
+      },
+      "training_mean": {
+        "cosine_retrieval_top1_accuracy": 0.015625,
+        "mean_matched_cosine_similarity": 0.9987981915473938,
+        "mse": 0.0034867196809500456,
+        "mse_divided_by_training_mean_baseline_mse": 1.0,
+        "normalized_rmse": 1.1492543895234515,
+        "retrieval_candidate_count": 64,
+        "retrieval_chance_accuracy": 0.015625,
+        "rmse": 0.05904845295882975
+      }
+    }
+  },
+  "validation_scores": [
+    {
+      "alpha": 0.0001,
+      "normalized_rmse": 0.9104621676405639,
+      "rmse": 0.04097210533803393
+    },
+    {
+      "alpha": 0.001,
+      "normalized_rmse": 0.9066852925668011,
+      "rmse": 0.040802780269814994
+    },
+    {
+      "alpha": 0.01,
+      "normalized_rmse": 0.8770338077591996,
+      "rmse": 0.039474622686384346
+    },
+    {
+      "alpha": 0.1,
+      "normalized_rmse": 0.7798461987675733,
+      "rmse": 0.03516475685437367
+    },
+    {
+      "alpha": 1.0,
+      "normalized_rmse": 0.7122665646567852,
+      "rmse": 0.032335380327538056
+    }
+  ]
+}

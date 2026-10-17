@@ -34,6 +34,6 @@ test_reproducible_and_both_test_grammars_present (test_transfer_logic.TransferLo
 test_topology_holdouts_and_cycle_do_not_break_certificates (test_transfer_logic.TransferLogicTests.test_topology_holdouts_and_cycle_do_not_break_certificates) ... ok
 
 ----------------------------------------------------------------------
-Ran 34 tests in 1.686s
+Ran 34 tests in 1.135s
 
 OK

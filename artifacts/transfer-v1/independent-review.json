@@ -1,0 +1,400 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-17T06:44:37.097151+00:00",
+  "reviewer": {
+    "kind": "independent delegated AI agent",
+    "human_signoff": false,
+    "human_example_review": "pending; AI review does not substitute for Ian's review"
+  },
+  "formal_inputs": {
+    "examples": 448,
+    "retained_zero_axiom_audits_checked": 896,
+    "exact_donor_text_baseline_and_unique_valid_choice_checked": true,
+    "lineage_disjoint_splits": true,
+    "answer_label_counts": {
+      "train": {
+        "A": 121,
+        "B": 135
+      },
+      "val": {
+        "A": 32,
+        "B": 32
+      },
+      "test": {
+        "A": 63,
+        "B": 65
+      }
+    }
+  },
+  "training_majority_label_baseline": {
+    "label": "B",
+    "training_count": 135,
+    "test_correct": 65,
+    "test_accuracy": 0.5078125
+  },
+  "functional_metrics_recomputed_from_128_rows": {
+    "source_proof_text": {
+      "count": 128,
+      "correct": 65,
+      "accuracy": 0.5078125,
+      "answer_token_nll": 1.1705268193036318,
+      "prediction_label_counts": {
+        "A": 50,
+        "B": 78
+      }
+    },
+    "ordinary_recipient": {
+      "count": 128,
+      "correct": 69,
+      "accuracy": 0.5390625,
+      "answer_token_nll": 0.8256626329384744,
+      "prediction_label_counts": {
+        "A": 20,
+        "B": 108
+      }
+    },
+    "proof_text_recipient": {
+      "count": 128,
+      "correct": 82,
+      "accuracy": 0.640625,
+      "answer_token_nll": 0.7949950380716473,
+      "prediction_label_counts": {
+        "A": 41,
+        "B": 87
+      }
+    },
+    "self_patch": {
+      "count": 128,
+      "correct": 69,
+      "accuracy": 0.5390625,
+      "answer_token_nll": 0.825662752147764,
+      "prediction_label_counts": {
+        "A": 20,
+        "B": 108
+      }
+    },
+    "translated_donor": {
+      "count": 128,
+      "correct": 66,
+      "accuracy": 0.515625,
+      "answer_token_nll": 0.8001760062761605,
+      "prediction_label_counts": {
+        "A": 45,
+        "B": 83
+      }
+    },
+    "shuffled_training_pairs": {
+      "count": 128,
+      "correct": 68,
+      "accuracy": 0.53125,
+      "answer_token_nll": 0.7995450627058744,
+      "prediction_label_counts": {
+        "A": 43,
+        "B": 85
+      }
+    },
+    "shuffled_donor_rows": {
+      "count": 128,
+      "correct": 68,
+      "accuracy": 0.53125,
+      "answer_token_nll": 0.8027023870963603,
+      "prediction_label_counts": {
+        "A": 45,
+        "B": 83
+      }
+    },
+    "translated_zero_donor": {
+      "count": 128,
+      "correct": 70,
+      "accuracy": 0.546875,
+      "answer_token_nll": 0.7938106581568718,
+      "prediction_label_counts": {
+        "A": 37,
+        "B": 91
+      }
+    },
+    "recipient_training_mean": {
+      "count": 128,
+      "correct": 67,
+      "accuracy": 0.5234375,
+      "answer_token_nll": 0.8007504269480705,
+      "prediction_label_counts": {
+        "A": 44,
+        "B": 84
+      }
+    },
+    "oracle_text_state_patch": {
+      "count": 128,
+      "correct": 69,
+      "accuracy": 0.5390625,
+      "answer_token_nll": 0.8005209562834352,
+      "prediction_label_counts": {
+        "A": 44,
+        "B": 84
+      }
+    },
+    "raw_identity_donor": {
+      "count": 128,
+      "correct": 64,
+      "accuracy": 0.5,
+      "answer_token_nll": 0.9886175622232258,
+      "prediction_label_counts": {
+        "A": 9,
+        "B": 119
+      }
+    }
+  },
+  "paired_intervals_independently_recomputed": {
+    "ordinary_recipient": {
+      "accuracy_difference": -0.0234375,
+      "cluster_bootstrap_interval": [
+        -0.0983637605563835,
+        0.051094890510948905
+      ],
+      "lineages": 69,
+      "grammars": 2
+    },
+    "proof_text_recipient": {
+      "accuracy_difference": -0.125,
+      "cluster_bootstrap_interval": [
+        -0.2076923076923077,
+        -0.05069765649090364
+      ],
+      "lineages": 69,
+      "grammars": 2
+    }
+  },
+  "geometry": {
+    "selected_alpha": 1.0,
+    "independent_dual_validation_scores": [
+      {
+        "alpha": 0.0001,
+        "normalized_rmse": 0.9104621676408633
+      },
+      {
+        "alpha": 0.001,
+        "normalized_rmse": 0.9066852925668831
+      },
+      {
+        "alpha": 0.01,
+        "normalized_rmse": 0.8770338077591953
+      },
+      {
+        "alpha": 0.1,
+        "normalized_rmse": 0.7798461987675724
+      },
+      {
+        "alpha": 1.0,
+        "normalized_rmse": 0.7122665646567852
+      }
+    ],
+    "train_only_scaling_verified": true,
+    "primal_map_matches_independent_dual_solution": true,
+    "test_mse": 0.0009425572891237048,
+    "test_mse_ratio_to_training_mean": 0.28953774275739363,
+    "retrieval_top1": 0.828125,
+    "candidate_pool": 128
+  },
+  "student_runs": [
+    {
+      "seed": 1729,
+      "arm": "verified_supervision",
+      "test_accuracy": 0.40625,
+      "updates": 96,
+      "answer_tokens": 768,
+      "prompt_tokens": 243615,
+      "padded_tokens": 311248,
+      "parameters": 539437,
+      "checkpoint_hash_and_reload_match": true
+    },
+    {
+      "seed": 1729,
+      "arm": "permuted_labels",
+      "test_accuracy": 0.5078125,
+      "updates": 96,
+      "answer_tokens": 768,
+      "prompt_tokens": 243615,
+      "padded_tokens": 311248,
+      "parameters": 539437,
+      "checkpoint_hash_and_reload_match": true
+    },
+    {
+      "seed": 1730,
+      "arm": "verified_supervision",
+      "test_accuracy": 0.5078125,
+      "updates": 96,
+      "answer_tokens": 768,
+      "prompt_tokens": 243615,
+      "padded_tokens": 313552,
+      "parameters": 539437,
+      "checkpoint_hash_and_reload_match": true
+    },
+    {
+      "seed": 1730,
+      "arm": "permuted_labels",
+      "test_accuracy": 0.4765625,
+      "updates": 96,
+      "answer_tokens": 768,
+      "prompt_tokens": 243615,
+      "padded_tokens": 313552,
+      "parameters": 539437,
+      "checkpoint_hash_and_reload_match": true
+    },
+    {
+      "seed": 1731,
+      "arm": "verified_supervision",
+      "test_accuracy": 0.515625,
+      "updates": 96,
+      "answer_tokens": 768,
+      "prompt_tokens": 243615,
+      "padded_tokens": 314640,
+      "parameters": 539437,
+      "checkpoint_hash_and_reload_match": true
+    },
+    {
+      "seed": 1731,
+      "arm": "permuted_labels",
+      "test_accuracy": 0.4921875,
+      "updates": 96,
+      "answer_tokens": 768,
+      "prompt_tokens": 243615,
+      "padded_tokens": 314640,
+      "parameters": 539437,
+      "checkpoint_hash_and_reload_match": true
+    }
+  ],
+  "student_summary": {
+    "verified_supervision": {
+      "test_accuracy_mean": 0.4765625,
+      "test_accuracy_std_across_seeds": 0.049820641848200495
+    },
+    "permuted_labels": {
+      "test_accuracy_mean": 0.4921875,
+      "test_accuracy_std_across_seeds": 0.01275775907699572
+    },
+    "verified_minus_control_accuracy": -0.015625,
+    "iteration_gate": "Only consider a later iterative experiment if fixed-data gains replicate across held-out grammars and stronger useful-data controls. This label-control run alone does not justify iteration."
+  },
+  "independent_principal_control": {
+    "status": "passed",
+    "reviewer": "delegated cousin AI agent; not human signoff",
+    "completed_utc": "2026-10-17T06:40:21.039490+00:00",
+    "example_id": "transfer_test_000000",
+    "model": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "device": "mps",
+    "dtype": "float32",
+    "layer_index": 14,
+    "position": "last_nonpadding_token",
+    "captured_block13_output_equals_hidden_states14": true,
+    "tolerance": {
+      "absolute": 0.0001,
+      "relative": 0.0001
+    },
+    "self_patch_checks": {
+      "cached_prefix": {
+        "maximum_absolute_logit_error": 1.8596649169921875e-05,
+        "allclose_at_fixed_tolerance": true
+      },
+      "full_prompt": {
+        "maximum_absolute_logit_error": 0.0,
+        "allclose_at_fixed_tolerance": true
+      }
+    },
+    "ordinary_scores": {
+      "prediction": "A",
+      "answer_token_nll": 0.7595213651657104,
+      "choice_token_ids": [
+        362,
+        425
+      ]
+    },
+    "original_kv_cache_unchanged": true,
+    "source_hashes": {
+      "/Users/ianprado02/Downloads/lemmaferry/artifacts/transfer-v1/independent-control.py": "22c68be80f6ee5d2b4b44b375f9ec842f79be5177b65bc8d045844e9f9e2964f",
+      "experiments/evaluate_intervention.py": "7201102c3c35f5e22cd90d4c8e1f4cc932e991b48f1e993739cc0bf158e93c16"
+    },
+    "input_sha256": "af14ac8cd8eecbcf550c5b00c14222fa8a8e71242f03deb38041052eb4fec5e8",
+    "recipient_report_sha256": "95f26874dfc1e6a89a413c5df557db72335702bbcf6345ab7667b6b59ccc19bf",
+    "elapsed_seconds": 3.1040681659942493
+  },
+  "manually_inspected_example": {
+    "id": "transfer_test_000000",
+    "answer": "A",
+    "route": "Rune0 -> Rune8 -> Rune4 -> Rune1 -> Rune12",
+    "rules": [
+      "e2",
+      "e9",
+      "e5",
+      "e4"
+    ],
+    "invalid_B": "After e2,e9, Rune4 is known; e4 requires Rune1, so the swapped final rules fail.",
+    "Lean_term": "h_e4 (h_e5 (h_e9 (h_e2 (h_start))))"
+  },
+  "interpretation": [
+    "Geometric alignment succeeds on this fixed test pool; it does not establish useful reasoning transfer.",
+    "Translated accuracy66/128 is below ordinary69/128 and exact proof text82/128. The ordinary comparison's conditional bootstrap interval includes zero.",
+    "Translated answer-token NLL improves slightly over ordinary but remains worse than exact proof text; claims should distinguish NLL and accuracy.",
+    "Only two test grammars were sampled; lineage bootstrap intervals are conditional on those grammars.",
+    "The single-token oracle text-state patch matches ordinary accuracy, suggesting the tested one-position interface is a limiting factor; this is an inference, not proof of a general impossibility.",
+    "The correct-label student mean47.65625% does not beat the permuted-label mean49.21875%. This small weak-control experiment provides no basis for iterative generation or broader capability claims."
+  ],
+  "review_limits": [
+    "NLL means were recomputed from stored per-row NLLs; full vocabulary logits for every row were not retained.",
+    "The real-model principal control was independently rerun on one fixed example; all128 intervention rows were not rerun.",
+    "Matching student initialization and optimizer policy were verified in the hashed source; all six saved checkpoint hashes and reported standalone reload predictions were checked."
+  ],
+  "sha256": {
+    "/Users/ianprado02/Downloads/lemmaferry/.venv-llm/lib/python3.14/site-packages/transformers/models/qwen2/modeling_qwen2.py": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb",
+    "/Users/ianprado02/Downloads/lemmaferry/artifacts/transfer-v1/independent-metrics-review.py": "d22f30776947a6e6aace1b02140951cca547abfe30d0ff50e8a3fa45c57a3b69",
+    "/Users/ianprado02/Downloads/lemmaferry/data/transfer-v1/logs/test/batch_00000.log": "b11aeec3753311b88e232b4de6c7502e5b145af6e1193b1b94a087a5bda2d7e1",
+    "/Users/ianprado02/Downloads/lemmaferry/data/transfer-v1/logs/test/batch_00001.log": "cd916f77a9103b62f107cab29295d92a13f9a1d8599a7b9e3dbaab889b6f9abb",
+    "/Users/ianprado02/Downloads/lemmaferry/data/transfer-v1/logs/train/batch_00000.log": "04ddcf7e669ceea75fc925ca85c1f4637861ea92a8d6b0d5186a67fd651336a7",
+    "/Users/ianprado02/Downloads/lemmaferry/data/transfer-v1/logs/train/batch_00001.log": "bdeda00786c0418edd46def25b529864a51c351f58752b0de07eba5c3049e471",
+    "/Users/ianprado02/Downloads/lemmaferry/data/transfer-v1/logs/train/batch_00002.log": "f6e9d307a7b00ba5845fb4cec86d44deacc8e2bd3d150080061d097b6a2c23f9",
+    "/Users/ianprado02/Downloads/lemmaferry/data/transfer-v1/logs/train/batch_00003.log": "6e05103c04d3da11285685f6676b14d7fa6cbf8c625d0d93d2f753f2554a43a7",
+    "/Users/ianprado02/Downloads/lemmaferry/data/transfer-v1/logs/validation/batch_00000.log": "9a9998562b9bf21d4fd0ddd881fca86a523012ae34fffcd3caa6a92ecb733b49",
+    "CONTRIBUTING.md": "d33bbfc92594af1a2ea1fb225e5adf535664aec3213e208d1a805a5850a0ba27",
+    "artifacts/real-model-plan.json": "a54c8abf4e83fbeb926b805c4a1fc716a88ada61608fc64b16b565799a5858e6",
+    "artifacts/student-v1/reloaded/seed1729-permuted_labels.json": "b2d48da7aecca5915038428173730d95fc9a422a4a04d5c6a5c2caf571790e32",
+    "artifacts/student-v1/reloaded/seed1729-verified_supervision.json": "61e8af66426fd709e96d3582bd232cd4f507d46a8565988331f731346b63d58c",
+    "artifacts/student-v1/reloaded/seed1730-permuted_labels.json": "cee8a036cf2732d920a58fe22364890099c64662280fd0778b8281bf8ca50b49",
+    "artifacts/student-v1/reloaded/seed1730-verified_supervision.json": "16c95682ef6b4ab0dccecfecd19c9c23d34d26493f230311dd4dbe50b6f5b15c",
+    "artifacts/student-v1/reloaded/seed1731-permuted_labels.json": "fb7a4f14894fc6cae2888adba8a9e443bd9aa428168a5199dd352d064858b85e",
+    "artifacts/student-v1/reloaded/seed1731-verified_supervision.json": "6c011ca1c6ea527ea957e86bd6bb4debc22c556fb19890c7156a16d8923e9630",
+    "artifacts/student-v1/results.json": "cc4b96d97fdd1b95a178100bd40c3f7e51a7c39ac92d4e8731574ba874075c77",
+    "artifacts/transfer-v1/affine-results.json": "f2ceabf389671b61b1ae0fa577983986450c3d417bb384250349d367fa34e505",
+    "artifacts/transfer-v1/independent-control.py": "22c68be80f6ee5d2b4b44b375f9ec842f79be5177b65bc8d045844e9f9e2964f",
+    "artifacts/transfer-v1/recipient-evaluation/results.json": "95f26874dfc1e6a89a413c5df557db72335702bbcf6345ab7667b6b59ccc19bf",
+    "artifacts/transfer-v1/source-evaluation/results.json": "c9c3ad08fa22341543ab8042b3abdbefe2c72e0f133174f4b69efa976c0749c8",
+    "data/transfer-v1/anchors/test.jsonl": "af14ac8cd8eecbcf550c5b00c14222fa8a8e71242f03deb38041052eb4fec5e8",
+    "data/transfer-v1/anchors/train.jsonl": "d1fcc429e691f7ce235c7e1169020a9fbaa78092d0175b113735be2dfb819a6e",
+    "data/transfer-v1/anchors/val.jsonl": "db1643545f3421b7248c19c6fc7049d244c865563dc7278c21d918eae69eb7c6",
+    "data/transfer-v1/checked/test.checked.jsonl": "f476379b48ae6bd1465f17be31452602478a78991908b60aae6bb0512cf77ed5",
+    "data/transfer-v1/checked/train.checked.jsonl": "1090bef7b89a5482e08edadeb408781d6d5b77a3b2a158ec01cb9573f2aee718",
+    "data/transfer-v1/checked/validation.checked.jsonl": "1b167d6b804a8396828cc308998c734ccddc9a0dfaf8b3a0041aa81a44257cfc",
+    "experiments/collect_activations.py": "4ff6aec2ca5837ced9c075c484087ecd13c9d2e4c38c2ba7bcfa18c99a96e6d9",
+    "experiments/evaluate_intervention.py": "7201102c3c35f5e22cd90d4c8e1f4cc932e991b48f1e993739cc0bf158e93c16",
+    "experiments/evaluate_student_checkpoint.py": "afbcefb591ae8d92a74cd1d828f4ed842ae27696a728d5854a01b1b80d11bfe3",
+    "experiments/fit_activations.py": "156e957906d7fe974f88532ccd912d2dea37f11eef6b9f9a04ef80f1ccc463c6",
+    "experiments/train_fixed_student.py": "23537696a98f0ed2f921124d6b871361a0f9e6241c92efd47b7a70cd2982d482",
+    "runs/student-v1/checkpoints/seed1729-permuted_labels.pt": "c5da1be66b46677dd57a7e632cf34fb6d43c7628b401be017ea16678497c44f7",
+    "runs/student-v1/checkpoints/seed1729-verified_supervision.pt": "09886aa1ef34734e3baf90ef16c474b286b4970e593d633f5a112bee88e19b87",
+    "runs/student-v1/checkpoints/seed1730-permuted_labels.pt": "7546b580f8dfd0325092e80b913a6b525de89f6263501202e3933963da2dc746",
+    "runs/student-v1/checkpoints/seed1730-verified_supervision.pt": "1712fbff6cf6aa06c73f1f33e54f048d870292882b731393baa3805b0c19c389",
+    "runs/student-v1/checkpoints/seed1731-permuted_labels.pt": "ebd8b23a03e256d8134e26669a5720cb3efa1ea3f8f36ec146eaea137398a849",
+    "runs/student-v1/checkpoints/seed1731-verified_supervision.pt": "b87eae2c7f202b92c959fe195d47606258bd8a0570851c57b2399b225f25db01",
+    "runs/transfer-v1/affine/results.json": "f2ceabf389671b61b1ae0fa577983986450c3d417bb384250349d367fa34e505",
+    "runs/transfer-v1/affine/translator.npz": "d17b8076db4109fa5846e0c76994a3fba58eb59e30d0c7948a97b7a431be9b89",
+    "runs/transfer-v1/independent-control.json": "dc3af3352d285fd84f5092325021e0e7b807b061070cb5253f78e2f038b9cb09",
+    "runs/transfer-v1/source/manifest.json": "b2eaf178b58e25721ae8ce26ba509c7b20ee237a788a36537c879de86fed40f8",
+    "runs/transfer-v1/source/test.npz": "e4328fd026ce5b69705a17d2f503c16c9f4b272daad10d0063f6bdd134788e30",
+    "runs/transfer-v1/source/train.npz": "6cb729d8a33c834c3a26d17cddeb86c6c7f08b87f9aee3faa365e1894d8c84b1",
+    "runs/transfer-v1/source/val.npz": "b4f03a81624b302f0307275eae07dd66246edfe0ecb2269e55656386c33bf312",
+    "runs/transfer-v1/target/manifest.json": "08d97e7b19029b8ff7e02c53fe74e8f5310627333dbda4cb7cf7e4cd379b0a58",
+    "runs/transfer-v1/target/test.npz": "4acc044a0a89cb9166b9a32a9610467f0f6649c80b654bd32c604e222d6af830",
+    "runs/transfer-v1/target/train.npz": "f39067cc78bdc116edce14ba485df34ea18d313cb050e7c0dc22c3224d58f963",
+    "runs/transfer-v1/target/val.npz": "b32a8059d4ffee86f1de3cb641675b46f99cab22109a851563a50dfab2d052e1",
+    "src/lemmaferry/alignment.py": "6c6064733bf35390cb3a62d973dd96a42097de7061a3f2369d9a6a209444abc9"
+  }
+}

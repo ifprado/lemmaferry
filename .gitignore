@@ -21,3 +21,4 @@ activations/
 data/generated/
 runs/
 results/lean_logs/
+results/ci-lean/

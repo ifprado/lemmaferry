@@ -1,5 +1,14 @@
 # First experiment with actual language models
 
+**Execution update:** this plan has now been run as a proof-assistance experiment.
+The [measured results](validation.md#first-actual-model-experiment) retain the
+30-prompt pilot and the separate 448-prompt collection, fitted map, intervention
+controls, and fixed-student comparison. The donor receives a verified proof;
+the text baseline receives its exact prompt. Vector alignment improved, but
+answer accuracy did not beat the ordinary recipient or proof-text baseline.
+This tests evidence compression rather than equal-information pretraining skill
+transfer. The original preparation-time limitations below describe the starter.
+
 The first real-model milestone asks a limited question: can an affine map align
 the activations of a small mathematical model and a small general model on
 unseen theorem families? A later intervention experiment asks whether the
@@ -230,8 +239,11 @@ here should not be presented as evidence for arbitrary unrelated models.
 
 ## Checklist D: test an actual intervention
 
-This part is a future implementation task. The collector does not replace
-activations, run the recipient's decoder, or evaluate answers.
+This part is now implemented in
+[`evaluate_intervention.py`](../experiments/evaluate_intervention.py), with
+small random-model boundary/cache tests and actual pinned-model evaluation.
+The collector itself remains separate from activation replacement and answer
+scoring. The first single-position intervention did not improve accuracy.
 
 1. Load the recipient as `AutoModelForCausalLM`, keep its parameters frozen,
    and implement a hook at the exact boundary used during collection.

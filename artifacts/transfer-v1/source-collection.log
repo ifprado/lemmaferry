@@ -1,0 +1,3 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+Collected activations in runs/transfer-v1/source; tokenizer SHA: f884026e05f6dfffe68b72d580b588006d98b3bc0a128bb1ac425c76f7fc438c

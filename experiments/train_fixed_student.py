@@ -28,6 +28,31 @@ def tokens(text: str) -> list[str]:
     return re.findall(r"[A-Za-z]+|[0-9]|[^\w\s]", text)
 
 
+def build_student(vocab_size: int):
+    import torch
+    from torch import nn
+
+    class Student(nn.Module):
+        def __init__(self):
+            super().__init__()
+            self.words = nn.Embedding(vocab_size, 128, padding_idx=0)
+            self.positions = nn.Embedding(1024, 128)
+            block = nn.TransformerEncoderLayer(128, 4, 512, dropout=0.0,
+                                               activation="gelu", batch_first=True, norm_first=True)
+            self.layers = nn.TransformerEncoder(block, 2, enable_nested_tensor=False)
+            self.norm = nn.LayerNorm(128)
+            self.head = nn.Linear(128, vocab_size)
+
+        def forward(self, ids, lengths):
+            positions = torch.arange(ids.shape[1], device=ids.device)
+            x = self.words(ids) + self.positions(positions)[None]
+            causal = torch.triu(torch.ones((ids.shape[1], ids.shape[1]), dtype=torch.bool, device=ids.device), diagonal=1)
+            x = self.layers(x, mask=causal, src_key_padding_mask=(ids == 0))
+            return self.head(self.norm(x[torch.arange(len(ids), device=ids.device), lengths - 1]))
+
+    return Student()
+
+
 def run(args):
     import torch
     from torch import nn
@@ -50,24 +75,6 @@ def run(args):
         raise ValueError("Student prompt exceeds frozen context1024")
     gold = {split: [vocab[r["answer"]] for r in rows] for split, rows in data.items()}
     labels = [vocab["A"], vocab["B"]]
-
-    class Student(nn.Module):
-        def __init__(self):
-            super().__init__()
-            self.words = nn.Embedding(len(vocab), 128, padding_idx=0)
-            self.positions = nn.Embedding(1024, 128)
-            block = nn.TransformerEncoderLayer(128, 4, 512, dropout=0.0,
-                                               activation="gelu", batch_first=True, norm_first=True)
-            self.layers = nn.TransformerEncoder(block, 2, enable_nested_tensor=False)
-            self.norm = nn.LayerNorm(128)
-            self.head = nn.Linear(128, len(vocab))
-
-        def forward(self, ids, lengths):
-            positions = torch.arange(ids.shape[1], device=ids.device)
-            x = self.words(ids) + self.positions(positions)[None]
-            causal = torch.triu(torch.ones((ids.shape[1], ids.shape[1]), dtype=torch.bool, device=ids.device), diagonal=1)
-            x = self.layers(x, mask=causal, src_key_padding_mask=(ids == 0))
-            return self.head(self.norm(x[torch.arange(len(ids), device=ids.device), lengths - 1]))
 
     def batch(sequences):
         lengths = torch.tensor([len(s) for s in sequences], device=args.device)
@@ -118,11 +125,11 @@ def run(args):
         for seed in (1729, 1730, 1731):
             torch.manual_seed(seed)
             torch.use_deterministic_algorithms(True, warn_only=True)
-            initial = Student().state_dict()
+            initial = build_student(len(vocab)).state_dict()
             permutation = np.random.default_rng(seed + 999).permutation(len(data["train"]))
             shuffled = [gold["train"][int(i)] for i in permutation]
             for arm in ("verified_supervision", "permuted_labels"):
-                model = Student().to(args.device)
+                model = build_student(len(vocab)).to(args.device)
                 model.load_state_dict(initial)
                 if arm == "verified_supervision":
                     untrained = evaluate(model, "test")

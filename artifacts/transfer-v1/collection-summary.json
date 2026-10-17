@@ -1,0 +1,161 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-17T06:32:46.882845+00:00",
+  "scope": "Frozen-checkpoint activation collection, not a capability/transfer result",
+  "collector_sha256": "4ff6aec2ca5837ced9c075c484087ecd13c9d2e4c38c2ba7bcfa18c99a96e6d9",
+  "preregistered_plan_sha256": "a54c8abf4e83fbeb926b805c4a1fc716a88ada61608fc64b16b565799a5858e6",
+  "frozen_counts": {
+    "train": 256,
+    "val": 64,
+    "test": 128
+  },
+  "runs": {
+    "source": {
+      "model": "Qwen/Qwen2.5-Math-1.5B",
+      "revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "examples": 448,
+      "measurement": {
+        "tokenizer_and_tokenization_wall_seconds": 0.6394110419787467,
+        "peak_process_rss_bytes": 9726279680,
+        "peak_process_rss_method": "getrusage(RUSAGE_SELF).ru_maxrss; process lifetime",
+        "mps_peak_memory_api": "not_available; only sampled public allocator counters",
+        "total_wall_seconds": 169.66601987503236,
+        "mps_sampled_max_allocated_bytes": 6476362496,
+        "mps_sampled_max_driver_allocated_bytes": 7433060352,
+        "mps_memory_sampling": "after model load and each completed batch; not a continuous peak",
+        "model_load_wall_seconds": 3.347613457997795,
+        "collection_wall_seconds": 164.4495667499723,
+        "collected_examples": 448,
+        "examples_per_second": 2.724239466566278,
+        "input_tokens": 349615
+      },
+      "manifest": "artifacts/transfer-v1/source-manifest.json",
+      "outputs": {
+        "train": {
+          "path": "train.npz",
+          "shape": [
+            256,
+            1536
+          ],
+          "sha256": "6cb729d8a33c834c3a26d17cddeb86c6c7f08b87f9aee3faa365e1894d8c84b1",
+          "collection_wall_seconds": 83.78484550002031,
+          "input_tokens": 176875
+        },
+        "val": {
+          "path": "val.npz",
+          "shape": [
+            64,
+            1536
+          ],
+          "sha256": "b4f03a81624b302f0307275eae07dd66246edfe0ecb2269e55656386c33bf312",
+          "collection_wall_seconds": 31.166006374987774,
+          "input_tokens": 66826
+        },
+        "test": {
+          "path": "test.npz",
+          "shape": [
+            128,
+            1536
+          ],
+          "sha256": "e4328fd026ce5b69705a17d2f503c16c9f4b272daad10d0063f6bdd134788e30",
+          "collection_wall_seconds": 49.49797520803986,
+          "input_tokens": 105914
+        }
+      }
+    },
+    "target": {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "examples": 448,
+      "measurement": {
+        "tokenizer_and_tokenization_wall_seconds": 0.6190627499599941,
+        "peak_process_rss_bytes": 9727246336,
+        "peak_process_rss_method": "getrusage(RUSAGE_SELF).ru_maxrss; process lifetime",
+        "mps_peak_memory_api": "not_available; only sampled public allocator counters",
+        "total_wall_seconds": 168.89071054197848,
+        "mps_sampled_max_allocated_bytes": 6476362496,
+        "mps_sampled_max_driver_allocated_bytes": 7433043968,
+        "mps_memory_sampling": "after model load and each completed batch; not a continuous peak",
+        "model_load_wall_seconds": 3.0835702079930343,
+        "collection_wall_seconds": 164.04654216696508,
+        "collected_examples": 448,
+        "examples_per_second": 2.7309322956897786,
+        "input_tokens": 349615
+      },
+      "manifest": "artifacts/transfer-v1/target-manifest.json",
+      "outputs": {
+        "train": {
+          "path": "train.npz",
+          "shape": [
+            256,
+            1536
+          ],
+          "sha256": "f39067cc78bdc116edce14ba485df34ea18d313cb050e7c0dc22c3224d58f963",
+          "collection_wall_seconds": 83.27899920800701,
+          "input_tokens": 176875
+        },
+        "val": {
+          "path": "val.npz",
+          "shape": [
+            64,
+            1536
+          ],
+          "sha256": "b32a8059d4ffee86f1de3cb641675b46f99cab22109a851563a50dfab2d052e1",
+          "collection_wall_seconds": 31.17691062501399,
+          "input_tokens": 66826
+        },
+        "test": {
+          "path": "test.npz",
+          "shape": [
+            128,
+            1536
+          ],
+          "sha256": "4acc044a0a89cb9166b9a32a9610467f0f6649c80b654bd32c604e222d6af830",
+          "collection_wall_seconds": 49.589879958017264,
+          "input_tokens": 105914
+        }
+      }
+    }
+  },
+  "paired_checks": {
+    "train": {
+      "examples": 256,
+      "shape_per_model": [
+        256,
+        1536
+      ],
+      "ids_families_token_hashes_lengths_match": true,
+      "archive_hashes_verified": true,
+      "input_hashes_frozen_and_matched": true
+    },
+    "val": {
+      "examples": 64,
+      "shape_per_model": [
+        64,
+        1536
+      ],
+      "ids_families_token_hashes_lengths_match": true,
+      "archive_hashes_verified": true,
+      "input_hashes_frozen_and_matched": true
+    },
+    "test": {
+      "examples": 128,
+      "shape_per_model": [
+        128,
+        1536
+      ],
+      "ids_families_token_hashes_lengths_match": true,
+      "archive_hashes_verified": true,
+      "input_hashes_frozen_and_matched": true
+    }
+  },
+  "failed_attempts": [],
+  "environment_lock": "artifacts/transfer-v1/collection-environment.lock.txt",
+  "measurement_notes": [
+    "Model load times use previously downloaded local weights.",
+    "Collection includes forward passes, synchronization, CPU transfer and archive/manifest writes.",
+    "Peak RSS is the process-lifetime resident-memory high-water mark. MPS public counters are sampled after model load and completed batches, not a continuous GPU-memory peak.",
+    "Models ran sequentially. No map fitting or test performance inspection was performed by the collection agent."
+  ],
+  "environment_lock_sha256": "319dcc1f8e8dbecd675dfa70b356eed6f069704b59f1a6d18445cf07b36c61f5"
+}

@@ -1,0 +1,83 @@
+{
+  "preregistered_plan_sha256": "a54c8abf4e83fbeb926b805c4a1fc716a88ada61608fc64b16b565799a5858e6",
+  "collector_sha256": "4ff6aec2ca5837ced9c075c484087ecd13c9d2e4c38c2ba7bcfa18c99a96e6d9",
+  "input_sha256": {
+    "train": "d1fcc429e691f7ce235c7e1169020a9fbaa78092d0175b113735be2dfb819a6e",
+    "val": "db1643545f3421b7248c19c6fc7049d244c865563dc7278c21d918eae69eb7c6",
+    "test": "af14ac8cd8eecbcf550c5b00c14222fa8a8e71242f03deb38041052eb4fec5e8"
+  },
+  "commands": [
+    {
+      "role": "source",
+      "args": [
+        ".venv-llm/bin/python",
+        "experiments/collect_activations.py",
+        "--model",
+        "Qwen/Qwen2.5-Math-1.5B",
+        "--revision",
+        "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+        "--train",
+        "data/transfer-v1/anchors/train.jsonl",
+        "--val",
+        "data/transfer-v1/anchors/val.jsonl",
+        "--test",
+        "data/transfer-v1/anchors/test.jsonl",
+        "--output",
+        "runs/transfer-v1/source",
+        "--layer",
+        "14",
+        "--max-length",
+        "2048",
+        "--batch-size",
+        "1",
+        "--device",
+        "mps",
+        "--dtype",
+        "float32",
+        "--seed",
+        "1729",
+        "--expected-tokenizer-sha",
+        "f884026e05f6dfffe68b72d580b588006d98b3bc0a128bb1ac425c76f7fc438c"
+      ],
+      "output": "runs/transfer-v1/source",
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "role": "target",
+      "args": [
+        ".venv-llm/bin/python",
+        "experiments/collect_activations.py",
+        "--model",
+        "Qwen/Qwen2.5-1.5B",
+        "--revision",
+        "8faed761d45a263340a0528343f099c05c9a4323",
+        "--train",
+        "data/transfer-v1/anchors/train.jsonl",
+        "--val",
+        "data/transfer-v1/anchors/val.jsonl",
+        "--test",
+        "data/transfer-v1/anchors/test.jsonl",
+        "--output",
+        "runs/transfer-v1/target",
+        "--layer",
+        "14",
+        "--max-length",
+        "2048",
+        "--batch-size",
+        "1",
+        "--device",
+        "mps",
+        "--dtype",
+        "float32",
+        "--seed",
+        "1729",
+        "--expected-tokenizer-sha",
+        "f884026e05f6dfffe68b72d580b588006d98b3bc0a128bb1ac425c76f7fc438c"
+      ],
+      "output": "runs/transfer-v1/target",
+      "status": "completed",
+      "exit_code": 0
+    }
+  ]
+}

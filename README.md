@@ -8,6 +8,7 @@ The first question is deliberately small: **can a learned affine map carry usefu
 
 ## Start here
 
+- Read the [first actual-model results](docs/validation.md#first-actual-model-experiment): vector alignment improved, but the translated state did not beat ordinary answers or supplying the same proof as text.
 - Inspect the [latest alignment reproduction](artifacts/lf-001/reproduction.json) and [real Lean-verification report](docs/lf-002-lean-verification.md). The accepted dataset is in [`results/lf-002/checked/`](results/lf-002/checked/), with 20 verified examples per split; `examples/logic/` retains the original three-example preparation samples.
 - Read the [actionable roadmap](docs/roadmap.md), or open [the interactive roadmap](docs/index.html) in your browser.
 - Run the first two CPU experiments below.
@@ -43,9 +44,11 @@ python experiments/toy_alignment.py --seed 7 --output artifacts/my_alignment.jso
 | Formal task generator | Implemented constructive propositional implication graphs. Short and longer valid rule chains share the same theorem. |
 | Fictional-language renderer | Implemented from the same graph, with a checked controlled-format round trip. It is not a learned semantic translator. |
 | Lean runner | Implemented timeouts, per-example statuses and zero-axiom audit. A [follow-up run](docs/lf-002-lean-verification.md) verified 60 generated examples and both proofs of each with Lean 4.35.0 and recognized zero-axiom audits. |
-| Actual LLM collector | Optional script and instructions supplied. No model weights downloaded or real-model inference run during preparation. |
-| Real-model affine fitter | Connects collected arrays to validation-selected ridge regression and controls. A numeric integration test does not substitute for a model run. |
-| Activation intervention, student training, adaptive self-play | Roadmap experiments, not implemented claims. |
+| Actual LLM collector | Executed on pinned Qwen2.5 Math/general 1.5B checkpoints: CPU smoke checks, a 30-pair pilot, and a separate 448-pair collection with matching tokenizers and input hashes. |
+| Real-model affine fitter | Executed with 256 training, 64 validation, and 128 test pairs. Validation selected ridge alpha `1.0`; test MSE was 0.290 times the training-mean baseline. |
+| Activation intervention | Implemented last-prompt-token patching at layer 14 with self-patch and shuffled/mean/zero controls. Accuracy was 51.6%, versus 53.9% ordinary and 64.1% with identical proof information as text. |
+| Small student training | Executed a 539,437-parameter causal student on fixed verified data, with three seeds and exactly matched label-permutation controls. No held-out improvement; this is a restricted from-scratch student, not general-model distillation. |
+| Adaptive self-play | Not run. The fixed-data experiment did not establish value that would justify iteration. |
 
 The implication generator always chooses a reachable target. Its useful answer is a rule chain. Binary reachable/not-reachable accuracy on these records would be trivial and must not be used as evidence of reasoning.
 
@@ -79,6 +82,10 @@ Each requires a separate experiment. The current starter demonstrates artificial
 The bundled [run record](docs/validation.md) contains measured CPU results and verification limits. For seed 7, the artificial paired map's normalized held-out RMSE was about 0.00970, compared with 1.068 for shuffled anchors and 1.061 for predicting the training mean. These are planted-factor sanity checks, not mathematical or LLM capability results.
 
 A [follow-up reproduction](artifacts/lf-001/reproduction.json) retained both predefined seeds, 7 and 19, and matched the bundled alignment results within floating-point tolerance; all 23 Python tests passed. The separate [first real Lean verification](docs/lf-002-lean-verification.md) checked 20 examples per split, retained compiler logs, and confirmed corrupted-input and missing-executable controls.
+
+The [hosted CI reproduction](docs/ci-reproduction.md) passed on clean Linux checkouts after fixing the missing Lake manifest. A [15-example correspondence audit](docs/example-audit.html) records five examples per split; coding-agent review passed and human review remains pending.
+
+In the [actual-model experiment](docs/validation.md#first-actual-model-experiment), the affine map aligned representations but did not improve answer accuracy. The recipient benefited more from the supplied proof as ordinary text. The same fixed dataset also failed to improve a small student's held-out accuracy over a label-permutation control. These are bounded negative results, with commands, controls, hashes, and per-example outputs retained.
 
 ## Research map and collaboration
 

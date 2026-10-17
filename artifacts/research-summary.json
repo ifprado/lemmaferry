@@ -1,0 +1,167 @@
+{
+  "status": "completed_with_negative_functional_and_student_results",
+  "recorded_at_utc": "2026-10-17T06:43:17.396647+00:00",
+  "question": "Can an affine mathematical representation improve proof-assisted answers beyond the identical mathematical information supplied as text?",
+  "publication": {
+    "repository": "https://github.com/ifprado/lemmaferry",
+    "initial_baseline_commit": "98cb9eca826de6d955f1a0250140f5505e5ffe35",
+    "baseline_release": "https://github.com/ifprado/lemmaferry/releases/tag/v0.1.0",
+    "passed_research_code_ci": "https://github.com/ifprado/lemmaferry/actions/runs/39010288317"
+  },
+  "audit": {
+    "examples": 15,
+    "per_split": 5,
+    "coding_agent_review": "passed",
+    "human_review": "pending",
+    "record": "results/lf-004/audit.json"
+  },
+  "collection": {
+    "pilot_pairs": 30,
+    "expanded_pairs": 448,
+    "train": 256,
+    "validation": 64,
+    "test": 128,
+    "test_grammars": 2,
+    "test_underlying_lineages": 69,
+    "expanded_real_lean_audits": 896
+  },
+  "geometry": {
+    "selected_alpha": 1.0,
+    "test_mse_ratio_to_mean": 0.28953774275739363,
+    "test_retrieval_accuracy": 0.828125
+  },
+  "functional": {
+    "metrics": {
+      "ordinary_recipient": {
+        "count": 128,
+        "two_choice_accuracy": 0.5390625,
+        "answer_token_nll": 0.8256626329384744,
+        "two_choice_nll": 0.6889904036652297,
+        "greedy_token_accuracy": 0.5390625
+      },
+      "proof_text_recipient": {
+        "count": 128,
+        "two_choice_accuracy": 0.640625,
+        "answer_token_nll": 0.7949950380716473,
+        "two_choice_nll": 0.668970271712169,
+        "greedy_token_accuracy": 0.640625
+      },
+      "self_patch": {
+        "count": 128,
+        "two_choice_accuracy": 0.5390625,
+        "answer_token_nll": 0.825662752147764,
+        "two_choice_nll": 0.688990490976721,
+        "greedy_token_accuracy": 0.5390625
+      },
+      "translated_donor": {
+        "count": 128,
+        "two_choice_accuracy": 0.515625,
+        "answer_token_nll": 0.8001760062761605,
+        "two_choice_nll": 0.6866236901842058,
+        "greedy_token_accuracy": 0.515625
+      },
+      "shuffled_training_pairs": {
+        "count": 128,
+        "two_choice_accuracy": 0.53125,
+        "answer_token_nll": 0.7995450627058744,
+        "two_choice_nll": 0.687255168100819,
+        "greedy_token_accuracy": 0.53125
+      },
+      "shuffled_donor_rows": {
+        "count": 128,
+        "two_choice_accuracy": 0.53125,
+        "answer_token_nll": 0.8027023870963603,
+        "two_choice_nll": 0.6889997278340161,
+        "greedy_token_accuracy": 0.53125
+      },
+      "translated_zero_donor": {
+        "count": 128,
+        "two_choice_accuracy": 0.546875,
+        "answer_token_nll": 0.7938106581568718,
+        "two_choice_nll": 0.6877188994549215,
+        "greedy_token_accuracy": 0.546875
+      },
+      "recipient_training_mean": {
+        "count": 128,
+        "two_choice_accuracy": 0.5234375,
+        "answer_token_nll": 0.8007504269480705,
+        "two_choice_nll": 0.6871824457775801,
+        "greedy_token_accuracy": 0.5234375
+      },
+      "oracle_text_state_patch": {
+        "count": 128,
+        "two_choice_accuracy": 0.5390625,
+        "answer_token_nll": 0.8005209562834352,
+        "two_choice_nll": 0.6860355769749731,
+        "greedy_token_accuracy": 0.5390625
+      },
+      "raw_identity_donor": {
+        "count": 128,
+        "two_choice_accuracy": 0.5,
+        "answer_token_nll": 0.9886175622232258,
+        "two_choice_nll": 0.6959101154934615,
+        "greedy_token_accuracy": 0.5
+      }
+    },
+    "paired_comparisons": {
+      "ordinary_recipient": {
+        "accuracy_difference": -0.0234375,
+        "lineage_cluster_bootstrap_95_percent_interval": [
+          -0.0983637605563835,
+          0.051094890510948905
+        ],
+        "underlying_lineages": 69,
+        "test_grammars": 2,
+        "scope": "Conditional on the two chosen graph grammars; too few independent grammars for broad family-level claims."
+      },
+      "proof_text_recipient": {
+        "accuracy_difference": -0.125,
+        "lineage_cluster_bootstrap_95_percent_interval": [
+          -0.2076923076923077,
+          -0.05069765649090364
+        ],
+        "underlying_lineages": 69,
+        "test_grammars": 2,
+        "scope": "Conditional on the two chosen graph grammars; too few independent grammars for broad family-level claims."
+      }
+    },
+    "max_self_patch_absolute_logit_error": 4.76837158203125e-05,
+    "conclusion": "Translated activations did not improve overall answer accuracy or beat identical proof information as text. Answer-token NLL improved slightly versus ordinary recipient. Exact proof-text-state patch also did not reproduce the full text benefit, limiting this one-position interface."
+  },
+  "student": {
+    "parameters": 539437,
+    "seeds": [
+      1729,
+      1730,
+      1731
+    ],
+    "summary": {
+      "verified_supervision": {
+        "test_accuracy_mean": 0.4765625,
+        "test_accuracy_std_across_seeds": 0.049820641848200495
+      },
+      "permuted_labels": {
+        "test_accuracy_mean": 0.4921875,
+        "test_accuracy_std_across_seeds": 0.01275775907699572
+      },
+      "verified_minus_control_accuracy": -0.015625,
+      "iteration_gate": "Only consider a later iterative experiment if fixed-data gains replicate across held-out grammars and stronger useful-data controls. This label-control run alone does not justify iteration."
+    },
+    "six_standalone_reloads_reproduced_all_predictions": true,
+    "control_scope": "Permuted answer labels isolate correct supervision; no comparison to equally useful ordinary text."
+  },
+  "iteration": "Not run; fixed-data value was not demonstrated.",
+  "limits": [
+    "Proof-assisted evidence compression, not transfer of equal-information pretrained mathematical skill.",
+    "Single next-token binary choice and two held-out graph grammars only.",
+    "No multi-token generation or matched end-to-end inference-cost advantage claimed.",
+    "Human correspondence review remains pending.",
+    "Small student is initialized from scratch and restricted to this synthetic next-token task."
+  ],
+  "independent_coding_agent_review": {
+    "status": "passed",
+    "record": "artifacts/transfer-v1/independent-review.json",
+    "sha256": "4e73e67afe95e2f1b7ad4f9e7a8455c16a8bdc526f769408229b317a7a817330",
+    "human_review_remains_pending": true
+  }
+}

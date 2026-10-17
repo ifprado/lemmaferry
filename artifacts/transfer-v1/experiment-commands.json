@@ -1,0 +1,292 @@
+{
+  "recorded_at_utc": "2026-10-17T06:43:17.393308+00:00",
+  "commands": [
+    {
+      "purpose": "Generate fixed expanded corpus",
+      "cwd": "repository root",
+      "argv": [
+        ".venv/bin/python",
+        "experiments/generate_transfer_logic.py",
+        "--output",
+        "data/transfer-v1/generated",
+        "--counts",
+        "256",
+        "64",
+        "128",
+        "--seed",
+        "1729"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Real Lean verification: train",
+      "cwd": "lean",
+      "argv": [
+        "../.venv/bin/python",
+        "../experiments/check_lean.py",
+        "../data/transfer-v1/generated/train.jsonl",
+        "--lean",
+        "LEAN_EXECUTABLE",
+        "--output",
+        "../data/transfer-v1/checked/train.checked.jsonl",
+        "--log-dir",
+        "../data/transfer-v1/logs/train"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Real Lean verification: validation",
+      "cwd": "lean",
+      "argv": [
+        "../.venv/bin/python",
+        "../experiments/check_lean.py",
+        "../data/transfer-v1/generated/validation.jsonl",
+        "--lean",
+        "LEAN_EXECUTABLE",
+        "--output",
+        "../data/transfer-v1/checked/validation.checked.jsonl",
+        "--log-dir",
+        "../data/transfer-v1/logs/validation"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Real Lean verification: test",
+      "cwd": "lean",
+      "argv": [
+        "../.venv/bin/python",
+        "../experiments/check_lean.py",
+        "../data/transfer-v1/generated/test.jsonl",
+        "--lean",
+        "LEAN_EXECUTABLE",
+        "--output",
+        "../data/transfer-v1/checked/test.checked.jsonl",
+        "--log-dir",
+        "../data/transfer-v1/logs/test"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Prepare paired proof-assisted views",
+      "cwd": "repository root",
+      "argv": [
+        ".venv/bin/python",
+        "experiments/prepare_activation_tasks.py",
+        "--inputs",
+        "data/transfer-v1/checked",
+        "--output",
+        "data/transfer-v1/anchors",
+        "--counts",
+        "256",
+        "64",
+        "128"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Fit registered affine map",
+      "cwd": "repository root",
+      "argv": [
+        ".venv/bin/python",
+        "experiments/fit_activations.py",
+        "--source",
+        "runs/transfer-v1/source",
+        "--target",
+        "runs/transfer-v1/target",
+        "--output",
+        "runs/transfer-v1/affine",
+        "--alphas",
+        "0.0001",
+        "0.001",
+        "0.01",
+        "0.1",
+        "1.0",
+        "--seed",
+        "1729"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Source model answer reference",
+      "cwd": "repository root",
+      "argv": [
+        ".venv-llm/bin/python",
+        "experiments/evaluate_intervention.py",
+        "--source",
+        "runs/transfer-v1/source",
+        "--target",
+        "runs/transfer-v1/target",
+        "--translator",
+        "runs/transfer-v1/affine",
+        "--inputs",
+        "data/transfer-v1/anchors",
+        "--output",
+        "artifacts/transfer-v1/source-evaluation",
+        "--source-only",
+        "--device",
+        "mps"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Recipient answer interventions and controls",
+      "cwd": "repository root",
+      "argv": [
+        ".venv-llm/bin/python",
+        "experiments/evaluate_intervention.py",
+        "--source",
+        "runs/transfer-v1/source",
+        "--target",
+        "runs/transfer-v1/target",
+        "--translator",
+        "runs/transfer-v1/affine",
+        "--inputs",
+        "data/transfer-v1/anchors",
+        "--output",
+        "artifacts/transfer-v1/recipient-evaluation",
+        "--device",
+        "mps"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Fixed student and matched control",
+      "cwd": "repository root",
+      "argv": [
+        ".venv-llm/bin/python",
+        "experiments/train_fixed_student.py",
+        "--inputs",
+        "data/transfer-v1/anchors",
+        "--output",
+        "artifacts/student-v1",
+        "--checkpoints",
+        "runs/student-v1/checkpoints",
+        "--device",
+        "mps"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Standalone checkpoint reload",
+      "cwd": "repository root",
+      "argv": [
+        ".venv-llm/bin/python",
+        "experiments/evaluate_student_checkpoint.py",
+        "--checkpoint",
+        "runs/student-v1/checkpoints/seed1729-verified_supervision.pt",
+        "--inputs",
+        "data/transfer-v1/anchors/test.jsonl",
+        "--output",
+        "artifacts/student-v1/reloaded/seed1729-verified_supervision.json",
+        "--device",
+        "mps"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Standalone checkpoint reload",
+      "cwd": "repository root",
+      "argv": [
+        ".venv-llm/bin/python",
+        "experiments/evaluate_student_checkpoint.py",
+        "--checkpoint",
+        "runs/student-v1/checkpoints/seed1729-permuted_labels.pt",
+        "--inputs",
+        "data/transfer-v1/anchors/test.jsonl",
+        "--output",
+        "artifacts/student-v1/reloaded/seed1729-permuted_labels.json",
+        "--device",
+        "mps"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Standalone checkpoint reload",
+      "cwd": "repository root",
+      "argv": [
+        ".venv-llm/bin/python",
+        "experiments/evaluate_student_checkpoint.py",
+        "--checkpoint",
+        "runs/student-v1/checkpoints/seed1730-verified_supervision.pt",
+        "--inputs",
+        "data/transfer-v1/anchors/test.jsonl",
+        "--output",
+        "artifacts/student-v1/reloaded/seed1730-verified_supervision.json",
+        "--device",
+        "mps"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Standalone checkpoint reload",
+      "cwd": "repository root",
+      "argv": [
+        ".venv-llm/bin/python",
+        "experiments/evaluate_student_checkpoint.py",
+        "--checkpoint",
+        "runs/student-v1/checkpoints/seed1730-permuted_labels.pt",
+        "--inputs",
+        "data/transfer-v1/anchors/test.jsonl",
+        "--output",
+        "artifacts/student-v1/reloaded/seed1730-permuted_labels.json",
+        "--device",
+        "mps"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Standalone checkpoint reload",
+      "cwd": "repository root",
+      "argv": [
+        ".venv-llm/bin/python",
+        "experiments/evaluate_student_checkpoint.py",
+        "--checkpoint",
+        "runs/student-v1/checkpoints/seed1731-verified_supervision.pt",
+        "--inputs",
+        "data/transfer-v1/anchors/test.jsonl",
+        "--output",
+        "artifacts/student-v1/reloaded/seed1731-verified_supervision.json",
+        "--device",
+        "mps"
+      ],
+      "outputs": []
+    },
+    {
+      "purpose": "Standalone checkpoint reload",
+      "cwd": "repository root",
+      "argv": [
+        ".venv-llm/bin/python",
+        "experiments/evaluate_student_checkpoint.py",
+        "--checkpoint",
+        "runs/student-v1/checkpoints/seed1731-permuted_labels.pt",
+        "--inputs",
+        "data/transfer-v1/anchors/test.jsonl",
+        "--output",
+        "artifacts/student-v1/reloaded/seed1731-permuted_labels.json",
+        "--device",
+        "mps"
+      ],
+      "outputs": []
+    }
+  ],
+  "reproduction_notes": [
+    "Use fresh output directories; scripts reject existing destinations to preserve earlier runs.",
+    "Replace LEAN_EXECUTABLE with the installed pinned Lean path. Actual execution used /Users/ianprado02/.elan/bin/lean.",
+    "Collection commands, exact model revisions and dependency locks are in commands.json and collection-environment.lock.txt.",
+    "Raw activation arrays, affine map and student checkpoints are outside Git and supplied as separate release artifacts."
+  ],
+  "script_sha256": {
+    "experiments/check_lean.py": "fb83b270fa537135c826aad56238f2d575342acf882654e7938a9237b8bcfd5d",
+    "experiments/collect_activations.py": "4ff6aec2ca5837ced9c075c484087ecd13c9d2e4c38c2ba7bcfa18c99a96e6d9",
+    "experiments/evaluate_intervention.py": "7201102c3c35f5e22cd90d4c8e1f4cc932e991b48f1e993739cc0bf158e93c16",
+    "experiments/evaluate_student_checkpoint.py": "afbcefb591ae8d92a74cd1d828f4ed842ae27696a728d5854a01b1b80d11bfe3",
+    "experiments/fit_activations.py": "156e957906d7fe974f88532ccd912d2dea37f11eef6b9f9a04ef80f1ccc463c6",
+    "experiments/generate_logic.py": "f81d9cdec129dc986efaa71ec6be5d5d0756b77809c45da20c4ee6d19c40f3db",
+    "experiments/generate_transfer_logic.py": "7760ff39dbdb82548de35772910561c7040fa56c39871e1e90e2d26de8acfee4",
+    "experiments/plot_transfer_results.py": "874bd574d51d0e1ad070b3b3e6ed1cdfbc052eb6dd2a06eed383fda92efd5e69",
+    "experiments/prepare_activation_tasks.py": "7d15ba7445c4e7f61cc132d2d71ff9c1fa93a980183f00de7d92f070e01cd44a",
+    "experiments/toy_alignment.py": "82219074f054b40beb846670ffffbc12a1271562e7efccef2f775d7d88b3f2fc",
+    "experiments/train_fixed_student.py": "23537696a98f0ed2f921124d6b871361a0f9e6241c92efd47b7a70cd2982d482",
+    "experiments/verify_lean_evidence.py": "a2dbfcfed0cb350e51399d6f36f030205c76e0d3a61c04a01fcd5c562cfa832b"
+  }
+}

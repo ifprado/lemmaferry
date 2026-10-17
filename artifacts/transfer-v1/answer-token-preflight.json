@@ -1,0 +1,29 @@
+{
+  "checked_utc": "2026-10-17T06:28:24.571889+00:00",
+  "status": "passed",
+  "continuations": {
+    "A": " A",
+    "B": " B"
+  },
+  "reason": "Bare A/B retokenize the final colon; leading-space continuations preserve the frozen prompt prefix.",
+  "models": {
+    "source": {
+      "model": "Qwen/Qwen2.5-Math-1.5B",
+      "revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "continuation_token_ids": {
+        "A": 362,
+        "B": 425
+      },
+      "prompt_views_checked": 1434
+    },
+    "target": {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "continuation_token_ids": {
+        "A": 362,
+        "B": 425
+      },
+      "prompt_views_checked": 1434
+    }
+  }
+}
