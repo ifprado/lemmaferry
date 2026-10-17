@@ -188,8 +188,8 @@ in the fresh archive run named by the summary.
 
 The [JSON summary](../results/swap-integration/summary.json) and
 [exact command receipts](../results/swap-integration/commands.json) retain these
-results. All 109 tests passed with Torch 2.14.1 and NumPy 2.5.4 on Python 3.14.7.
-The NumPy-only environment passed 73 tests and skipped 36 optional-runtime tests.
+results. All 110 tests passed with Torch 2.14.1 and NumPy 2.5.4 on Python 3.14.7.
+The NumPy-only environment passed 73 tests and skipped 37 optional-runtime tests.
 The prototype's 43 source and historical artifact files were hash-checked and
 remained unchanged.
 
@@ -217,10 +217,10 @@ Each actual neural arm had 400,672 trainable parameters, completed 256 optimizer
 updates and saw 8,192 pairs. Both arms within each seed had matching initial and
 batch-order hashes, update counts and validation schedules. Synthetic arms had
 2,598 parameters, 512 updates and 16,384 pair exposures each. The measured CPU
-comparison commands took 1.58 seconds for synthetic and 10.61 seconds for actual
+comparison commands took 1.57 seconds for synthetic and 10.55 seconds for actual
 vectors, including writing and reloading evidence. Actual paired/shuffled neural
 fitting totaled 3.16 seconds across the three seeds; descriptive affine fitting
-totaled 1.47 seconds. These local timings are not portable performance claims.
+totaled 1.44 seconds. These local timings are not portable performance claims.
 
 The registered loop admitted six lemmas in each of two iterations using Lean
 4.35.0; all six second-iteration lemmas reused earlier results. Each of five arms
@@ -237,3 +237,8 @@ same-information text, 16.3084 shuffled, 16.3088 mean and 16.3132 ordinary-langu
 control. Swap therefore showed no accuracy advantage and did not beat text on
 answer loss. This tiny randomly initialized recipient is an engineering check,
 not evidence about broad general-model reasoning.
+
+A final CLI regression test caught and fixed neural checkpoint-selection reporting
+in the distinct-view fitting command. Both fixed-budget vector comparisons were
+repeated against that source; their metrics were identical. Both evidence sets
+and their measured costs are retained in the JSON record.

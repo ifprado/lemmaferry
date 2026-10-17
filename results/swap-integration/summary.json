@@ -7,18 +7,18 @@
   "raw_evidence_directory": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/swap-integration-20261017T231218Z",
   "tests": {
     "numpy_only": {
-      "discovered": 109,
+      "discovered": 110,
       "passed": 73,
-      "skipped_optional": 36,
-      "seconds": 5.035,
-      "log_sha256": "d497960d933a1498b0c84c53c3595e56f0edf48afc7a7713c7a08fee78b8cf87"
+      "skipped_optional": 37,
+      "seconds": 5.02,
+      "log_sha256": "11bb567648e976a9f411b8614f9b0610649e3c397bbf32f784fd231020c41312"
     },
     "torch": {
-      "discovered": 109,
-      "passed": 109,
+      "discovered": 110,
+      "passed": 110,
       "skipped": 0,
-      "seconds": 13.618,
-      "log_sha256": "b4e50105af7da4c89e1140c858ce43ead4cc47b7e4d0119104f25f13990337ef"
+      "seconds": 14.458,
+      "log_sha256": "bfef76a7130fcf12d06fb8fc448e1e5d18492615285fbcc5da1ca39a7b5d6928"
     }
   },
   "environment_sha256": "31a25317a5714c0348636a0c262aa11236b6631f615c42718766e0b2f5b4ce53",
@@ -30,14 +30,14 @@
     },
     "scope": "Saved-vector geometric alignment; no model collection, recipient training, inference assistance or capability evidence.",
     "compute_comparison": "Paired and shuffled neural arms are matched. Affine is descriptive and not compute matched.",
-    "raw_summary_sha256": "2cd853c68ef77f9ccb9f6430d8398fca5808db5fecb24402b23c5622357cbd19",
-    "raw_protocol_sha256": "0592b947e3154b544b002044b51fd2f2b2a912c2654a06b8acecee2292dbb535",
-    "raw_artifact_inventory_sha256": "044cbe4326987d78fd53c7d4ec57ad57125377a3fb24d8a24a1e75f8a21b47e9",
+    "raw_summary_sha256": "47e09811e43e6c7324963d805922fc99393dd6b9185de5bd1d0c8bd50bc30de5",
+    "raw_protocol_sha256": "5fb1762c8d4322a9084339549bcbdca503f32a158ff94ba39263404aebb78cc6",
+    "raw_artifact_inventory_sha256": "4003bf54a4f71d24758cde2e441346c4d5de05e1298fec2375bd25b242ba706f",
     "runs": [
       {
         "seed": 7,
         "backend": "swap",
-        "fitting_wall_seconds": 0.9401522080297582,
+        "fitting_wall_seconds": 0.9394399169832468,
         "reload_predictions_exact": true,
         "bundle_manifest_sha256": "20d4fb19674b9686b21adfc33e5136356776038cf4aac61aae8a2db1320ebaa8",
         "test_metrics": {
@@ -179,7 +179,7 @@
       {
         "seed": 7,
         "backend": "affine",
-        "fitting_wall_seconds": 0.0014492080081254244,
+        "fitting_wall_seconds": 0.0014375419705174863,
         "reload_predictions_exact": true,
         "bundle_manifest_sha256": "42ba4ee7d25b84fd5e8ffe871c1239839e782fc2aeb3fe40ad75078fc64d0c70",
         "test_metrics": {
@@ -242,7 +242,8 @@
         }
       }
     ],
-    "synthetic_acceptance_passed": true
+    "synthetic_acceptance_passed": true,
+    "raw_directory": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/swap-integration-20261017T231218Z/cli-fix-validation/synthetic"
   },
   "actual_vectors": {
     "counts": {
@@ -252,14 +253,14 @@
     },
     "scope": "Saved-vector geometric alignment; no model collection, recipient training, inference assistance or capability evidence.",
     "compute_comparison": "Paired and shuffled neural arms are matched. Affine is descriptive and not compute matched.",
-    "raw_summary_sha256": "43d51e40c127f4d02bc157796ff552060627235a2d1a91d8da9ee1e544e1409b",
-    "raw_protocol_sha256": "7b795c43893e18b5d0b91c5fb2a2e27db85453d42ef02cfa9c36befa60dc3283",
-    "raw_artifact_inventory_sha256": "e0021fab8fec4d966bd843a2019e16a78d5af968317bd9caf044ece5d41a4d79",
+    "raw_summary_sha256": "2a64bb1d59a2db1429517f290e7d58758528e304f27c5c64e14c9df55b86e298",
+    "raw_protocol_sha256": "809b7b42cf9dd67f7f636ae6db0785d21e3a44cbd63ca906520903fc91ab8ca7",
+    "raw_artifact_inventory_sha256": "ed7721b87d8d8c42364429effaf9549b888995f27c97a6fe6e0a2a0656e5fc81",
     "runs": [
       {
         "seed": 7,
         "backend": "swap",
-        "fitting_wall_seconds": 1.2546914590056986,
+        "fitting_wall_seconds": 1.2481508750352077,
         "reload_predictions_exact": true,
         "bundle_manifest_sha256": "de78dd728b886418891145c30e555756d098e4fb49b1fd292d9dcfb330ca0133",
         "test_metrics": {
@@ -401,7 +402,7 @@
       {
         "seed": 7,
         "backend": "affine",
-        "fitting_wall_seconds": 0.5011593750095926,
+        "fitting_wall_seconds": 0.48628908302634954,
         "reload_predictions_exact": true,
         "bundle_manifest_sha256": "8cb62d70a73237111b892ea6729d488f444dffe95043d0df2bff25319f43f01b",
         "test_metrics": {
@@ -466,7 +467,7 @@
       {
         "seed": 19,
         "backend": "swap",
-        "fitting_wall_seconds": 0.955243915959727,
+        "fitting_wall_seconds": 0.955296250001993,
         "reload_predictions_exact": true,
         "bundle_manifest_sha256": "d42f1df0da5e39651591dd922fe447ec3876f2ac28a377f4813a5aae33e5b493",
         "test_metrics": {
@@ -608,7 +609,7 @@
       {
         "seed": 19,
         "backend": "affine",
-        "fitting_wall_seconds": 0.48301104200072587,
+        "fitting_wall_seconds": 0.47684720798861235,
         "reload_predictions_exact": true,
         "bundle_manifest_sha256": "43cb2fa1106db782e42be1229359d086f14d886b3427bd1ea51731f5ae90eccd",
         "test_metrics": {
@@ -673,7 +674,7 @@
       {
         "seed": 31,
         "backend": "swap",
-        "fitting_wall_seconds": 0.9542960000107996,
+        "fitting_wall_seconds": 0.9544849999947473,
         "reload_predictions_exact": true,
         "bundle_manifest_sha256": "9bf3af1bea63553db650e8cf96094dd660c3c87546dfb384c9d8b018ab243d74",
         "test_metrics": {
@@ -815,7 +816,7 @@
       {
         "seed": 31,
         "backend": "affine",
-        "fitting_wall_seconds": 0.48247712501324713,
+        "fitting_wall_seconds": 0.47556370799429715,
         "reload_predictions_exact": true,
         "bundle_manifest_sha256": "ac36218ca7d6ee0082865331e912b9aaafbf2809402ecb1bd750ec2379985998",
         "test_metrics": {
@@ -877,7 +878,8 @@
           "T_of_S_language": 0.44691615295029335
         }
       }
-    ]
+    ],
+    "raw_directory": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/swap-integration-20261017T231218Z/cli-fix-validation/actual-vectors"
   },
   "constructive_loop": {
     "completed_iterations": 2,
@@ -1264,5 +1266,15 @@
     "Tiny recipient and 24 authored evaluation questions are a pipeline fixture.",
     "No inference-time communication interface or sustained broad capability improvement established.",
     "Raw checkpoints, activations and logs remain local in the archive; only this small JSON summary is committed."
-  ]
+  ],
+  "revalidation": {
+    "reason": "A final command-line review found the distinct-view fitter printed affine-only selection metadata after successful neural fitting. Corrected reporting and added a subprocess CLI regression test.",
+    "changed_implementation_file": "experiments/fit_rosetta.py",
+    "fixed_budgets_and_seeds_unchanged": true,
+    "original_evidence_retained": true,
+    "repeated_vector_metrics_identical": true,
+    "final_comparison_directory": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/swap-integration-20261017T231218Z/cli-fix-validation",
+    "initial_comparison_seconds": 12.18820475001121,
+    "final_comparison_seconds": 12.119297457975335
+  }
 }

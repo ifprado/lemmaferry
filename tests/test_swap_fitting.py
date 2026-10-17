@@ -3,6 +3,8 @@
 import importlib.util
 import json
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -25,6 +27,23 @@ class SwapFittingTests(unittest.TestCase):
         import torch
         torch.set_num_threads(1)
         self.config = dict(steps=2, validation_every=1, batch_size=4, hidden_dim=8, latent_dim=3)
+
+    def test_neural_fitting_clis_complete_and_report_selection(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            fixture = load("_cli_distinct_fixture", "tests/test_rosetta.py")
+            source, target, views = fixture.fake_cross_domain(Path(tmp))
+            command = [sys.executable, str(ROOT / "experiments/fit_rosetta.py"),
+                       "--source", str(source), "--target", str(target),
+                       "--correspondence", str(views), "--output", str(Path(tmp) / "cli-fit"),
+                       "--translator", "swap", "--seed", "7", "--swap-steps", "2",
+                       "--swap-hidden-dim", "8", "--swap-latent-dim", "3",
+                       "--swap-validation-every", "1", "--swap-batch-size", "4"]
+            process = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, timeout=60)
+            self.assertEqual(process.returncode, 0, process.stderr)
+            result = json.loads(process.stdout)
+            self.assertEqual(result["status"], "completed")
+            self.assertEqual(set(result["selection"]), {"paired", "shuffled"})
+            self.assertTrue(all(1 <= row["selected_step"] <= 2 for row in result["selection"].values()))
 
     def test_same_input_neural_fit_reloads_and_keeps_token_audit(self):
         fixture = load("_same_input_fixture", "tests/test_fit_activations.py")

@@ -95,8 +95,13 @@ def main() -> None:
                              args.lambdas, objective=args.objective, seed=args.seed,
                              translator=args.translator,
                              swap_config=swap_options(args) if args.translator == "swap" else None)
+    protocol = report["protocol"]
+    selection = protocol.get("selection")
+    if selection is None:
+        selection = {arm: {"selected_step": training["selected_step"]}
+                     for arm, training in protocol["training"].items()}
     print(json.dumps({"status": report["status"], "output": str(args.output),
-                      "selection": report["protocol"]["selection"], "scope": report["protocol"]["scope"]}, indent=2))
+                      "selection": selection, "scope": protocol["scope"]}, indent=2))
 
 
 if __name__ == "__main__":
