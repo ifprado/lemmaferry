@@ -19,7 +19,9 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from lemmaferry.correspondence import load_correspondence  # noqa: E402
-from lemmaferry.rosetta import OBJECTIVES, PairedSplit, RosettaPair  # noqa: E402
+from lemmaferry.rosetta import OBJECTIVES, PairedSplit  # noqa: E402
+from lemmaferry.translators import fit_translator  # noqa: E402
+from lemmaferry.translator_cli import add_translator_arguments, swap_options  # noqa: E402
 
 _SPEC = importlib.util.spec_from_file_location("_lemmaferry_collections", Path(__file__).with_name("fit_activations.py"))
 _COLLECTOR = importlib.util.module_from_spec(_SPEC)
@@ -47,6 +49,7 @@ def paired_domains(source: Path, target: Path, correspondence: Path) -> tuple[di
 def fit_collections(
     source: Path, target: Path, correspondence: Path, output: Path,
     lambdas=(0.0, 0.001, 0.1, 1.0), *, objective="raw_sum", seed=1729,
+    translator="affine", swap_config=None,
 ) -> dict:
     source, target, correspondence, output = map(Path, (source, target, correspondence, output))
     if output.exists():
@@ -56,7 +59,8 @@ def fit_collections(
                                sx[split]["ids"].tolist(), sx[split]["families"].tolist(), split,
                                source_ids=sx[split]["ids"].tolist(), target_ids=ty[split]["ids"].tolist())
              for split in ("train", "val", "test")}
-    pair = RosettaPair.fit(pairs["train"], pairs["val"], lambdas, objective=objective, seed=seed)
+    pair = fit_translator(pairs["train"], pairs["val"], translator=translator,
+                          lambdas=lambdas, objective=objective, seed=seed, swap_config=swap_config)
     manifest_path = correspondence / "manifest.json" if correspondence.is_dir() else correspondence
     sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
     pair.protocol["extraction"] = {
@@ -85,9 +89,12 @@ def main() -> None:
     parser.add_argument("--lambdas", type=float, nargs="+", default=[0.0, 0.001, 0.1, 1.0])
     parser.add_argument("--objective", choices=tuple(OBJECTIVES), default="raw_sum")
     parser.add_argument("--seed", type=int, default=1729)
+    add_translator_arguments(parser)
     args = parser.parse_args()
     report = fit_collections(args.source, args.target, args.correspondence, args.output,
-                             args.lambdas, objective=args.objective, seed=args.seed)
+                             args.lambdas, objective=args.objective, seed=args.seed,
+                             translator=args.translator,
+                             swap_config=swap_options(args) if args.translator == "swap" else None)
     print(json.dumps({"status": report["status"], "output": str(args.output),
                       "selection": report["protocol"]["selection"], "scope": report["protocol"]["scope"]}, indent=2))
 

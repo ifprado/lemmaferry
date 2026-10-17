@@ -11,6 +11,7 @@ from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 import hashlib
 import json
+import math
 from pathlib import Path
 from typing import Any
 
@@ -32,6 +33,14 @@ class LoopConfig:
     backend: str = "tiny"
     experience_mode: str = "language"
     representations: bool = True
+    translator: str = "affine"
+    translator_objective: str = "raw_sum"
+    swap_latent_dim: int = 8
+    swap_hidden_dim: int = 64
+    swap_steps: int = 128
+    swap_batch_size: int = 32
+    swap_learning_rate: float = 0.002
+    swap_validation_every: int = 16
     steps: int = 2
     batch_size: int = 1
     max_length: int = 2048
@@ -53,6 +62,18 @@ class LoopConfig:
             raise ValueError("backend must be tiny or pretrained")
         if self.experience_mode not in {"language", "translated"}:
             raise ValueError("experience_mode must be language or translated")
+        if self.translator not in {"affine", "swap"}:
+            raise ValueError("translator must be affine or swap")
+        if self.translator_objective not in {"raw_sum", "standardized_mean"}:
+            raise ValueError("unknown affine translator objective")
+        swap_integers = (self.swap_latent_dim, self.swap_hidden_dim, self.swap_steps,
+                         self.swap_batch_size, self.swap_validation_every)
+        if any(type(value) is not int or value < 1 for value in swap_integers):
+            raise ValueError("swap dimensions and training budgets must be positive integers")
+        if not math.isfinite(self.swap_learning_rate) or self.swap_learning_rate <= 0:
+            raise ValueError("swap learning rate must be finite and positive")
+        if self.translator == "swap" and not self.representations:
+            raise ValueError("swap translator requires paired representations")
         if self.experience_mode == "translated" and not self.representations:
             raise ValueError("translated experience requires paired representations")
         if self.learning_rate <= 0 or self.auxiliary_weight <= 0 or self.mastery_threshold < 0:
@@ -128,9 +149,11 @@ def run_loop(output: Path | str, evaluation: Path | str, *,
         "translated_control": "same formal donor information supplied as text, with an equally computed recipient-state auxiliary loss",
         "correspondence_controls": "identical verified prompts and answer supervision, with shuffled-pair or training-mean auxiliary targets",
         "feedback_policy": "only post-update loss on accepted training examples; external evaluation is never a curriculum input",
-        "representation_policy": "separate formal phi,p and natural-language derivation r; family-held-out calibration; validation-only lambda selection",
+        "representation_policy": "separate formal phi,p and natural-language derivation r; family-held-out calibration; validation-only regularization or swap checkpoint selection; fresh bridge from current pre-update recipient each iteration",
+        "donor_policy": "source checkpoint held fixed across all iterations; detached pre-update activations; no gradient from recipient or bridge reaches the donor",
         "iteration_policy": "fixed budget, no evaluation-based early stopping, layer selection, or iterative success claim",
-        "source_sha256": {p.name: _hash(p) for p in sorted(Path(__file__).parent.glob("*.py"))},
+        "source_sha256": {str(p.relative_to(Path(__file__).parent)): _hash(p)
+                          for p in sorted(Path(__file__).parent.rglob("*.py"))},
         "scope": ("tiny randomly initialized neural fixtures; no specialist or general-purpose capability claim"
                   if config.backend == "tiny" else "local pinned pretrained specialist and recipient; recipient residual-adapter updates"),
     }
@@ -160,6 +183,12 @@ def run_loop(output: Path | str, evaluation: Path | str, *,
         source_model = _recipient(config, mathematical=True) if config.representations else None
         if source_model is not None:
             summary["source_checkpoint"] = save_recipient(source_model, output / "source-initial.pt")
+        source_hash = parameter_sha256(source_model) if source_model is not None else None
+        swap_config = ({"latent_dim": config.swap_latent_dim, "hidden_dim": config.swap_hidden_dim,
+                        "steps": config.swap_steps, "batch_size": config.swap_batch_size,
+                        "learning_rate": config.swap_learning_rate,
+                        "validation_every": config.swap_validation_every, "device": "cpu"}
+                       if config.translator == "swap" else None)
         budget = TrainingBudget(steps=config.steps, batch_size=config.batch_size,
                                 max_length=config.max_length, learning_rate=config.learning_rate,
                                 auxiliary_weight=config.auxiliary_weight if config.experience_mode == "translated" else 0.0)
@@ -186,8 +215,12 @@ def run_loop(output: Path | str, evaluation: Path | str, *,
             calibration = None
             if source_model is not None:
                 from .representations import fit_library_rosetta
+                if parameter_sha256(source_model) != source_hash:
+                    raise ValueError("mathematical donor changed between iterations")
                 fitted = fit_library_rosetta(library.records(), after["snapshot_hash"], source_model,
-                                             arms["verified"], directory / "rosetta", seed=config.seed)
+                                             arms["verified"], directory / "rosetta", seed=config.seed,
+                                             translator=config.translator, objective=config.translator_objective,
+                                             swap_config=swap_config)
                 calibration = fitted["report"]
                 if config.experience_mode == "translated":
                     for row in experience:
@@ -230,6 +263,8 @@ def run_loop(output: Path | str, evaluation: Path | str, *,
                         "supervised_answer_tokens", "examples_seen"):
                 if len({r[key] for r in training.values()}) != 1:
                     raise ValueError("training budget differs across arms: " + key)
+            if source_model is not None and parameter_sha256(source_model) != source_hash:
+                raise ValueError("recipient learning changed the fixed mathematical donor")
             scores = score_candidates(arms["verified"], experience, fixed_evaluation=frozen)
             family_by_id = {r["id"]: r["family"] for r in experience}
             grouped: dict[str, list[float]] = defaultdict(list)

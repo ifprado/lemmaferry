@@ -1,0 +1,122 @@
+{
+  "schema": "lemmaferry.swap.validation-plan.v1",
+  "registered_at_utc": "2026-10-17T23:12:18.293082+00:00",
+  "base_branch": "research/constructive-learning-loop",
+  "base_sha": "dc4ff35e6dccd24f9250d3a7b12ad55e8c55bab8",
+  "feature_branch": "feature/swap-autoencoder",
+  "evidence_directory": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/swap-integration-20261017T231218Z",
+  "environment": {
+    "python": ".venv-llm/bin/python",
+    "device": "cpu",
+    "torch_threads": 1,
+    "model_downloads": false,
+    "paid_compute": false
+  },
+  "loss": {
+    "paired": 1.0,
+    "self": 0.25,
+    "cycle": 0.1,
+    "latent": 0.01
+  },
+  "controls": {
+    "neural": "Same architecture, initialization, AdamW settings, update count, batch indices, validation schedule; only one recorded deranged training correspondence changes. Reverse uses the same (x,y_perm) pairs.",
+    "mean": "Per-domain training mean.",
+    "affine": "Validation-selected raw affine ridge; descriptive comparator, not compute matched."
+  },
+  "synthetic": {
+    "data_seed": 2026,
+    "seeds": [
+      7
+    ],
+    "counts": {
+      "train": 512,
+      "val": 96,
+      "test": 128
+    },
+    "dimensions": [
+      12,
+      10
+    ],
+    "distribution": "planted nonlinear four-factor paired views; independently drawn samples, not held-out theorem structures",
+    "latent_dim": 8,
+    "hidden_dim": 32,
+    "steps": 512,
+    "batch_size": 32,
+    "learning_rate": 0.002,
+    "validation_every": 64,
+    "metrics": [
+      "bidirectional normalized RMSE",
+      "self reconstruction",
+      "cycle normalized RMSE",
+      "cosine retrieval"
+    ],
+    "acceptance": "Finite held-out metrics; paired normalized RMSE below shuffled and mean in both directions; reload reproduces predictions. Failure is reported, not tuned away."
+  },
+  "actual_vectors": {
+    "source": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/transfer-v1/source",
+    "target": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/transfer-v1/target",
+    "loader": "fit_activations.paired_collections",
+    "seeds": [
+      7,
+      19,
+      31
+    ],
+    "counts": {
+      "train": 256,
+      "val": 64,
+      "test": 128
+    },
+    "dimensions": [
+      1536,
+      1536
+    ],
+    "latent_dim": 16,
+    "hidden_dim": 64,
+    "steps": 256,
+    "batch_size": 32,
+    "learning_rate": 0.002,
+    "validation_every": 32,
+    "metrics": [
+      "bidirectional normalized RMSE",
+      "self reconstruction",
+      "cycle normalized RMSE",
+      "cosine retrieval",
+      "wall seconds",
+      "optimizer updates",
+      "pair exposures"
+    ],
+    "acceptance": "Audit succeeds, neural control budgets match, finite metrics and reload consistency. No performance improvement required. No large-model collection/inference."
+  },
+  "loop": {
+    "iterations": 2,
+    "proposals_per_iteration": 6,
+    "seed": 1729,
+    "backend": "tiny",
+    "experience_mode": "translated",
+    "translator": "swap",
+    "steps": 2,
+    "batch_size": 1,
+    "max_length": 2048,
+    "auxiliary_weight": 0.1,
+    "swap_latent_dim": 8,
+    "swap_hidden_dim": 16,
+    "swap_steps": 32,
+    "swap_batch_size": 4,
+    "swap_learning_rate": 0.002,
+    "swap_validation_every": 8,
+    "lean": "~/.elan/bin/lean (real pinned toolchain)",
+    "acceptance": "Two complete iterations, real Lean admission, five matched recipient arms, fresh pre-update bridge each iteration, persistent recipient optimizer state, independent verifier succeeds and tampered target is rejected. Capability improvement not required."
+  },
+  "selection": "Train normalization only; validation checkpoint selection on fixed schedule; test and independent capability benchmark never tune translator.",
+  "tests": [
+    "existing NumPy-only suite",
+    "existing Torch suite",
+    "cross routing and gradients",
+    "empty vs present zero",
+    "unequal dimensions",
+    "train-only normalization",
+    "matched shuffled controls",
+    "safe checkpoint reload/tampering",
+    "independent neural replay"
+  ]
+}

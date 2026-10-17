@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import replace
+import copy
 import importlib.util
 import json
 from pathlib import Path
@@ -120,6 +121,26 @@ class PersistentLearningTests(unittest.TestCase):
             train_update(model, broken, budget=replace(self.budget, auxiliary_weight=0.1),
                          fixed_evaluation=self.evaluation)
         self.assertEqual(model.updates, before)
+
+    def test_auxiliary_targets_are_frozen_before_any_recipient_forward(self):
+        baseline, mutated = self.recipient(), self.recipient()
+        original = [{**row, "translated_target": [0.0] * 16} for row in self.rows]
+        caller_rows = copy.deepcopy(original)
+        def change_caller_inputs(module, args, output):
+            for row in caller_rows:
+                row["translated_target"][:] = [1000.0] * 16
+        handle = mutated.module.register_forward_hook(change_caller_inputs)
+        try:
+            left = train_update(baseline, original, budget=replace(self.budget, auxiliary_weight=.1),
+                                fixed_evaluation=self.evaluation)
+            right = train_update(mutated, caller_rows, budget=replace(self.budget, auxiliary_weight=.1),
+                                 fixed_evaluation=self.evaluation)
+        finally:
+            handle.remove()
+        self.assertEqual(caller_rows[0]["translated_target"][0], 1000)
+        self.assertEqual(left, right)
+        self.assertTrue(right["auxiliary_targets_detached"])
+        self.assertIsNotNone(right["auxiliary_targets_sha256"])
 
     @unittest.skipUnless(importlib.util.find_spec("transformers"), "optional Transformers runtime required")
     def test_pretrained_backend_updates_only_adapter_and_reloads_it(self):

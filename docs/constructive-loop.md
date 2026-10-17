@@ -46,6 +46,13 @@ operational guarantee on finite hardware.
 
 ## Representations and the two maps
 
+The default backend is affine. The opt-in `--translator swap` backend uses the
+existing two-port crossed autoencoder with explicit masked empty slots and
+validation-selected neural checkpoints. See the [swap architecture and execution
+guide](swap-autoencoder.md) for losses, controls, audited fitting, artifact format,
+and independent verification. Both backends supply auxiliary training targets;
+this option does not add an inference-time communication interface.
+
 The mathematical view contains the formal statement, proof, definitions, and
 minimal prior-theorem closure. The language view renders the corresponding
 assumptions, conclusion, proof operations, substitutions, and dependency closure.

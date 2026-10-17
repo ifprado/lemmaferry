@@ -177,6 +177,7 @@ def _disjoint(a: Mapping[str, Any], b: Mapping[str, Any]) -> None:
 
 class RosettaPair:
     """Two independently validation-selected maps with frozen train statistics."""
+    backend = "affine_ridge"
 
     @classmethod
     def fit(
@@ -250,11 +251,25 @@ class RosettaPair:
         }
         return self
 
-    def to_language(self, x: ArrayLike) -> Array:
-        return self.maps["T"].predict(x)
+    def to_language(self, x: ArrayLike, control: str = "paired") -> Array:
+        if control == "mean":
+            data = _matrix(x, "x")
+            if data.shape[1] != len(self.math_scaler.mean):
+                raise ValueError("mathematical dimension differs from translator")
+            return np.broadcast_to(self.language_scaler.mean, (len(data), len(self.language_scaler.mean))).copy()
+        if control not in ("paired", "shuffled"):
+            raise ValueError("control must be paired, shuffled or mean")
+        return self.maps["T" if control == "paired" else "T_shuffled"].predict(x)
 
-    def to_math(self, y: ArrayLike) -> Array:
-        return self.maps["S"].predict(y)
+    def to_math(self, y: ArrayLike, control: str = "paired") -> Array:
+        if control == "mean":
+            data = _matrix(y, "y")
+            if data.shape[1] != len(self.language_scaler.mean):
+                raise ValueError("language dimension differs from translator")
+            return np.broadcast_to(self.math_scaler.mean, (len(data), len(self.math_scaler.mean))).copy()
+        if control not in ("paired", "shuffled"):
+            raise ValueError("control must be paired, shuffled or mean")
+        return self.maps["S" if control == "paired" else "S_shuffled"].predict(y)
 
     def F(self, x: ArrayLike | None, y: ArrayLike | None) -> tuple[Array, Array]:
         """Return (S(y), T(x)); missing slots use frozen reference vectors."""

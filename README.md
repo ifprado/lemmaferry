@@ -9,6 +9,7 @@ The hypothesis is that constructive mathematics can supply expandable, verifiabl
 ## Start here
 
 - Read the [constructive learning-loop implementation](docs/constructive-loop.md), including the foundation, cumulative library, two translators, persistent recipient updates, independent evaluation, and feedback controls.
+- Use the optional [two-port swap autoencoder](docs/swap-autoencoder.md) with `--translator swap`; affine remains the default. The guide includes audited saved-vector fitting, controls, checkpoints, and two-cycle verification commands.
 - Download the [constructive-loop branch release](https://github.com/ifprado/lemmaferry/releases/tag/constructive-loop-v0.2.0), with source, execution evidence, and SHA256 checksums.
 - The [earlier frozen baseline and first-model release](https://github.com/ifprado/lemmaferry/releases/tag/research-2026-10-17) remains available; its source snapshot predates the separate human audit confirmation linked below.
 - Read the [first actual-model results](docs/validation.md#first-actual-model-experiment): vector alignment improved, but the translated state did not beat ordinary answers or supplying the same proof as text in answer accuracy.
@@ -52,6 +53,7 @@ python experiments/toy_alignment.py --seed 7 --output artifacts/my_alignment.jso
 | Actual LLM collector | Executed on pinned Qwen2.5 Math/general 1.5B checkpoints: CPU smoke checks, a 30-pair pilot, and a separate 448-pair collection with matching tokenizers and input hashes. |
 | Real-model affine fitter | Executed with 256 training, 64 validation, and 128 test pairs. Validation selected ridge alpha `1.0`; test MSE was 0.290 times the training-mean baseline. |
 | Bidirectional Rosetta maps | Learned `T` and `S`, the exact raw-coordinate ridge objective, separate formal/language inputs, validation-selected regularization, round trips, fixed reference slots, shuffled-pair and mean controls. |
+| Two-port swap autoencoder | Optional crossed encoders/decoders, explicit empty-slot presence flags, unequal dimensions, train-only normalization, matched shuffled neural controls, validation-selected numeric checkpoints, and constructive-loop auxiliary targets. |
 | Activation intervention | Implemented last-prompt-token patching at layer 14 with self-patch and shuffled/mean/zero controls. Accuracy was 51.6%, versus 53.9% ordinary and 64.1% with identical proof information as text. |
 | Small student training | Executed a 539,437-parameter causal student on fixed verified data, with three seeds and exactly matched label-permutation controls. No held-out improvement; this is a restricted from-scratch student, not general-model distillation. |
 | Persistent recipient learning | Tiny causal model and local pinned pretrained-model adapters; weights and AdamW state persist through iterations. Language-only and translated-state training modes have matched controls. |

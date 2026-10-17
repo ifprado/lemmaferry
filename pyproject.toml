@@ -13,6 +13,7 @@ dependencies = ["numpy>=1.26,<3"]
 
 [project.optional-dependencies]
 plots = ["matplotlib>=3.8,<4"]
+swap = ["torch>=2.4,<3"]
 llm = ["torch>=2.4", "transformers>=4.45,<5", "safetensors>=0.4"]
 
 [tool.setuptools.packages.find]
