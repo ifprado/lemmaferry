@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "seeds": [7, 19, 31],
+  "sizes": [256, 1024, 4096],
+  "model": {"layers": 6, "width": 256, "heads": 4, "context": 512},
+  "batch": 16,
+  "pretrain_steps": 800,
+  "recipient_steps": 1024,
+  "stages": 2,
+  "encoder_steps": 1024,
+  "bridge_steps": 512,
+  "alpha": 0.1,
+  "learning_rate": 0.0005,
+  "validation": 128,
+  "test": 512,
+  "harder": 512,
+  "cap_hours": 6,
+  "checkpoint_every": 64
+}

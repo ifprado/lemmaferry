@@ -1,0 +1,11 @@
+{
+  "reason": "HTML report must read the canonical independent-verification.json emitted by CLI verify",
+  "main_synthetic_fitting_or_training_started": false,
+  "changed_source_files": [
+    "src/lemmaferry/scratch/report.py"
+  ],
+  "old_plan_sha256": "40441d3d5d50c935553f48ca754c3b7049fa74381058b148a3af4189787f0560",
+  "new_plan_sha256": "e8fab2f54fcdb48a06445c171d72b4253cba186130b6668f8f53a57e7a65562a",
+  "experimental_config_unchanged": true,
+  "model_generator_training_and_verifier_code_unchanged": true
+}

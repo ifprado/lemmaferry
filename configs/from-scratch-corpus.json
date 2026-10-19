@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "title": "Alice's Adventures in Wonderland",
+  "author": "Lewis Carroll",
+  "source": "https://www.gutenberg.org/ebooks/11.txt.utf-8",
+  "metadata": "https://www.gutenberg.org/ebooks/11",
+  "edition": "Millennium Fulcrum Edition 3.0; Gutenberg update 2025-06-26",
+  "license": "Public domain in the USA; Project Gutenberg license retained in the local source file",
+  "sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+  "bytes": 174311,
+  "partition": "Strip Gutenberg START/END markers, encode UTF-8; first 90 percent of bytes train, remainder validation, before training",
+  "tokenizer": "Fixed local UTF-8 byte vocabulary: PAD=0, BOS=1, EOS=2, bytes=3..258. No external tokenizer or weights.",
+  "download": "curl --fail --location https://www.gutenberg.org/ebooks/11.txt.utf-8 --output RUN/corpus/alice.txt; preflight checks exact SHA-256 and refuses changed content"
+}

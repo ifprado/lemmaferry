@@ -1,0 +1,13 @@
+{
+  "cpu": "Apple M5 Pro",
+  "physical_cpu_cores": 18,
+  "memory_bytes": 25769803776,
+  "gpu": [
+    {
+      "spdisplays_mtlgpufamilysupport": "spdisplays_metal4",
+      "sppci_cores": "20",
+      "sppci_model": "Apple M5 Pro"
+    }
+  ],
+  "serial_numbers_or_uuids_collected": false
+}

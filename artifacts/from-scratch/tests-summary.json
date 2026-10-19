@@ -1,0 +1,11 @@
+{
+  "schema": "lemmaferry.scratch.tests-summary.v1",
+  "status": "passed",
+  "tests": 140,
+  "executed": 137,
+  "skipped": 3,
+  "seconds": 20.418,
+  "raw_log": "tests.log",
+  "raw_log_sha256": "053f7a4b44e99395c43d59399ca7a42a2abe85d6cda9bffb6e6877d7cbc13e4e",
+  "raw_log_bytes": 22971
+}

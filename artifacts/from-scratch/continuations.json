@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "index": 0,
+      "seed": 7,
+      "size": 4096,
+      "arm": "swap_paired",
+      "additional": 256,
+      "updates": 128,
+      "extension": "extensions/extension-000.json",
+      "parent_checkpoint": "study/7-4096/swap_paired/stage-1/recipient.pt",
+      "directory": "continuation-000",
+      "complete": true,
+      "checkpoint": "continuation-000/swap_paired/stage-0/recipient.pt",
+      "checkpoint_sha256": "2f5798531906cabb1b1dc2e485603e8611098e069d6263c61303e1eeeeff16ea",
+      "base_dataset_sha256": "1f092eddffed639889b36a429f258a37811216551f7cfe4f2a0e7938d062416b",
+      "extension_sha256": "a15f5a5067fe1d367e1449135feee0874f0a6f2a7ee8ae0cc37c6f2d2726dcbb",
+      "starting_updates": 1824,
+      "ending_updates": 1952,
+      "new_problems_consumed": 256
+    }
+  ]
+}

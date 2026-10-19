@@ -1,0 +1,227 @@
+{
+  "schema": "lemmaferry.scratch.continuation-summary.v1",
+  "continuations": [
+    {
+      "continuation": {
+        "index": 0,
+        "seed": 7,
+        "size": 4096,
+        "arm": "swap_paired",
+        "additional": 256,
+        "updates": 128,
+        "extension": "extensions/extension-000.json",
+        "parent_checkpoint": "study/7-4096/swap_paired/stage-1/recipient.pt",
+        "directory": "continuation-000",
+        "complete": true,
+        "checkpoint": "continuation-000/swap_paired/stage-0/recipient.pt",
+        "checkpoint_sha256": "2f5798531906cabb1b1dc2e485603e8611098e069d6263c61303e1eeeeff16ea",
+        "base_dataset_sha256": "1f092eddffed639889b36a429f258a37811216551f7cfe4f2a0e7938d062416b",
+        "extension_sha256": "a15f5a5067fe1d367e1449135feee0874f0a6f2a7ee8ae0cc37c6f2d2726dcbb",
+        "starting_updates": 1824,
+        "ending_updates": 1952,
+        "new_problems_consumed": 256
+      },
+      "evaluation": {
+        "test": {
+          "overall": {
+            "correct": 254,
+            "total": 512,
+            "accuracy": 0.49609375,
+            "answer_loss": 0.2425693281693384,
+            "generation_correct": 254,
+            "generation_accuracy": 0.49609375
+          },
+          "by_family": {
+            "apply": {
+              "correct": 111,
+              "total": 205,
+              "accuracy": 0.5414634146341464,
+              "answer_loss": 0.2343031008795994,
+              "generation_correct": 111,
+              "generation_accuracy": 0.5414634146341464
+            },
+            "intro": {
+              "correct": 16,
+              "total": 31,
+              "accuracy": 0.5161290322580645,
+              "answer_loss": 0.2362580294570615,
+              "generation_correct": 16,
+              "generation_accuracy": 0.5161290322580645
+            },
+            "left": {
+              "correct": 2,
+              "total": 4,
+              "accuracy": 0.5,
+              "answer_loss": 0.23473351821303368,
+              "generation_correct": 2,
+              "generation_accuracy": 0.5
+            },
+            "pair": {
+              "correct": 125,
+              "total": 271,
+              "accuracy": 0.4612546125461255,
+              "answer_loss": 0.24953191422228443,
+              "generation_correct": 125,
+              "generation_accuracy": 0.4612546125461255
+            },
+            "right": {
+              "correct": 0,
+              "total": 1,
+              "accuracy": 0.0,
+              "answer_loss": 0.2772786021232605,
+              "generation_correct": 0,
+              "generation_accuracy": 0.0
+            }
+          },
+          "by_depth": {
+            "2": {
+              "correct": 4,
+              "total": 7,
+              "accuracy": 0.5714285714285714,
+              "answer_loss": 0.2302502053124564,
+              "generation_correct": 4,
+              "generation_accuracy": 0.5714285714285714
+            },
+            "3": {
+              "correct": 250,
+              "total": 505,
+              "accuracy": 0.49504950495049505,
+              "answer_loss": 0.24274008828814667,
+              "generation_correct": 250,
+              "generation_accuracy": 0.49504950495049505
+            }
+          },
+          "checkpoint_sha256": "2f5798531906cabb1b1dc2e485603e8611098e069d6263c61303e1eeeeff16ea",
+          "input_sha256": "474c0ee99a6f6624ce7c434677293b7a356c88ab54f7b5149e4ee1e96ee271b4",
+          "input_fields": [
+            "id",
+            "question",
+            "answer",
+            "family",
+            "depth"
+          ],
+          "prediction_boundary": "question and constant space; answer only used for scoring",
+          "schema": "lemmaferry.scratch.evaluation.v1"
+        },
+        "harder": {
+          "overall": {
+            "correct": 259,
+            "total": 512,
+            "accuracy": 0.505859375,
+            "answer_loss": 0.2831945018551778,
+            "generation_correct": 243,
+            "generation_accuracy": 0.474609375
+          },
+          "by_family": {
+            "apply": {
+              "correct": 56,
+              "total": 109,
+              "accuracy": 0.5137614678899083,
+              "answer_loss": 0.24285953362053686,
+              "generation_correct": 56,
+              "generation_accuracy": 0.5137614678899083
+            },
+            "intro": {
+              "correct": 126,
+              "total": 247,
+              "accuracy": 0.5101214574898786,
+              "answer_loss": 0.2899520097956484,
+              "generation_correct": 116,
+              "generation_accuracy": 0.46963562753036436
+            },
+            "pair": {
+              "correct": 77,
+              "total": 154,
+              "accuracy": 0.5,
+              "answer_loss": 0.30138718772244144,
+              "generation_correct": 71,
+              "generation_accuracy": 0.461038961038961
+            },
+            "right": {
+              "correct": 0,
+              "total": 2,
+              "accuracy": 0.0,
+              "answer_loss": 0.24606122821569443,
+              "generation_correct": 0,
+              "generation_accuracy": 0.0
+            }
+          },
+          "by_depth": {
+            "4": {
+              "correct": 44,
+              "total": 83,
+              "accuracy": 0.5301204819277109,
+              "answer_loss": 0.2629136570605887,
+              "generation_correct": 43,
+              "generation_accuracy": 0.5180722891566265
+            },
+            "5": {
+              "correct": 99,
+              "total": 180,
+              "accuracy": 0.55,
+              "answer_loss": 0.2708854503929615,
+              "generation_correct": 93,
+              "generation_accuracy": 0.5166666666666667
+            },
+            "6": {
+              "correct": 83,
+              "total": 173,
+              "accuracy": 0.4797687861271676,
+              "answer_loss": 0.2974185387178653,
+              "generation_correct": 74,
+              "generation_accuracy": 0.4277456647398844
+            },
+            "7": {
+              "correct": 27,
+              "total": 63,
+              "accuracy": 0.42857142857142855,
+              "answer_loss": 0.310181336743491,
+              "generation_correct": 27,
+              "generation_accuracy": 0.42857142857142855
+            },
+            "8": {
+              "correct": 4,
+              "total": 11,
+              "accuracy": 0.36363636363636365,
+              "answer_loss": 0.2693102088841525,
+              "generation_correct": 4,
+              "generation_accuracy": 0.36363636363636365
+            },
+            "9": {
+              "correct": 2,
+              "total": 2,
+              "accuracy": 1.0,
+              "answer_loss": 0.2285633161664009,
+              "generation_correct": 2,
+              "generation_accuracy": 1.0
+            }
+          },
+          "checkpoint_sha256": "2f5798531906cabb1b1dc2e485603e8611098e069d6263c61303e1eeeeff16ea",
+          "input_sha256": "9d4b1435a72d79fce4eb9663a69d04e22953b7402705a3b0e7031665a4e11de9",
+          "input_fields": [
+            "id",
+            "question",
+            "answer",
+            "family",
+            "depth"
+          ],
+          "prediction_boundary": "question and constant space; answer only used for scoring",
+          "schema": "lemmaferry.scratch.evaluation.v1"
+        }
+      },
+      "raw_evaluation": "continuation-000/evaluation.json",
+      "raw_evaluation_sha256": "0973e7180615476994a90f39b6cb881487a701f827a40520a708e61f223cdbb2",
+      "per_row_predictions": {
+        "test": {
+          "count": 512,
+          "canonical_sha256": "eb68ea6b29f9af0d124dd191239d604ca347642322060fee03ac6acc72d3da78"
+        },
+        "harder": {
+          "count": 512,
+          "canonical_sha256": "81d7ecee1013ce00cb015005e90239cc7e5127494a5e9a21cbadb3949d4c2a11"
+        }
+      }
+    }
+  ],
+  "scope": "Exploratory continuations, separate from the frozen main comparison. Every aggregate metric is retained; raw question/prediction rows remain local and hash-bound."
+}

@@ -1,0 +1,75 @@
+{
+  "seconds": 72.05451754201204,
+  "records": 5248,
+  "fingerprint": "1f092eddffed639889b36a429f258a37811216551f7cfe4f2a0e7938d062416b",
+  "real_lean": {
+    "records": 5248,
+    "batches": 41,
+    "pin": "leanprover/lean4:v4.35.0",
+    "common_lemmas_audited_per_batch": 2
+  },
+  "surface_controls": {
+    "train": {
+      "count": 4096,
+      "labels": {
+        "A": 2048,
+        "B": 2048
+      },
+      "choice_length_ties": 4096,
+      "always_A_accuracy": 0.5,
+      "families": {
+        "pair": 2219,
+        "intro": 198,
+        "apply": 1614,
+        "left": 31,
+        "right": 34
+      }
+    },
+    "validation": {
+      "count": 128,
+      "labels": {
+        "A": 64,
+        "B": 64
+      },
+      "choice_length_ties": 128,
+      "always_A_accuracy": 0.5,
+      "families": {
+        "apply": 53,
+        "intro": 8,
+        "pair": 66,
+        "right": 1
+      }
+    },
+    "test": {
+      "count": 512,
+      "labels": {
+        "A": 256,
+        "B": 256
+      },
+      "choice_length_ties": 512,
+      "always_A_accuracy": 0.5,
+      "families": {
+        "pair": 271,
+        "apply": 205,
+        "intro": 31,
+        "right": 1,
+        "left": 4
+      }
+    },
+    "harder": {
+      "count": 512,
+      "labels": {
+        "A": 256,
+        "B": 256
+      },
+      "choice_length_ties": 512,
+      "always_A_accuracy": 0.5,
+      "families": {
+        "intro": 247,
+        "pair": 154,
+        "apply": 109,
+        "right": 2
+      }
+    }
+  }
+}

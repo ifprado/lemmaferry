@@ -1,0 +1,65 @@
+{
+  "environment": {
+    "python": "3.14.7",
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "machine": "arm64",
+    "system": "Darwin",
+    "os_release": "25.5.0",
+    "device": "mps",
+    "threads": 1,
+    "mps_high_watermark": "default",
+    "peak_process_rss_bytes": 510427136
+  },
+  "measurements": [
+    {
+      "model": {
+        "layers": 6,
+        "width": 256,
+        "heads": 4,
+        "context": 512
+      },
+      "parameters": 5002752,
+      "batch": 16,
+      "seconds_per_update": 0.09273557641912096,
+      "initial_loss": 5.776904106140137,
+      "development_batch_loss_after_60": 1.3490544557571411,
+      "loss_reduced": true,
+      "estimated_recipient_hours": 0.9496123025317987
+    },
+    {
+      "model": {
+        "layers": 3,
+        "width": 128,
+        "heads": 4,
+        "context": 512
+      },
+      "parameters": 726912,
+      "batch": 16,
+      "seconds_per_update": 0.027875885420750517,
+      "initial_loss": 5.589822769165039,
+      "development_batch_loss_after_60": 2.1523005962371826,
+      "loss_reduced": true,
+      "estimated_recipient_hours": 0.2854490667084853
+    }
+  ],
+  "selection": {
+    "model": {
+      "layers": 6,
+      "width": 256,
+      "heads": 4,
+      "context": 512
+    },
+    "parameters": 5002752,
+    "batch": 16,
+    "seconds_per_update": 0.09273557641912096,
+    "initial_loss": 5.776904106140137,
+    "development_batch_loss_after_60": 1.3490544557571411,
+    "loss_reduced": true,
+    "estimated_recipient_hours": 0.9496123025317987
+  },
+  "alpha": 0.1,
+  "alpha_policy": "minimum disjoint development validation answer NLL; see development.json",
+  "cap_reserved_fraction": 0.35,
+  "discarded_weights": true
+}

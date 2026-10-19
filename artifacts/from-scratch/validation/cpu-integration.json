@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "run": "/tmp/lemmaferry-scratch-matched-final-l5dk6gf2",
+  "conditions": 4,
+  "continuations": 1,
+  "checkpoint_noop_resume_identical": true,
+  "checkpoint_files": 15,
+  "matched_formula_skeletons_and_lengths": true,
+  "plan_sha256": "0d8109eb487e0f4d0388f23262636361985058ae9b66567a97e86ee5cf5f17eb"
+}

@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "question": "Does paired constructive-proof representation training improve a randomly initialized tiny causal language model beyond matched proof-as-text training?",
+  "primary": "ordinary structural-holdout A/B likelihood accuracy, paired minus text-only, per size and seed",
+  "secondary": ["deeper theorem-shape holdout accuracy", "answer NLL", "free greedy exact answer", "paired versus shuffled and mean", "proof vector reconstruction ablations", "bidirectional bridge geometry"],
+  "seeds": [7, 19, 31],
+  "nested_distinct_problem_counts": [256, 1024, 4096],
+  "arms": ["text_only", "swap_paired", "swap_shuffled", "swap_mean"],
+  "default_model": {"layers": 6, "width": 256, "heads": 4, "context": 512},
+  "fallback_model": {"layers": 3, "width": 128, "heads": 4, "context": 512},
+  "architecture_selection": "discarded development-only throughput/overfit pilot; largest listed architecture projected below 65 percent of six-hour cap for recipient updates",
+  "alpha_selection": {"candidates": [0.01, 0.1], "metric": "minimum validation answer NLL", "development_train": 64, "development_validation": 16, "seed": 9000000, "recipient_updates_per_candidate": 64, "reserve_all_development_theorems_from_main": true},
+  "budgets": {"pretraining_updates": 800, "recipient_updates": 1024, "recipient_stages": 2, "proof_encoder_updates": 1024, "bridge_updates_per_arm_per_stage": 512, "batch_sequences": 16, "supervised_tokens_per_problem_exposure": 67, "bridge_batch_pairs": 32},
+  "checkpoint_selection": "proof encoder and bridge: validation only; recipient: full fixed update budget",
+  "choice_controls": "A/B options must have identical connective-tree skeleton, depth, connective counts and printed byte length; a Boolean countermodel refutes the distractor under the same premises",
+  "pretraining_audit_amendment": "Before any main recipient training or test inference, a manual example audit found an answer-length shortcut in the first generated dataset. That dataset is retained as abandoned raw evidence; regenerate matched choices and repeat the disjoint development selection before freezing the main study.",
+  "acceptance": "pipeline integrity and matched controls; report all outcomes including tie or decline; positive external reasoning is not required",
+  "experiment_cap_hours": 6,
+  "scope": "controlled propositional deduction with a small byte LM; no claim of broad reasoning or indefinitely sustained improvements"
+}

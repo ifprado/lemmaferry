@@ -1,0 +1,8 @@
+{
+  "checkpoint": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/from-scratch-matched-20261019T061101Z/starting/7.pt",
+  "checkpoint_sha256": "de65170ef8778c77dcabd46d42329343b56d13c2509891b2c24829db4e9b91d2",
+  "prompt": "Alice ",
+  "continuation": "with the was the was the was and the was\r\none to go the was on t",
+  "tokens_requested": 64,
+  "updates": 800
+}

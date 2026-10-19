@@ -1,0 +1,33 @@
+{
+  "schema": "lemmaferry.scratch.cost-receipt.v1",
+  "created_utc": "2026-10-19T07:29:41.065935+00:00",
+  "experiment_clock": {
+    "seconds": 4527.12424379302,
+    "cap_hours": 6,
+    "policy": "active experiment commands; coding/install excluded; updated at checkpoints"
+  },
+  "fresh_cpu_verification_seconds_from_artifact_creation": 65.34522819519043,
+  "verification_and_postprocessing_wall_interval_seconds": 159.67395210266113,
+  "experiment_plus_postprocessing_seconds": 4686.798195895681,
+  "cap_hours": 6,
+  "within_six_hour_experiment_cap": true,
+  "budget_policy": "Clock counts active experimental commands including retained predecessor costs; coding and installation excluded. Added interval starts when verify.log was created and includes final CPU verification, baseline replay, diagnostics, report and plot export plus intervening coordination. Earlier regression and bounded integration checks are separately reported rather than charged to this training cap. Parallel postprocessing is counted by wall interval, not summed worker CPU time.",
+  "runtime_device": "local Apple M5 Pro MPS training; local CPU independent replay",
+  "hosted_inference_calls": 0,
+  "remote_training_jobs": 0,
+  "pretrained_weight_downloads": 0,
+  "paid_training_compute_used": false,
+  "energy_measurement": "not measured",
+  "regression_suite": {
+    "tests": 140,
+    "skipped_optional_runtime": 3,
+    "wall_seconds": 20.418
+  },
+  "inputs_sha256": {
+    "experiment-clock.json": "dcb88db5b6eac8a1638976ed66756bad5e114e329fb8b172885823139448beb7",
+    "independent-verification.json": "af22644f6e8e58b56f721e97b21b8716a8276e6dd6379c37f4f009d0e7becd59",
+    "baseline-independent-verification.json": "97ab39c4848aab62bf93e8f451506ef3daa9262c84e2642bbe3fcd795efb6907",
+    "collapse-diagnostics.json": "26e89bc658a130817cf6bc96c584fd69c090726720267eb33d8ab37267017c2d",
+    "tests.log": "053f7a4b44e99395c43d59399ca7a42a2abe85d6cda9bffb6e6877d7cbc13e4e"
+  }
+}

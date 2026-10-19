@@ -2,7 +2,7 @@ name: Reproduce starter checks
 
 on:
   push:
-    branches: [main, research/constructive-learning-loop, 'feature/swap-autoencoder*']
+    branches: [main, research/constructive-learning-loop, 'feature/swap-autoencoder*', 'feature/from-scratch-swap*']
   pull_request:
   workflow_dispatch:
 
@@ -127,6 +127,14 @@ jobs:
         run: |
           python experiments/run_constructive_loop.py --output runs/ci-loop/swap-execution --experience-mode translated --translator swap --iterations 2 --steps 2 --torch-threads 1 --swap-latent-dim 8 --swap-hidden-dim 16 --swap-steps 32 --swap-batch-size 4 --swap-learning-rate 0.002 --swap-validation-every 8
           python experiments/verify_constructive_run.py runs/ci-loop/swap-execution
+      - name: Exercise the random-initialization pipeline and independent reload verifier
+        run: |
+          python -m lemmaferry.scratch --run runs/ci-loop/scratch --config configs/from-scratch-ci.json --device cpu generate
+          python -m lemmaferry.scratch --run runs/ci-loop/scratch --device cpu pretrain
+          python -m lemmaferry.scratch --run runs/ci-loop/scratch --device cpu study
+          python -m lemmaferry.scratch --run runs/ci-loop/scratch --device cpu verify
+          python experiments/verify_scratch_baselines.py --run runs/ci-loop/scratch
+          python -m lemmaferry.scratch --run runs/ci-loop/scratch --device cpu report
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
         with:

@@ -1,0 +1,1776 @@
+{
+  "schema": "lemmaferry.scratch.example-audit.v1",
+  "created_utc": "2026-10-19T06:16:54.332633+00:00",
+  "dataset_fingerprint": "1f092eddffed639889b36a429f258a37811216551f7cfe4f2a0e7938d062416b",
+  "dataset_file_sha256": "b1f13f9588e3a0e2851060c134bcd30030fc92fd3d564ad4fa02ea7e7f1bcc95",
+  "reviewer": "Codex independent audit; not human confirmation",
+  "human_confirmation": false,
+  "scope": "Read-only manual content inspection of 20 actual admitted examples, five per split. Formal premises, conclusion, proof operations, Lean term, proposition-name mapping, English choices, answer and negative countermodel inspected separately from Lean acceptance. No model scores read.",
+  "selection_policy": "First apply, intro, pair, left, right record in each split where available; fill missing root families with the first unselected record. No outcome selection.",
+  "selected_ids": [
+    "d06693914d5a45b20dd08696fbde8da55e6cc28dc810c28f6492353e3877a605",
+    "f898a4a3d57b2f27039441cb792f2b74f9c72011168bde9564b01de9306c837a",
+    "332565ad24905e9bcbc1abc1c76e7f42b0519671b20737db711c3b64bf8998bf",
+    "37260c8f52e621fbbe9f1bf10a2e517cdea342e194cc59986c77511f93eb3a46",
+    "16ef9a5a2cf8a6b0a7ae2a5576919ca20035d8c8404da6e96a167b49889006df",
+    "ec5965fc2e68318c169af9aa0d421ea7dcc3b5e213f4623c151cfb4218de9187",
+    "3ff355204e22df2549c590ddb50eaa7cbad3d3203b68fb82c611c0cd87b2ac6f",
+    "a6495d06bc9e4be3941a31c60d7a226ce1d66e27b53b48508775098dd9919bd0",
+    "4cc52e40c4f849e5c05bad6a3df47c49c5e26019ebfac623250937d34f04fd8d",
+    "ca535c241d8cb85f2e81754e62a7e5b5771c576317885aaff3f775114a0c4cee",
+    "1830480fbc276e8db73bccbf457710cf3109a622e76a2a2e864c33c55b10b7b1",
+    "0b3b3a3d300c00778c927307dd284dcb8de6c16a67dfb8032b4dfedec91aee88",
+    "021973d949a2d1ca5330aafc5ecd6cafcc52134a3b572e84363bfda57e5e34d6",
+    "486148cbd48e86d33de05e52fe7983f250f5b44d3f03358b9268fc7af10993ef",
+    "7897ce936bf04ab1d1b53e087d6c9e3ed597b3d55908c7360ce7914be104ee66",
+    "c2fbddd40e25d28b36971227735c0a7240b8a5bd987722100a0e4d345a707103",
+    "da32f94bf312af2aeef5556b965948565b013d0ca4f983e4e71c3a17734a6232",
+    "3954352e90bcc556409bb279e584dc4d42e6ae421f2ebb8adf38e825adf76cbe",
+    "3be67a0875e598cf8cfa00d3eb787891e6be4d17abe497a736bc9472d3081463",
+    "70dff939eb03b98b330fa733f2caa033ea4c3601a995612d1a40efa07e817f90"
+  ],
+  "coverage": {
+    "train": {
+      "available_root_families": [
+        "apply",
+        "intro",
+        "left",
+        "pair",
+        "right"
+      ],
+      "selected_root_families": [
+        "apply",
+        "intro",
+        "pair",
+        "left",
+        "right"
+      ]
+    },
+    "validation": {
+      "available_root_families": [
+        "apply",
+        "intro",
+        "pair",
+        "right"
+      ],
+      "selected_root_families": [
+        "apply",
+        "intro",
+        "pair",
+        "right",
+        "intro"
+      ]
+    },
+    "test": {
+      "available_root_families": [
+        "apply",
+        "intro",
+        "left",
+        "pair",
+        "right"
+      ],
+      "selected_root_families": [
+        "apply",
+        "intro",
+        "pair",
+        "left",
+        "right"
+      ]
+    },
+    "harder": {
+      "available_root_families": [
+        "apply",
+        "intro",
+        "pair",
+        "right"
+      ],
+      "selected_root_families": [
+        "apply",
+        "intro",
+        "pair",
+        "right",
+        "intro"
+      ]
+    }
+  },
+  "whole_dataset_choice_audit": {
+    "train": {
+      "records": 4096,
+      "displayed_choice_byte_length_ties": 4096,
+      "matched_ordered_connective_skeletons": 4096,
+      "answer_counts": {
+        "A": 2048,
+        "B": 2048
+      },
+      "always_A_correct": 2048,
+      "always_A_accuracy": 0.5,
+      "longer_choice_random_tie_accuracy": 0.5
+    },
+    "validation": {
+      "records": 128,
+      "displayed_choice_byte_length_ties": 128,
+      "matched_ordered_connective_skeletons": 128,
+      "answer_counts": {
+        "A": 64,
+        "B": 64
+      },
+      "always_A_correct": 64,
+      "always_A_accuracy": 0.5,
+      "longer_choice_random_tie_accuracy": 0.5
+    },
+    "test": {
+      "records": 512,
+      "displayed_choice_byte_length_ties": 512,
+      "matched_ordered_connective_skeletons": 512,
+      "answer_counts": {
+        "A": 256,
+        "B": 256
+      },
+      "always_A_correct": 256,
+      "always_A_accuracy": 0.5,
+      "longer_choice_random_tie_accuracy": 0.5
+    },
+    "harder": {
+      "records": 512,
+      "displayed_choice_byte_length_ties": 512,
+      "matched_ordered_connective_skeletons": 512,
+      "answer_counts": {
+        "A": 256,
+        "B": 256
+      },
+      "always_A_correct": 256,
+      "always_A_accuracy": 0.5,
+      "longer_choice_random_tie_accuracy": 0.5
+    }
+  },
+  "overall_verdict": "pass",
+  "mismatches": [],
+  "limits": "One-way controlled-English correspondence audit, not a general natural-language equivalence proof, human confirmation or capability evaluation. Matching formula trees and byte lengths remove the identified size shortcut; other distributional shortcuts remain possible.",
+  "source_hashes": {
+    "src/lemmaferry/scratch/logic.py": "dc3353e2be92b52b5b43ef0f199671a9f6b58d22fa22aaaa1aabea8608992733"
+  },
+  "examples": [
+    {
+      "id": "d06693914d5a45b20dd08696fbde8da55e6cc28dc810c28f6492353e3877a605",
+      "split": "train",
+      "family": "apply",
+      "depth": 3,
+      "proof_depth": 2,
+      "statement": "(p1 ∧ p1); ((p1 ∧ p1) → (p0 → p0)) ⊢ (p0 → p0)",
+      "premises": [
+        [
+          "and",
+          1,
+          1
+        ],
+        [
+          "imp",
+          [
+            "and",
+            1,
+            1
+          ],
+          [
+            "imp",
+            0,
+            0
+          ]
+        ]
+      ],
+      "goal": [
+        "imp",
+        0,
+        0
+      ],
+      "proof": [
+        "apply",
+        [
+          "hyp",
+          1
+        ],
+        [
+          "hyp",
+          0
+        ]
+      ],
+      "lean_term": "(h1 h0)",
+      "lean_declaration": "theorem lf_d06693914d5a45b20dd08696fbde8da55e6cc28dc810c28f6492353e3877a605 (p0 p1 p2 p3 : Prop) (h0 : (p1 ∧ p1)) (h1 : ((p1 ∧ p1) → (p0 → p0))) : (p0 → p0) := (h1 h0)\n",
+      "atom_names": {
+        "p0": "elms",
+        "p1": "pine",
+        "p2": "oaks",
+        "p3": "firs"
+      },
+      "question": "Known: (pine and pine); (if (pine and pine) then (if elms then elms)). Which conclusion follows?\nA: (if elms then elms)\nB: (if firs then elms)\nAnswer:",
+      "answer": "A",
+      "negative_conclusion": [
+        "imp",
+        3,
+        0
+      ],
+      "negative_countermodel": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "row_sha256": "8c5893623a7bb15b9a9134de4c0ae1e48b5d97bcc35128131b93569b5bffa72e",
+      "verdict": "pass",
+      "notes": "Apply h1 to the repeated-p1 conjunction h0, yielding p0→p0. English A matches. The countermodel makes p3 true and p0 false, refuting B without violating the premises."
+    },
+    {
+      "id": "f898a4a3d57b2f27039441cb792f2b74f9c72011168bde9564b01de9306c837a",
+      "split": "train",
+      "family": "intro",
+      "depth": 3,
+      "proof_depth": 5,
+      "statement": "((p3 → p3) → p2) ⊢ (p2 → (p2 ∧ p2))",
+      "premises": [
+        [
+          "imp",
+          [
+            "imp",
+            3,
+            3
+          ],
+          2
+        ]
+      ],
+      "goal": [
+        "imp",
+        2,
+        [
+          "and",
+          2,
+          2
+        ]
+      ],
+      "proof": [
+        "intro",
+        2,
+        [
+          "pair",
+          [
+            "apply",
+            [
+              "hyp",
+              0
+            ],
+            [
+              "intro",
+              3,
+              [
+                "hyp",
+                2
+              ]
+            ]
+          ],
+          [
+            "hyp",
+            1
+          ]
+        ]
+      ],
+      "lean_term": "(fun h1 : p2 => (And.intro (h0 (fun h2 : p3 => h2)) h1))",
+      "lean_declaration": "theorem lf_f898a4a3d57b2f27039441cb792f2b74f9c72011168bde9564b01de9306c837a (p0 p1 p2 p3 : Prop) (h0 : ((p3 → p3) → p2)) : (p2 → (p2 ∧ p2)) := (fun h1 : p2 => (And.intro (h0 (fun h2 : p3 => h2)) h1))\n",
+      "atom_names": {
+        "p0": "rain",
+        "p1": "wind",
+        "p2": "mist",
+        "p3": "snow"
+      },
+      "question": "Suppose (if (if snow then snow) then mist). Choose the implied statement.\nA: (if mist then (mist and snow))\nB: (if mist then (mist and mist))\nAnswer:",
+      "answer": "B",
+      "negative_conclusion": [
+        "imp",
+        2,
+        [
+          "and",
+          2,
+          3
+        ]
+      ],
+      "negative_countermodel": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "row_sha256": "098bc1ca4eb082467e67a533ab8327655050f20ead13e527873f7828341d3e28",
+      "verdict": "pass",
+      "notes": "Under p2, build the identity on p3, apply h0 to obtain p2, and pair it with the bound p2. English B is exactly p2→(p2∧p2); the negative incorrectly demands p3."
+    },
+    {
+      "id": "332565ad24905e9bcbc1abc1c76e7f42b0519671b20737db711c3b64bf8998bf",
+      "split": "train",
+      "family": "pair",
+      "depth": 3,
+      "proof_depth": 4,
+      "statement": "p1; p2; p3; ((p2 ∧ p1) → p1) ⊢ (p1 ∧ p3)",
+      "premises": [
+        1,
+        2,
+        3,
+        [
+          "imp",
+          [
+            "and",
+            2,
+            1
+          ],
+          1
+        ]
+      ],
+      "goal": [
+        "and",
+        1,
+        3
+      ],
+      "proof": [
+        "pair",
+        [
+          "apply",
+          [
+            "hyp",
+            3
+          ],
+          [
+            "pair",
+            [
+              "hyp",
+              1
+            ],
+            [
+              "hyp",
+              0
+            ]
+          ]
+        ],
+        [
+          "hyp",
+          2
+        ]
+      ],
+      "lean_term": "(And.intro (h3 (And.intro h1 h0)) h2)",
+      "lean_declaration": "theorem lf_332565ad24905e9bcbc1abc1c76e7f42b0519671b20737db711c3b64bf8998bf (p0 p1 p2 p3 : Prop) (h0 : p1) (h1 : p2) (h2 : p3) (h3 : ((p2 ∧ p1) → p1)) : (p1 ∧ p3) := (And.intro (h3 (And.intro h1 h0)) h2)\n",
+      "atom_names": {
+        "p0": "rain",
+        "p1": "mist",
+        "p2": "wind",
+        "p3": "snow"
+      },
+      "question": "Suppose snow; (if (wind and mist) then mist); wind; mist. Choose the implied statement.\nA: (mist and snow)\nB: (rain and mist)\nAnswer:",
+      "answer": "A",
+      "negative_conclusion": [
+        "and",
+        0,
+        1
+      ],
+      "negative_countermodel": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "row_sha256": "06b803db3aafcf5b98807f0b4db58ad4b73bb62a78cbe337949291050e12116d",
+      "verdict": "pass",
+      "notes": "Construct p2∧p1, apply its implication to get p1, then pair with p3. The positive English option is mist-and-snow; the negative requires the false p0 atom."
+    },
+    {
+      "id": "37260c8f52e621fbbe9f1bf10a2e517cdea342e194cc59986c77511f93eb3a46",
+      "split": "train",
+      "family": "left",
+      "depth": 3,
+      "proof_depth": 3,
+      "statement": "(p1 ∧ p0); ((p1 ∧ p0) → (p1 ∧ p2)) ⊢ p1",
+      "premises": [
+        [
+          "and",
+          1,
+          0
+        ],
+        [
+          "imp",
+          [
+            "and",
+            1,
+            0
+          ],
+          [
+            "and",
+            1,
+            2
+          ]
+        ]
+      ],
+      "goal": 1,
+      "proof": [
+        "left",
+        [
+          "apply",
+          [
+            "hyp",
+            1
+          ],
+          [
+            "hyp",
+            0
+          ]
+        ]
+      ],
+      "lean_term": "(And.left (h1 h0))",
+      "lean_declaration": "theorem lf_37260c8f52e621fbbe9f1bf10a2e517cdea342e194cc59986c77511f93eb3a46 (p0 p1 p2 p3 : Prop) (h0 : (p1 ∧ p0)) (h1 : ((p1 ∧ p0) → (p1 ∧ p2))) : p1 := (And.left (h1 h0))\n",
+      "atom_names": {
+        "p0": "snow",
+        "p1": "rain",
+        "p2": "wind",
+        "p3": "mist"
+      },
+      "question": "Assume (rain and snow); (if (rain and snow) then (rain and wind)). Which conclusion follows?\nA: rain\nB: mist\nAnswer:",
+      "answer": "A",
+      "negative_conclusion": 3,
+      "negative_countermodel": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "row_sha256": "df3becd45ec4395199cc8341e2337a68913c61f770bf82a98019886283028fd2",
+      "verdict": "pass",
+      "notes": "Apply the implication to the given conjunction, then take its left component p1. The displayed rain conclusion and the false mist distractor match those atoms."
+    },
+    {
+      "id": "16ef9a5a2cf8a6b0a7ae2a5576919ca20035d8c8404da6e96a167b49889006df",
+      "split": "train",
+      "family": "right",
+      "depth": 3,
+      "proof_depth": 4,
+      "statement": "((p2 → p2) → (p3 ∧ p3)) ⊢ p3",
+      "premises": [
+        [
+          "imp",
+          [
+            "imp",
+            2,
+            2
+          ],
+          [
+            "and",
+            3,
+            3
+          ]
+        ]
+      ],
+      "goal": 3,
+      "proof": [
+        "right",
+        [
+          "apply",
+          [
+            "hyp",
+            0
+          ],
+          [
+            "intro",
+            2,
+            [
+              "hyp",
+              1
+            ]
+          ]
+        ]
+      ],
+      "lean_term": "(And.right (h0 (fun h1 : p2 => h1)))",
+      "lean_declaration": "theorem lf_16ef9a5a2cf8a6b0a7ae2a5576919ca20035d8c8404da6e96a167b49889006df (p0 p1 p2 p3 : Prop) (h0 : ((p2 → p2) → (p3 ∧ p3))) : p3 := (And.right (h0 (fun h1 : p2 => h1)))\n",
+      "atom_names": {
+        "p0": "teal",
+        "p1": "ruby",
+        "p2": "gold",
+        "p3": "blue"
+      },
+      "question": "Assume (if (if gold then gold) then (blue and blue)). Choose the implied statement.\nA: blue\nB: gold\nAnswer:",
+      "answer": "A",
+      "negative_conclusion": 2,
+      "negative_countermodel": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "row_sha256": "cb7691629551863e19e1de54c3933bff758d29cc07fca60119a16d672236c3af",
+      "verdict": "pass",
+      "notes": "Introduce the p2 identity, use it as h0’s argument, and project the right p3. English blue is correct while the countermodel leaves gold false."
+    },
+    {
+      "id": "ec5965fc2e68318c169af9aa0d421ea7dcc3b5e213f4623c151cfb4218de9187",
+      "split": "validation",
+      "family": "apply",
+      "depth": 3,
+      "proof_depth": 2,
+      "statement": "(p1 ∧ p1); ((p1 ∧ p1) → (p1 → p3)) ⊢ (p1 → p3)",
+      "premises": [
+        [
+          "and",
+          1,
+          1
+        ],
+        [
+          "imp",
+          [
+            "and",
+            1,
+            1
+          ],
+          [
+            "imp",
+            1,
+            3
+          ]
+        ]
+      ],
+      "goal": [
+        "imp",
+        1,
+        3
+      ],
+      "proof": [
+        "apply",
+        [
+          "hyp",
+          1
+        ],
+        [
+          "hyp",
+          0
+        ]
+      ],
+      "lean_term": "(h1 h0)",
+      "lean_declaration": "theorem lf_ec5965fc2e68318c169af9aa0d421ea7dcc3b5e213f4623c151cfb4218de9187 (p0 p1 p2 p3 : Prop) (h0 : (p1 ∧ p1)) (h1 : ((p1 ∧ p1) → (p1 → p3))) : (p1 → p3) := (h1 h0)\n",
+      "atom_names": {
+        "p0": "blue",
+        "p1": "ruby",
+        "p2": "teal",
+        "p3": "gold"
+      },
+      "question": "Suppose (if (ruby and ruby) then (if ruby then gold)); (ruby and ruby). Which must follow?\nA: (if ruby then gold)\nB: (if gold then blue)\nAnswer:",
+      "answer": "A",
+      "negative_conclusion": [
+        "imp",
+        3,
+        0
+      ],
+      "negative_countermodel": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "row_sha256": "d88ed1150aec1d48174d258bcc29b1561c1bb3e0714228d51413486b0c7e7b82",
+      "verdict": "pass",
+      "notes": "Apply h1 to h0 to get p1→p3. English ruby→gold matches; gold→blue is false in the supplied model."
+    },
+    {
+      "id": "3ff355204e22df2549c590ddb50eaa7cbad3d3203b68fb82c611c0cd87b2ac6f",
+      "split": "validation",
+      "family": "intro",
+      "depth": 3,
+      "proof_depth": 4,
+      "statement": "(p0 ∧ (p0 ∧ p2)) ⊢ (p0 → (p0 ∧ p0))",
+      "premises": [
+        [
+          "and",
+          0,
+          [
+            "and",
+            0,
+            2
+          ]
+        ]
+      ],
+      "goal": [
+        "imp",
+        0,
+        [
+          "and",
+          0,
+          0
+        ]
+      ],
+      "proof": [
+        "intro",
+        0,
+        [
+          "pair",
+          [
+            "left",
+            [
+              "hyp",
+              0
+            ]
+          ],
+          [
+            "hyp",
+            1
+          ]
+        ]
+      ],
+      "lean_term": "(fun h1 : p0 => (And.intro (And.left h0) h1))",
+      "lean_declaration": "theorem lf_3ff355204e22df2549c590ddb50eaa7cbad3d3203b68fb82c611c0cd87b2ac6f (p0 p1 p2 p3 : Prop) (h0 : (p0 ∧ (p0 ∧ p2))) : (p0 → (p0 ∧ p0)) := (fun h1 : p0 => (And.intro (And.left h0) h1))\n",
+      "atom_names": {
+        "p0": "rain",
+        "p1": "mist",
+        "p2": "snow",
+        "p3": "wind"
+      },
+      "question": "Assume (rain and (rain and snow)). Which must follow?\nA: (if wind then (wind and mist))\nB: (if rain then (rain and rain))\nAnswer:",
+      "answer": "B",
+      "negative_conclusion": [
+        "imp",
+        3,
+        [
+          "and",
+          3,
+          1
+        ]
+      ],
+      "negative_countermodel": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "row_sha256": "072eab81d11c12bf87a22d690602066db745f0ffc25bae955f2af90aafcdb262",
+      "verdict": "pass",
+      "notes": "Under p0, combine the left p0 from the premise with the bound p0. English rain→(rain∧rain) matches, while the other implication demands false mist."
+    },
+    {
+      "id": "a6495d06bc9e4be3941a31c60d7a226ce1d66e27b53b48508775098dd9919bd0",
+      "split": "validation",
+      "family": "pair",
+      "depth": 3,
+      "proof_depth": 3,
+      "statement": "p2; (p1 → p1); (p2 → (p3 → p0)) ⊢ ((p3 → p0) ∧ (p1 → p1))",
+      "premises": [
+        2,
+        [
+          "imp",
+          1,
+          1
+        ],
+        [
+          "imp",
+          2,
+          [
+            "imp",
+            3,
+            0
+          ]
+        ]
+      ],
+      "goal": [
+        "and",
+        [
+          "imp",
+          3,
+          0
+        ],
+        [
+          "imp",
+          1,
+          1
+        ]
+      ],
+      "proof": [
+        "pair",
+        [
+          "apply",
+          [
+            "hyp",
+            2
+          ],
+          [
+            "hyp",
+            0
+          ]
+        ],
+        [
+          "hyp",
+          1
+        ]
+      ],
+      "lean_term": "(And.intro (h2 h0) h1)",
+      "lean_declaration": "theorem lf_a6495d06bc9e4be3941a31c60d7a226ce1d66e27b53b48508775098dd9919bd0 (p0 p1 p2 p3 : Prop) (h0 : p2) (h1 : (p1 → p1)) (h2 : (p2 → (p3 → p0))) : ((p3 → p0) ∧ (p1 → p1)) := (And.intro (h2 h0) h1)\n",
+      "atom_names": {
+        "p0": "elms",
+        "p1": "pine",
+        "p2": "oaks",
+        "p3": "firs"
+      },
+      "question": "Suppose oaks; (if pine then pine); (if oaks then (if firs then elms)). Choose the implied statement.\nA: ((if elms then oaks) and (if pine then firs))\nB: ((if firs then elms) and (if pine then pine))\nAnswer:",
+      "answer": "B",
+      "negative_conclusion": [
+        "and",
+        [
+          "imp",
+          0,
+          2
+        ],
+        [
+          "imp",
+          1,
+          3
+        ]
+      ],
+      "negative_countermodel": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "row_sha256": "f010ddace41c87f60df1fadb1b7e041bc65c480bdf498d79bfc30c1d60f5c8c3",
+      "verdict": "pass",
+      "notes": "Apply the p2 premise to its implication and conjoin the resulting p3→p0 with the given p1 identity. The English B ordering is correct; the negative’s second implication is false."
+    },
+    {
+      "id": "4cc52e40c4f849e5c05bad6a3df47c49c5e26019ebfac623250937d34f04fd8d",
+      "split": "validation",
+      "family": "right",
+      "depth": 3,
+      "proof_depth": 3,
+      "statement": "(p0 → p0); ((p0 → p0) → (p3 ∧ p0)) ⊢ p0",
+      "premises": [
+        [
+          "imp",
+          0,
+          0
+        ],
+        [
+          "imp",
+          [
+            "imp",
+            0,
+            0
+          ],
+          [
+            "and",
+            3,
+            0
+          ]
+        ]
+      ],
+      "goal": 0,
+      "proof": [
+        "right",
+        [
+          "apply",
+          [
+            "hyp",
+            1
+          ],
+          [
+            "hyp",
+            0
+          ]
+        ]
+      ],
+      "lean_term": "(And.right (h1 h0))",
+      "lean_declaration": "theorem lf_4cc52e40c4f849e5c05bad6a3df47c49c5e26019ebfac623250937d34f04fd8d (p0 p1 p2 p3 : Prop) (h0 : (p0 → p0)) (h1 : ((p0 → p0) → (p3 ∧ p0))) : p0 := (And.right (h1 h0))\n",
+      "atom_names": {
+        "p0": "gold",
+        "p1": "teal",
+        "p2": "blue",
+        "p3": "ruby"
+      },
+      "question": "Assume (if gold then gold); (if (if gold then gold) then (ruby and gold)). Which must follow?\nA: gold\nB: teal\nAnswer:",
+      "answer": "A",
+      "negative_conclusion": 1,
+      "negative_countermodel": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "row_sha256": "3d870274e6aacc5350333c10b7dddcf5893cd69160ccc7e7efa06e992becc7ec",
+      "verdict": "pass",
+      "notes": "Apply the higher-order implication to the given p0 identity and take its right p0. English gold matches; teal remains false in the countermodel."
+    },
+    {
+      "id": "ca535c241d8cb85f2e81754e62a7e5b5771c576317885aaff3f775114a0c4cee",
+      "split": "validation",
+      "family": "intro",
+      "depth": 3,
+      "proof_depth": 4,
+      "statement": "((p3 → p1) ∧ p2) ⊢ (p1 → (p2 ∧ p1))",
+      "premises": [
+        [
+          "and",
+          [
+            "imp",
+            3,
+            1
+          ],
+          2
+        ]
+      ],
+      "goal": [
+        "imp",
+        1,
+        [
+          "and",
+          2,
+          1
+        ]
+      ],
+      "proof": [
+        "intro",
+        1,
+        [
+          "pair",
+          [
+            "right",
+            [
+              "hyp",
+              0
+            ]
+          ],
+          [
+            "hyp",
+            1
+          ]
+        ]
+      ],
+      "lean_term": "(fun h1 : p1 => (And.intro (And.right h0) h1))",
+      "lean_declaration": "theorem lf_ca535c241d8cb85f2e81754e62a7e5b5771c576317885aaff3f775114a0c4cee (p0 p1 p2 p3 : Prop) (h0 : ((p3 → p1) ∧ p2)) : (p1 → (p2 ∧ p1)) := (fun h1 : p1 => (And.intro (And.right h0) h1))\n",
+      "atom_names": {
+        "p0": "teal",
+        "p1": "gold",
+        "p2": "ruby",
+        "p3": "blue"
+      },
+      "question": "Known: ((if blue then gold) and ruby). Which conclusion follows?\nA: (if gold then (ruby and gold))\nB: (if ruby then (gold and blue))\nAnswer:",
+      "answer": "A",
+      "negative_conclusion": [
+        "imp",
+        2,
+        [
+          "and",
+          1,
+          3
+        ]
+      ],
+      "negative_countermodel": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "row_sha256": "0e1fa85c30a32f5055ebaee7844c3d5bbca29ea5322b3ef9e23a8100c6f62ae9",
+      "verdict": "pass",
+      "notes": "Under p1, take the premise’s right p2 and pair it with that bound p1. The English gold→(ruby∧gold) is correct; the distractor requires unsupported gold/blue from ruby."
+    },
+    {
+      "id": "1830480fbc276e8db73bccbf457710cf3109a622e76a2a2e864c33c55b10b7b1",
+      "split": "test",
+      "family": "apply",
+      "depth": 3,
+      "proof_depth": 2,
+      "statement": "(p3 ∧ p0); ((p3 ∧ p0) → (p2 → p2)) ⊢ (p2 → p2)",
+      "premises": [
+        [
+          "and",
+          3,
+          0
+        ],
+        [
+          "imp",
+          [
+            "and",
+            3,
+            0
+          ],
+          [
+            "imp",
+            2,
+            2
+          ]
+        ]
+      ],
+      "goal": [
+        "imp",
+        2,
+        2
+      ],
+      "proof": [
+        "apply",
+        [
+          "hyp",
+          1
+        ],
+        [
+          "hyp",
+          0
+        ]
+      ],
+      "lean_term": "(h1 h0)",
+      "lean_declaration": "theorem lf_1830480fbc276e8db73bccbf457710cf3109a622e76a2a2e864c33c55b10b7b1 (p0 p1 p2 p3 : Prop) (h0 : (p3 ∧ p0)) (h1 : ((p3 ∧ p0) → (p2 → p2))) : (p2 → p2) := (h1 h0)\n",
+      "atom_names": {
+        "p0": "blue",
+        "p1": "gold",
+        "p2": "ruby",
+        "p3": "teal"
+      },
+      "question": "Given (teal and blue); (if (teal and blue) then (if ruby then ruby)). Choose the implied statement.\nA: (if blue then gold)\nB: (if ruby then ruby)\nAnswer:",
+      "answer": "B",
+      "negative_conclusion": [
+        "imp",
+        0,
+        1
+      ],
+      "negative_countermodel": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "row_sha256": "403cef7ad22dc7da0671c8d891a654ba55a527da043ecb41eb1fa5f3125fc6ed",
+      "verdict": "pass",
+      "notes": "Apply the conjunction premise to the implication, obtaining p2→p2. English B is that ruby identity; the alternative blue→gold is refuted."
+    },
+    {
+      "id": "0b3b3a3d300c00778c927307dd284dcb8de6c16a67dfb8032b4dfedec91aee88",
+      "split": "test",
+      "family": "intro",
+      "depth": 3,
+      "proof_depth": 4,
+      "statement": "p3; (p3 → p3) ⊢ (p2 → (p3 ∧ p2))",
+      "premises": [
+        3,
+        [
+          "imp",
+          3,
+          3
+        ]
+      ],
+      "goal": [
+        "imp",
+        2,
+        [
+          "and",
+          3,
+          2
+        ]
+      ],
+      "proof": [
+        "intro",
+        2,
+        [
+          "pair",
+          [
+            "apply",
+            [
+              "hyp",
+              1
+            ],
+            [
+              "hyp",
+              0
+            ]
+          ],
+          [
+            "hyp",
+            2
+          ]
+        ]
+      ],
+      "lean_term": "(fun h2 : p2 => (And.intro (h1 h0) h2))",
+      "lean_declaration": "theorem lf_0b3b3a3d300c00778c927307dd284dcb8de6c16a67dfb8032b4dfedec91aee88 (p0 p1 p2 p3 : Prop) (h0 : p3) (h1 : (p3 → p3)) : (p2 → (p3 ∧ p2)) := (fun h2 : p2 => (And.intro (h1 h0) h2))\n",
+      "atom_names": {
+        "p0": "ruby",
+        "p1": "blue",
+        "p2": "gold",
+        "p3": "teal"
+      },
+      "question": "Suppose (if teal then teal); teal. Which conclusion follows?\nA: (if ruby then (gold and teal))\nB: (if gold then (teal and gold))\nAnswer:",
+      "answer": "B",
+      "negative_conclusion": [
+        "imp",
+        0,
+        [
+          "and",
+          2,
+          3
+        ]
+      ],
+      "negative_countermodel": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "row_sha256": "628ea3d39b6e92227ac03021d45211bb475be9b8373ed730b05e23690e9f12f0",
+      "verdict": "pass",
+      "notes": "Under p2, use h1(h0) to recover p3, then pair with bound p2. English gold→(teal∧gold) matches. Ruby→(gold∧teal) fails with ruby true and gold false."
+    },
+    {
+      "id": "021973d949a2d1ca5330aafc5ecd6cafcc52134a3b572e84363bfda57e5e34d6",
+      "split": "test",
+      "family": "pair",
+      "depth": 3,
+      "proof_depth": 4,
+      "statement": "((p3 ∧ p1) ∧ (p0 → p3)); ((p3 ∧ p1) → p2) ⊢ (p2 ∧ p2)",
+      "premises": [
+        [
+          "and",
+          [
+            "and",
+            3,
+            1
+          ],
+          [
+            "imp",
+            0,
+            3
+          ]
+        ],
+        [
+          "imp",
+          [
+            "and",
+            3,
+            1
+          ],
+          2
+        ]
+      ],
+      "goal": [
+        "and",
+        2,
+        2
+      ],
+      "proof": [
+        "pair",
+        [
+          "apply",
+          [
+            "hyp",
+            1
+          ],
+          [
+            "left",
+            [
+              "hyp",
+              0
+            ]
+          ]
+        ],
+        [
+          "apply",
+          [
+            "hyp",
+            1
+          ],
+          [
+            "left",
+            [
+              "hyp",
+              0
+            ]
+          ]
+        ]
+      ],
+      "lean_term": "(And.intro (h1 (And.left h0)) (h1 (And.left h0)))",
+      "lean_declaration": "theorem lf_021973d949a2d1ca5330aafc5ecd6cafcc52134a3b572e84363bfda57e5e34d6 (p0 p1 p2 p3 : Prop) (h0 : ((p3 ∧ p1) ∧ (p0 → p3))) (h1 : ((p3 ∧ p1) → p2)) : (p2 ∧ p2) := (And.intro (h1 (And.left h0)) (h1 (And.left h0)))\n",
+      "atom_names": {
+        "p0": "wind",
+        "p1": "mist",
+        "p2": "rain",
+        "p3": "snow"
+      },
+      "question": "Known: ((snow and mist) and (if wind then snow)); (if (snow and mist) then rain). Which must follow?\nA: (rain and rain)\nB: (mist and wind)\nAnswer:",
+      "answer": "A",
+      "negative_conclusion": [
+        "and",
+        1,
+        0
+      ],
+      "negative_countermodel": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "row_sha256": "62ecb5ba357fdf03a539aea4aecd2693a97ca15d3ccdf27e06adadd043e3d27e",
+      "verdict": "pass",
+      "notes": "Project the left conjunction from h0 and apply h1 twice; pair the two p2 results. English rain-and-rain is correct, while mist-and-wind includes false wind."
+    },
+    {
+      "id": "486148cbd48e86d33de05e52fe7983f250f5b44d3f03358b9268fc7af10993ef",
+      "split": "test",
+      "family": "left",
+      "depth": 3,
+      "proof_depth": 3,
+      "statement": "(p3 → p0); ((p3 → p0) → (p2 ∧ p3)) ⊢ p2",
+      "premises": [
+        [
+          "imp",
+          3,
+          0
+        ],
+        [
+          "imp",
+          [
+            "imp",
+            3,
+            0
+          ],
+          [
+            "and",
+            2,
+            3
+          ]
+        ]
+      ],
+      "goal": 2,
+      "proof": [
+        "left",
+        [
+          "apply",
+          [
+            "hyp",
+            1
+          ],
+          [
+            "hyp",
+            0
+          ]
+        ]
+      ],
+      "lean_term": "(And.left (h1 h0))",
+      "lean_declaration": "theorem lf_486148cbd48e86d33de05e52fe7983f250f5b44d3f03358b9268fc7af10993ef (p0 p1 p2 p3 : Prop) (h0 : (p3 → p0)) (h1 : ((p3 → p0) → (p2 ∧ p3))) : p2 := (And.left (h1 h0))\n",
+      "atom_names": {
+        "p0": "wind",
+        "p1": "rain",
+        "p2": "mist",
+        "p3": "snow"
+      },
+      "question": "Suppose (if snow then wind); (if (if snow then wind) then (mist and snow)). Which conclusion follows?\nA: mist\nB: rain\nAnswer:",
+      "answer": "A",
+      "negative_conclusion": 1,
+      "negative_countermodel": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "row_sha256": "bc77ec7d2de69aaf06b79c82b409c7b0ceeebdb7098d43a649359705a1d9f077",
+      "verdict": "pass",
+      "notes": "Apply the higher-order rule to the given implication and take the left p2. The English mist conclusion matches; rain is false in the supplied model."
+    },
+    {
+      "id": "7897ce936bf04ab1d1b53e087d6c9e3ed597b3d55908c7360ce7914be104ee66",
+      "split": "test",
+      "family": "right",
+      "depth": 3,
+      "proof_depth": 3,
+      "statement": "(p3 → p1); ((p3 → p1) → (p2 ∧ p1)) ⊢ p1",
+      "premises": [
+        [
+          "imp",
+          3,
+          1
+        ],
+        [
+          "imp",
+          [
+            "imp",
+            3,
+            1
+          ],
+          [
+            "and",
+            2,
+            1
+          ]
+        ]
+      ],
+      "goal": 1,
+      "proof": [
+        "right",
+        [
+          "apply",
+          [
+            "hyp",
+            1
+          ],
+          [
+            "hyp",
+            0
+          ]
+        ]
+      ],
+      "lean_term": "(And.right (h1 h0))",
+      "lean_declaration": "theorem lf_7897ce936bf04ab1d1b53e087d6c9e3ed597b3d55908c7360ce7914be104ee66 (p0 p1 p2 p3 : Prop) (h0 : (p3 → p1)) (h1 : ((p3 → p1) → (p2 ∧ p1))) : p1 := (And.right (h1 h0))\n",
+      "atom_names": {
+        "p0": "blue",
+        "p1": "ruby",
+        "p2": "gold",
+        "p3": "teal"
+      },
+      "question": "Known: (if (if teal then ruby) then (gold and ruby)); (if teal then ruby). Which conclusion follows?\nA: teal\nB: ruby\nAnswer:",
+      "answer": "B",
+      "negative_conclusion": 3,
+      "negative_countermodel": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "row_sha256": "92d6816915dc2651baa3f12c8c27cba0bb7bacb131861e1df1f1ee98b971504f",
+      "verdict": "pass",
+      "notes": "Apply h1 to h0 and take the right p1. English B=ruby is correct; the countermodel makes the teal alternative false."
+    },
+    {
+      "id": "c2fbddd40e25d28b36971227735c0a7240b8a5bd987722100a0e4d345a707103",
+      "split": "harder",
+      "family": "apply",
+      "depth": 5,
+      "proof_depth": 5,
+      "statement": "p2; ((((p3 ∧ p1) → (p3 ∧ p1)) ∧ p2) → p1); (p1 → (p0 ∧ p2)) ⊢ (p0 ∧ p2)",
+      "premises": [
+        2,
+        [
+          "imp",
+          [
+            "and",
+            [
+              "imp",
+              [
+                "and",
+                3,
+                1
+              ],
+              [
+                "and",
+                3,
+                1
+              ]
+            ],
+            2
+          ],
+          1
+        ],
+        [
+          "imp",
+          1,
+          [
+            "and",
+            0,
+            2
+          ]
+        ]
+      ],
+      "goal": [
+        "and",
+        0,
+        2
+      ],
+      "proof": [
+        "apply",
+        [
+          "hyp",
+          2
+        ],
+        [
+          "apply",
+          [
+            "hyp",
+            1
+          ],
+          [
+            "pair",
+            [
+              "intro",
+              [
+                "and",
+                3,
+                1
+              ],
+              [
+                "hyp",
+                3
+              ]
+            ],
+            [
+              "hyp",
+              0
+            ]
+          ]
+        ]
+      ],
+      "lean_term": "(h2 (h1 (And.intro (fun h3 : (p3 ∧ p1) => h3) h0)))",
+      "lean_declaration": "theorem lf_c2fbddd40e25d28b36971227735c0a7240b8a5bd987722100a0e4d345a707103 (p0 p1 p2 p3 : Prop) (h0 : p2) (h1 : ((((p3 ∧ p1) → (p3 ∧ p1)) ∧ p2) → p1)) (h2 : (p1 → (p0 ∧ p2))) : (p0 ∧ p2) := (h2 (h1 (And.intro (fun h3 : (p3 ∧ p1) => h3) h0)))\n",
+      "atom_names": {
+        "p0": "teal",
+        "p1": "gold",
+        "p2": "blue",
+        "p3": "ruby"
+      },
+      "question": "Suppose (if gold then (teal and blue)); (if ((if (ruby and gold) then (ruby and gold)) and blue) then gold); blue. Which must follow?\nA: (teal and ruby)\nB: (teal and blue)\nAnswer:",
+      "answer": "B",
+      "negative_conclusion": [
+        "and",
+        0,
+        3
+      ],
+      "negative_countermodel": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "row_sha256": "a8f47f8155dad1547202b563c296431863cc7a9394dceb68d88ef38040bc4545",
+      "verdict": "pass",
+      "notes": "Introduce identity on p3∧p1, pair it with p2, apply h1 to obtain p1, then h2 to obtain p0∧p2. English B preserves both nested implication scopes; the negative substitutes false p3."
+    },
+    {
+      "id": "da32f94bf312af2aeef5556b965948565b013d0ca4f983e4e71c3a17734a6232",
+      "split": "harder",
+      "family": "intro",
+      "depth": 6,
+      "proof_depth": 5,
+      "statement": "p1 ⊢ (p3 → ((p1 ∧ ((p3 ∧ p3) → (p3 ∧ p3))) ∧ p3))",
+      "premises": [
+        1
+      ],
+      "goal": [
+        "imp",
+        3,
+        [
+          "and",
+          [
+            "and",
+            1,
+            [
+              "imp",
+              [
+                "and",
+                3,
+                3
+              ],
+              [
+                "and",
+                3,
+                3
+              ]
+            ]
+          ],
+          3
+        ]
+      ],
+      "proof": [
+        "intro",
+        3,
+        [
+          "pair",
+          [
+            "pair",
+            [
+              "hyp",
+              0
+            ],
+            [
+              "intro",
+              [
+                "and",
+                3,
+                3
+              ],
+              [
+                "hyp",
+                2
+              ]
+            ]
+          ],
+          [
+            "hyp",
+            1
+          ]
+        ]
+      ],
+      "lean_term": "(fun h1 : p3 => (And.intro (And.intro h0 (fun h2 : (p3 ∧ p3) => h2)) h1))",
+      "lean_declaration": "theorem lf_da32f94bf312af2aeef5556b965948565b013d0ca4f983e4e71c3a17734a6232 (p0 p1 p2 p3 : Prop) (h0 : p1) : (p3 → ((p1 ∧ ((p3 ∧ p3) → (p3 ∧ p3))) ∧ p3)) := (fun h1 : p3 => (And.intro (And.intro h0 (fun h2 : (p3 ∧ p3) => h2)) h1))\n",
+      "atom_names": {
+        "p0": "wind",
+        "p1": "rain",
+        "p2": "mist",
+        "p3": "snow"
+      },
+      "question": "Suppose rain. Which must follow?\nA: (if snow then ((rain and (if (snow and snow) then (snow and snow))) and snow))\nB: (if snow then ((rain and (if (wind and snow) then (wind and rain))) and mist))\nAnswer:",
+      "answer": "A",
+      "negative_conclusion": [
+        "imp",
+        3,
+        [
+          "and",
+          [
+            "and",
+            1,
+            [
+              "imp",
+              [
+                "and",
+                0,
+                3
+              ],
+              [
+                "and",
+                0,
+                1
+              ]
+            ]
+          ],
+          2
+        ]
+      ],
+      "negative_countermodel": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "row_sha256": "4ad4392b10a2bc843df09f34140171e8269dceb8a43d235307fc1f0742730459",
+      "verdict": "pass",
+      "notes": "Under p3, pair the given p1 with identity on p3∧p3, then pair with bound p3. The nested Lean binders and English A agree; the negative ultimately demands false p2."
+    },
+    {
+      "id": "3954352e90bcc556409bb279e584dc4d42e6ae421f2ebb8adf38e825adf76cbe",
+      "split": "harder",
+      "family": "pair",
+      "depth": 7,
+      "proof_depth": 5,
+      "statement": "p1; ((p1 ∧ p1) ∧ (p1 → p1)) ⊢ ((p2 → p2) ∧ ((p2 → (((p1 ∧ p1) ∧ (p1 → p1)) ∧ p2)) ∧ p1))",
+      "premises": [
+        1,
+        [
+          "and",
+          [
+            "and",
+            1,
+            1
+          ],
+          [
+            "imp",
+            1,
+            1
+          ]
+        ]
+      ],
+      "goal": [
+        "and",
+        [
+          "imp",
+          2,
+          2
+        ],
+        [
+          "and",
+          [
+            "imp",
+            2,
+            [
+              "and",
+              [
+                "and",
+                [
+                  "and",
+                  1,
+                  1
+                ],
+                [
+                  "imp",
+                  1,
+                  1
+                ]
+              ],
+              2
+            ]
+          ],
+          1
+        ]
+      ],
+      "proof": [
+        "pair",
+        [
+          "intro",
+          2,
+          [
+            "hyp",
+            2
+          ]
+        ],
+        [
+          "pair",
+          [
+            "intro",
+            2,
+            [
+              "pair",
+              [
+                "hyp",
+                1
+              ],
+              [
+                "hyp",
+                2
+              ]
+            ]
+          ],
+          [
+            "hyp",
+            0
+          ]
+        ]
+      ],
+      "lean_term": "(And.intro (fun h2 : p2 => h2) (And.intro (fun h2 : p2 => (And.intro h1 h2)) h0))",
+      "lean_declaration": "theorem lf_3954352e90bcc556409bb279e584dc4d42e6ae421f2ebb8adf38e825adf76cbe (p0 p1 p2 p3 : Prop) (h0 : p1) (h1 : ((p1 ∧ p1) ∧ (p1 → p1))) : ((p2 → p2) ∧ ((p2 → (((p1 ∧ p1) ∧ (p1 → p1)) ∧ p2)) ∧ p1)) := (And.intro (fun h2 : p2 => h2) (And.intro (fun h2 : p2 => (And.intro h1 h2)) h0))\n",
+      "atom_names": {
+        "p0": "rain",
+        "p1": "snow",
+        "p2": "wind",
+        "p3": "mist"
+      },
+      "question": "Assume snow; ((snow and snow) and (if snow then snow)). Which must follow?\nA: ((if wind then wind) and ((if wind then (((snow and snow) and (if snow then snow)) and wind)) and snow))\nB: ((if rain then wind) and ((if mist then (((mist and mist) and (if snow then mist)) and wind)) and rain))\nAnswer:",
+      "answer": "A",
+      "negative_conclusion": [
+        "and",
+        [
+          "imp",
+          0,
+          2
+        ],
+        [
+          "and",
+          [
+            "imp",
+            3,
+            [
+              "and",
+              [
+                "and",
+                [
+                  "and",
+                  3,
+                  3
+                ],
+                [
+                  "imp",
+                  1,
+                  3
+                ]
+              ],
+              2
+            ]
+          ],
+          0
+        ]
+      ],
+      "negative_countermodel": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "row_sha256": "3509b15eb8dcac2de1608fe008b2987d847f2d4f4b8d26843cad1f226b4a6889",
+      "verdict": "pass",
+      "notes": "Pair identity on p2 with a pair containing the weakening implication p2→(h1∧p2) and h0. The two independent h2 binders have separate scopes. English A matches every nested conjunct; the negative has a false final atom."
+    },
+    {
+      "id": "3be67a0875e598cf8cfa00d3eb787891e6be4d17abe497a736bc9472d3081463",
+      "split": "harder",
+      "family": "right",
+      "depth": 4,
+      "proof_depth": 5,
+      "statement": "p3; (((p0 → p0) ∧ p3) → (p2 ∧ p0)) ⊢ p0",
+      "premises": [
+        3,
+        [
+          "imp",
+          [
+            "and",
+            [
+              "imp",
+              0,
+              0
+            ],
+            3
+          ],
+          [
+            "and",
+            2,
+            0
+          ]
+        ]
+      ],
+      "goal": 0,
+      "proof": [
+        "right",
+        [
+          "apply",
+          [
+            "hyp",
+            1
+          ],
+          [
+            "pair",
+            [
+              "intro",
+              0,
+              [
+                "hyp",
+                2
+              ]
+            ],
+            [
+              "hyp",
+              0
+            ]
+          ]
+        ]
+      ],
+      "lean_term": "(And.right (h1 (And.intro (fun h2 : p0 => h2) h0)))",
+      "lean_declaration": "theorem lf_3be67a0875e598cf8cfa00d3eb787891e6be4d17abe497a736bc9472d3081463 (p0 p1 p2 p3 : Prop) (h0 : p3) (h1 : (((p0 → p0) ∧ p3) → (p2 ∧ p0))) : p0 := (And.right (h1 (And.intro (fun h2 : p0 => h2) h0)))\n",
+      "atom_names": {
+        "p0": "mist",
+        "p1": "rain",
+        "p2": "snow",
+        "p3": "wind"
+      },
+      "question": "Known: wind; (if ((if mist then mist) and wind) then (snow and mist)). Which conclusion follows?\nA: rain\nB: mist\nAnswer:",
+      "answer": "B",
+      "negative_conclusion": 1,
+      "negative_countermodel": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "row_sha256": "ce94df1e594c78fe23e9a018724aaf748312b94d3b3387a2997f93ecb3ff4b48",
+      "verdict": "pass",
+      "notes": "Construct identity on p0, pair it with p3, apply h1, then project right p0. English B=mist matches; rain is false in the supplied model."
+    },
+    {
+      "id": "70dff939eb03b98b330fa733f2caa033ea4c3601a995612d1a40efa07e817f90",
+      "split": "harder",
+      "family": "intro",
+      "depth": 7,
+      "proof_depth": 5,
+      "statement": "(p2 → (p0 → p1)) ⊢ (p3 → ((p3 → ((p2 → (p0 → p1)) ∧ p3)) ∧ p3))",
+      "premises": [
+        [
+          "imp",
+          2,
+          [
+            "imp",
+            0,
+            1
+          ]
+        ]
+      ],
+      "goal": [
+        "imp",
+        3,
+        [
+          "and",
+          [
+            "imp",
+            3,
+            [
+              "and",
+              [
+                "imp",
+                2,
+                [
+                  "imp",
+                  0,
+                  1
+                ]
+              ],
+              3
+            ]
+          ],
+          3
+        ]
+      ],
+      "proof": [
+        "intro",
+        3,
+        [
+          "pair",
+          [
+            "intro",
+            3,
+            [
+              "pair",
+              [
+                "hyp",
+                0
+              ],
+              [
+                "hyp",
+                2
+              ]
+            ]
+          ],
+          [
+            "hyp",
+            1
+          ]
+        ]
+      ],
+      "lean_term": "(fun h1 : p3 => (And.intro (fun h2 : p3 => (And.intro h0 h2)) h1))",
+      "lean_declaration": "theorem lf_70dff939eb03b98b330fa733f2caa033ea4c3601a995612d1a40efa07e817f90 (p0 p1 p2 p3 : Prop) (h0 : (p2 → (p0 → p1))) : (p3 → ((p3 → ((p2 → (p0 → p1)) ∧ p3)) ∧ p3)) := (fun h1 : p3 => (And.intro (fun h2 : p3 => (And.intro h0 h2)) h1))\n",
+      "atom_names": {
+        "p0": "wind",
+        "p1": "rain",
+        "p2": "mist",
+        "p3": "snow"
+      },
+      "question": "Given (if mist then (if wind then rain)). Choose the implied statement.\nA: (if mist then ((if snow then ((if rain then (if wind then wind)) and mist)) and wind))\nB: (if snow then ((if snow then ((if mist then (if wind then rain)) and snow)) and snow))\nAnswer:",
+      "answer": "B",
+      "negative_conclusion": [
+        "imp",
+        2,
+        [
+          "and",
+          [
+            "imp",
+            3,
+            [
+              "and",
+              [
+                "imp",
+                1,
+                [
+                  "imp",
+                  0,
+                  0
+                ]
+              ],
+              2
+            ]
+          ],
+          0
+        ]
+      ],
+      "negative_countermodel": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "row_sha256": "0f497b8cd87461001cd588c4250f1ae643f2123dcf64e3038668b4919fca67a9",
+      "verdict": "pass",
+      "notes": "Under p3, construct p3→(h0∧p3) using the inner binder and pair it with the outer p3. English B preserves both scopes. The negative demands false p0 when p2 is true."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "root": "/Users/ianprado02/Downloads/lemmaferry-archive/local-runs/from-scratch-20261019T060343Z",
+  "receipt_sha256": "f5a441c2cb5eb9b27d129a693fa91d5427e67d29baa063af15dd68a19b96ab9f",
+  "reason": "independent manual example audit found an answer-length shortcut; regenerate matched-choice data and rerun development pilot"
+}
